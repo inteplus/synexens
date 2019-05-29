@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='dataframemt',
-    version='0.0.1',
+    version='0.0.2',
     description="Extra Python modules to deal with dataframes for Minh-Tri Pham",
     author=["Minh-Tri Pham"],
     packages=find_packages(),
@@ -17,7 +17,4 @@ setup(
         'dask[dataframe]', # for reading chunks of CSV files in parallel
         'basemt', # Minh-Tri's base modules for logging and multi-threading
     ],
-    dependency_links=[
-        'https://github.com/inteplus/basemt/tarball/master#egg=0.0.2',
-    ]
 )
