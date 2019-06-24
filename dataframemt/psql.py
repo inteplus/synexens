@@ -185,6 +185,32 @@ def rename_table(schema_name, old_table_name, new_table_name, conn, nb_trials=3,
     exec_sql('ALTER TABLE "{}"."{}" RENAME TO "{}";'.format(schema_name, old_table_name, new_table_name), conn, nb_trials=nb_trials, logger=logger)
 
 
+def tableview_exists(tableview_name, conn, schema_name=None, nb_trials=3, logger=None):
+    '''Lists all views of a given schema.
+
+    Parameters
+    ----------
+        tableview_name : str
+            name of table or view
+        conn : sqlalchemy.engine.base.Engine
+            an sqlalchemy connection engine created by function `create_engine()`
+        schema_name : str or None
+            a valid schema name returned from `list_schemas()`
+        nb_trials: int
+            number of query trials
+        logger: logging.Logger or None
+            logger for debugging
+
+    Returns
+    -------
+        retval : bool
+            whether a table or a view exists with the given name
+    '''
+    if tableview_name in list_tables(schema_name, conn):
+        return True
+    return tableview_name in list_views(conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger)
+
+
 def list_columns_ext(table_name, conn, schema_name=None, nb_trials=3, logger=None):
     '''Lists all columns of a given table of a given schema.
 
@@ -206,10 +232,18 @@ def list_columns_ext(table_name, conn, schema_name=None, nb_trials=3, logger=Non
         out : pandas.DataFrame
             a table of details of the columns
     '''
+    if not tableview_exists(table_name, conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger):
+        if schema_name is None:
+            s = "Table or view with name '{}' does not exists.".format(table_name)
+        else:
+            s = "Table or view with name '{}' from schema '{}' does not exists.".format(table_name, schema_name)
+        raise _ps.ProgrammingError(s)
+
     if schema_name is None:
         query_str = "select * from information_schema.columns where table_name='{}';".format(table_name)
     else:
         query_str = "select * from information_schema.columns where table_schema='{}' and table_name='{}';".format(schema_name, table_name)
+
     return read_sql_query(query_str, conn, nb_trials=nb_trials, logger=logger)
 
 
