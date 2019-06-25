@@ -17,31 +17,6 @@ from dataframemt.sql import *
 # ----- functions dealing with sql queries to overcome OperationalError -----
 
 
-def run_func(func, *args, nb_trials=3, logger=None, **kwargs):
-    '''Attempt to run a function a number of times to overcome OperationalError exceptions.
-
-    :Parameters:
-        func : function
-            function to be invoked
-        args : sequence
-            arguments to be passed to the function
-        nb_trials: int
-            number of query trials
-        logger: logging.Logger or None
-            logger for debugging
-        kwargs : dict
-            keyword arguments to be passed to the function
-    '''
-    for x in range(nb_trials):
-        try:
-            return func(*args, **kwargs)
-        except (_se.DatabaseError, _se.OperationalError, _ps.OperationalError) as e:
-            if logger:
-                with logger.scoped_warn("Ignored an exception raised by failed attempt {}/{} to execute `{}.{}()`".format(x+1, nb_trials, func.__module__, func.__name__)):
-                    logger.warn_last_exception()
-    raise RuntimeError("Attempted {} times to execute `{}.{}()` but failed.".format(nb_trials, func.__module__, func.__name__))
-
-
 def read_sql(sql, conn, nb_trials=3, logger=None, **kwargs):
     """Read an SQL query with a number of trials to overcome OperationalError.
 
@@ -206,7 +181,7 @@ def tableview_exists(tableview_name, conn, schema_name=None, nb_trials=3, logger
         retval : bool
             whether a table or a view exists with the given name
     '''
-    if tableview_name in list_tables(schema_name, conn):
+    if tableview_name in list_tables(schema_name, conn, nb_trials=nb_trials, logger=logger):
         return True
     return tableview_name in list_views(conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger)
 
