@@ -1,4 +1,5 @@
 import sqlalchemy as _sa
+import sqlalchemy.exc as _se
 
 def table_sql(table_name, schema_name=None):
     return table_name if schema_name is None else '{}.{}'.format(schema_name, table_name)
@@ -25,7 +26,7 @@ def run_func(func, *args, nb_trials=3, logger=None, **kwargs):
     for x in range(nb_trials):
         try:
             return func(*args, **kwargs)
-        except (_se.DatabaseError, _se.OperationalError, _ps.OperationalError) as e:
+        except (_se.DatabaseError, _se.OperationalError) as e:
             if logger:
                 with logger.scoped_warn("Ignored an exception raised by failed attempt {}/{} to execute `{}.{}()`".format(x+1, nb_trials, func.__module__, func.__name__)):
                     logger.warn_last_exception()
