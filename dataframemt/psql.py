@@ -206,7 +206,7 @@ def tableview_exists(tableview_name, conn, schema_name=None, nb_trials=3, logger
         retval : bool
             whether a table or a view exists with the given name
     '''
-    if tableview_name in list_tables(schema_name, conn, nb_trials=nb_trials, logger=logger):
+    if tableview_name in list_tables(conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger):
         return True
     return tableview_name in list_views(conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger)
 

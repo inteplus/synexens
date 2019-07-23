@@ -53,15 +53,15 @@ def list_schemas(conn, nb_trials=3, logger=None):
     return run_func(_sa.inspect, conn, nb_trials=nb_trials, logger=logger).get_schema_names()
 
 
-def list_tables(schema_name, conn, nb_trials=3, logger=None):
+def list_tables(conn, schema_name=None, nb_trials=3, logger=None):
     '''Lists all tables of a given schema.
 
     Parameters
     ----------
-        schema_name : str
-            a valid schema name returned from `list_schemas()`
         conn : sqlalchemy.engine.base.Engine
             an sqlalchemy connection engine created by function `create_engine()`
+        schema_name : str or None
+            a valid schema name returned from `list_schemas()`. Default to sqlalchemy
         nb_trials: int
             number of query trials
         logger: logging.Logger or None
@@ -72,6 +72,6 @@ def list_tables(schema_name, conn, nb_trials=3, logger=None):
         out : list
             list of all table names
     '''
-    return run_func(conn.table_names, nb_trials=nb_trials, logger=logger, schema=schema_name)
+    return run_func(conn.table_names, schema=schema_name, nb_trials=nb_trials, logger=logger)
 
 
