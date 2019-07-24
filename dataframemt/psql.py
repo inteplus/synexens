@@ -185,6 +185,27 @@ def rename_table(schema_name, old_table_name, new_table_name, conn, nb_trials=3,
     exec_sql('ALTER TABLE "{}"."{}" RENAME TO "{}";'.format(schema_name, old_table_name, new_table_name), conn, nb_trials=nb_trials, logger=logger)
 
 
+def rename_view(schema_name, old_view_name, new_view_name, conn, nb_trials=3, logger=None):
+    '''Renames a view of a schema.
+
+    Parameters
+    ----------
+        schema_name : str
+            schema name
+        old_view_name : str
+            old view name
+        new_view_name : str
+            new view name
+        conn : sqlalchemy.engine.base.Engine
+            an sqlalchemy connection engine created by function `create_engine()`
+        nb_trials: int
+            number of query trials
+        logger: logging.Logger or None
+            logger for debugging
+    '''
+    exec_sql('ALTER VIEW "{}"."{}" RENAME TO "{}";'.format(schema_name, old_view_name, new_view_name), conn, nb_trials=nb_trials, logger=logger)
+
+
 def tableview_exists(tableview_name, conn, schema_name=None, nb_trials=3, logger=None):
     '''Lists all views of a given schema.
 
