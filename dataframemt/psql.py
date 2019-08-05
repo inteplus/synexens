@@ -164,6 +164,31 @@ def list_views(conn, schema_name=None, nb_trials=3, logger=None):
     return df['viewname'].tolist()
 
 
+def get_view_sql_code(view_name, conn, schema_name=None, nb_trials=3, logger=None):
+    '''Gets the SQL string of a view.
+
+    Parameters
+    ----------
+        view_name : str
+            view name
+        conn : sqlalchemy.engine.base.Engine
+            an sqlalchemy connection engine created by function `create_engine()`
+        schema_name : str or None
+            a valid schema name returned from `list_schemas()`
+        nb_trials: int
+            number of query trials
+        logger: logging.Logger or None
+            logger for debugging
+
+    Returns
+    -------
+        retval : str
+            SQL query string defining the view
+    '''
+    return read_sql_query("SELECT pg_get_viewdef('{}', true) a".format(table_sql(view_name, schema_name=schema_name)), 
+        conn, nb_trials=nb_trials, logger=logger)['a'][0]
+
+
 def rename_table(schema_name, old_table_name, new_table_name, conn, nb_trials=3, logger=None):
     '''Renames a table of a schema.
 
