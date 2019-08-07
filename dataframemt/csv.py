@@ -96,6 +96,8 @@ def read_csv(path, **kwargs):
                 df[x] = df[x].astype('category', categories=y[1], ordered=y[2])
             elif y == 'int64':
                 df[x] = df[x].astype(_np.int64)
+            elif y == 'uint8':
+                df[x] = df[x].astype(_np.uint8)
             elif y == 'float64':
                 df[x] = df[x].astype(_np.float64)
             elif y == 'bool':
