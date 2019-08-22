@@ -245,6 +245,33 @@ def list_all_frames(conn, schema_name=None, nb_trials=3, logger=None):
     return _pd.concat(dfs, sort=False).reset_index(drop=True)
 
 
+def get_frame_length(frame_name, conn, schema_name=None, nb_trials=3, logger=None):
+    '''Gets the number of rows of a dataframes (tables/views/materialized views).
+
+    Parameters
+    ----------
+        frame_name : str
+            name of the dataframe
+        conn : sqlalchemy.engine.base.Engine
+            an sqlalchemy connection engine created by function `create_engine()`
+        nb_trials: int
+            number of query trials
+        logger: logging.Logger or None
+            logger for debugging
+
+    Returns
+    -------
+        out : int
+            number of rows
+
+    Notes
+    -----
+        The dataframe must exist.
+    '''
+    table_sql_str = table_sql(frame_name, schema_name=schema_name)
+    return read_sql_query("SELECT COUNT(*) a FROM {};".format(table_sql_str), conn, nb_trials=nb_trials, logger=logger)['a'][0]
+
+
 def get_view_sql_code(view_name, conn, schema_name=None, nb_trials=3, logger=None):
     '''Gets the SQL string of a view.
 
