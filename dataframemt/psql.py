@@ -242,7 +242,7 @@ def list_all_frames(conn, schema_name=None, nb_trials=3, logger=None):
         if len(df) > 0:
             df['schema_name'] = schema_name
             dfs.append(df)
-    return _pd.concat(dfs, sort=False)
+    return _pd.concat(dfs, sort=False).reset_index(drop=True)
 
 
 def get_view_sql_code(view_name, conn, schema_name=None, nb_trials=3, logger=None):
