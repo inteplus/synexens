@@ -164,6 +164,87 @@ def list_views(conn, schema_name=None, nb_trials=3, logger=None):
     return df['viewname'].tolist()
 
 
+def list_matviews(conn, schema_name=None, nb_trials=3, logger=None):
+    '''Lists all materialized views of a given schema.
+
+    Parameters
+    ----------
+        conn : sqlalchemy.engine.base.Engine
+            an sqlalchemy connection engine created by function `create_engine()`
+        schema_name : str or None
+            a valid schema name returned from `list_schemas()`
+        nb_trials: int
+            number of query trials
+        logger: logging.Logger or None
+            logger for debugging
+
+    Returns
+    -------
+        out : list
+            list of all materialized view names
+    '''
+    if schema_name is None:
+        schema_name = 'public'
+    query_str = "select distinct matviewname from pg_matviews where schemaname='{}';".format(schema_name)
+    df = read_sql_query(query_str, conn, nb_trials=nb_trials, logger=logger)
+    return df['matviewname'].tolist()
+
+
+def list_frames(conn, schema_name=None, nb_trials=3, logger=None):
+    '''Lists all dataframes (tables/views/materialized views) of a given schema.
+
+    Parameters
+    ----------
+        conn : sqlalchemy.engine.base.Engine
+            an sqlalchemy connection engine created by function `create_engine()`
+        schema_name : str or None
+            a valid schema name returned from `list_schemas()`
+        nb_trials: int
+            number of query trials
+        logger: logging.Logger or None
+            logger for debugging
+
+    Returns
+    -------
+        out : pd.DataFrame(columns=['name', 'type'])
+            list of all dataframes of types {'table', 'view', 'matview'}
+    '''
+    data = []
+    for item in list_tables(conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger):
+        data.append((item, 'table'))
+    for item in list_views(conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger):
+        data.append((item, 'view'))
+    for item in list_matviews(conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger):
+        data.append((item, 'matview'))
+    return _pd.DataFrame(data=data, columns=['name', 'type'])
+
+
+def list_all_frames(conn, schema_name=None, nb_trials=3, logger=None):
+    '''Lists all dataframes (tables/views/materialized views) across all schemas.
+
+    Parameters
+    ----------
+        conn : sqlalchemy.engine.base.Engine
+            an sqlalchemy connection engine created by function `create_engine()`
+        nb_trials: int
+            number of query trials
+        logger: logging.Logger or None
+            logger for debugging
+
+    Returns
+    -------
+        out : pd.DataFrame(columns=['name', 'schema_name', 'type'])
+            list of all dataframes of types {'table', 'view', 'matview'}
+    '''
+    dfs = []
+    for schema_name in list_schemas(conn, nb_trials=nb_trials, logger=logger):
+        df = list_frames(conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger)
+        if len(df) > 0:
+            df['schema_name'] = schema_name
+            dfs.append(df)
+    return _pd.concat(dfs, sort=False)
+
+
 def get_view_sql_code(view_name, conn, schema_name=None, nb_trials=3, logger=None):
     '''Gets the SQL string of a view.
 
@@ -185,7 +266,7 @@ def get_view_sql_code(view_name, conn, schema_name=None, nb_trials=3, logger=Non
         retval : str
             SQL query string defining the view
     '''
-    return read_sql_query("SELECT pg_get_viewdef('{}', true) a".format(table_sql(view_name, schema_name=schema_name)), 
+    return read_sql_query("SELECT pg_get_viewdef('{}', true) a".format(table_sql(view_name, schema_name=schema_name)),
         conn, nb_trials=nb_trials, logger=logger)['a'][0]
 
 
@@ -588,7 +669,7 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema_name=None, ma
         id_list = diff_keys + remote_only_keys
         if len(id_list) > 0:
             id_list = ",".join(str(x) for x in id_list)
-            query_str = "DELETE FROM {} WHERE {} IN ({});".format(table_sql_str, id_name, id_list)
+            query_str = "IF EXISTS({}) DELETE FROM {} WHERE {} IN ({}) END IF;".format(table_sql_str, table_sql_str, id_name, id_list)
             exec_sql(query_str, cnx, nb_trials=nb_trials, logger=logger)
 
         # insert records that need modification
