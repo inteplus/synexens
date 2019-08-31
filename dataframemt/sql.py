@@ -26,6 +26,8 @@ def run_func(func, *args, nb_trials=3, logger=None, **kwargs):
     for x in range(nb_trials):
         try:
             return func(*args, **kwargs)
+        except _se.ProgrammingError as e:
+            raise e
         except (_se.DatabaseError, _se.OperationalError) as e:
             if logger:
                 with logger.scoped_warn("Ignored an exception raised by failed attempt {}/{} to execute `{}.{}()`".format(x+1, nb_trials, func.__module__, func.__name__)):
