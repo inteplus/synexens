@@ -22,7 +22,7 @@ def pg_get_locked_transactions(conn):
     query_str = "SELECT t1.*, t2.relname FROM pg_locks t1 INNER JOIN pg_class t2 ON t1.relation=t2.oid WHERE NOT t2.relname ILIKE 'pg_%%';"
     return _pd.read_sql(query_str, conn)
 
-def pg_cancel_backend(pid):
+def pg_cancel_backend(conn, pid):
     '''Cancels a backend transaction given its pid.'''
     query_str = "SELECT pg_cancel_backend('{}');".format(pid)
     return _pd.read_sql(query_str, conn)
@@ -58,34 +58,53 @@ def run_func(func, *args, nb_trials=3, logger=None, **kwargs):
     raise RuntimeError("Attempted {} times to execute `{}.{}()` but failed.".format(nb_trials, func.__module__, func.__name__))
 
 
-def read_sql(sql, conn, nb_trials=3, logger=None, **kwargs):
+def read_sql(sql, conn, index_col=None, set_index_after=False, nb_trials=3, logger=None, **kwargs):
     """Read an SQL query with a number of trials to overcome OperationalError.
 
-    :Aditional Parameters:
+    Parameters
+    ----------
+        index_col: string or list of strings, optional, default: None
+            Column(s) to set as index(MultiIndex). See pandas.read_sql().
+        set_index_after : bool
+            whether to set index specified by index_col via the pandas.read_sql() function or after the function has been invoked
         nb_trials: int
             number of query trials
         logger: logging.Logger or None
             logger for debugging
+        kwargs : dict
+            other keyword arguments to be passed directly to pandas.read_sql()
 
     pandas.read_sql:
 
     """ + _pd.read_sql.__doc__
-    return run_func(_pd.read_sql, sql, conn, nb_trials=nb_trials, logger=logger, **kwargs)
+    if index_col is None or not set_index_after:
+        return run_func(_pd.read_sql, sql, conn, index_col=index_col, nb_trials=nb_trials, logger=logger, **kwargs)
+    df = run_func(_pd.read_sql, sql, conn, nb_trials=nb_trials, logger=logger, **kwargs)
+    return df.set_index(index_col, drop=True)
 
 
-def read_sql_query(sql, conn, nb_trials=3, logger=None, **kwargs):
+def read_sql_query(sql, conn, index_col=None, nb_trials=3, logger=None, **kwargs):
     """Read an SQL query with a number of trials to overcome OperationalError.
 
     :Aditional Parameters:
+        index_col: string or list of strings, optional, default: None
+            Column(s) to set as index(MultiIndex). See pandas.read_sql_query().
+        set_index_after : bool
+            whether to set index specified by index_col via the pandas.read_sql_query() function or after the function has been invoked
         nb_trials: int
             number of query trials
         logger: logging.Logger or None
             logger for debugging
+        kwargs : dict
+            other keyword arguments to be passed directly to pandas.read_sql_query()
 
     pandas.read_sql_query:
 
     """ + _pd.read_sql_query.__doc__
-    return run_func(_pd.read_sql_query, sql, conn, nb_trials=nb_trials, logger=logger, **kwargs)
+    if index_col is None or not set_index_after:
+        return run_func(_pd.read_sql_query, sql, conn, index_col=index_col, nb_trials=nb_trials, logger=logger, **kwargs)
+    df = run_func(_pd.read_sql_query, sql, conn, nb_trials=nb_trials, logger=logger, **kwargs)
+    return df.set_index(index_col, drop=True)
 
 
 def read_sql_table(table_name, conn, nb_trials=3, logger=None, **kwargs):
