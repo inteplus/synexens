@@ -14,6 +14,20 @@ import dataframemt.csv as _mc
 from dataframemt.sql import *
 
 
+# ----- debugging functions -----
+
+
+def pg_get_locked_transactions(conn):
+    '''Obtains a dataframe representing transactions which have been locked by the server.'''
+    query_str = "SELECT t1.*, t2.relname FROM pg_locks t1 INNER JOIN pg_class t2 ON t1.relation=t2.oid WHERE NOT t2.relname ILIKE 'pg_%%';"
+    return _pd.read_sql(query_str, conn)
+
+def pg_cancel_backend(pid):
+    '''Cancels a backend transaction given its pid.'''
+    query_str = "SELECT pg_cancel_backend('{}');".format(pid)
+    return _pd.read_sql(query_str, conn)
+
+
 # ----- functions dealing with sql queries to overcome OperationalError -----
 
 
