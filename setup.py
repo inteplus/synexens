@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='dataframemt',
-    version='0.2.1',
+    version='0.2.2',
     description="Extra Python modules to deal with dataframes for Minh-Tri Pham",
     author=["Minh-Tri Pham"],
     packages=find_packages(),
