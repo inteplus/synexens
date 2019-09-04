@@ -17,21 +17,70 @@ from dataframemt.sql import *
 # ----- debugging functions -----
 
 
-def pg_get_locked_transactions(conn):
-    '''Obtains a dataframe representing transactions which have been locked by the server.'''
-    query_str = "SELECT t1.*, t2.relname FROM pg_locks t1 INNER JOIN pg_class t2 ON t1.relation=t2.oid WHERE NOT t2.relname ILIKE 'pg_%%';"
+def pg_get_locked_transactions(conn, schema_name=None):
+    '''Obtains a dataframe representing transactions which have been locked by the server.
+
+    Parameters
+    ----------
+    conn : sqlalchemy.engine.base.Engine
+        connection engine
+    schema_name : str or None
+        If None, then all schemas are considered and not just the public schema. Else, scope down to a single schema.
+
+    Returns
+    -------
+    pd.DataFrame
+        A table containing the current backend transactions
+    '''
+    if schema_name is None:
+        query_str = """
+            SELECT
+                t1.*, t2.relname, t3.nspname
+              FROM pg_locks t1
+                INNER JOIN pg_class t2 ON t1.relation=t2.oid
+                INNER JOIN pg_namespace t3 ON t2.relnamespace=t3.oid
+              WHERE NOT t2.relname ILIKE 'pg_%%'
+            ;"""
+    else:
+        query_str = """
+            SELECT
+                t1.*, t2.relname, t3.nspname
+              FROM pg_locks t1 
+                INNER JOIN pg_class t2 ON t1.relation=t2.oid
+                INNER JOIN pg_namespace t3 ON t2.relnamespace=t3.oid
+              WHERE NOT t2.relname ILIKE 'pg_%%'
+                AND t3.nspname = '{}'
+            ;""".format(schema_name)
     return _pd.read_sql(query_str, conn)
 
 def pg_cancel_backend(conn, pid):
-    '''Cancels a backend transaction given its pid.'''
+    '''Cancels a backend transaction given its pid.
+
+    Parameters
+    ----------
+    conn : sqlalchemy.engine.base.Engine
+        connection engine
+    pid : int
+        the backend pid to be cancelled
+    '''
     query_str = "SELECT pg_cancel_backend('{}');".format(pid)
     return _pd.read_sql(query_str, conn)
 
 
-def pg_cancel_all_backends(conn, logger=None):
-    '''Cancels all backend transactions.'''
-    query_str = "SELECT DISTINCT t1.pid FROM pg_locks t1 INNER JOIN pg_class t2 ON t1.relation=t2.oid WHERE NOT t2.relname ILIKE 'pg_%%';"
-    pids = _pd.read_sql(query_str, conn)['pid'].tolist()
+def pg_cancel_all_backends(conn, schema_name=None, logger=None):
+    '''Cancels all backend transactions.
+
+    Parameters
+    ----------
+    conn : sqlalchemy.engine.base.Engine
+        connection engine
+    schema_name : str or None
+        If None, then all schemas are considered and not just the public schema. Else, scope down to a single schema.
+    logger: logging.Logger or None
+        logger for debugging
+    '''
+    df = pg_get_locked_transactions(conn, schema_name=schema_name)
+    pids = df['pid'].drop_duplicates().tolist()
     for pid in pids:
         if logger:
             logger.info("Cancelling backend pid {}".format(pid))
