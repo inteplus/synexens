@@ -28,6 +28,16 @@ def pg_cancel_backend(conn, pid):
     return _pd.read_sql(query_str, conn)
 
 
+def pg_cancel_all_backends(conn, logger=None):
+    '''Cancels all backend transactions.'''
+    query_str = "SELECT DISTINCT t1.pid FROM pg_locks t1 INNER JOIN pg_class t2 ON t1.relation=t2.oid WHERE NOT t2.relname ILIKE 'pg_%%';"
+    pids = _pd.read_sql(query_str, conn)['pid'].tolist()
+    for pid in pids:
+        if logger:
+            logger.info("Cancelling backend pid {}".format(pid))
+        pg_cancel_backend(conn, pid)
+
+
 # ----- functions dealing with sql queries to overcome OperationalError -----
 
 
