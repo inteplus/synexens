@@ -401,41 +401,65 @@ def rename_table(schema, old_table_name, new_table_name, conn, nb_trials=3, logg
 
     Parameters
     ----------
-    schema : str
-        schema name
     old_table_name : str
         old table name
     new_table_name : str
         new table name
     conn : sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
+    schema : str or None
+        a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
     logger: logging.Logger or None
         logger for debugging
     '''
-    exec_sql('ALTER TABLE "{}"."{}" RENAME TO "{}";'.format(schema, old_table_name, new_table_name), conn, nb_trials=nb_trials, logger=logger)
+    frame_sql_str = frame_sql(old_table_name, schema=schema)
+    exec_sql('ALTER TABLE {} RENAME TO "{}";'.format(frame_sql_str, new_table_name), conn, nb_trials=nb_trials, logger=logger)
 
 
-def rename_view(schema, old_view_name, new_view_name, conn, nb_trials=3, logger=None):
+def rename_view(old_view_name, new_view_name, conn, schema=None, nb_trials=3, logger=None):
     '''Renames a view of a schema.
 
     Parameters
     ----------
-    schema : str
-        schema name
     old_view_name : str
         old view name
     new_view_name : str
         new view name
     conn : sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
+    schema : str or None
+        a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
     logger: logging.Logger or None
         logger for debugging
     '''
-    exec_sql('ALTER VIEW "{}"."{}" RENAME TO "{}";'.format(schema, old_view_name, new_view_name), conn, nb_trials=nb_trials, logger=logger)
+    frame_sql_str = frame_sql(old_view_name, schema=schema)
+    exec_sql('ALTER VIEW {} RENAME TO "{}";'.format(frame_sql_str, new_view_name), conn, nb_trials=nb_trials, logger=logger)
+
+
+def rename_matview(old_matview_name, new_matview_name, conn, schema=None, nb_trials=3, logger=None):
+    '''Renames a materialized view of a schema.
+
+    Parameters
+    ----------
+    old_matview_name : str
+        old materialized view name
+    new_matview_name : str
+        new materialized view name
+    conn : sqlalchemy.engine.base.Engine
+        an sqlalchemy connection engine created by function `create_engine()`
+    schema : str or None
+        a valid schema name returned from `list_schemas()`
+    nb_trials: int
+        number of query trials
+    logger: logging.Logger or None
+        logger for debugging
+    '''
+    frame_sql_str = frame_sql(old_matview_name, schema=schema)
+    exec_sql('ALTER MATERIALIZED VIEW {} RENAME TO "{}";'.format(frame_sql_str, new_matview_name), conn, nb_trials=nb_trials, logger=logger)
 
 
 def frame_exists(frame_name, conn, schema=None, nb_trials=3, logger=None):
