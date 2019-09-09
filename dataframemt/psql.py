@@ -184,7 +184,7 @@ def read_sql_table(table_name, conn, nb_trials=3, logger=None, **kwargs):
     return run_func(_pd.read_sql_table, table_name, conn, nb_trials=nb_trials, logger=logger, **kwargs)
 
 
-def to_sql(df, conn, name, nb_trials=3, logger=None, **kwargs):
+def to_sql(df, name, conn, nb_trials=3, logger=None, **kwargs):
     """Writes records stored in a DataFrame to an SQL database, with a number of trials to overcome OperationalError.
 
     Parameters
