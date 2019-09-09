@@ -31,7 +31,7 @@ def list_views(db_name, conn):
     return df['viewname'].tolist()
 
 
-def rename_table(old_table_name, new_table_name, conn, schema_name=None):
+def rename_table(old_table_name, new_table_name, conn, schema=None):
     '''Renames a table of a schema.
 
     Parameters
@@ -42,28 +42,28 @@ def rename_table(old_table_name, new_table_name, conn, schema_name=None):
             new table name
         conn : sqlalchemy.engine.base.Engine
             an sqlalchemy connection engine created by function `create_engine()`
-        schema_name : str or None
+        schema : str or None
             schema name
     '''
-    if schema_name is None:
+    if schema is None:
         query_str = 'ALTER TABLE "{}" RENAME TO "{}";'.format(old_table_name, new_table_name)
     else:
-        query_str = 'ALTER TABLE "{}"."{}" RENAME TO "{}";'.format(schema_name, old_table_name, new_table_name)
+        query_str = 'ALTER TABLE "{}"."{}" RENAME TO "{}";'.format(schema, old_table_name, new_table_name)
     conn.execute(query_str)
 
 
-def list_columns_ext(table_name, conn, schema_name=None):
+def list_columns_ext(table_name, conn, schema=None):
     '''Lists all columns of a given table of a given schema.
 
     Parameters
     ----------
-        schema_name : str
+        schema : str
             a valid schema name returned from `list_schemas()`
         table_name : str
             a valid table name returned from `list_tables()`
         conn : sqlalchemy.engine.base.Engine
             an sqlalchemy connection engine created by function `create_engine()`
-        schema_name : str or None
+        schema : str or None
             schema name
 
     Returns
@@ -71,14 +71,14 @@ def list_columns_ext(table_name, conn, schema_name=None):
         out : pandas.DataFrame
             a table of details of the columns
     '''
-    if schema_name is None:
+    if schema is None:
         query_str = "select * from information_schema.columns where table_name='{}';".format(table_name)
     else:
-        query_str = "select * from information_schema.columns where table_schema='{}' and table_name='{}';".format(schema_name, table_name)
+        query_str = "select * from information_schema.columns where table_schema='{}' and table_name='{}';".format(schema, table_name)
     return _pd.read_sql_query(query_str, conn)
 
 
-def list_columns(table_name, conn, schema_name=None):
+def list_columns(table_name, conn, schema=None):
     '''Lists all columns of a given table of a given schema.
 
     Parameters
@@ -87,17 +87,17 @@ def list_columns(table_name, conn, schema_name=None):
             a valid table name returned from `list_tables()`
         conn : sqlalchemy.engine.base.Engine
             an sqlalchemy connection engine created by function `create_engine()`
-        schema_name : str or None
+        schema : str or None
             schema name
 
     Returns
     -------
         out : list of all column names
     '''
-    return list_columns_ext(table_name, conn, schema_name=schema_name)['column_name'].tolist()
+    return list_columns_ext(table_name, conn, schema=schema)['column_name'].tolist()
 
 
-def rename_column(table_name, old_column_name, new_column_name, conn, schema_name=None):
+def rename_column(table_name, old_column_name, new_column_name, conn, schema=None):
     '''Renames a column of a table.
 
     Parameters
@@ -110,18 +110,18 @@ def rename_column(table_name, old_column_name, new_column_name, conn, schema_nam
             new column name
         conn : sqlalchemy.engine.base.Engine
             an sqlalchemy connection engine created by function `create_engine()`
-        schema_name : str or None
+        schema : str or None
             schema name
     '''
     old_column_name = old_column_name.replace('%', '%%')
-    if schema_name is None:
+    if schema is None:
         query_str = 'ALTER TABLE "{}" RENAME COLUMN "{}" TO "{}";'.format(table_name, old_column_name, new_column_name)
     else:
-        query_str = 'ALTER TABLE "{}"."{}" RENAME COLUMN "{}" TO "{}";'.format(schema_name, table_name, old_column_name, new_column_name)
+        query_str = 'ALTER TABLE "{}"."{}" RENAME COLUMN "{}" TO "{}";'.format(schema, table_name, old_column_name, new_column_name)
     conn.execute(query_str)
 
 
-def drop_column(table_name, column_name, conn, schema_name=None):
+def drop_column(table_name, column_name, conn, schema=None):
     '''Drops a column of a table.
 
     Parameters
@@ -132,12 +132,12 @@ def drop_column(table_name, column_name, conn, schema_name=None):
             column name
         conn : sqlalchemy.engine.base.Engine
             an sqlalchemy connection engine created by function `create_engine()`
-        schema_name : str or None
+        schema : str or None
             schema name
     '''
     column_name = column_name.replace('%', '%%')
-    if schema_name is None:
+    if schema is None:
         query_str = 'ALTER TABLE "{}" DROP COLUMN "{}";'.format(table_name, column_name)
     else:
-        query_str = 'ALTER TABLE "{}"."{}" DROP COLUMN "{}";'.format(schema_name, table_name, column_name)
+        query_str = 'ALTER TABLE "{}"."{}" DROP COLUMN "{}";'.format(schema, table_name, column_name)
     conn.execute(query_str)

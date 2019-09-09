@@ -17,14 +17,14 @@ from dataframemt.sql import *
 # ----- debugging functions -----
 
 
-def pg_get_locked_transactions(conn, schema_name=None):
+def pg_get_locked_transactions(conn, schema=None):
     '''Obtains a dataframe representing transactions which have been locked by the server.
 
     Parameters
     ----------
     conn : sqlalchemy.engine.base.Engine
         connection engine
-    schema_name : str or None
+    schema : str or None
         If None, then all schemas are considered and not just the public schema. Else, scope down to a single schema.
 
     Returns
@@ -32,7 +32,7 @@ def pg_get_locked_transactions(conn, schema_name=None):
     pd.DataFrame
         A table containing the current backend transactions
     '''
-    if schema_name is None:
+    if schema is None:
         query_str = """
             SELECT
                 t1.*, t2.relname, t3.nspname
@@ -50,7 +50,7 @@ def pg_get_locked_transactions(conn, schema_name=None):
                 INNER JOIN pg_namespace t3 ON t2.relnamespace=t3.oid
               WHERE NOT t2.relname ILIKE 'pg_%%'
                 AND t3.nspname = '{}'
-            ;""".format(schema_name)
+            ;""".format(schema)
     return _pd.read_sql(query_str, conn)
 
 def pg_cancel_backend(conn, pid):
@@ -67,19 +67,19 @@ def pg_cancel_backend(conn, pid):
     return _pd.read_sql(query_str, conn)
 
 
-def pg_cancel_all_backends(conn, schema_name=None, logger=None):
+def pg_cancel_all_backends(conn, schema=None, logger=None):
     '''Cancels all backend transactions.
 
     Parameters
     ----------
     conn : sqlalchemy.engine.base.Engine
         connection engine
-    schema_name : str or None
+    schema : str or None
         If None, then all schemas are considered and not just the public schema. Else, scope down to a single schema.
     logger: logging.Logger or None
         logger for debugging
     '''
-    df = pg_get_locked_transactions(conn, schema_name=schema_name)
+    df = pg_get_locked_transactions(conn, schema=schema)
     pids = df['pid'].drop_duplicates().tolist()
     for pid in pids:
         if logger:
@@ -217,14 +217,14 @@ def exec_sql(sql, conn, *args, nb_trials=3, logger=None, **kwargs):
 # ----- simple functions -----
 
 
-def rename_schema(old_schema_name, new_schema_name, conn, nb_trials=3, logger=None):
+def rename_schema(old_schema, new_schema, conn, nb_trials=3, logger=None):
     '''Renames a schema.
 
     Parameters
     ----------
-    old_schema_name : str
+    old_schema : str
         old schema name
-    new_schema_name : str
+    new_schema : str
         new schema name
     conn : sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
@@ -233,17 +233,17 @@ def rename_schema(old_schema_name, new_schema_name, conn, nb_trials=3, logger=No
     logger: logging.Logger or None
         logger for debugging
     '''
-    exec_sql('ALTER SCHEMA "{}" RENAME TO "{}";'.format(old_schema_name, new_schema_name), conn, nb_trials=nb_trials, logger=logger)
+    exec_sql('ALTER SCHEMA "{}" RENAME TO "{}";'.format(old_schema, new_schema), conn, nb_trials=nb_trials, logger=logger)
 
 
-def list_views(conn, schema_name=None, nb_trials=3, logger=None):
+def list_views(conn, schema=None, nb_trials=3, logger=None):
     '''Lists all views of a given schema.
 
     Parameters
     ----------
     conn : sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema_name : str or None
+    schema : str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -255,22 +255,22 @@ def list_views(conn, schema_name=None, nb_trials=3, logger=None):
     out : list
         list of all view names
     '''
-    if schema_name is None:
+    if schema is None:
         query_str = "select distinct viewname from pg_views;"
     else:
-        query_str = "select distinct viewname from pg_views where schemaname='{}';".format(schema_name)
+        query_str = "select distinct viewname from pg_views where schemaname='{}';".format(schema)
     df = read_sql_query(query_str, conn, nb_trials=nb_trials, logger=logger)
     return df['viewname'].tolist()
 
 
-def list_matviews(conn, schema_name=None, nb_trials=3, logger=None):
+def list_matviews(conn, schema=None, nb_trials=3, logger=None):
     '''Lists all materialized views of a given schema.
 
     Parameters
     ----------
     conn : sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema_name : str or None
+    schema : str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -282,21 +282,21 @@ def list_matviews(conn, schema_name=None, nb_trials=3, logger=None):
     out : list
         list of all materialized view names
     '''
-    if schema_name is None:
-        schema_name = 'public'
-    query_str = "select distinct matviewname from pg_matviews where schemaname='{}';".format(schema_name)
+    if schema is None:
+        schema = 'public'
+    query_str = "select distinct matviewname from pg_matviews where schemaname='{}';".format(schema)
     df = read_sql_query(query_str, conn, nb_trials=nb_trials, logger=logger)
     return df['matviewname'].tolist()
 
 
-def list_frames(conn, schema_name=None, nb_trials=3, logger=None):
+def list_frames(conn, schema=None, nb_trials=3, logger=None):
     '''Lists all dataframes (tables/views/materialized views) of a given schema.
 
     Parameters
     ----------
     conn : sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema_name : str or None
+    schema : str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -309,16 +309,16 @@ def list_frames(conn, schema_name=None, nb_trials=3, logger=None):
         list of all dataframes of types {'table', 'view', 'matview'}
     '''
     data = []
-    for item in list_tables(conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger):
+    for item in list_tables(conn, schema=schema, nb_trials=nb_trials, logger=logger):
         data.append((item, 'table'))
-    for item in list_views(conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger):
+    for item in list_views(conn, schema=schema, nb_trials=nb_trials, logger=logger):
         data.append((item, 'view'))
-    for item in list_matviews(conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger):
+    for item in list_matviews(conn, schema=schema, nb_trials=nb_trials, logger=logger):
         data.append((item, 'matview'))
     return _pd.DataFrame(data=data, columns=['name', 'type'])
 
 
-def list_all_frames(conn, schema_name=None, nb_trials=3, logger=None):
+def list_all_frames(conn, schema=None, nb_trials=3, logger=None):
     '''Lists all dataframes (tables/views/materialized views) across all schemas.
 
     Parameters
@@ -332,19 +332,19 @@ def list_all_frames(conn, schema_name=None, nb_trials=3, logger=None):
 
     Returns
     -------
-    out : pd.DataFrame(columns=['name', 'schema_name', 'type'])
+    out : pd.DataFrame(columns=['name', 'schema', 'type'])
         list of all dataframes of types {'table', 'view', 'matview'}
     '''
     dfs = []
-    for schema_name in list_schemas(conn, nb_trials=nb_trials, logger=logger):
-        df = list_frames(conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger)
+    for schema in list_schemas(conn, nb_trials=nb_trials, logger=logger):
+        df = list_frames(conn, schema=schema, nb_trials=nb_trials, logger=logger)
         if len(df) > 0:
-            df['schema_name'] = schema_name
+            df['schema'] = schema
             dfs.append(df)
     return _pd.concat(dfs, sort=False).reset_index(drop=True)
 
 
-def get_frame_length(frame_name, conn, schema_name=None, nb_trials=3, logger=None):
+def get_frame_length(frame_name, conn, schema=None, nb_trials=3, logger=None):
     '''Gets the number of rows of a dataframes (tables/views/materialized views).
 
     Parameters
@@ -367,11 +367,11 @@ def get_frame_length(frame_name, conn, schema_name=None, nb_trials=3, logger=Non
     -----
     The dataframe must exist.
     '''
-    frame_sql_str = frame_sql(frame_name, schema_name=schema_name)
+    frame_sql_str = frame_sql(frame_name, schema=schema)
     return read_sql_query("SELECT COUNT(*) a FROM {};".format(frame_sql_str), conn, nb_trials=nb_trials, logger=logger)['a'][0]
 
 
-def get_view_sql_code(view_name, conn, schema_name=None, nb_trials=3, logger=None):
+def get_view_sql_code(view_name, conn, schema=None, nb_trials=3, logger=None):
     '''Gets the SQL string of a view.
 
     Parameters
@@ -380,7 +380,7 @@ def get_view_sql_code(view_name, conn, schema_name=None, nb_trials=3, logger=Non
         view name
     conn : sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema_name : str or None
+    schema : str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -392,16 +392,16 @@ def get_view_sql_code(view_name, conn, schema_name=None, nb_trials=3, logger=Non
     retval : str
         SQL query string defining the view
     '''
-    return read_sql_query("SELECT pg_get_viewdef('{}', true) a".format(frame_sql(view_name, schema_name=schema_name)),
+    return read_sql_query("SELECT pg_get_viewdef('{}', true) a".format(frame_sql(view_name, schema=schema)),
         conn, nb_trials=nb_trials, logger=logger)['a'][0]
 
 
-def rename_table(schema_name, old_table_name, new_table_name, conn, nb_trials=3, logger=None):
+def rename_table(schema, old_table_name, new_table_name, conn, nb_trials=3, logger=None):
     '''Renames a table of a schema.
 
     Parameters
     ----------
-    schema_name : str
+    schema : str
         schema name
     old_table_name : str
         old table name
@@ -414,15 +414,15 @@ def rename_table(schema_name, old_table_name, new_table_name, conn, nb_trials=3,
     logger: logging.Logger or None
         logger for debugging
     '''
-    exec_sql('ALTER TABLE "{}"."{}" RENAME TO "{}";'.format(schema_name, old_table_name, new_table_name), conn, nb_trials=nb_trials, logger=logger)
+    exec_sql('ALTER TABLE "{}"."{}" RENAME TO "{}";'.format(schema, old_table_name, new_table_name), conn, nb_trials=nb_trials, logger=logger)
 
 
-def rename_view(schema_name, old_view_name, new_view_name, conn, nb_trials=3, logger=None):
+def rename_view(schema, old_view_name, new_view_name, conn, nb_trials=3, logger=None):
     '''Renames a view of a schema.
 
     Parameters
     ----------
-    schema_name : str
+    schema : str
         schema name
     old_view_name : str
         old view name
@@ -435,10 +435,10 @@ def rename_view(schema_name, old_view_name, new_view_name, conn, nb_trials=3, lo
     logger: logging.Logger or None
         logger for debugging
     '''
-    exec_sql('ALTER VIEW "{}"."{}" RENAME TO "{}";'.format(schema_name, old_view_name, new_view_name), conn, nb_trials=nb_trials, logger=logger)
+    exec_sql('ALTER VIEW "{}"."{}" RENAME TO "{}";'.format(schema, old_view_name, new_view_name), conn, nb_trials=nb_trials, logger=logger)
 
 
-def frame_exists(frame_name, conn, schema_name=None, nb_trials=3, logger=None):
+def frame_exists(frame_name, conn, schema=None, nb_trials=3, logger=None):
     '''Checks if a frame exists.
 
     Parameters
@@ -447,7 +447,7 @@ def frame_exists(frame_name, conn, schema_name=None, nb_trials=3, logger=None):
         name of table or view
     conn : sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema_name : str or None
+    schema : str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -459,14 +459,14 @@ def frame_exists(frame_name, conn, schema_name=None, nb_trials=3, logger=None):
     retval : bool
         whether a table or a view exists with the given name
     '''
-    if frame_name in list_tables(conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger):
+    if frame_name in list_tables(conn, schema=schema, nb_trials=nb_trials, logger=logger):
         return True
-    if frame_name in list_views(conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger):
+    if frame_name in list_views(conn, schema=schema, nb_trials=nb_trials, logger=logger):
         return True
-    return frame_name in list_matviews(conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger)
+    return frame_name in list_matviews(conn, schema=schema, nb_trials=nb_trials, logger=logger)
 
 
-def list_columns_ext(table_name, conn, schema_name=None, nb_trials=3, logger=None):
+def list_columns_ext(table_name, conn, schema=None, nb_trials=3, logger=None):
     '''Lists all columns of a given table of a given schema.
 
     Parameters
@@ -475,7 +475,7 @@ def list_columns_ext(table_name, conn, schema_name=None, nb_trials=3, logger=Non
         a valid table name returned from `list_tables()`
     conn : sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema_name : str or None
+    schema : str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -487,22 +487,22 @@ def list_columns_ext(table_name, conn, schema_name=None, nb_trials=3, logger=Non
     out : pandas.DataFrame
         a table of details of the columns
     '''
-    if not frame_exists(table_name, conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger):
-        if schema_name is None:
+    if not frame_exists(table_name, conn, schema=schema, nb_trials=nb_trials, logger=logger):
+        if schema is None:
             s = "Table or view with name '{}' does not exists.".format(table_name)
         else:
-            s = "Table or view with name '{}' from schema '{}' does not exists.".format(table_name, schema_name)
+            s = "Table or view with name '{}' from schema '{}' does not exists.".format(table_name, schema)
         raise _ps.ProgrammingError(s)
 
-    if schema_name is None:
+    if schema is None:
         query_str = "select * from information_schema.columns where table_name='{}';".format(table_name)
     else:
-        query_str = "select * from information_schema.columns where table_schema='{}' and table_name='{}';".format(schema_name, table_name)
+        query_str = "select * from information_schema.columns where table_schema='{}' and table_name='{}';".format(schema, table_name)
 
     return read_sql_query(query_str, conn, nb_trials=nb_trials, logger=logger)
 
 
-def list_columns(table_name, conn, schema_name=None, nb_trials=3, logger=None):
+def list_columns(table_name, conn, schema=None, nb_trials=3, logger=None):
     '''Lists all columns of a given table of a given schema.
 
     Parameters
@@ -511,7 +511,7 @@ def list_columns(table_name, conn, schema_name=None, nb_trials=3, logger=None):
         a valid table name returned from `list_tables()`
     conn : sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema_name : str or None
+    schema : str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -522,10 +522,10 @@ def list_columns(table_name, conn, schema_name=None, nb_trials=3, logger=None):
     -------
     out : list of all column names
     '''
-    return list_columns_ext(table_name, conn, schema_name=schema_name, nb_trials=nb_trials, logger=logger)['column_name'].tolist()
+    return list_columns_ext(table_name, conn, schema=schema, nb_trials=nb_trials, logger=logger)['column_name'].tolist()
 
 
-def rename_column(table_name, old_column_name, new_column_name, conn, schema_name=None, nb_trials=3, logger=None):
+def rename_column(table_name, old_column_name, new_column_name, conn, schema=None, nb_trials=3, logger=None):
     '''Renames a column of a table.
 
     Parameters
@@ -538,7 +538,7 @@ def rename_column(table_name, old_column_name, new_column_name, conn, schema_nam
         new column name
     conn : sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema_name : str or None
+    schema : str or None
         schema name
     nb_trials: int
         number of query trials
@@ -546,14 +546,14 @@ def rename_column(table_name, old_column_name, new_column_name, conn, schema_nam
         logger for debugging
     '''
     old_column_name = old_column_name.replace('%', '%%')
-    if schema_name is None:
+    if schema is None:
         query_str = 'ALTER TABLE "{}" RENAME COLUMN "{}" TO "{}";'.format(table_name, old_column_name, new_column_name)
     else:
-        query_str = 'ALTER TABLE "{}"."{}" RENAME COLUMN "{}" TO "{}";'.format(schema_name, table_name, old_column_name, new_column_name)
+        query_str = 'ALTER TABLE "{}"."{}" RENAME COLUMN "{}" TO "{}";'.format(schema, table_name, old_column_name, new_column_name)
     exec_sql(query_str, conn, nb_trials=nb_trials, logger=logger)
 
 
-def drop_column(table_name, column_name, conn, schema_name=None, nb_trials=3, logger=None):
+def drop_column(table_name, column_name, conn, schema=None, nb_trials=3, logger=None):
     '''Drops a column of a table.
 
     Parameters
@@ -564,7 +564,7 @@ def drop_column(table_name, column_name, conn, schema_name=None, nb_trials=3, lo
         column name
     conn : sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema_name : str or None
+    schema : str or None
         schema name
     nb_trials: int
         number of query trials
@@ -572,17 +572,17 @@ def drop_column(table_name, column_name, conn, schema_name=None, nb_trials=3, lo
         logger for debugging
     '''
     column_name = column_name.replace('%', '%%')
-    if schema_name is None:
+    if schema is None:
         query_str = 'ALTER TABLE "{}" DROP COLUMN "{}";'.format(table_name, column_name)
     else:
-        query_str = 'ALTER TABLE "{}"."{}" DROP COLUMN "{}";'.format(schema_name, table_name, column_name)
+        query_str = 'ALTER TABLE "{}"."{}" DROP COLUMN "{}";'.format(schema, table_name, column_name)
     exec_sql(query_str, conn, nb_trials=nb_trials, logger=logger)
 
 
 # ----- functions to synchronise between a local table and a remote table -----
 
 
-def comparesync_table(cnx, csv_filepath, table_name, id_name, set_index_after=False, columns=['*'], schema_name=None, cond=None, reading_mode=True, nb_trials=3, logger=None):
+def comparesync_table(cnx, csv_filepath, table_name, id_name, set_index_after=False, columns=['*'], schema=None, cond=None, reading_mode=True, nb_trials=3, logger=None):
     '''Compares a local CSV table with a remote PostgreSQL to find out which rows are the same or different.
 
     Parameters
@@ -599,7 +599,7 @@ def comparesync_table(cnx, csv_filepath, table_name, id_name, set_index_after=Fa
         whether to set index specified by index_col via the pandas.read_sql() function or after the function has been invoked
     columns : list
         list of column names the function will read from, ignoring the remaining columns
-    schema_name : str
+    schema : str
         schema name, None means using the default one
     cond : str
         additional condition in selecting rows from the PostgreSQL table
@@ -630,7 +630,7 @@ def comparesync_table(cnx, csv_filepath, table_name, id_name, set_index_after=Fa
     The 'hash' column of each table will be used to store and compare the hash values. If it does not exist, it will be generated automatically.
     The id_name field must uniquely identify each record in both tables. Duplicated keys in either table will be treated as diff_keys, so that hopefully next sync will fix them.
     '''
-    frame_sql_str = frame_sql(table_name, schema_name=schema_name)
+    frame_sql_str = frame_sql(table_name, schema=schema)
 
     with logger.scoped_debug("Comparing table: local '{}' <-> remote '{}'".format(csv_filepath, frame_sql_str), curly=False) if logger else dummy_scope:
         # make sure the folder containing the CSV file exists
@@ -670,7 +670,7 @@ def comparesync_table(cnx, csv_filepath, table_name, id_name, set_index_after=Fa
             else:
                 text = 'textin(record_out(('+column_list+')))'
 
-            if 'hash' in list_columns(table_name, cnx, schema_name=schema_name, nb_trials=nb_trials, logger=logger):
+            if 'hash' in list_columns(table_name, cnx, schema=schema, nb_trials=nb_trials, logger=logger):
                 query_str = "select {}, hash from {}".format(id_name, frame_sql_str)
             else:
                 query_str = "select {}, md5({}) as hash from {}".format(id_name, text, frame_sql_str)
@@ -708,7 +708,7 @@ def comparesync_table(cnx, csv_filepath, table_name, id_name, set_index_after=Fa
         return local_df, remote_md5_df, same_keys, diff_keys, local_only_keys, remote_only_keys
 
 
-def writesync_table(cnx, csv_filepath, table_name, id_name, schema_name=None, max_records_per_query=None, nb_trials=3, logger=None):
+def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_records_per_query=None, nb_trials=3, logger=None):
     '''Writes and updates a remote PostgreSQL table from a local CSV table by updating only rows which have been changed.
 
     Parameters
@@ -721,7 +721,7 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema_name=None, ma
         table name
     id_name : str
         index column name. Assumption is only one column for indexing for now.
-    schema_name : str
+    schema : str
         schema name, None means using the default one
     bg_write_csv : bool
         whether to write the updated CSV file in a background thread
@@ -742,9 +742,9 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema_name=None, ma
     The id_name column is written as the primary key of the remote table.
     See the comparesync_table() function for additional assumptions.
     '''
-    frame_sql_str = frame_sql(table_name, schema_name=schema_name)
+    frame_sql_str = frame_sql(table_name, schema=schema)
     with logger.scoped_debug("Writing table: local '{}' -> remote '{}'".format(csv_filepath, frame_sql_str), curly=False) if logger else dummy_scope:
-        local_df, remote_md5_df, same_keys, diff_keys, local_only_keys, remote_only_keys = comparesync_table(cnx, csv_filepath, table_name, id_name, columns=['*'], schema_name=schema_name, cond=None, reading_mode=False, nb_trials=nb_trials, logger=None)
+        local_df, remote_md5_df, same_keys, diff_keys, local_only_keys, remote_only_keys = comparesync_table(cnx, csv_filepath, table_name, id_name, columns=['*'], schema=schema, cond=None, reading_mode=False, nb_trials=nb_trials, logger=None)
 
         if len(diff_keys) == 0 and len(local_only_keys) == 0 and len(remote_only_keys) == 0: # nothing changed, really!
             if logger:
@@ -762,7 +762,7 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema_name=None, ma
             return local_df
 
         if len(local_df) < 128: # a small dataset
-            to_sql(local_df, cnx, table_name, schema=schema_name, if_exists='replace', index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
+            to_sql(local_df, cnx, table_name, schema=schema, if_exists='replace', index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
             return local_df
 
         if len(same_keys) == 0: # no record in the remote table
@@ -784,7 +784,7 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema_name=None, ma
                     logger.debug("Inserting {} records, {} remaining...".format(len(df2), len(df)))
 
                 start_time = _pd.Timestamp.utcnow()
-                to_sql(df2, cnx, table_name, schema=schema_name, if_exists='append', index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
+                to_sql(df2, cnx, table_name, schema=schema, if_exists='append', index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
                 elapsed_time = (_pd.Timestamp.utcnow() - start_time).total_seconds() # elapsed time is in seconds
 
                 if max_records_per_query is None:
@@ -795,7 +795,7 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema_name=None, ma
 
             if logger:
                 logger.debug("Inserting {} records.".format(len(df)))
-            to_sql(df, cnx, table_name, schema=schema_name, if_exists='append', index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
+            to_sql(df, cnx, table_name, schema=schema, if_exists='append', index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
 
         # remove redundant remote records
         id_list = diff_keys + remote_only_keys
@@ -815,7 +815,7 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema_name=None, ma
                     logger.debug("Modifying {} records, {} remaining...".format(len(df2), len(df)))
 
                 start_time = _pd.Timestamp.utcnow()
-                to_sql(df2, cnx, table_name, schema=schema_name, if_exists='append', index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
+                to_sql(df2, cnx, table_name, schema=schema, if_exists='append', index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
                 elapsed_time = (_pd.Timestamp.utcnow() - start_time).total_seconds() # elapsed time is in seconds
 
                 if max_records_per_query is None:
@@ -825,12 +825,12 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema_name=None, ma
                         record_cap *= 2
             if logger:
                 logger.debug("Modifying {} records.".format(len(df)))
-            to_sql(df, cnx, table_name, schema=schema_name, if_exists='append', index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
+            to_sql(df, cnx, table_name, schema=schema, if_exists='append', index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
 
     return local_df
 
 
-def readsync_table(cnx, csv_filepath, table_name, id_name, set_index_after=False, columns=['*'], schema_name=None, cond=None, bg_write_csv=False, max_records_per_query=10240, nb_trials=3, logger=None):
+def readsync_table(cnx, csv_filepath, table_name, id_name, set_index_after=False, columns=['*'], schema=None, cond=None, bg_write_csv=False, max_records_per_query=10240, nb_trials=3, logger=None):
     '''Reads and updates a local CSV table from a PostgreSQL table by updating only rows which have been changed.
 
     Parameters
@@ -847,7 +847,7 @@ def readsync_table(cnx, csv_filepath, table_name, id_name, set_index_after=False
         whether to set index specified by index_col via the pandas.read_sql() function or after the function has been invoked
     columns : list
         list of column names the function will read from, ignoring the remaining columns
-    schema_name : str
+    schema : str
         schema name, None means using the default one
     cond : str
         additional condition in selecting rows from the PostgreSQL table
@@ -871,9 +871,9 @@ def readsync_table(cnx, csv_filepath, table_name, id_name, set_index_after=False
     ----
     See the comparesync_table() function for additional assumptions.
     '''
-    frame_sql_str = frame_sql(table_name, schema_name=schema_name)
+    frame_sql_str = frame_sql(table_name, schema=schema)
     with logger.scoped_debug("Reading table: local '{}' <- remote '{}'".format(csv_filepath, frame_sql_str), curly=False) if logger else dummy_scope:
-        local_df, remote_md5_df, same_keys, diff_keys, local_only_keys, remote_only_keys = comparesync_table(cnx, csv_filepath, table_name, id_name, columns=columns, schema_name=schema_name, cond=cond, nb_trials=nb_trials, logger=None)
+        local_df, remote_md5_df, same_keys, diff_keys, local_only_keys, remote_only_keys = comparesync_table(cnx, csv_filepath, table_name, id_name, columns=columns, schema=schema, cond=cond, nb_trials=nb_trials, logger=None)
 
         if len(diff_keys) == 0 and len(local_only_keys) == 0 and len(remote_only_keys) == 0: # nothing changed, really!
             if logger:

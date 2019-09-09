@@ -1,8 +1,8 @@
 import sqlalchemy as _sa
 import sqlalchemy.exc as _se
 
-def frame_sql(table_name, schema_name=None):
-    return table_name if schema_name is None else '{}.{}'.format(schema_name, table_name)
+def frame_sql(frame_name, schema=None):
+    return frame_name if schema is None else '{}.{}'.format(schema, frame_name)
 
 
 # ----- functions dealing with sql queries to overcome OperationalError -----
@@ -52,17 +52,17 @@ def list_schemas(conn, nb_trials=3, logger=None):
         out : list
             list of all schema names
     '''
-    return run_func(_sa.inspect, conn, nb_trials=nb_trials, logger=logger).get_schema_names()
+    return run_func(_sa.inspect, conn, nb_trials=nb_trials, logger=logger).get_schemas()
 
 
-def list_tables(conn, schema_name=None, nb_trials=3, logger=None):
+def list_tables(conn, schema=None, nb_trials=3, logger=None):
     '''Lists all tables of a given schema.
 
     Parameters
     ----------
         conn : sqlalchemy.engine.base.Engine
             an sqlalchemy connection engine created by function `create_engine()`
-        schema_name : str or None
+        schema : str or None
             a valid schema name returned from `list_schemas()`. Default to sqlalchemy
         nb_trials: int
             number of query trials
@@ -74,6 +74,6 @@ def list_tables(conn, schema_name=None, nb_trials=3, logger=None):
         out : list
             list of all table names
     '''
-    return run_func(conn.table_names, schema=schema_name, nb_trials=nb_trials, logger=logger)
+    return run_func(conn.table_names, schema=schema, nb_trials=nb_trials, logger=logger)
 
 
