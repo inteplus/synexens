@@ -367,8 +367,8 @@ def get_frame_length(frame_name, conn, schema_name=None, nb_trials=3, logger=Non
     -----
     The dataframe must exist.
     '''
-    table_sql_str = table_sql(frame_name, schema_name=schema_name)
-    return read_sql_query("SELECT COUNT(*) a FROM {};".format(table_sql_str), conn, nb_trials=nb_trials, logger=logger)['a'][0]
+    frame_sql_str = frame_sql(frame_name, schema_name=schema_name)
+    return read_sql_query("SELECT COUNT(*) a FROM {};".format(frame_sql_str), conn, nb_trials=nb_trials, logger=logger)['a'][0]
 
 
 def get_view_sql_code(view_name, conn, schema_name=None, nb_trials=3, logger=None):
@@ -392,7 +392,7 @@ def get_view_sql_code(view_name, conn, schema_name=None, nb_trials=3, logger=Non
     retval : str
         SQL query string defining the view
     '''
-    return read_sql_query("SELECT pg_get_viewdef('{}', true) a".format(table_sql(view_name, schema_name=schema_name)),
+    return read_sql_query("SELECT pg_get_viewdef('{}', true) a".format(frame_sql(view_name, schema_name=schema_name)),
         conn, nb_trials=nb_trials, logger=logger)['a'][0]
 
 
@@ -630,9 +630,9 @@ def comparesync_table(cnx, csv_filepath, table_name, id_name, set_index_after=Fa
     The 'hash' column of each table will be used to store and compare the hash values. If it does not exist, it will be generated automatically.
     The id_name field must uniquely identify each record in both tables. Duplicated keys in either table will be treated as diff_keys, so that hopefully next sync will fix them.
     '''
-    table_sql_str = table_sql(table_name, schema_name=schema_name)
+    frame_sql_str = frame_sql(table_name, schema_name=schema_name)
 
-    with logger.scoped_debug("Comparing table: local '{}' <-> remote '{}'".format(csv_filepath, table_sql_str), curly=False) if logger else dummy_scope:
+    with logger.scoped_debug("Comparing table: local '{}' <-> remote '{}'".format(csv_filepath, frame_sql_str), curly=False) if logger else dummy_scope:
         # make sure the folder containing the CSV file exists
         data_dir = _p.dirname(csv_filepath)
         _p.make_dirs(data_dir)
@@ -671,9 +671,9 @@ def comparesync_table(cnx, csv_filepath, table_name, id_name, set_index_after=Fa
                 text = 'textin(record_out(('+column_list+')))'
 
             if 'hash' in list_columns(table_name, cnx, schema_name=schema_name, nb_trials=nb_trials, logger=logger):
-                query_str = "select {}, hash from {}".format(id_name, table_sql_str)
+                query_str = "select {}, hash from {}".format(id_name, frame_sql_str)
             else:
-                query_str = "select {}, md5({}) as hash from {}".format(id_name, text, table_sql_str)
+                query_str = "select {}, md5({}) as hash from {}".format(id_name, text, frame_sql_str)
 
             if cond is not None:
                 query_str += " where " + cond
@@ -742,8 +742,8 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema_name=None, ma
     The id_name column is written as the primary key of the remote table.
     See the comparesync_table() function for additional assumptions.
     '''
-    table_sql_str = table_sql(table_name, schema_name=schema_name)
-    with logger.scoped_debug("Writing table: local '{}' -> remote '{}'".format(csv_filepath, table_sql_str), curly=False) if logger else dummy_scope:
+    frame_sql_str = frame_sql(table_name, schema_name=schema_name)
+    with logger.scoped_debug("Writing table: local '{}' -> remote '{}'".format(csv_filepath, frame_sql_str), curly=False) if logger else dummy_scope:
         local_df, remote_md5_df, same_keys, diff_keys, local_only_keys, remote_only_keys = comparesync_table(cnx, csv_filepath, table_name, id_name, columns=['*'], schema_name=schema_name, cond=None, reading_mode=False, nb_trials=nb_trials, logger=None)
 
         if len(diff_keys) == 0 and len(local_only_keys) == 0 and len(remote_only_keys) == 0: # nothing changed, really!
@@ -756,8 +756,8 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema_name=None, ma
 
         if local_df is None: # delete remote table if there is no local table
             if logger:
-                logger.debug("Deleting remote table {} if it exists because local table is empty...".format(table_sql_str))
-            query_str = "DROP TABLE IF EXISTS {};".format(table_sql_str)
+                logger.debug("Deleting remote table {} if it exists because local table is empty...".format(frame_sql_str))
+            query_str = "DROP TABLE IF EXISTS {};".format(frame_sql_str)
             exec_sql(query_str, cnx, nb_trials=nb_trials, logger=logger)
             return local_df
 
@@ -767,8 +767,8 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema_name=None, ma
 
         if len(same_keys) == 0: # no record in the remote table
             if logger:
-                logger.debug("Deleting table {} if it exists since there is no reusable remote record...".format(table_sql_str))
-            query_str = "DROP TABLE IF EXISTS {};".format(table_sql_str) # delete the remote table
+                logger.debug("Deleting table {} if it exists since there is no reusable remote record...".format(frame_sql_str))
+            query_str = "DROP TABLE IF EXISTS {};".format(frame_sql_str) # delete the remote table
             exec_sql(query_str, cnx, nb_trials=nb_trials, logger=logger)
 
         record_cap = 128 if max_records_per_query is None else max_records_per_query
@@ -801,7 +801,7 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema_name=None, ma
         id_list = diff_keys + remote_only_keys
         if len(id_list) > 0:
             id_list = ",".join(str(x) for x in id_list)
-            query_str = "IF EXISTS({}) DELETE FROM {} WHERE {} IN ({}) END IF;".format(table_sql_str, table_sql_str, id_name, id_list)
+            query_str = "IF EXISTS({}) DELETE FROM {} WHERE {} IN ({}) END IF;".format(frame_sql_str, frame_sql_str, id_name, id_list)
             exec_sql(query_str, cnx, nb_trials=nb_trials, logger=logger)
 
         # insert records that need modification
@@ -871,8 +871,8 @@ def readsync_table(cnx, csv_filepath, table_name, id_name, set_index_after=False
     ----
     See the comparesync_table() function for additional assumptions.
     '''
-    table_sql_str = table_sql(table_name, schema_name=schema_name)
-    with logger.scoped_debug("Reading table: local '{}' <- remote '{}'".format(csv_filepath, table_sql_str), curly=False) if logger else dummy_scope:
+    frame_sql_str = frame_sql(table_name, schema_name=schema_name)
+    with logger.scoped_debug("Reading table: local '{}' <- remote '{}'".format(csv_filepath, frame_sql_str), curly=False) if logger else dummy_scope:
         local_df, remote_md5_df, same_keys, diff_keys, local_only_keys, remote_only_keys = comparesync_table(cnx, csv_filepath, table_name, id_name, columns=columns, schema_name=schema_name, cond=cond, nb_trials=nb_trials, logger=None)
 
         if len(diff_keys) == 0 and len(local_only_keys) == 0 and len(remote_only_keys) == 0: # nothing changed, really!
@@ -903,7 +903,7 @@ def readsync_table(cnx, csv_filepath, table_name, id_name, set_index_after=False
                 if logger:
                     logger.debug("Fetching {} records with remaining {} records...".format(len(id_list2), len(id_list)))
                 query_str = "("+",".join((str(id) for id in id_list2))+")"
-                query_str = "select {} from {} where {} in {}".format(column_list, table_sql_str, id_name, query_str)
+                query_str = "select {} from {} where {} in {}".format(column_list, frame_sql_str, id_name, query_str)
                 if cond is not None:
                     query_str += " and " + cond
                 #if logger:

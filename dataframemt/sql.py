@@ -1,7 +1,7 @@
 import sqlalchemy as _sa
 import sqlalchemy.exc as _se
 
-def table_sql(table_name, schema_name=None):
+def frame_sql(table_name, schema_name=None):
     return table_name if schema_name is None else '{}.{}'.format(schema_name, table_name)
 
 
