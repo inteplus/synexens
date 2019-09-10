@@ -184,20 +184,53 @@ def read_sql_table(table_name, conn, nb_trials=3, logger=None, **kwargs):
     return run_func(_pd.read_sql_table, table_name, conn, nb_trials=nb_trials, logger=logger, **kwargs)
 
 
-def to_sql(df, name, conn, nb_trials=3, logger=None, **kwargs):
+def to_sql(df, name, conn, schema=None, if_exists='fail', nb_trials=3, logger=None, **kwargs):
     """Writes records stored in a DataFrame to an SQL database, with a number of trials to overcome OperationalError.
 
     Parameters
     ----------
+    df : pandas.DataFrame
+        dataframe to be sent to the server
+    conn : sqlalchemy.engine.Engine or sqlite3.Connection
+        the connection engine
+    schema : string, optional
+        Specify the schema. If None, use default schema.
+    if_exists : str
+        what to do when the table exists. Beside all options available from pandas.to_sql(), a new option called 'gently_replace' is introduced, in which it will avoid dropping the table by trying to delete all entries and then inserting new entries. But it will only do so if the remote table contains exactly all the columns that the local dataframe has, and vice-versa.
     nb_trials: int
         number of query trials
     logger: logging.Logger or None
         logger for debugging
 
+    Raises
+    ------
+    sqlalchemy.exc.ProgrammingError if the local and remote frames do not have the same structure
+
     pandas.DataFrame.to_sql:
 
     """ + _pd.DataFrame.to_sql.__doc__
-    return run_func(df.to_sql, name, conn, nb_trials=nb_trials, logger=logger, **kwargs)
+    if if_exists != 'gently_replace':
+        return run_func(df.to_sql, name, conn, schema=schema, if_exists=if_exists, nb_trials=nb_trials, logger=logger, **kwargs)
+
+    # 'gently replace' case: frame does not exist
+    if not frame_exists(name, conn, schema=schema, nb_trials=nb_trials, logger=logger):
+        run_func(df.to_sql, name, conn, schema=schema, if_exists='replace', nb_trials=nb_trials, logger=logger, **kwargs)
+
+    # 'gently replace' case: frame exists
+    frame_sql_str = frame_sql(name, schema=schema)
+    query_str = "SELECT * FROM {} LIMIT 1;".format(frame_sql_str)
+    df2 = read_sql_query(query_str, conn, index_col=None, nb_trials=nb_trials, logger=logger)
+    if df.index.names != df2.index.names:
+        raise _se.ProgrammingError("Local index names ({}) and remote index names ({}) do not match.".format(df.index.names, df2.index.names))
+
+    if len(df.columns) != len(df2.columns):
+        raise _se.ProgrammingError("Local number of columns ({}) differs from remote number of columns ({}).".format(len(df.columns), len(df2.columns)))
+
+    if (df.columns != df2.columns).any():
+        raise _se.ProgrammingError("Local columns ({}) differ from remote columns ({}).".format(df.columns, df2.columns))
+
+    exec_sql("DELETE FROM {};".format(frame_sql_str), conn, nb_trials=nb_trials, logger=logger)
+    return run_func(df.to_sql, name, conn, schema=schema, if_exists='append', nb_trials=nb_trials, logger=logger, **kwargs)
 
 
 def exec_sql(sql, conn, *args, nb_trials=3, logger=None, **kwargs):
