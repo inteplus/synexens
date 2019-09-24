@@ -221,13 +221,13 @@ def to_sql(df, name, conn, schema=None, if_exists='fail', nb_trials=3, logger=No
     query_str = "SELECT * FROM {} LIMIT 1;".format(frame_sql_str)
     df2 = read_sql_query(query_str, conn, index_col=None, nb_trials=nb_trials, logger=logger)
     if df.index.names != df2.index.names:
-        raise _se.ProgrammingError("Local index names ({}) and remote index names ({}) do not match.".format(df.index.names, df2.index.names))
+        raise _se.ProgrammingError(query_str, "dataframe index", "Local index names ({}) and remote index names ({}) do not match.".format(df.index.names, df2.index.names))
 
     if len(df.columns) != len(df2.columns):
-        raise _se.ProgrammingError("Local number of columns ({}) differs from remote number of columns ({}).".format(len(df.columns), len(df2.columns)))
+        raise _se.ProgrammingError(query_str, "dataframe index", "Local number of columns ({}) differs from remote number of columns ({}).".format(len(df.columns), len(df2.columns)))
 
     if (df.columns != df2.columns).any():
-        raise _se.ProgrammingError("Local columns ({}) differ from remote columns ({}).".format(df.columns, df2.columns))
+        raise _se.ProgrammingError(query_str, "dataframe index", "Local columns ({}) differ from remote columns ({}).".format(df.columns, df2.columns))
 
     exec_sql("DELETE FROM {};".format(frame_sql_str), conn, nb_trials=nb_trials, logger=logger)
     return run_func(df.to_sql, name, conn, schema=schema, if_exists='append', nb_trials=nb_trials, logger=logger, **kwargs)
