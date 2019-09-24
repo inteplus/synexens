@@ -582,6 +582,38 @@ def list_columns(table_name, conn, schema=None, nb_trials=3, logger=None):
     return list_columns_ext(table_name, conn, schema=schema, nb_trials=nb_trials, logger=logger)['column_name'].tolist()
 
 
+def list_primary_columns(frame_name, conn, schema=None, nb_trials=3, logger=None):
+    '''Lists all primary columns of a given frame of a given schema.
+
+    Parameters
+    ----------
+    frame_name : str
+        a valid table/view/matview name returned from `list_frames()`
+    conn : sqlalchemy.engine.base.Engine
+        an sqlalchemy connection engine created by function `create_engine()`
+    schema : str or None
+        a valid schema name returned from `list_schemas()`
+    nb_trials: int
+        number of query trials
+    logger: logging.Logger or None
+        logger for debugging
+
+    Returns
+    -------
+    pandas.DataFrame
+        dataframe containing primary column names and data types
+    '''
+    frame_sql_str = frame_sql(frame_name, schema=schema)
+    query_str = """
+        SELECT a.attname, format_type(a.atttypid, a.atttypmod) AS data_type
+        FROM   pg_index i
+        JOIN   pg_attribute a ON a.attrelid = i.indrelid
+                             AND a.attnum = ANY(i.indkey)
+        WHERE  i.indrelid = '{}'::regclass
+        AND    i.indisprimary;
+        """.format(frame_sql_str)
+    return read_sql_query(query_str, conn, nb_trials=nb_trials, logger=logger)
+
 def rename_column(table_name, old_column_name, new_column_name, conn, schema=None, nb_trials=3, logger=None):
     '''Renames a column of a table.
 
