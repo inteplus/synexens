@@ -143,7 +143,7 @@ def read_sql(sql, conn, index_col=None, set_index_after=False, nb_trials=3, logg
     return df.set_index(index_col, drop=True)
 
 
-def read_sql_query(sql, conn, index_col=None, nb_trials=3, logger=None, **kwargs):
+def read_sql_query(sql, conn, index_col=None, set_index_after=False, nb_trials=3, logger=None, **kwargs):
     """Read an SQL query with a number of trials to overcome OperationalError.
 
     Parameters
