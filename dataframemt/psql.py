@@ -184,6 +184,19 @@ def read_sql_table(table_name, conn, nb_trials=3, logger=None, **kwargs):
     return run_func(_pd.read_sql_table, table_name, conn, nb_trials=nb_trials, logger=logger, **kwargs)
 
 
+def indices(df):
+    '''Returns the list of named indices of the dataframe, ignoring any unnamed index.'''
+    a = list(df.index.names)
+    return a if a != [None] else []
+
+
+def compliance_check(df):
+    '''Checks if a dataframe is compliant to PSQL. It must has no index, or indices which do not match with any column. Raises ValueError when an error is encountered.'''
+    for x in indices(df):
+        if x in df.columns:
+            raise ValueError("Index '{}' appears as a non-primary column as well".format(x))
+
+
 def to_sql(df, name, conn, schema=None, if_exists='fail', nb_trials=3, logger=None, **kwargs):
     """Writes records stored in a DataFrame to an SQL database, with a number of trials to overcome OperationalError.
 
@@ -206,31 +219,53 @@ def to_sql(df, name, conn, schema=None, if_exists='fail', nb_trials=3, logger=No
     ------
     sqlalchemy.exc.ProgrammingError if the local and remote frames do not have the same structure
 
+    Notes
+    -----
+    The original pandas.DataFrame.to_sql() function does not turn any index into a primary key in PSQL. This function attempts to fix that problem. It takes as input a PSQL-compliant dataframe (see `compliance_check()`). It ignores any input `index` or `index_label` keyword. Instead, it considers 2 cases. If the dataframe's has an index or indices, then the tuple of all indices is turned into the primary key. If not, there is no primary key and no index is uploaded.
+
     pandas.DataFrame.to_sql:
 
     """ + _pd.DataFrame.to_sql.__doc__
-    if if_exists != 'gently_replace':
-        return run_func(df.to_sql, name, conn, schema=schema, if_exists=if_exists, nb_trials=nb_trials, logger=logger, **kwargs)
 
-    # 'gently replace' case: frame does not exist
-    if not frame_exists(name, conn, schema=schema, nb_trials=nb_trials, logger=logger):
-        run_func(df.to_sql, name, conn, schema=schema, if_exists='replace', nb_trials=nb_trials, logger=logger, **kwargs)
+    if kwargs:
+        if 'index' in kwargs:
+            raise ValueError("This function does not accept `index` as a keyword.")
+        if 'index_label' in kwargs:
+            raise ValueError("This function does not accept `index_label` as a keyword.")
 
-    # 'gently replace' case: frame exists
+    compliance_check(df)
     frame_sql_str = frame_sql(name, schema=schema)
-    query_str = "SELECT * FROM {} LIMIT 1;".format(frame_sql_str)
-    df2 = read_sql_query(query_str, conn, index_col=None, nb_trials=nb_trials, logger=logger)
-    if df.index.names != df2.index.names:
-        raise _se.ProgrammingError(query_str, "dataframe index", "Local index names ({}) and remote index names ({}) do not match.".format(df.index.names, df2.index.names))
+    
+    # if the remote frame does not exist, force `if_exists` to 'replace'
+    if not frame_exists(name, conn, schema=schema, nb_trials=nb_trials, logger=logger):
+        if_exists = 'replace'
+    local_indices = indices(df)
 
-    if len(df.columns) != len(df2.columns):
-        raise _se.ProgrammingError(query_str, "dataframe index", "Local number of columns ({}) differs from remote number of columns ({}).".format(len(df.columns), len(df2.columns)))
+    # not 'gently replace' case
+    if if_exists != 'gently_replace':
+        if not local_indices:
+            return run_func(df.to_sql, name, conn, schema=schema, if_exists=if_exists, index=False, index_label=None, nb_trials=nb_trials, logger=logger, **kwargs)
+        retval = run_func(df.to_sql, name, conn, schema=schema, if_exists=if_exists, index=True, index_label=None, nb_trials=nb_trials, logger=logger, **kwargs)
+        if if_exists == 'replace':
+            exec_sql("ALTER TABLE {} ADD PRIMARY KEY ({});".format(frame_sql_str, ','.join(local_indices)), conn, nb_trials=nb_trials, logger=logger)
+        return retval
 
-    if (df.columns != df2.columns).any():
-        raise _se.ProgrammingError(query_str, "dataframe index", "Local columns ({}) differ from remote columns ({}).".format(df.columns, df2.columns))
+    # the remaining section is the 'gently replace' case
+
+    # remote indices
+    remote_indices = list_primary_columns(name, conn, schema=schema, nb_trials=nb_trials, logger=logger)
+    if local_indices != remote_indices:
+        raise _se.ProgrammingError("SELECT * FROM {} LIMIT 1;".format(frame_sql_str), remote_indices, "Remote index '{}' differs from local index '{}'.".format(remote_indices, local_indices))
+
+    # remote columns
+    remote_columns = list_columns(name, conn, schema=schema, nb_trials=nb_trials, logger=logger)
+    remote_columns = [x for x in remote_columns if not x in remote_indices]
+    columns = list(df.columns)
+    if columns != remote_columns:
+        raise _se.ProgrammingError("SELECT * FROM {} LIMIT 1;".format(frame_sql_str), "matching non-primary fields", "Local columns '{}' differ from remote columns '{}'.".format(columns, remote_columns))
 
     exec_sql("DELETE FROM {};".format(frame_sql_str), conn, nb_trials=nb_trials, logger=logger)
-    return run_func(df.to_sql, name, conn, schema=schema, if_exists='append', nb_trials=nb_trials, logger=logger, **kwargs)
+    return run_func(df.to_sql, name, conn, schema=schema, if_exists='append', index=bool(local_indices), index_label=None, nb_trials=nb_trials, logger=logger, **kwargs)
 
 
 def exec_sql(sql, conn, *args, nb_trials=3, logger=None, **kwargs):
@@ -582,7 +617,7 @@ def list_columns(table_name, conn, schema=None, nb_trials=3, logger=None):
     return list_columns_ext(table_name, conn, schema=schema, nb_trials=nb_trials, logger=logger)['column_name'].tolist()
 
 
-def list_primary_columns(frame_name, conn, schema=None, nb_trials=3, logger=None):
+def list_primary_columns_ext(frame_name, conn, schema=None, nb_trials=3, logger=None):
     '''Lists all primary columns of a given frame of a given schema.
 
     Parameters
@@ -613,6 +648,31 @@ def list_primary_columns(frame_name, conn, schema=None, nb_trials=3, logger=None
         AND    i.indisprimary;
         """.format(frame_sql_str)
     return read_sql_query(query_str, conn, nb_trials=nb_trials, logger=logger)
+
+
+def list_primary_columns(frame_name, conn, schema=None, nb_trials=3, logger=None):
+    '''Lists all primary columns of a given frame of a given schema.
+
+    Parameters
+    ----------
+    frame_name : str
+        a valid table/view/matview name returned from `list_frames()`
+    conn : sqlalchemy.engine.base.Engine
+        an sqlalchemy connection engine created by function `create_engine()`
+    schema : str or None
+        a valid schema name returned from `list_schemas()`
+    nb_trials: int
+        number of query trials
+    logger: logging.Logger or None
+        logger for debugging
+
+    Returns
+    -------
+    list
+        list of primary column names
+    '''
+    return list_primary_columns_ext(frame_name, conn, schema=schema, nb_trials=nb_trials, logger=logger)['attname'].tolist()
+
 
 def rename_column(table_name, old_column_name, new_column_name, conn, schema=None, nb_trials=3, logger=None):
     '''Renames a column of a table.
