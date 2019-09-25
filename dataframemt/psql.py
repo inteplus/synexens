@@ -53,6 +53,7 @@ def pg_get_locked_transactions(conn, schema=None):
             ;""".format(schema)
     return _pd.read_sql(query_str, conn)
 
+
 def pg_cancel_backend(conn, pid):
     '''Cancels a backend transaction given its pid.
 
@@ -115,7 +116,8 @@ def run_func(func, *args, nb_trials=3, logger=None, **kwargs):
             if logger:
                 with logger.scoped_warn("Ignored an exception raised by failed attempt {}/{} to execute `{}.{}()`".format(x+1, nb_trials, func.__module__, func.__name__)):
                     logger.warn_last_exception()
-    raise RuntimeError("Attempted {} times to execute `{}.{}()` but failed.".format(nb_trials, func.__module__, func.__name__))
+    raise RuntimeError("Attempted {} times to execute `{}.{}()` but failed.".format(
+        nb_trials, func.__module__, func.__name__))
 
 
 def read_sql(sql, conn, index_col=None, set_index_after=False, nb_trials=3, logger=None, **kwargs):
@@ -139,7 +141,8 @@ def read_sql(sql, conn, index_col=None, set_index_after=False, nb_trials=3, logg
     """ + _pd.read_sql.__doc__
     if index_col is None or not set_index_after:
         return run_func(_pd.read_sql, sql, conn, index_col=index_col, nb_trials=nb_trials, logger=logger, **kwargs)
-    df = run_func(_pd.read_sql, sql, conn, nb_trials=nb_trials, logger=logger, **kwargs)
+    df = run_func(_pd.read_sql, sql, conn,
+                  nb_trials=nb_trials, logger=logger, **kwargs)
     return df.set_index(index_col, drop=True)
 
 
@@ -164,7 +167,8 @@ def read_sql_query(sql, conn, index_col=None, set_index_after=False, nb_trials=3
     """ + _pd.read_sql_query.__doc__
     if index_col is None or not set_index_after:
         return run_func(_pd.read_sql_query, sql, conn, index_col=index_col, nb_trials=nb_trials, logger=logger, **kwargs)
-    df = run_func(_pd.read_sql_query, sql, conn, nb_trials=nb_trials, logger=logger, **kwargs)
+    df = run_func(_pd.read_sql_query, sql, conn,
+                  nb_trials=nb_trials, logger=logger, **kwargs)
     return df.set_index(index_col, drop=True)
 
 
@@ -194,7 +198,8 @@ def compliance_check(df):
     '''Checks if a dataframe is compliant to PSQL. It must has no index, or indices which do not match with any column. Raises ValueError when an error is encountered.'''
     for x in indices(df):
         if x in df.columns:
-            raise ValueError("Index '{}' appears as a non-primary column as well".format(x))
+            raise ValueError(
+                "Index '{}' appears as a non-primary column as well".format(x))
 
 
 def to_sql(df, name, conn, schema=None, if_exists='fail', nb_trials=3, logger=None, **kwargs):
@@ -229,13 +234,15 @@ def to_sql(df, name, conn, schema=None, if_exists='fail', nb_trials=3, logger=No
 
     if kwargs:
         if 'index' in kwargs:
-            raise ValueError("This function does not accept `index` as a keyword.")
+            raise ValueError(
+                "This function does not accept `index` as a keyword.")
         if 'index_label' in kwargs:
-            raise ValueError("This function does not accept `index_label` as a keyword.")
+            raise ValueError(
+                "This function does not accept `index_label` as a keyword.")
 
     compliance_check(df)
     frame_sql_str = frame_sql(name, schema=schema)
-    
+
     # if the remote frame does not exist, force `if_exists` to 'replace'
     if not frame_exists(name, conn, schema=schema, nb_trials=nb_trials, logger=logger):
         if_exists = 'replace'
@@ -245,26 +252,33 @@ def to_sql(df, name, conn, schema=None, if_exists='fail', nb_trials=3, logger=No
     if if_exists != 'gently_replace':
         if not local_indices:
             return run_func(df.to_sql, name, conn, schema=schema, if_exists=if_exists, index=False, index_label=None, nb_trials=nb_trials, logger=logger, **kwargs)
-        retval = run_func(df.to_sql, name, conn, schema=schema, if_exists=if_exists, index=True, index_label=None, nb_trials=nb_trials, logger=logger, **kwargs)
+        retval = run_func(df.to_sql, name, conn, schema=schema, if_exists=if_exists,
+                          index=True, index_label=None, nb_trials=nb_trials, logger=logger, **kwargs)
         if if_exists == 'replace':
-            exec_sql("ALTER TABLE {} ADD PRIMARY KEY ({});".format(frame_sql_str, ','.join(local_indices)), conn, nb_trials=nb_trials, logger=logger)
+            exec_sql("ALTER TABLE {} ADD PRIMARY KEY ({});".format(frame_sql_str, ','.join(
+                local_indices)), conn, nb_trials=nb_trials, logger=logger)
         return retval
 
     # the remaining section is the 'gently replace' case
 
     # remote indices
-    remote_indices = list_primary_columns(name, conn, schema=schema, nb_trials=nb_trials, logger=logger)
+    remote_indices = list_primary_columns(
+        name, conn, schema=schema, nb_trials=nb_trials, logger=logger)
     if local_indices != remote_indices:
-        raise _se.ProgrammingError("SELECT * FROM {} LIMIT 1;".format(frame_sql_str), remote_indices, "Remote index '{}' differs from local index '{}'.".format(remote_indices, local_indices))
+        raise _se.ProgrammingError("SELECT * FROM {} LIMIT 1;".format(frame_sql_str), remote_indices,
+                                   "Remote index '{}' differs from local index '{}'.".format(remote_indices, local_indices))
 
     # remote columns
-    remote_columns = list_columns(name, conn, schema=schema, nb_trials=nb_trials, logger=logger)
+    remote_columns = list_columns(
+        name, conn, schema=schema, nb_trials=nb_trials, logger=logger)
     remote_columns = [x for x in remote_columns if not x in remote_indices]
     columns = list(df.columns)
     if columns != remote_columns:
-        raise _se.ProgrammingError("SELECT * FROM {} LIMIT 1;".format(frame_sql_str), "matching non-primary fields", "Local columns '{}' differ from remote columns '{}'.".format(columns, remote_columns))
+        raise _se.ProgrammingError("SELECT * FROM {} LIMIT 1;".format(frame_sql_str), "matching non-primary fields",
+                                   "Local columns '{}' differ from remote columns '{}'.".format(columns, remote_columns))
 
-    exec_sql("DELETE FROM {};".format(frame_sql_str), conn, nb_trials=nb_trials, logger=logger)
+    exec_sql("DELETE FROM {};".format(frame_sql_str),
+             conn, nb_trials=nb_trials, logger=logger)
     return run_func(df.to_sql, name, conn, schema=schema, if_exists='append', index=bool(local_indices), index_label=None, nb_trials=nb_trials, logger=logger, **kwargs)
 
 
@@ -301,7 +315,8 @@ def rename_schema(old_schema, new_schema, conn, nb_trials=3, logger=None):
     logger: logging.Logger or None
         logger for debugging
     '''
-    exec_sql('ALTER SCHEMA "{}" RENAME TO "{}";'.format(old_schema, new_schema), conn, nb_trials=nb_trials, logger=logger)
+    exec_sql('ALTER SCHEMA "{}" RENAME TO "{}";'.format(
+        old_schema, new_schema), conn, nb_trials=nb_trials, logger=logger)
 
 
 def list_views(conn, schema=None, nb_trials=3, logger=None):
@@ -326,7 +341,8 @@ def list_views(conn, schema=None, nb_trials=3, logger=None):
     if schema is None:
         query_str = "select distinct viewname from pg_views;"
     else:
-        query_str = "select distinct viewname from pg_views where schemaname='{}';".format(schema)
+        query_str = "select distinct viewname from pg_views where schemaname='{}';".format(
+            schema)
     df = read_sql_query(query_str, conn, nb_trials=nb_trials, logger=logger)
     return df['viewname'].tolist()
 
@@ -352,7 +368,8 @@ def list_matviews(conn, schema=None, nb_trials=3, logger=None):
     '''
     if schema is None:
         schema = 'public'
-    query_str = "select distinct matviewname from pg_matviews where schemaname='{}';".format(schema)
+    query_str = "select distinct matviewname from pg_matviews where schemaname='{}';".format(
+        schema)
     df = read_sql_query(query_str, conn, nb_trials=nb_trials, logger=logger)
     return df['matviewname'].tolist()
 
@@ -405,7 +422,8 @@ def list_all_frames(conn, schema=None, nb_trials=3, logger=None):
     '''
     dfs = []
     for schema in list_schemas(conn, nb_trials=nb_trials, logger=logger):
-        df = list_frames(conn, schema=schema, nb_trials=nb_trials, logger=logger)
+        df = list_frames(conn, schema=schema,
+                         nb_trials=nb_trials, logger=logger)
         if len(df) > 0:
             df['schema'] = schema
             dfs.append(df)
@@ -461,7 +479,7 @@ def get_view_sql_code(view_name, conn, schema=None, nb_trials=3, logger=None):
         SQL query string defining the view
     '''
     return read_sql_query("SELECT pg_get_viewdef('{}', true) a".format(frame_sql(view_name, schema=schema)),
-        conn, nb_trials=nb_trials, logger=logger)['a'][0]
+                          conn, nb_trials=nb_trials, logger=logger)['a'][0]
 
 
 def rename_table(schema, old_table_name, new_table_name, conn, nb_trials=3, logger=None):
@@ -481,9 +499,42 @@ def rename_table(schema, old_table_name, new_table_name, conn, nb_trials=3, logg
         number of query trials
     logger: logging.Logger or None
         logger for debugging
+
+    Returns
+    -------
+    whatever exec_sql() returns
     '''
     frame_sql_str = frame_sql(old_table_name, schema=schema)
-    exec_sql('ALTER TABLE {} RENAME TO "{}";'.format(frame_sql_str, new_table_name), conn, nb_trials=nb_trials, logger=logger)
+    exec_sql('ALTER TABLE {} RENAME TO "{}";'.format(frame_sql_str,
+                                                     new_table_name), conn, nb_trials=nb_trials, logger=logger)
+
+
+def drop_table(table_name, conn, schema=None, restrict=True, nb_trials=3, logger=None):
+    '''Drops a table if it exists, with restrict or cascade options.
+
+    Parameters
+    ----------
+    table_name : str
+        table name
+    conn : sqlalchemy.engine.base.Engine
+        an sqlalchemy connection engine created by function `create_engine()`
+    schema : str or None
+        a valid schema name returned from `list_schemas()`
+    restrict : bool
+        If True, refuses to drop table if there is any object depending on it. Otherwise it is the 'cascade' option which allows you to remove those dependent objects together with the table automatically.
+    nb_trials: int
+        number of query trials
+    logger: logging.Logger or None
+        logger for debugging
+
+    Returns
+    -------
+    whatever exec_sql() returns
+    '''
+    frame_sql_str = frame_sql(table_name, schema=schema)
+    query_str = "DROP TABLE IF EXISTS {} {};".format(
+        frame_sql_str, "RESTRICT" if restrict else "CASCADE")
+    return exec_sql(query_str, conn, nb_trials=nb_trials, logger=logger)
 
 
 def rename_view(old_view_name, new_view_name, conn, schema=None, nb_trials=3, logger=None):
@@ -505,7 +556,36 @@ def rename_view(old_view_name, new_view_name, conn, schema=None, nb_trials=3, lo
         logger for debugging
     '''
     frame_sql_str = frame_sql(old_view_name, schema=schema)
-    exec_sql('ALTER VIEW {} RENAME TO "{}";'.format(frame_sql_str, new_view_name), conn, nb_trials=nb_trials, logger=logger)
+    exec_sql('ALTER VIEW {} RENAME TO "{}";'.format(frame_sql_str,
+                                                    new_view_name), conn, nb_trials=nb_trials, logger=logger)
+
+
+def drop_view(view_name, conn, schema=None, restrict=True, nb_trials=3, logger=None):
+    '''Drops a view if it exists, with restrict or cascade options.
+
+    Parameters
+    ----------
+    view_name : str
+        view name
+    conn : sqlalchemy.engine.base.Engine
+        an sqlalchemy connection engine created by function `create_engine()`
+    schema : str or None
+        a valid schema name returned from `list_schemas()`
+    restrict : bool
+        If True, refuses to drop table if there is any object depending on it. Otherwise it is the 'cascade' option which allows you to remove those dependent objects together with the table automatically.
+    nb_trials: int
+        number of query trials
+    logger: logging.Logger or None
+        logger for debugging
+
+    Returns
+    -------
+    whatever exec_sql() returns
+    '''
+    frame_sql_str = frame_sql(view_name, schema=schema)
+    query_str = "DROP VIEW IF EXISTS {} {};".format(
+        frame_sql_str, "RESTRICT" if restrict else "CASCADE")
+    return exec_sql(query_str, conn, nb_trials=nb_trials, logger=logger)
 
 
 def rename_matview(old_matview_name, new_matview_name, conn, schema=None, nb_trials=3, logger=None):
@@ -527,7 +607,36 @@ def rename_matview(old_matview_name, new_matview_name, conn, schema=None, nb_tri
         logger for debugging
     '''
     frame_sql_str = frame_sql(old_matview_name, schema=schema)
-    exec_sql('ALTER MATERIALIZED VIEW {} RENAME TO "{}";'.format(frame_sql_str, new_matview_name), conn, nb_trials=nb_trials, logger=logger)
+    exec_sql('ALTER MATERIALIZED VIEW {} RENAME TO "{}";'.format(
+        frame_sql_str, new_matview_name), conn, nb_trials=nb_trials, logger=logger)
+
+
+def drop_matview(matview_name, conn, schema=None, restrict=True, nb_trials=3, logger=None):
+    '''Drops a mateiralized view if it exists, with restrict or cascade options.
+
+    Parameters
+    ----------
+    matview_name : str
+        materialized view name
+    conn : sqlalchemy.engine.base.Engine
+        an sqlalchemy connection engine created by function `create_engine()`
+    schema : str or None
+        a valid schema name returned from `list_schemas()`
+    restrict : bool
+        If True, refuses to drop table if there is any object depending on it. Otherwise it is the 'cascade' option which allows you to remove those dependent objects together with the table automatically.
+    nb_trials: int
+        number of query trials
+    logger: logging.Logger or None
+        logger for debugging
+
+    Returns
+    -------
+    whatever exec_sql() returns
+    '''
+    frame_sql_str = frame_sql(matview_name, schema=schema)
+    query_str = "DROP VIEW IF EXISTS {} {};".format(
+        frame_sql_str, "RESTRICT" if restrict else "CASCADE")
+    return exec_sql(query_str, conn, nb_trials=nb_trials, logger=logger)
 
 
 def frame_exists(frame_name, conn, schema=None, nb_trials=3, logger=None):
@@ -558,6 +667,37 @@ def frame_exists(frame_name, conn, schema=None, nb_trials=3, logger=None):
     return frame_name in list_matviews(conn, schema=schema, nb_trials=nb_trials, logger=logger)
 
 
+def drop_frame(frame_name, conn, schema=None, restrict=True, nb_trials=3, logger=None):
+    '''Drops a frame (table/view/mateiralized view) if it exists, with restrict or cascade options.
+
+    Parameters
+    ----------
+    frame_name : str
+        frame name
+    conn : sqlalchemy.engine.base.Engine
+        an sqlalchemy connection engine created by function `create_engine()`
+    schema : str or None
+        a valid schema name returned from `list_schemas()`
+    restrict : bool
+        If True, refuses to drop table if there is any object depending on it. Otherwise it is the 'cascade' option which allows you to remove those dependent objects together with the table automatically.
+    nb_trials: int
+        number of query trials
+    logger: logging.Logger or None
+        logger for debugging
+
+    Returns
+    -------
+    whatever exec_sql() returns, or False if the frame does not exist
+    '''
+    if frame_name in list_tables(conn, schema=schema, nb_trials=nb_trials, logger=logger):
+        return drop_table(frame_name, conn, schema=schema, restrict=restrict, nb_trials=nb_trials, logger=logger)
+    if frame_name in list_views(conn, schema=schema, nb_trials=nb_trials, logger=logger):
+        return drop_view(frame_name, conn, schema=schema, restrict=restrict, nb_trials=nb_trials, logger=logger)
+    if frame_name in list_matviews(conn, schema=schema, nb_trials=nb_trials, logger=logger):
+        return drop_matview(frame_name, conn, schema=schema, restrict=restrict, nb_trials=nb_trials, logger=logger)
+    return False
+
+
 def list_columns_ext(table_name, conn, schema=None, nb_trials=3, logger=None):
     '''Lists all columns of a given table of a given schema.
 
@@ -581,15 +721,19 @@ def list_columns_ext(table_name, conn, schema=None, nb_trials=3, logger=None):
     '''
     if not frame_exists(table_name, conn, schema=schema, nb_trials=nb_trials, logger=logger):
         if schema is None:
-            s = "Table or view with name '{}' does not exists.".format(table_name)
+            s = "Table or view with name '{}' does not exists.".format(
+                table_name)
         else:
-            s = "Table or view with name '{}' from schema '{}' does not exists.".format(table_name, schema)
+            s = "Table or view with name '{}' from schema '{}' does not exists.".format(
+                table_name, schema)
         raise _ps.ProgrammingError(s)
 
     if schema is None:
-        query_str = "select * from information_schema.columns where table_name='{}';".format(table_name)
+        query_str = "select * from information_schema.columns where table_name='{}';".format(
+            table_name)
     else:
-        query_str = "select * from information_schema.columns where table_schema='{}' and table_name='{}';".format(schema, table_name)
+        query_str = "select * from information_schema.columns where table_schema='{}' and table_name='{}';".format(
+            schema, table_name)
 
     return read_sql_query(query_str, conn, nb_trials=nb_trials, logger=logger)
 
@@ -696,9 +840,11 @@ def rename_column(table_name, old_column_name, new_column_name, conn, schema=Non
     '''
     old_column_name = old_column_name.replace('%', '%%')
     if schema is None:
-        query_str = 'ALTER TABLE "{}" RENAME COLUMN "{}" TO "{}";'.format(table_name, old_column_name, new_column_name)
+        query_str = 'ALTER TABLE "{}" RENAME COLUMN "{}" TO "{}";'.format(
+            table_name, old_column_name, new_column_name)
     else:
-        query_str = 'ALTER TABLE "{}"."{}" RENAME COLUMN "{}" TO "{}";'.format(schema, table_name, old_column_name, new_column_name)
+        query_str = 'ALTER TABLE "{}"."{}" RENAME COLUMN "{}" TO "{}";'.format(
+            schema, table_name, old_column_name, new_column_name)
     exec_sql(query_str, conn, nb_trials=nb_trials, logger=logger)
 
 
@@ -722,9 +868,11 @@ def drop_column(table_name, column_name, conn, schema=None, nb_trials=3, logger=
     '''
     column_name = column_name.replace('%', '%%')
     if schema is None:
-        query_str = 'ALTER TABLE "{}" DROP COLUMN "{}";'.format(table_name, column_name)
+        query_str = 'ALTER TABLE "{}" DROP COLUMN "{}";'.format(
+            table_name, column_name)
     else:
-        query_str = 'ALTER TABLE "{}"."{}" DROP COLUMN "{}";'.format(schema, table_name, column_name)
+        query_str = 'ALTER TABLE "{}"."{}" DROP COLUMN "{}";'.format(
+            schema, table_name, column_name)
     exec_sql(query_str, conn, nb_trials=nb_trials, logger=logger)
 
 
@@ -790,11 +938,13 @@ def comparesync_table(cnx, csv_filepath, table_name, id_name, set_index_after=Fa
         if _p.exists(csv_filepath):
             try:
                 local_df = _mc.read_csv(csv_filepath, index_col=id_name)
-                local_dup_keys = local_df[local_df.index.duplicated()].index.drop_duplicates().tolist()
+                local_dup_keys = local_df[local_df.index.duplicated(
+                )].index.drop_duplicates().tolist()
                 if len(local_df) == 0:
                     local_df = None
                 elif 'hash' not in local_df.columns:
-                    local_df['hash'] = _pu.hash_pandas_object(local_df, index=False, hash_key='emerus_pham').astype(_np.int64)
+                    local_df['hash'] = _pu.hash_pandas_object(
+                        local_df, index=False, hash_key='emerus_pham').astype(_np.int64)
             except ValueError:
                 local_df = None
         else:
@@ -804,12 +954,14 @@ def comparesync_table(cnx, csv_filepath, table_name, id_name, set_index_after=Fa
         # local_md5_df
         if local_df is not None:
             if logger:
-                logger.debug("The local table has {} records.".format(len(local_df)))
+                logger.debug(
+                    "The local table has {} records.".format(len(local_df)))
             local_md5_df = local_df[['hash']]
         else:
             if logger:
                 logger.debug("The local table is empty.")
-            local_md5_df = _pd.DataFrame(index=_pd.Index([], name=id_name), columns=['hash'])
+            local_md5_df = _pd.DataFrame(index=_pd.Index(
+                [], name=id_name), columns=['hash'])
 
         # remote_md5_df
         try:
@@ -820,39 +972,50 @@ def comparesync_table(cnx, csv_filepath, table_name, id_name, set_index_after=Fa
                 text = 'textin(record_out(('+column_list+')))'
 
             if 'hash' in list_columns(table_name, cnx, schema=schema, nb_trials=nb_trials, logger=logger):
-                query_str = "select {}, hash from {}".format(id_name, frame_sql_str)
+                query_str = "select {}, hash from {}".format(
+                    id_name, frame_sql_str)
             else:
-                query_str = "select {}, md5({}) as hash from {}".format(id_name, text, frame_sql_str)
+                query_str = "select {}, md5({}) as hash from {}".format(
+                    id_name, text, frame_sql_str)
 
             if cond is not None:
                 query_str += " where " + cond
-            #if logger:
+            # if logger:
                 #logger.debug("Probing the remote table using hash query '{}'...".format(query_str))
-            remote_md5_df = read_sql(query_str, cnx, index_col=id_name, set_index_after=set_index_after, nb_trials=nb_trials, logger=logger)
-            remote_dup_keys = remote_md5_df[remote_md5_df.index.duplicated()].index.drop_duplicates().tolist()
+            remote_md5_df = read_sql(query_str, cnx, index_col=id_name,
+                                     set_index_after=set_index_after, nb_trials=nb_trials, logger=logger)
+            remote_dup_keys = remote_md5_df[remote_md5_df.index.duplicated(
+            )].index.drop_duplicates().tolist()
             if logger:
-                logger.debug("The remote table has {} records.".format(len(remote_md5_df)))
-        except (_se.ProgrammingError, _ps.ProgrammingError): # table does not exist or does not have the columns we wanted
+                logger.debug("The remote table has {} records.".format(
+                    len(remote_md5_df)))
+        # table does not exist or does not have the columns we wanted
+        except (_se.ProgrammingError, _ps.ProgrammingError):
             if reading_mode:
                 raise
             if logger:
                 logger.warn("Ignoring the following exception.")
                 logger.warn_last_exception()
-            remote_md5_df = _pd.DataFrame(index=_pd.Index([], name=id_name), columns=['hash'])
+            remote_md5_df = _pd.DataFrame(
+                index=_pd.Index([], name=id_name), columns=['hash'])
             remote_dup_keys = []
             if logger:
                 logger.debug("The remote table is empty.")
 
         # compare
-        df = local_md5_df.join(remote_md5_df, how='outer', lsuffix='_local', rsuffix='_remote')
+        df = local_md5_df.join(remote_md5_df, how='outer',
+                               lsuffix='_local', rsuffix='_remote')
         diff_keys = local_dup_keys + remote_dup_keys
-        df = df[~df.index.isin(diff_keys)] # remove all cases with duplicated keys
+        # remove all cases with duplicated keys
+        df = df[~df.index.isin(diff_keys)]
         local_only_keys = df[df['hash_remote'].isnull()].index.tolist()
         df = df[df['hash_remote'].notnull()]
         remote_only_keys = df[df['hash_local'].isnull()].index.tolist()
         df = df[df['hash_local'].notnull()]
-        same_keys = df[df['hash_local'] == df['hash_remote']].index.tolist() # no need to drop_duplicates() as each key identifies maximum 1 row in each table
-        diff_keys += df[df['hash_local'] != df['hash_remote']].index.tolist() # no need to drop_duplicates() as each key identifies maximum 1 row in each table
+        # no need to drop_duplicates() as each key identifies maximum 1 row in each table
+        same_keys = df[df['hash_local'] == df['hash_remote']].index.tolist()
+        # no need to drop_duplicates() as each key identifies maximum 1 row in each table
+        diff_keys += df[df['hash_local'] != df['hash_remote']].index.tolist()
 
         return local_df, remote_md5_df, same_keys, diff_keys, local_only_keys, remote_only_keys
 
@@ -893,31 +1056,39 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
     '''
     frame_sql_str = frame_sql(table_name, schema=schema)
     with logger.scoped_debug("Writing table: local '{}' -> remote '{}'".format(csv_filepath, frame_sql_str), curly=False) if logger else dummy_scope:
-        local_df, remote_md5_df, same_keys, diff_keys, local_only_keys, remote_only_keys = comparesync_table(cnx, csv_filepath, table_name, id_name, columns=['*'], schema=schema, cond=None, reading_mode=False, nb_trials=nb_trials, logger=None)
+        local_df, remote_md5_df, same_keys, diff_keys, local_only_keys, remote_only_keys = comparesync_table(
+            cnx, csv_filepath, table_name, id_name, columns=['*'], schema=schema, cond=None, reading_mode=False, nb_trials=nb_trials, logger=None)
 
-        if len(diff_keys) == 0 and len(local_only_keys) == 0 and len(remote_only_keys) == 0: # nothing changed, really!
+        # nothing changed, really!
+        if len(diff_keys) == 0 and len(local_only_keys) == 0 and len(remote_only_keys) == 0:
             if logger:
-                logger.debug("Both tables are the same and of length {}.".format(len(same_keys)))
+                logger.debug(
+                    "Both tables are the same and of length {}.".format(len(same_keys)))
             return local_df
 
         if logger:
-            logger.debug("Keys: {} to retain, {} to delete, {} to update, {} to write as new.".format(len(same_keys), len(remote_only_keys), len(diff_keys), len(local_only_keys)))
+            logger.debug("Keys: {} to retain, {} to delete, {} to update, {} to write as new.".format(
+                len(same_keys), len(remote_only_keys), len(diff_keys), len(local_only_keys)))
 
-        if local_df is None: # delete remote table if there is no local table
+        if local_df is None:  # delete remote table if there is no local table
             if logger:
-                logger.debug("Deleting remote table {} if it exists because local table is empty...".format(frame_sql_str))
+                logger.debug(
+                    "Deleting remote table {} if it exists because local table is empty...".format(frame_sql_str))
             query_str = "DROP TABLE IF EXISTS {};".format(frame_sql_str)
             exec_sql(query_str, cnx, nb_trials=nb_trials, logger=logger)
             return local_df
 
-        if len(local_df) < 128: # a small dataset
-            to_sql(local_df, cnx, table_name, schema=schema, if_exists='replace', index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
+        if len(local_df) < 128:  # a small dataset
+            to_sql(local_df, cnx, table_name, schema=schema, if_exists='replace',
+                   index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
             return local_df
 
-        if len(same_keys) == 0: # no record in the remote table
+        if len(same_keys) == 0:  # no record in the remote table
             if logger:
-                logger.debug("Deleting table {} if it exists since there is no reusable remote record...".format(frame_sql_str))
-            query_str = "DROP TABLE IF EXISTS {};".format(frame_sql_str) # delete the remote table
+                logger.debug(
+                    "Deleting table {} if it exists since there is no reusable remote record...".format(frame_sql_str))
+            query_str = "DROP TABLE IF EXISTS {};".format(
+                frame_sql_str)  # delete the remote table
             exec_sql(query_str, cnx, nb_trials=nb_trials, logger=logger)
 
         record_cap = 128 if max_records_per_query is None else max_records_per_query
@@ -930,27 +1101,33 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
                 df2 = df[:record_cap]
                 df = df[record_cap:]
                 if logger:
-                    logger.debug("Inserting {} records, {} remaining...".format(len(df2), len(df)))
+                    logger.debug(
+                        "Inserting {} records, {} remaining...".format(len(df2), len(df)))
 
                 start_time = _pd.Timestamp.utcnow()
-                to_sql(df2, cnx, table_name, schema=schema, if_exists='append', index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
-                elapsed_time = (_pd.Timestamp.utcnow() - start_time).total_seconds() # elapsed time is in seconds
+                to_sql(df2, cnx, table_name, schema=schema, if_exists='append',
+                       index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
+                # elapsed time is in seconds
+                elapsed_time = (_pd.Timestamp.utcnow() -
+                                start_time).total_seconds()
 
                 if max_records_per_query is None:
-                    if elapsed_time > 300: # too slow
+                    if elapsed_time > 300:  # too slow
                         record_cap = max(1, record_cap//2)
-                    else: # too fast
+                    else:  # too fast
                         record_cap *= 2
 
             if logger:
                 logger.debug("Inserting {} records.".format(len(df)))
-            to_sql(df, cnx, table_name, schema=schema, if_exists='append', index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
+            to_sql(df, cnx, table_name, schema=schema, if_exists='append',
+                   index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
 
         # remove redundant remote records
         id_list = diff_keys + remote_only_keys
         if len(id_list) > 0:
             id_list = ",".join(str(x) for x in id_list)
-            query_str = "IF EXISTS({}) DELETE FROM {} WHERE {} IN ({}) END IF;".format(frame_sql_str, frame_sql_str, id_name, id_list)
+            query_str = "IF EXISTS({}) DELETE FROM {} WHERE {} IN ({}) END IF;".format(
+                frame_sql_str, frame_sql_str, id_name, id_list)
             exec_sql(query_str, cnx, nb_trials=nb_trials, logger=logger)
 
         # insert records that need modification
@@ -961,20 +1138,25 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
                 df2 = df[:record_cap]
                 df = df[record_cap:]
                 if logger:
-                    logger.debug("Modifying {} records, {} remaining...".format(len(df2), len(df)))
+                    logger.debug(
+                        "Modifying {} records, {} remaining...".format(len(df2), len(df)))
 
                 start_time = _pd.Timestamp.utcnow()
-                to_sql(df2, cnx, table_name, schema=schema, if_exists='append', index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
-                elapsed_time = (_pd.Timestamp.utcnow() - start_time).total_seconds() # elapsed time is in seconds
+                to_sql(df2, cnx, table_name, schema=schema, if_exists='append',
+                       index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
+                # elapsed time is in seconds
+                elapsed_time = (_pd.Timestamp.utcnow() -
+                                start_time).total_seconds()
 
                 if max_records_per_query is None:
-                    if elapsed_time > 300: # too slow
+                    if elapsed_time > 300:  # too slow
                         record_cap = max(1, record_cap//2)
-                    else: # too fast
+                    else:  # too fast
                         record_cap *= 2
             if logger:
                 logger.debug("Modifying {} records.".format(len(df)))
-            to_sql(df, cnx, table_name, schema=schema, if_exists='append', index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
+            to_sql(df, cnx, table_name, schema=schema, if_exists='append',
+                   index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
 
     return local_df
 
@@ -1022,15 +1204,19 @@ def readsync_table(cnx, csv_filepath, table_name, id_name, set_index_after=False
     '''
     frame_sql_str = frame_sql(table_name, schema=schema)
     with logger.scoped_debug("Reading table: local '{}' <- remote '{}'".format(csv_filepath, frame_sql_str), curly=False) if logger else dummy_scope:
-        local_df, remote_md5_df, same_keys, diff_keys, local_only_keys, remote_only_keys = comparesync_table(cnx, csv_filepath, table_name, id_name, columns=columns, schema=schema, cond=cond, nb_trials=nb_trials, logger=None)
+        local_df, remote_md5_df, same_keys, diff_keys, local_only_keys, remote_only_keys = comparesync_table(
+            cnx, csv_filepath, table_name, id_name, columns=columns, schema=schema, cond=cond, nb_trials=nb_trials, logger=None)
 
-        if len(diff_keys) == 0 and len(local_only_keys) == 0 and len(remote_only_keys) == 0: # nothing changed, really!
+        # nothing changed, really!
+        if len(diff_keys) == 0 and len(local_only_keys) == 0 and len(remote_only_keys) == 0:
             if logger:
-                logger.debug("Both tables are the same and of length {}.".format(len(same_keys)))
+                logger.debug(
+                    "Both tables are the same and of length {}.".format(len(same_keys)))
             return local_df, None if bg_write_csv else local_df
 
         if logger:
-            logger.debug("Keys: {} to retain, {} to delete, {} to update, {} to read as new.".format(len(same_keys), len(local_only_keys), len(diff_keys), len(remote_only_keys)))
+            logger.debug("Keys: {} to retain, {} to delete, {} to update, {} to read as new.".format(
+                len(same_keys), len(local_only_keys), len(diff_keys), len(remote_only_keys)))
 
         # read remote records
         id_list = diff_keys + remote_only_keys
@@ -1050,22 +1236,27 @@ def readsync_table(cnx, csv_filepath, table_name, id_name, set_index_after=False
                     id_list2 = id_list
                     id_list = []
                 if logger:
-                    logger.debug("Fetching {} records with remaining {} records...".format(len(id_list2), len(id_list)))
+                    logger.debug("Fetching {} records with remaining {} records...".format(
+                        len(id_list2), len(id_list)))
                 query_str = "("+",".join((str(id) for id in id_list2))+")"
-                query_str = "select {} from {} where {} in {}".format(column_list, frame_sql_str, id_name, query_str)
+                query_str = "select {} from {} where {} in {}".format(
+                    column_list, frame_sql_str, id_name, query_str)
                 if cond is not None:
                     query_str += " and " + cond
-                #if logger:
+                # if logger:
                     #logger.debug("  using query '{}',".format(query_str))
 
                 start_time = _pd.Timestamp.utcnow()
-                new_dfs.append(read_sql(query_str, cnx, index_col=id_name, set_index_after=set_index_after, nb_trials=nb_trials, logger=logger))
-                elapsed_time = (_pd.Timestamp.utcnow() - start_time).total_seconds() # elapsed time is in seconds
+                new_dfs.append(read_sql(query_str, cnx, index_col=id_name,
+                                        set_index_after=set_index_after, nb_trials=nb_trials, logger=logger))
+                # elapsed time is in seconds
+                elapsed_time = (_pd.Timestamp.utcnow() -
+                                start_time).total_seconds()
 
                 if max_records_per_query is None:
-                    if elapsed_time > 300: # too slow
+                    if elapsed_time > 300:  # too slow
                         record_cap = max(1, record_cap//2)
-                    else: # too fast
+                    else:  # too fast
                         record_cap *= 2
 
             new_df = _pd.concat(new_dfs)
@@ -1076,16 +1267,19 @@ def readsync_table(cnx, csv_filepath, table_name, id_name, set_index_after=False
                 if logger:
                     logger.debug("New dataframe:\n{}".format(str(new_df)))
                     logger.debug("Hash dataframe:\n{}".format(str(new_md5_df)))
-                raise RuntimeError("Something must have gone wrong. Number of hashes {} != number of records {}.".format(len(new_md5_df), len(new_df)))
+                raise RuntimeError("Something must have gone wrong. Number of hashes {} != number of records {}.".format(
+                    len(new_md5_df), len(new_df)))
         else:
-            new_df = None # nothing new
+            new_df = None  # nothing new
 
         # final df
         if len(same_keys) == 0:
-            df = local_df[0:0] if new_df is None else new_df # former: empty dataframe
+            # former: empty dataframe
+            df = local_df[0:0] if new_df is None else new_df
         else:
             local2_df = local_df[local_df.index.isin(same_keys)]
-            df = local2_df if new_df is None else _pd.concat([local2_df, new_df], sort=True)
+            df = local2_df if new_df is None else _pd.concat(
+                [local2_df, new_df], sort=True)
         df.index = df.index.astype(new_md5_df.index.dtype)
         df = df.sort_index()
 
