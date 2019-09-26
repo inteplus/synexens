@@ -235,10 +235,10 @@ def to_sql(df, name, conn, schema=None, if_exists='fail', nb_trials=3, logger=No
     if kwargs:
         if 'index' in kwargs:
             raise ValueError(
-                "This function does not accept `index` as a keyword.")
+                "The `dataframemt.psql.to_sql()` function does not accept `index` as a keyword.")
         if 'index_label' in kwargs:
             raise ValueError(
-                "This function does not accept `index_label` as a keyword.")
+                "This `dataframemt.psql.to_sql()` function does not accept `index_label` as a keyword.")
 
     compliance_check(df)
     frame_sql_str = frame_sql(name, schema=schema)
