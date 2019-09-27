@@ -634,7 +634,7 @@ def drop_matview(matview_name, conn, schema=None, restrict=True, nb_trials=3, lo
     whatever exec_sql() returns
     '''
     frame_sql_str = frame_sql(matview_name, schema=schema)
-    query_str = "DROP VIEW IF EXISTS {} {};".format(
+    query_str = "DROP MATERIALIZED VIEW IF EXISTS {} {};".format(
         frame_sql_str, "RESTRICT" if restrict else "CASCADE")
     return exec_sql(query_str, conn, nb_trials=nb_trials, logger=logger)
 
