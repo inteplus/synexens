@@ -2,11 +2,11 @@
 
 import pandas as _pd
 import re as _re
-import base.path as _p
+import basemt.path as _p
 from basemt.bg_invoke import BgInvoke
-import dataframemt.csv as _mc
+import pandasmt.csv as _mc
 
-from dataframemt.sql import *
+from .sql import *
 
 
 # MT-TODO: any function below this line needs testing
