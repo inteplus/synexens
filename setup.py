@@ -3,9 +3,9 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='dataframemt',
+    name='sqlmt',
     version='0.3.9',
-    description="Extra Python modules to deal with dataframes for Minh-Tri Pham",
+    description="Extra Python modules to deal with the interaction between pandas dataframes and remote SQL servers, for Minh-Tri Pham",
     author=["Minh-Tri Pham"],
     packages=find_packages(),
     install_requires=[

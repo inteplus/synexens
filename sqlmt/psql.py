@@ -9,9 +9,9 @@ import psycopg2 as _ps
 import sqlalchemy.exc as _se
 from basemt.bg_invoke import BgInvoke
 from basemt.logging import dummy_scope
-import dataframemt.csv as _mc
+import pandasmt.csv as _mc
 
-from dataframemt.sql import *
+from .sql import *
 
 
 # ----- debugging functions -----
@@ -235,10 +235,10 @@ def to_sql(df, name, conn, schema=None, if_exists='fail', nb_trials=3, logger=No
     if kwargs:
         if 'index' in kwargs:
             raise ValueError(
-                "The `dataframemt.psql.to_sql()` function does not accept `index` as a keyword.")
+                "The `sqlmt.psql.to_sql()` function does not accept `index` as a keyword.")
         if 'index_label' in kwargs:
             raise ValueError(
-                "This `dataframemt.psql.to_sql()` function does not accept `index_label` as a keyword.")
+                "This `sqlmt.psql.to_sql()` function does not accept `index_label` as a keyword.")
 
     compliance_check(df)
     frame_sql_str = frame_sql(name, schema=schema)
