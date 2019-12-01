@@ -1,5 +1,6 @@
-'''Only for backward compatibility. You should import seriesmt or seriesmt.series instead.'''
+'''Only for backward compatibility. You should import pandasmt.series instead.'''
 
-from seriesmt.series import *
+from pandas.series import *
 from basemt import logger
-logger.warn("dataframemt.series is an old module. Its existence is only for backward compatibility. Please import seriesmt instead.")
+logger.debug_call_stack()
+logger.warn("Module dataframemt.series is deprecated. Its existence is only for backward compatibility. Please use module pandasmt.series instead.")
