@@ -1,4 +1,4 @@
-'''Useful modules for accessing PostgreSQL'''
+'''Useful modules for accessing MySQL'''
 
 import pandas as _pd
 import re as _re
@@ -6,7 +6,7 @@ import mt.base.path as _p
 from mt.base.bg_invoke import BgInvoke
 import mt.pandas.csv as _mc
 
-from .sql import *
+from .base import *
 
 
 # MT-TODO: any function below this line needs testing

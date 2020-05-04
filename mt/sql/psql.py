@@ -11,7 +11,7 @@ from mt.base.bg_invoke import BgInvoke
 from mt.base.logging import dummy_scope
 import mt.pandas.csv as _mc
 
-from .sql import *
+from .base import *
 
 
 # ----- debugging functions -----

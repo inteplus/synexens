@@ -1,1 +1,4 @@
-from .version import VERSION as __version__
+from mt.base import logger
+logger.warn_module_move('sqlmt', 'mt.sql')
+
+from mt.sql import *

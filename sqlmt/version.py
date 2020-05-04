@@ -1,4 +1,4 @@
-MAJOR_VERSION = 0
-MINOR_VERSION = 4
-PATCH_VERSION = 1
-VERSION = '{}.{}.{}'.format(MAJOR_VERSION, MINOR_VERSION, PATCH_VERSION)
+from mt.base import logger
+logger.warn_module_move('sqlmt.version', 'mt.sql.version')
+
+from mt.sql.version import *
