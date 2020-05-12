@@ -235,10 +235,10 @@ def to_sql(df, name, conn, schema=None, if_exists='fail', nb_trials=3, logger=No
     if kwargs:
         if 'index' in kwargs:
             raise ValueError(
-                "The `sqlmt.psql.to_sql()` function does not accept `index` as a keyword.")
+                "The `mt.sql.psql.to_sql()` function does not accept `index` as a keyword.")
         if 'index_label' in kwargs:
             raise ValueError(
-                "This `sqlmt.psql.to_sql()` function does not accept `index_label` as a keyword.")
+                "This `mt.sql.psql.to_sql()` function does not accept `index_label` as a keyword.")
 
     compliance_check(df)
     frame_sql_str = frame_sql(name, schema=schema)
@@ -1105,8 +1105,7 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
             return local_df
 
         if len(local_df) < 128:  # a small dataset
-            to_sql(local_df, cnx, table_name, schema=schema, if_exists='replace',
-                   index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
+            to_sql(local_df, cnx, table_name, schema=schema, if_exists='replace', nb_trials=nb_trials, logger=logger)
             return local_df
 
         if len(same_keys) == 0:  # no record in the remote table
@@ -1131,8 +1130,7 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
                         "Inserting {} records, {} remaining...".format(len(df2), len(df)))
 
                 start_time = _pd.Timestamp.utcnow()
-                to_sql(df2, cnx, table_name, schema=schema, if_exists='append',
-                       index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
+                to_sql(df2, cnx, table_name, schema=schema, if_exists='append', nb_trials=nb_trials, logger=logger)
                 # elapsed time is in seconds
                 elapsed_time = (_pd.Timestamp.utcnow() -
                                 start_time).total_seconds()
@@ -1145,8 +1143,7 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
 
             if logger:
                 logger.debug("Inserting {} records.".format(len(df)))
-            to_sql(df, cnx, table_name, schema=schema, if_exists='append',
-                   index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
+            to_sql(df, cnx, table_name, schema=schema, if_exists='append', nb_trials=nb_trials, logger=logger)
 
         # remove redundant remote records
         id_list = diff_keys + remote_only_keys
@@ -1168,8 +1165,7 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
                         "Modifying {} records, {} remaining...".format(len(df2), len(df)))
 
                 start_time = _pd.Timestamp.utcnow()
-                to_sql(df2, cnx, table_name, schema=schema, if_exists='append',
-                       index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
+                to_sql(df2, cnx, table_name, schema=schema, if_exists='append', nb_trials=nb_trials, logger=logger)
                 # elapsed time is in seconds
                 elapsed_time = (_pd.Timestamp.utcnow() -
                                 start_time).total_seconds()
@@ -1181,8 +1177,7 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
                         record_cap *= 2
             if logger:
                 logger.debug("Modifying {} records.".format(len(df)))
-            to_sql(df, cnx, table_name, schema=schema, if_exists='append',
-                   index=True, index_label=id_name, nb_trials=nb_trials, logger=logger)
+            to_sql(df, cnx, table_name, schema=schema, if_exists='append', nb_trials=nb_trials, logger=logger)
 
     return local_df
 
