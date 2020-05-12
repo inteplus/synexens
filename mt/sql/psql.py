@@ -933,12 +933,12 @@ def drop_column(table_name, column_name, conn, schema=None, nb_trials=3, logger=
 # ----- functions to synchronise between a local table and a remote table -----
 
 
-def comparesync_table(cnx, csv_filepath, table_name, id_name, set_index_after=False, columns=['*'], schema=None, cond=None, reading_mode=True, nb_trials=3, logger=None):
+def comparesync_table(conn, csv_filepath, table_name, id_name, set_index_after=False, columns=['*'], schema=None, cond=None, reading_mode=True, nb_trials=3, logger=None):
     '''Compares a local CSV table with a remote PostgreSQL to find out which rows are the same or different.
 
     Parameters
     ----------
-    cnx : sqlalchemy connectible
+    conn : sqlalchemy connectible
         connection to the PostgreSQL database
     csv_filepath : path
         path to the local CSV file
@@ -1025,7 +1025,7 @@ def comparesync_table(cnx, csv_filepath, table_name, id_name, set_index_after=Fa
             else:
                 text = 'textin(record_out(('+column_list+')))'
 
-            if 'hash' in list_columns(table_name, cnx, schema=schema, nb_trials=nb_trials, logger=logger):
+            if 'hash' in list_columns(table_name, conn, schema=schema, nb_trials=nb_trials, logger=logger):
                 query_str = "select {}, hash from {}".format(
                     id_name, frame_sql_str)
             else:
@@ -1036,7 +1036,7 @@ def comparesync_table(cnx, csv_filepath, table_name, id_name, set_index_after=Fa
                 query_str += " where " + cond
             # if logger:
                 #logger.debug("Probing the remote table using hash query '{}'...".format(query_str))
-            remote_md5_df = read_sql(query_str, cnx, index_col=id_name,
+            remote_md5_df = read_sql(query_str, conn, index_col=id_name,
                                      set_index_after=set_index_after, nb_trials=nb_trials, logger=logger)
             remote_dup_keys = remote_md5_df[remote_md5_df.index.duplicated(
             )].index.drop_duplicates().tolist()
@@ -1074,12 +1074,12 @@ def comparesync_table(cnx, csv_filepath, table_name, id_name, set_index_after=Fa
         return local_df, remote_md5_df, same_keys, diff_keys, local_only_keys, remote_only_keys
 
 
-def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_records_per_query=None, nb_trials=3, logger=None):
+def writesync_table(conn, csv_filepath, table_name, id_name, schema=None, max_records_per_query=None, conn_ro=None, nb_trials=3, logger=None):
     '''Writes and updates a remote PostgreSQL table from a local CSV table by updating only rows which have been changed.
 
     Parameters
     ----------
-    cnx : sqlalchemy connectible
+    conn : sqlalchemy connectible
         connection to the PostgreSQL database
     csv_filepath : path
         path to the local CSV file
@@ -1093,6 +1093,8 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
         whether to write the updated CSV file in a background thread
     max_records_per_query : int or None
         maximum number of records to be updated in each SQL query. If None, this will be dynamic to make sure each query runs about 5 minute.
+    conn_ro : sqlalchemy connectible or None
+        read-only connection to the PostgreSQL database. If not specified, it is set to `conn`.
     nb_trials: int
         number of read_sql() trials
     logger: logging.Logger or None
@@ -1107,11 +1109,14 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
     ----
     The id_name column is written as the primary key of the remote table.
     See the comparesync_table() function for additional assumptions.
+    The function tries to use `conn_ro` instead of `conn` whenever possible to save cost.
     '''
+    if conn_ro is None:
+        conn_ro = conn
     frame_sql_str = frame_sql(table_name, schema=schema)
     with logger.scoped_debug("Writing table: local '{}' -> remote '{}'".format(csv_filepath, frame_sql_str), curly=False) if logger else dummy_scope:
         local_df, remote_md5_df, same_keys, diff_keys, local_only_keys, remote_only_keys = comparesync_table(
-            cnx, csv_filepath, table_name, id_name, columns=['*'], schema=schema, cond=None, reading_mode=False, nb_trials=nb_trials, logger=None)
+            conn_ro, csv_filepath, table_name, id_name, columns=['*'], schema=schema, cond=None, reading_mode=False, nb_trials=nb_trials, logger=None)
 
         # nothing changed, really!
         if len(diff_keys) == 0 and len(local_only_keys) == 0 and len(remote_only_keys) == 0:
@@ -1129,11 +1134,11 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
                 logger.debug(
                     "Deleting remote table {} if it exists because local table is empty...".format(frame_sql_str))
             query_str = "DROP TABLE IF EXISTS {};".format(frame_sql_str)
-            exec_sql(query_str, cnx, nb_trials=nb_trials, logger=logger)
+            exec_sql(query_str, conn, nb_trials=nb_trials, logger=logger)
             return local_df
 
         if len(local_df) < 128:  # a small dataset
-            to_sql(local_df, table_name, cnx, schema=schema, if_exists='replace', nb_trials=nb_trials, logger=logger)
+            to_sql(local_df, table_name, conn, schema=schema, if_exists='replace', nb_trials=nb_trials, logger=logger)
             return local_df
 
         if len(same_keys) == 0:  # no record in the remote table
@@ -1142,7 +1147,7 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
                     "Deleting table {} if it exists since there is no reusable remote record...".format(frame_sql_str))
             query_str = "DROP TABLE IF EXISTS {};".format(
                 frame_sql_str)  # delete the remote table
-            exec_sql(query_str, cnx, nb_trials=nb_trials, logger=logger)
+            exec_sql(query_str, conn, nb_trials=nb_trials, logger=logger)
 
         record_cap = 128 if max_records_per_query is None else max_records_per_query
 
@@ -1158,7 +1163,7 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
                         "Inserting {} records, {} remaining...".format(len(df2), len(df)))
 
                 start_time = _pd.Timestamp.utcnow()
-                to_sql(df2, table_name, cnx, schema=schema, if_exists='append', nb_trials=nb_trials, logger=logger)
+                to_sql(df2, table_name, conn, schema=schema, if_exists='append', nb_trials=nb_trials, logger=logger)
                 # elapsed time is in seconds
                 elapsed_time = (_pd.Timestamp.utcnow() -
                                 start_time).total_seconds()
@@ -1171,15 +1176,22 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
 
             if logger:
                 logger.debug("Inserting {} records.".format(len(df)))
-            to_sql(df, table_name, cnx, schema=schema, if_exists='append', nb_trials=nb_trials, logger=logger)
+            to_sql(df, table_name, conn, schema=schema, if_exists='append', nb_trials=nb_trials, logger=logger)
 
         # remove redundant remote records
         id_list = diff_keys + remote_only_keys
         if len(id_list) > 0:
             id_list = ",".join(str(x) for x in id_list)
-            query_str = "IF EXISTS({}) DELETE FROM {} WHERE {} IN ({}) END IF;".format(
-                frame_sql_str, frame_sql_str, id_name, id_list)
-            exec_sql(query_str, cnx, nb_trials=nb_trials, logger=logger)
+            query_str = """
+                DO $$
+                  BEGIN
+                    IF EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='{}' AND table_name='{}')
+                    THEN
+                      DELETE FROM {} WHERE {} IN ({});
+                    END IF;
+                  END
+                $$ ;""".format('public' if schema is None else schema, table_name, frame_sql_str, id_name, id_list)
+            exec_sql(query_str, conn, nb_trials=nb_trials, logger=logger)
 
         # insert records that need modification
         if len(diff_keys) > 0:
@@ -1193,7 +1205,7 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
                         "Modifying {} records, {} remaining...".format(len(df2), len(df)))
 
                 start_time = _pd.Timestamp.utcnow()
-                to_sql(df2, table_name, cnx, schema=schema, if_exists='append', nb_trials=nb_trials, logger=logger)
+                to_sql(df2, table_name, conn, schema=schema, if_exists='append', nb_trials=nb_trials, logger=logger)
                 # elapsed time is in seconds
                 elapsed_time = (_pd.Timestamp.utcnow() -
                                 start_time).total_seconds()
@@ -1205,17 +1217,17 @@ def writesync_table(cnx, csv_filepath, table_name, id_name, schema=None, max_rec
                         record_cap *= 2
             if logger:
                 logger.debug("Modifying {} records.".format(len(df)))
-            to_sql(df, table_name, cnx, schema=schema, if_exists='append', nb_trials=nb_trials, logger=logger)
+            to_sql(df, table_name, conn, schema=schema, if_exists='append', nb_trials=nb_trials, logger=logger)
 
     return local_df
 
 
-def readsync_table(cnx, csv_filepath, table_name, id_name, set_index_after=False, columns=['*'], schema=None, cond=None, bg_write_csv=False, max_records_per_query=10240, nb_trials=3, logger=None):
+def readsync_table(conn, csv_filepath, table_name, id_name, set_index_after=False, columns=['*'], schema=None, cond=None, bg_write_csv=False, max_records_per_query=10240, nb_trials=3, logger=None):
     '''Reads and updates a local CSV table from a PostgreSQL table by updating only rows which have been changed.
 
     Parameters
     ----------
-    cnx : sqlalchemy connectible
+    conn : sqlalchemy connectible
         connection to the PostgreSQL database
     csv_filepath : path
         path to the local CSV file
@@ -1254,7 +1266,7 @@ def readsync_table(cnx, csv_filepath, table_name, id_name, set_index_after=False
     frame_sql_str = frame_sql(table_name, schema=schema)
     with logger.scoped_debug("Reading table: local '{}' <- remote '{}'".format(csv_filepath, frame_sql_str), curly=False) if logger else dummy_scope:
         local_df, remote_md5_df, same_keys, diff_keys, local_only_keys, remote_only_keys = comparesync_table(
-            cnx, csv_filepath, table_name, id_name, columns=columns, schema=schema, cond=cond, nb_trials=nb_trials, logger=None)
+            conn, csv_filepath, table_name, id_name, columns=columns, schema=schema, cond=cond, nb_trials=nb_trials, logger=None)
 
         # nothing changed, really!
         if len(diff_keys) == 0 and len(local_only_keys) == 0 and len(remote_only_keys) == 0:
@@ -1296,7 +1308,7 @@ def readsync_table(cnx, csv_filepath, table_name, id_name, set_index_after=False
                     #logger.debug("  using query '{}',".format(query_str))
 
                 start_time = _pd.Timestamp.utcnow()
-                new_dfs.append(read_sql(query_str, cnx, index_col=id_name,
+                new_dfs.append(read_sql(query_str, conn, index_col=id_name,
                                         set_index_after=set_index_after, nb_trials=nb_trials, logger=logger))
                 # elapsed time is in seconds
                 elapsed_time = (_pd.Timestamp.utcnow() -
