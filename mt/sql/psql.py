@@ -195,11 +195,39 @@ def indices(df):
 
 
 def compliance_check(df):
-    '''Checks if a dataframe is compliant to PSQL. It must has no index, or indices which do not match with any column. Raises ValueError when an error is encountered.'''
+    '''Checks if a dataframe is compliant to PSQL. It must have no index, or indices which do not match with any column. Raises ValueError when an error is encountered.'''
     for x in indices(df):
         if x in df.columns:
             raise ValueError(
                 "Index '{}' appears as a non-primary column as well".format(x))
+
+
+def as_column_name(s):
+    '''Converts a string into a PSQL-compliant column name.
+
+    Parameters
+    ----------
+    s : str
+        a string
+
+    Returns
+    -------
+    s2 : str
+        a lower-case alpha-numeric and underscore-only string
+
+    Raises
+    ------
+    ValueError if the string cannot be converted.
+    '''
+    if not isinstance(s, str):
+        raise ValueError("The input argument is not a string: {}".format(s))
+
+    s2 = _re.sub('[^\w]', '_', s)
+    s2 = s2.lower()
+    if not _re.match('^[a-z]', s2):
+        raise ValueError("The first letter of the input is not an alphabet letter: '{}'->'{}'".format(s, s2))
+
+    return s2
 
 
 def to_sql(df, name, conn, schema=None, if_exists='fail', nb_trials=3, logger=None, **kwargs):
