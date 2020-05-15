@@ -1180,17 +1180,11 @@ def writesync_table(conn, csv_filepath, table_name, id_name, schema=None, max_re
 
         # remove redundant remote records
         id_list = diff_keys + remote_only_keys
-        if len(id_list) > 0:
+        if len(id_list) > 0 and table_name in list_tables(conn_ro, schema=schema, nb_trials=nb_trials, logger=logger):
+            if logger:
+                logger.debug("Removing {} keys.".format(len(id_list)))
             id_list = ",".join(str(x) for x in id_list)
-            query_str = """
-                DO $$
-                  BEGIN
-                    IF EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='{}' AND table_name='{}')
-                    THEN
-                      DELETE FROM {} WHERE {} IN ({});
-                    END IF;
-                  END
-                $$ ;""".format('public' if schema is None else schema, table_name, frame_sql_str, id_name, id_list)
+            query_str = "DELETE FROM {} WHERE {} IN ({});".format(frame_sql_str, id_name, id_list)
             exec_sql(query_str, conn, nb_trials=nb_trials, logger=logger)
 
         # insert records that need modification
