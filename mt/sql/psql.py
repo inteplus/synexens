@@ -22,9 +22,9 @@ def pg_get_locked_transactions(conn, schema=None):
 
     Parameters
     ----------
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         connection engine
-    schema : str or None
+    schema: str or None
         If None, then all schemas are considered and not just the public schema. Else, scope down to a single schema.
 
     Returns
@@ -59,9 +59,9 @@ def pg_cancel_backend(conn, pid):
 
     Parameters
     ----------
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         connection engine
-    pid : int
+    pid: int
         the backend pid to be cancelled
     '''
     query_str = "SELECT pg_cancel_backend('{}');".format(pid)
@@ -73,9 +73,9 @@ def pg_cancel_all_backends(conn, schema=None, logger=None):
 
     Parameters
     ----------
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         connection engine
-    schema : str or None
+    schema: str or None
         If None, then all schemas are considered and not just the public schema. Else, scope down to a single schema.
     logger: logging.Logger or None
         logger for debugging
@@ -96,15 +96,15 @@ def run_func(func, *args, nb_trials=3, logger=None, **kwargs):
 
     Parameters
     ----------
-    func : function
+    func: function
         function to be invoked
-    args : sequence
+    args: sequence
         arguments to be passed to the function
     nb_trials: int
         number of query trials
     logger: logging.Logger or None
         logger for debugging
-    kwargs : dict
+    kwargs: dict
         keyword arguments to be passed to the function
     '''
     for x in range(nb_trials):
@@ -127,13 +127,13 @@ def read_sql(sql, conn, index_col=None, set_index_after=False, nb_trials=3, logg
     ----------
     index_col: string or list of strings, optional, default: None
         Column(s) to set as index(MultiIndex). See pandas.read_sql().
-    set_index_after : bool
+    set_index_after: bool
         whether to set index specified by index_col via the pandas.read_sql() function or after the function has been invoked
     nb_trials: int
         number of query trials
     logger: logging.Logger or None
         logger for debugging
-    kwargs : dict
+    kwargs: dict
         other keyword arguments to be passed directly to pandas.read_sql()
 
     pandas.read_sql:
@@ -153,13 +153,13 @@ def read_sql_query(sql, conn, index_col=None, set_index_after=False, nb_trials=3
     ----------
     index_col: string or list of strings, optional, default: None
         Column(s) to set as index(MultiIndex). See pandas.read_sql_query().
-    set_index_after : bool
+    set_index_after: bool
         whether to set index specified by index_col via the pandas.read_sql_query() function or after the function has been invoked
     nb_trials: int
         number of query trials
     logger: logging.Logger or None
         logger for debugging
-    kwargs : dict
+    kwargs: dict
         other keyword arguments to be passed directly to pandas.read_sql_query()
 
     pandas.read_sql_query:
@@ -207,12 +207,12 @@ def as_column_name(s):
 
     Parameters
     ----------
-    s : str
+    s: str
         a string
 
     Returns
     -------
-    s2 : str
+    s2: str
         a lower-case alpha-numeric and underscore-only string
 
     Raises
@@ -235,13 +235,13 @@ def to_sql(df, name, conn, schema=None, if_exists='fail', nb_trials=3, logger=No
 
     Parameters
     ----------
-    df : pandas.DataFrame
+    df: pandas.DataFrame
         dataframe to be sent to the server
-    conn : sqlalchemy.engine.Engine or sqlite3.Connection
+    conn: sqlalchemy.engine.Engine or sqlite3.Connection
         the connection engine
-    schema : string, optional
+    schema: string, optional
         Specify the schema. If None, use default schema.
-    if_exists : str
+    if_exists: str
         what to do when the table exists. Beside all options available from pandas.to_sql(), a new option called 'gently_replace' is introduced, in which it will avoid dropping the table by trying to delete all entries and then inserting new entries. But it will only do so if the remote table contains exactly all the columns that the local dataframe has, and vice-versa.
     nb_trials: int
         number of query trials
@@ -332,11 +332,11 @@ def rename_schema(old_schema, new_schema, conn, nb_trials=3, logger=None):
 
     Parameters
     ----------
-    old_schema : str
+    old_schema: str
         old schema name
-    new_schema : str
+    new_schema: str
         new schema name
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
     nb_trials: int
         number of query trials
@@ -352,9 +352,9 @@ def list_views(conn, schema=None, nb_trials=3, logger=None):
 
     Parameters
     ----------
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -363,7 +363,7 @@ def list_views(conn, schema=None, nb_trials=3, logger=None):
 
     Returns
     -------
-    out : list
+    out: list
         list of all view names
     '''
     if schema is None:
@@ -380,9 +380,9 @@ def list_matviews(conn, schema=None, nb_trials=3, logger=None):
 
     Parameters
     ----------
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -391,7 +391,7 @@ def list_matviews(conn, schema=None, nb_trials=3, logger=None):
 
     Returns
     -------
-    out : list
+    out: list
         list of all materialized view names
     '''
     if schema is None:
@@ -407,9 +407,9 @@ def list_frames(conn, schema=None, nb_trials=3, logger=None):
 
     Parameters
     ----------
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -418,7 +418,7 @@ def list_frames(conn, schema=None, nb_trials=3, logger=None):
 
     Returns
     -------
-    out : pd.DataFrame(columns=['name', 'type'])
+    out: pd.DataFrame(columns=['name', 'type'])
         list of all dataframes of types {'table', 'view', 'matview'}
     '''
     data = []
@@ -436,7 +436,7 @@ def list_all_frames(conn, schema=None, nb_trials=3, logger=None):
 
     Parameters
     ----------
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
     nb_trials: int
         number of query trials
@@ -445,7 +445,7 @@ def list_all_frames(conn, schema=None, nb_trials=3, logger=None):
 
     Returns
     -------
-    out : pd.DataFrame(columns=['name', 'schema', 'type'])
+    out: pd.DataFrame(columns=['name', 'schema', 'type'])
         list of all dataframes of types {'table', 'view', 'matview'}
     '''
     dfs = []
@@ -463,9 +463,9 @@ def get_frame_length(frame_name, conn, schema=None, nb_trials=3, logger=None):
 
     Parameters
     ----------
-    frame_name : str
+    frame_name: str
         name of the dataframe
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
     nb_trials: int
         number of query trials
@@ -474,7 +474,7 @@ def get_frame_length(frame_name, conn, schema=None, nb_trials=3, logger=None):
 
     Returns
     -------
-    out : int
+    out: int
         number of rows
 
     Notes
@@ -516,11 +516,11 @@ def get_view_sql_code(view_name, conn, schema=None, nb_trials=3, logger=None):
 
     Parameters
     ----------
-    view_name : str
+    view_name: str
         view name
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -529,7 +529,7 @@ def get_view_sql_code(view_name, conn, schema=None, nb_trials=3, logger=None):
 
     Returns
     -------
-    retval : str
+    retval: str
         SQL query string defining the view
     '''
     return read_sql_query("SELECT pg_get_viewdef('{}', true) a".format(frame_sql(view_name, schema=schema)),
@@ -541,13 +541,13 @@ def rename_table(schema, old_table_name, new_table_name, conn, nb_trials=3, logg
 
     Parameters
     ----------
-    old_table_name : str
+    old_table_name: str
         old table name
-    new_table_name : str
+    new_table_name: str
         new table name
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -570,11 +570,11 @@ def drop_table(table_name, conn, schema=None, restrict=True, nb_trials=3, logger
     ----------
     table_name : str
         table name
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
-    restrict : bool
+    restrict: bool
         If True, refuses to drop table if there is any object depending on it. Otherwise it is the 'cascade' option which allows you to remove those dependent objects together with the table automatically.
     nb_trials: int
         number of query trials
@@ -596,13 +596,13 @@ def rename_view(old_view_name, new_view_name, conn, schema=None, nb_trials=3, lo
 
     Parameters
     ----------
-    old_view_name : str
+    old_view_name: str
         old view name
-    new_view_name : str
+    new_view_name: str
         new view name
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -619,13 +619,13 @@ def drop_view(view_name, conn, schema=None, restrict=True, nb_trials=3, logger=N
 
     Parameters
     ----------
-    view_name : str
+    view_name: str
         view name
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
-    restrict : bool
+    restrict: bool
         If True, refuses to drop table if there is any object depending on it. Otherwise it is the 'cascade' option which allows you to remove those dependent objects together with the table automatically.
     nb_trials: int
         number of query trials
@@ -647,13 +647,13 @@ def rename_matview(old_matview_name, new_matview_name, conn, schema=None, nb_tri
 
     Parameters
     ----------
-    old_matview_name : str
+    old_matview_name: str
         old materialized view name
-    new_matview_name : str
+    new_matview_name: str
         new materialized view name
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -670,13 +670,13 @@ def drop_matview(matview_name, conn, schema=None, restrict=True, nb_trials=3, lo
 
     Parameters
     ----------
-    matview_name : str
+    matview_name: str
         materialized view name
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
-    restrict : bool
+    restrict: bool
         If True, refuses to drop table if there is any object depending on it. Otherwise it is the 'cascade' option which allows you to remove those dependent objects together with the table automatically.
     nb_trials: int
         number of query trials
@@ -698,11 +698,11 @@ def frame_exists(frame_name, conn, schema=None, nb_trials=3, logger=None):
 
     Parameters
     ----------
-    frame_name : str
+    frame_name: str
         name of table or view
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -711,7 +711,7 @@ def frame_exists(frame_name, conn, schema=None, nb_trials=3, logger=None):
 
     Returns
     -------
-    retval : bool
+    retval: bool
         whether a table or a view exists with the given name
     '''
     if frame_name in list_tables(conn, schema=schema, nb_trials=nb_trials, logger=logger):
@@ -726,13 +726,13 @@ def drop_frame(frame_name, conn, schema=None, restrict=True, nb_trials=3, logger
 
     Parameters
     ----------
-    frame_name : str
+    frame_name: str
         frame name
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
-    restrict : bool
+    restrict: bool
         If True, refuses to drop table if there is any object depending on it. Otherwise it is the 'cascade' option which allows you to remove those dependent objects together with the table automatically.
     nb_trials: int
         number of query trials
@@ -757,11 +757,11 @@ def list_columns_ext(table_name, conn, schema=None, nb_trials=3, logger=None):
 
     Parameters
     ----------
-    table_name : str
+    table_name: str
         a valid table name returned from `list_tables()`
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -770,7 +770,7 @@ def list_columns_ext(table_name, conn, schema=None, nb_trials=3, logger=None):
 
     Returns
     -------
-    out : pandas.DataFrame
+    out: pandas.DataFrame
         a table of details of the columns
     '''
     if not frame_exists(table_name, conn, schema=schema, nb_trials=nb_trials, logger=logger):
@@ -797,11 +797,11 @@ def list_columns(table_name, conn, schema=None, nb_trials=3, logger=None):
 
     Parameters
     ----------
-    table_name : str
+    table_name: str
         a valid table name returned from `list_tables()`
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -810,7 +810,7 @@ def list_columns(table_name, conn, schema=None, nb_trials=3, logger=None):
 
     Returns
     -------
-    out : list of all column names
+    out: list of all column names
     '''
     return list_columns_ext(table_name, conn, schema=schema, nb_trials=nb_trials, logger=logger)['column_name'].tolist()
 
@@ -820,11 +820,11 @@ def list_primary_columns_ext(frame_name, conn, schema=None, nb_trials=3, logger=
 
     Parameters
     ----------
-    frame_name : str
+    frame_name: str
         a valid table/view/matview name returned from `list_frames()`
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -853,11 +853,11 @@ def list_primary_columns(frame_name, conn, schema=None, nb_trials=3, logger=None
 
     Parameters
     ----------
-    frame_name : str
+    frame_name: str
         a valid table/view/matview name returned from `list_frames()`
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         a valid schema name returned from `list_schemas()`
     nb_trials: int
         number of query trials
@@ -877,15 +877,15 @@ def rename_column(table_name, old_column_name, new_column_name, conn, schema=Non
 
     Parameters
     ----------
-    table_name : str
+    table_name: str
         table name
-    old_column_name : str
+    old_column_name: str
         old column name
-    new_column_name : str
+    new_column_name: str
         new column name
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         schema name
     nb_trials: int
         number of query trials
@@ -907,13 +907,13 @@ def drop_column(table_name, column_name, conn, schema=None, nb_trials=3, logger=
 
     Parameters
     ----------
-    table_name : str
+    table_name: str
         table name
-    column_name : str
+    column_name: str
         column name
-    conn : sqlalchemy.engine.base.Engine
+    conn: sqlalchemy.engine.base.Engine
         an sqlalchemy connection engine created by function `create_engine()`
-    schema : str or None
+    schema: str or None
         schema name
     nb_trials: int
         number of query trials
@@ -938,23 +938,23 @@ def comparesync_table(conn, csv_filepath, table_name, id_name, set_index_after=F
 
     Parameters
     ----------
-    conn : sqlalchemy connectible
+    conn: sqlalchemy connectible
         connection to the PostgreSQL database
-    csv_filepath : path
+    csv_filepath: path
         path to the local CSV file
-    table_name : str
+    table_name: str
         table name
-    id_name : str
+    id_name: str
         index column name. Assumption is only one column for indexing for now.
-    set_index_after : bool
+    set_index_after: bool
         whether to set index specified by index_col via the pandas.read_sql() function or after the function has been invoked
-    columns : list
+    columns: list
         list of column names the function will read from, ignoring the remaining columns
-    schema : str
+    schema: str
         schema name, None means using the default one
-    cond : str
+    cond: str
         additional condition in selecting rows from the PostgreSQL table
-    reading_mode : bool
+    reading_mode: bool
         whether comparing is for reading or for writing
     nb_trials: int
         number of read_sql() trials
@@ -963,17 +963,17 @@ def comparesync_table(conn, csv_filepath, table_name, id_name, set_index_after=F
 
     Returns
     -------
-    local_df : pandas.DataFrame(index=id_name, columns=[..., 'hash']) or None
+    local_df: pandas.DataFrame(index=id_name, columns=[..., 'hash']) or None
         local dataframe loaded to memory, if it exists
-    remote_md5_df : pandas.DataFrame(index=id_name, columns=['hash'])
+    remote_md5_df: pandas.DataFrame(index=id_name, columns=['hash'])
         remote dataframe containing only the hash values
-    same_keys : list
+    same_keys: list
         list of keys identifying rows which appear in both tables and are the same
-    diff_keys : list
+    diff_keys: list
         list of keys identifying rows which appear in both tables but are different
-    local_only_keys : list
+    local_only_keys: list
         list of keys containing rows which appear in the local table only
-    remote_only_keys : list
+    remote_only_keys: list
         list of keys identifying rows which appear in the remote table only
 
     Note
@@ -1079,21 +1079,21 @@ def writesync_table(conn, csv_filepath, table_name, id_name, schema=None, max_re
 
     Parameters
     ----------
-    conn : sqlalchemy connectible
+    conn: sqlalchemy connectible
         connection to the PostgreSQL database
-    csv_filepath : path
+    csv_filepath: path
         path to the local CSV file
-    table_name : str
+    table_name: str
         table name
-    id_name : str
+    id_name: str
         index column name. Assumption is only one column for indexing for now.
-    schema : str
+    schema: str
         schema name, None means using the default one
-    bg_write_csv : bool
+    bg_write_csv: bool
         whether to write the updated CSV file in a background thread
-    max_records_per_query : int or None
+    max_records_per_query: int or None
         maximum number of records to be updated in each SQL query. If None, this will be dynamic to make sure each query runs about 5 minute.
-    conn_ro : sqlalchemy connectible or None
+    conn_ro: sqlalchemy connectible or None
         read-only connection to the PostgreSQL database. If not specified, it is set to `conn`.
     nb_trials: int
         number of read_sql() trials
@@ -1102,7 +1102,7 @@ def writesync_table(conn, csv_filepath, table_name, id_name, schema=None, max_re
 
     Returns
     -------
-    df : pandas.DataFrame
+    df: pandas.DataFrame
         the data frame representing the local table
 
     Note
@@ -1221,25 +1221,25 @@ def readsync_table(conn, csv_filepath, table_name, id_name, set_index_after=Fals
 
     Parameters
     ----------
-    conn : sqlalchemy connectible
+    conn: sqlalchemy connectible
         connection to the PostgreSQL database
-    csv_filepath : path
+    csv_filepath: path
         path to the local CSV file
-    table_name : str
+    table_name: str
         table name
-    id_name : str
+    id_name: str
         index column name. Assumption is only one column for indexing for now.
-    set_index_after : bool
+    set_index_after: bool
         whether to set index specified by index_col via the pandas.read_sql() function or after the function has been invoked
-    columns : list
+    columns: list
         list of column names the function will read from, ignoring the remaining columns
-    schema : str
+    schema: str
         schema name, None means using the default one
-    cond : str
+    cond: str
         additional condition in selecting rows from the PostgreSQL table
-    bg_write_csv : bool
+    bg_write_csv: bool
         whether to write the updated CSV file in a background thread
-    max_records_per_query : int or None
+    max_records_per_query: int or None
         maximum number of records to be updated in each SQL query. If None, this will be dynamic to make sure each query runs about 5 minute.
     nb_trials: int
         number of read_sql() trials
@@ -1248,9 +1248,9 @@ def readsync_table(conn, csv_filepath, table_name, id_name, set_index_after=Fals
 
     Returns
     -------
-    df : pandas.DataFrame
+    df: pandas.DataFrame
         the data frame representing the read and updated table
-    bg : BgInvoke or None, optional
+    bg: BgInvoke or None, optional
         If bg_write_csv is True, this represents the background thread for writing the updated CSV file. If no background thread is needed, None is returned.
 
     Note
