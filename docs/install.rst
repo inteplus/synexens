@@ -7,4 +7,6 @@ Install via pip::
 
 Build from source::
 
+    git clone https://github.com/inteplus/sqlmt.git
+    cd basemt
     python3 setup.py install
