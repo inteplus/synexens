@@ -3,4 +3,5 @@ sphinx-rtd-theme
 sqlalchemy
 tzlocal
 psycopg2-binary
+basemt
 pandasmt
