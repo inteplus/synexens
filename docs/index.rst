@@ -10,6 +10,7 @@ Welcome to sqlmt's documentation!
    :maxdepth: 2
    :caption: Contents:
 	     
+   install
    autoapi/mt/sql/index
    autoapi/sqlmt/index
 
