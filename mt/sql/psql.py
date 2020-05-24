@@ -136,9 +136,11 @@ def read_sql(sql, conn, index_col=None, set_index_after=False, nb_trials=3, logg
     kwargs: dict
         other keyword arguments to be passed directly to pandas.read_sql()
 
-    pandas.read_sql:
+    See Also
+    --------
+    Function ``pandas.read_sql()``
 
-    """ + _pd.read_sql.__doc__
+    """
     if index_col is None or not set_index_after:
         return run_func(_pd.read_sql, sql, conn, index_col=index_col, nb_trials=nb_trials, logger=logger, **kwargs)
     df = run_func(_pd.read_sql, sql, conn,
@@ -162,9 +164,10 @@ def read_sql_query(sql, conn, index_col=None, set_index_after=False, nb_trials=3
     kwargs: dict
         other keyword arguments to be passed directly to pandas.read_sql_query()
 
-    pandas.read_sql_query:
-
-    """ + _pd.read_sql_query.__doc__
+    See Also
+    --------
+    Function ``pandas.read_sql_query()``
+    """
     if index_col is None or not set_index_after:
         return run_func(_pd.read_sql_query, sql, conn, index_col=index_col, nb_trials=nb_trials, logger=logger, **kwargs)
     df = run_func(_pd.read_sql_query, sql, conn,
@@ -182,9 +185,11 @@ def read_sql_table(table_name, conn, nb_trials=3, logger=None, **kwargs):
     logger: logging.Logger or None
         logger for debugging
 
-    pandas.read_sql_table:
+    See Also
+    --------
+    Function ``pandas.read_sql_table()``.
 
-    """ + _pd.read_sql_table.__doc__
+    """
     return run_func(_pd.read_sql_table, table_name, conn, nb_trials=nb_trials, logger=logger, **kwargs)
 
 
@@ -256,9 +261,11 @@ def to_sql(df, name, conn, schema=None, if_exists='fail', nb_trials=3, logger=No
     -----
     The original pandas.DataFrame.to_sql() function does not turn any index into a primary key in PSQL. This function attempts to fix that problem. It takes as input a PSQL-compliant dataframe (see `compliance_check()`). It ignores any input `index` or `index_label` keyword. Instead, it considers 2 cases. If the dataframe's has an index or indices, then the tuple of all indices is turned into the primary key. If not, there is no primary key and no index is uploaded.
 
-    pandas.DataFrame.to_sql:
+    See Also
+    --------
+    Function ``pandas.DataFrame.to_sql()``.
 
-    """ + _pd.DataFrame.to_sql.__doc__
+    """
 
     if kwargs:
         if 'index' in kwargs:
