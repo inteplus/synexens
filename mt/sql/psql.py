@@ -138,8 +138,7 @@ def read_sql(sql, conn, index_col=None, set_index_after=False, nb_trials=3, logg
 
     See Also
     --------
-    Function ``pandas.read_sql()``
-
+    pandas.read_sql
     """
     if index_col is None or not set_index_after:
         return run_func(_pd.read_sql, sql, conn, index_col=index_col, nb_trials=nb_trials, logger=logger, **kwargs)
@@ -166,7 +165,7 @@ def read_sql_query(sql, conn, index_col=None, set_index_after=False, nb_trials=3
 
     See Also
     --------
-    Function ``pandas.read_sql_query()``
+    pandas.read_sql_query
     """
     if index_col is None or not set_index_after:
         return run_func(_pd.read_sql_query, sql, conn, index_col=index_col, nb_trials=nb_trials, logger=logger, **kwargs)
@@ -187,7 +186,7 @@ def read_sql_table(table_name, conn, nb_trials=3, logger=None, **kwargs):
 
     See Also
     --------
-    Function ``pandas.read_sql_table()``.
+    pandas.read_sql_table
 
     """
     return run_func(_pd.read_sql_table, table_name, conn, nb_trials=nb_trials, logger=logger, **kwargs)
@@ -263,7 +262,7 @@ def to_sql(df, name, conn, schema=None, if_exists='fail', nb_trials=3, logger=No
 
     See Also
     --------
-    Function ``pandas.DataFrame.to_sql()``.
+    pandas.DataFrame.to_sql()
 
     """
 
