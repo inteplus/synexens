@@ -40,7 +40,7 @@ extensions = [
 ]
 
 # sphinx-autoapi
-autoapi_dirs = ["../mt", "../sqlmt"]
+autoapi_dirs = ["../sqlmt"]
 autoapi_python_use_implicit_namespaces = True
 
 master_doc = 'index'

@@ -1,6 +1,8 @@
 Installation
 ============
 
+This package is now deprecated. Use package 'mtsql' instead.
+
 Install via pip::
 
     pip3 install sqlmt

@@ -5,3 +5,4 @@ tzlocal
 psycopg2-binary
 basemt
 pandasmt
+mtsql

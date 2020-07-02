@@ -6,12 +6,13 @@
 Welcome to sqlmt's documentation!
 =================================
 
+This package is now deprecated. Use package 'mtsql' instead.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 	     
    install
-   autoapi/mt/sql/index
    autoapi/sqlmt/index
 
    
