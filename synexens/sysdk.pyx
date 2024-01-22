@@ -227,9 +227,7 @@ cdef extern from "SYSDKInterface.h" namespace "Synexens" nogil:
         #  高度
         int m_nHeight
 
-
     # ----- functions -----
-
 
     # 获取SDK版本号
     # @ param [in/out] nLength 字符长度
@@ -244,7 +242,6 @@ cdef extern from "SYSDKInterface.h" namespace "Synexens" nogil:
     # 反初始化SDK，释放资源
     # @ return 错误码
     SYErrorCode UnInitSDK()
-
 
     # 查找设备
     # @ param [in/out] nCount 设备数量
@@ -262,6 +259,43 @@ cdef extern from "SYSDKInterface.h" namespace "Synexens" nogil:
     # @ return 错误码
     SYErrorCode CloseDevice(unsigned int nDeviceID)
 
+    # 查询设备支持类型
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in/out] nCount 支持的数据帧类型数量,pSupportType为空时仅用作返回数量，否则用来校验pSupportType内存分配数量是否匹配
+    # @ param [in/out] pSupportType 支持的类型，由外部分配内存，pSupportType传入nullptr时仅获取nCount
+    # @ return 错误码
+    SYErrorCode QueryDeviceSupportFrameType(unsigned int nDeviceID, int& nCount, SYSupportType * pSupportType)
+
+    # 查询设备支持的帧分辨率
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] supportType 帧类型
+    # @ param [in/out] nCount 支持的分辨率数量,pResolution为空时仅用作返回数量，否则用来校验pResolution内存分配数量是否匹配
+    # @ param [in/out] pResolution 支持的分辨率类型，由外部分配内存，pResolution传入nullptr时仅获取nCount
+    # @ return 错误码
+    SYErrorCode QueryDeviceSupportResolution(unsigned int nDeviceID, SYSupportType supportType, int& nCount, SYResolution* pResolution)
+
+    # 获取当前流类型
+    # @ param [in] nDeviceID 设备ID
+    # @ return 当前流类型
+    SYStreamType GetCurrentStreamType(unsigned int nDeviceID)
+
+    # 启动数据流
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] streamType 数据流类型
+    # @ return 错误码
+    SYErrorCode StartStreaming(unsigned int nDeviceID, SYStreamType streamType)
+
+    # 停止数据流
+    # @ param [in] nDeviceID 设备ID
+    # @ return 错误码
+    SYErrorCode StopStreaming(unsigned int nDeviceID)
+
+    # 切换数据流
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] streamType 数据流类型
+    # @ return 错误码
+    SYErrorCode ChangeStreaming(unsigned int nDeviceID, SYStreamType streamType)
+
 
 # ----- functions -----
 
@@ -270,15 +304,17 @@ def get_sdk_version():
     cdef int nLength = 256
     cdef SYErrorCode ret
 
-    ret = GetSDKVersion(nLength, &arr[0])
+    ret = SYErrorCode(GetSDKVersion(nLength, &arr[0]))
+    if ret != 0:
+        raise RuntimeError(f"GetSDKVersion() returns {ret}.")
 
     return arr[:nLength].decode()
 
 def init_sdk():
-    return InitSDK()
+    return SYErrorCode(InitSDK())
 
 def uninit_sdk():
-    return UnInitSDK()
+    return SYErrorCode(UnInitSDK())
 
 def find_device():
     cdef int nCount = 0
@@ -286,12 +322,16 @@ def find_device():
     cdef SYErrorCode ret
 
     if True:
-        ret = FindDevice(nCount, NULL)
+        ret = SYErrorCode(FindDevice(nCount, NULL))
+        if ret != 0:
+            raise RuntimeError(f"First FindDevice() returns {ret}.")
         devices.resize(nCount)
     else:
         devices.resize(1)
 
-    ret = FindDevice(nCount, &devices[0])
+    ret = SYErrorCode(FindDevice(nCount, &devices[0]))
+    if ret != 0:
+        raise RuntimeError(f"Second FindDevice() returns {ret}.")
     res = {}
     for i in range(nCount):
         device = devices[i]
@@ -305,8 +345,58 @@ def open_device(unsigned int nDeviceID, SYDeviceType deviceType):
     di.m_nDeviceID = nDeviceID
     di.m_deviceType = deviceType
 
-    return OpenDevice(di)
-
+    return SYErrorCode(OpenDevice(di))
 
 def close_device(unsigned int nDeviceID):
-    return CloseDevice(nDeviceID)
+    return SYErrorCode(CloseDevice(nDeviceID))
+
+def query_device_support_frame_type(unsigned int nDeviceID):
+    cdef int nCount = 0
+    cdef vector[SYSupportType] supportTypes
+    cdef SYErrorCode ret
+
+    ret = SYErrorCode(QueryDeviceSupportFrameType(nDeviceID, nCount, NULL))
+    if ret != 0:
+        raise RuntimeError(f"First QueryDeviceSupportFrameType() returns {ret}.")
+    supportTypes.resize(nCount)
+
+    ret = SYErrorCode(QueryDeviceSupportFrameType(nDeviceID, nCount, &supportTypes[0]))
+    if ret != 0:
+        raise RuntimeError(f"Second QueryDeviceSupportFrameType() returns {ret}.")
+    res = []
+    for i in range(nCount):
+        res.append(SYSupportType(supportTypes[i]))
+
+    return res
+
+def query_device_support_resolution(unsigned int nDeviceID, SYSupportType supportType):
+    cdef int nCount = 0
+    cdef vector[SYResolution] resolutions
+    cdef SYErrorCode ret
+
+    ret = SYErrorCode(QueryDeviceSupportResolution(nDeviceID, supportType, nCount, NULL))
+    if ret != 0:
+        raise RuntimeError(f"First QueryDeviceSupportResolution() returns {ret}.")
+    resolutions.resize(nCount)
+
+    ret = SYErrorCode(QueryDeviceSupportResolution(nDeviceID, supportType, nCount, &resolutions[0]))
+    if ret != 0:
+        raise RuntimeError(f"Second QueryDeviceSupportFrameType() returns {ret}.")
+    res = []
+    for i in range(nCount):
+        res.append(SYResolution(resolutions[i]))
+
+    return res
+
+def get_current_stream_type(unsigned int nDeviceID):
+    return SYStreamType(GetCurrentStreamType(nDeviceID))
+
+def start_streaming(unsigned int nDeviceID, SYStreamType streamType):
+    return SYErrorCode(StartStreaming(nDeviceID, streamType))
+
+def stop_streaming(unsigned int nDeviceID):
+    return SYErrorCode(StopStreaming(nDeviceID))
+
+def change_streaming(unsigned int nDeviceID, SYStreamType streamType):
+    return SYErrorCode(ChangeStreaming(nDeviceID, streamType))
+
