@@ -83,6 +83,16 @@ cdef extern from "SYSDKInterface.h" namespace "Synexens" nogil:
     # @ return 错误码
     SYErrorCode UnInitSDK()
 
+
+def get_sdk_version():
+    cdef char arr[256]
+    cdef int nLength = 256
+    cdef SYErrorCode ret
+
+    ret = GetSDKVersion(nLength, &arr[0])
+
+    return arr[:nLength].decode()
+
 def init_sdk():
     return InitSDK()
 
