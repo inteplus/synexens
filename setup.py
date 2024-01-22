@@ -1,19 +1,15 @@
 #!/usr/bin/env python3
 
-from setuptools import setup, find_packages, find_namespace_packages
-from sqlmt.version import VERSION
+from setuptools import setup, find_packages
+from synexens.version import VERSION
 
 setup(
-    name='sqlmt',
+    name="synexens",
     version=VERSION,
-    description="Extra Python modules to deal with the interaction between pandas dataframes and remote SQL servers, for Minh-Tri Pham",
+    description="Wrapper for Synexens SDK to access their LiDAR devices",
     author=["Minh-Tri Pham"],
-    packages=find_packages() + find_namespace_packages(include=['mt.*']),
+    packages=find_packages(),
     install_requires=[
-        'sqlalchemy',  # for psql access
-        'tzlocal',  # for getting the local timezone
-        'psycopg2-binary',  # for psql access
-        # 'mysql', # for mysql access
-        'pandasmt>=0.1.0',
+        "mtbase",  # for numpy access
     ],
 )
