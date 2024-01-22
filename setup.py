@@ -18,7 +18,6 @@ setup(
     description="Wrapper for Synexens SDK to access their LiDAR devices",
     author=["Minh-Tri Pham"],
     packages=find_packages(),
-    package_data={"synexens.sysdk.lib.amd64": ["*.so"], "": ["*.so"]},
     include_package_data=True,
     install_requires=[
         "mtbase",  # for numpy access
