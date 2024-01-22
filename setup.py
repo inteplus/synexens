@@ -18,6 +18,7 @@ src_dirpath = path.join(setup_dirpath, "sysdk", "lib", plat)
 dst_dirpath = path.join(setup_dirpath, "synexens")
 for filepath in path.glob(src_dirpath + "/*.so"):
     dst_filepath = path.join(dst_dirpath, path.basename(filepath))
+    path.remove(dst_filepath)
     shutil.copyfile(filepath, dst_filepath)
 
 setup(
