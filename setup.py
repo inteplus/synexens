@@ -8,7 +8,6 @@ from setuptools import Extension, setup, find_packages
 from Cython.Build import cythonize
 from synexens.version import version
 
-if False:
 if platform.machine() == "x86_64":
     plat = "amd64"
 elif platform.machine() == "aarch64":

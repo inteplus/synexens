@@ -133,4 +133,6 @@ dmypy.json
 .pyre/
 
 
-synexens/*.so
+synexens/*.so*
+synexens/*.c
+synexens/*.cpp
