@@ -819,8 +819,64 @@ def get_depth_point_cloud(unsigned int nDeviceID, unsigned short[:,:] pDepth, bo
 
     return pPos
 
+def extract_resolution(SYResolution resolution):
+    if resolution == SYRESOLUTION_NULL:
+        return 0, 0
+    if resolution == SYRESOLUTION_320_240:
+        return 320, 240
+    if resolution == SYRESOLUTION_640_480:
+        return 640, 480
+    if resolution == SYRESOLUTION_960_540:
+        return 960, 540
+    if resolution == SYRESOLUTION_1920_1080:
+        return 1920, 1080
+
 def get_last_frame_data(unsigned int nDeviceID):
     cdef SYErrorCode ret
-    # need to create arrays of SYFrameInfo instances
-    # and to create a contiguous array to store the frames
-    # then we can invoke GetLastFrameData() and return the results in some kind of structure
+    cdef SYResolution resolution
+    cdef SYFrameInfo[2] frame_infos
+    cdef SYFrameData frame_data
+    cdef SYFrameData* pFrameData = &frame_data
+    cdef SYStreamType streamType
+    cdef int nCount
+
+    res = {}
+    streamType = SYStreamType(GetCurrentStreamType(nDeviceID))
+    res["stream_type"] = streamType
+
+    if streamType != SYSTREAMTYPE_DEPTHIR:
+        raise NotImplementedError("Currently only supporting stream type DEPTHIR.")
+
+    frame_infos[0].m_frameType = SYFRAMETYPE_DEPTH
+    ret = SYErrorCode(GetFrameResolution(nDeviceID, frame_infos[0].m_frameType, resolution))
+    if ret != 0:
+        raise RuntimeError(f"First GetFrameResolution() returns {ret}.")
+    frame_infos[0].m_nFrameWidth, frame_infos[0].m_nFrameHeight = extract_resolution(resolution)
+
+    frame_infos[1].m_frameType = SYFRAMETYPE_IR
+    ret = SYErrorCode(GetFrameResolution(nDeviceID, frame_infos[1].m_frameType, resolution))
+    if ret != 0:
+        raise RuntimeError(f"Second GetFrameResolution() returns {ret}.")
+    frame_infos[1].m_nFrameWidth, frame_infos[1].m_nFrameHeight = extract_resolution(resolution)
+
+    nCount1 = frame_infos[0].m_nFrameHeight * frame_infos[0].m_nFrameWidth
+    nCount2 = frame_infos[1].m_nFrameHeight * frame_infos[1].m_nFrameWidth
+    data = np.empty(nCount1 + nCount2, dtype=np.uint16)
+    cdef unsigned short[:] data_view = data
+
+    frame_data.m_nFrameCount = 2
+    frame_data.m_pFrameInfo = &frame_infos[0]
+    frame_data.m_pData = &data_view[0]
+    frame_data.m_nBuffferLength = (nCount1 + nCount2)*2
+
+    ret = SYErrorCode(GetLastFrameData(nDeviceID, pFrameData))
+    if ret != 0:
+        raise RuntimeError(f"GetLastFrameData() returns {ret}.")
+
+    res2 = []
+    img = data[:nCount1].reshape((frame_infos[0].m_nFrameHeight, frame_infos[0].m_nFrameWidth))
+    res2.append((frame_infos[0].m_frameType, frame_infos[0].m_nFrameHeight, frame_infos[0].m_nFrameWidth, img))
+    img = data[nCount1:].reshape((frame_infos[1].m_nFrameHeight, frame_infos[1].m_nFrameWidth))
+    res2.append((frame_infos[1].m_frameType, frame_infos[1].m_nFrameHeight, frame_infos[1].m_nFrameWidth, img))
+    res["frames"] = res2
+    return res
