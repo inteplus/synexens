@@ -4,6 +4,8 @@
 from libcpp.vector cimport vector
 from libcpp cimport bool
 
+import numpy as np
+
 cdef extern from "SYSDKInterface.h" namespace "Synexens" nogil:
 
     # ----- constants -----
@@ -296,6 +298,76 @@ cdef extern from "SYSDKInterface.h" namespace "Synexens" nogil:
     # @ return 错误码
     SYErrorCode ChangeStreaming(unsigned int nDeviceID, SYStreamType streamType)
 
+    # 设置分辨率（如果已启动数据流，内部会执行关流->设置分辨率->重新开流的操作流程）
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] frameType 帧类型
+    # @ param [in] resolution 帧分辨率
+    # @ return 错误码
+    SYErrorCode SetFrameResolution(unsigned int nDeviceID, SYFrameType frameType, SYResolution resolution)
+
+    # 获取设备帧分辨率
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] frameType 帧类型
+    # @ param [out] resolution 帧分辨率
+    # @ return 错误码
+    SYErrorCode GetFrameResolution(unsigned int nDeviceID, SYFrameType frameType, SYResolution& resolution)
+
+    # 获取滤波开启状态
+    # @ param [in] nDeviceID 设备ID
+    # @ param [out] bFilter 滤波开启状态，true-已开启滤波，false-未开启滤波
+    # @ return 错误码
+    SYErrorCode GetFilter(unsigned int nDeviceID, bool& bFilter)
+
+    # 开启/关闭滤波
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] bFilter 滤波开关，true-开启滤波，false-关闭滤波
+    # @ return 错误码
+    SYErrorCode SetFilter(unsigned int nDeviceID, bool bFilter)
+
+    # 获取滤波列表
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in/out] nCount 滤波列表长度
+    # @ param [in/out] pFilterType 滤波列表
+    # @ return 错误码
+    SYErrorCode GetFilterList(unsigned int nDeviceID, int& nCount, SYFilterType* pFilterType)
+
+    # 设置默认滤波
+    # @ param [in] nDeviceID 设备ID
+    # @ return 错误码
+    SYErrorCode SetDefaultFilter(unsigned int nDeviceID)
+
+    # 增加滤波
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] filterType 滤波类型
+    # @ return 错误码
+    SYErrorCode AddFilter(unsigned int nDeviceID, SYFilterType filterType)
+
+    # 移除滤波
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] nIndex 滤波列表中的索引
+    # @ return 错误码
+    SYErrorCode DeleteFilter(unsigned int nDeviceID, int nIndex)
+
+    # 清除滤波
+    # @ param [in] nDeviceID 设备ID
+    # @ return 错误码
+    SYErrorCode ClearFilter(unsigned int nDeviceID)
+
+    # 设置滤波参数
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] filterType 滤波类型
+    # @ param [in] nParamCount 滤波参数个数
+    # @ param [in] pFilterParam 滤波参数
+    # @ return 错误码
+    SYErrorCode SetFilterParam(unsigned int nDeviceID, SYFilterType filterType, int nParamCount, float* pFilterParam)
+
+    # 获取滤波参数
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] filterType 滤波类型
+    # @ param [in/out] nParamCount 滤波参数个数
+    # @ param [in/out] pFilterParam 滤波参数
+    # @ return 错误码
+    SYErrorCode GetFilterParam(unsigned int nDeviceID, SYFilterType filterType, int& nParamCount, float* pFilterParam)
 
 # ----- functions -----
 
@@ -400,3 +472,82 @@ def stop_streaming(unsigned int nDeviceID):
 def change_streaming(unsigned int nDeviceID, SYStreamType streamType):
     return SYErrorCode(ChangeStreaming(nDeviceID, streamType))
 
+def set_frame_resolution(unsigned int nDeviceID, SYFrameType frameType, SYResolution resolution):
+    return SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
+
+def get_frame_resolution(unsigned int nDeviceID, SYFrameType frameType):
+    cdef SYResolution resolution
+    cdef SYErrorCode ret
+
+    ret = SYErrorCode(GetFrameResolution(nDeviceID, frameType, resolution))
+    if ret != 0:
+        raise RuntimeError(f"GetFrameResolution() returns {ret}.")
+
+    return SYResolution(resolution)
+
+def get_filter(unsigned int nDeviceID):
+    cdef bool bFilter
+    cdef SYErrorCode ret
+
+    ret = SYErrorCode(GetFilter(nDeviceID, bFilter))
+    if ret != 0:
+        raise RuntimeError(f"GetFilter() returns {ret}.")
+
+    return bFilter
+
+def set_filter(unsigned int nDeviceID, bool bFilter):
+    return SYErrorCode(SetFilter(nDeviceID, bFilter))
+
+def get_filter_list(unsigned int nDeviceID):
+    cdef int nCount = 0
+    cdef vector[SYFilterType] filterTypes
+    cdef SYErrorCode ret
+
+    ret = SYErrorCode(GetFilterList(nDeviceID, nCount, NULL))
+    if ret != 0:
+        raise RuntimeError(f"First GetFilterList() returns {ret}.")
+    filterTypes.resize(nCount)
+
+    ret = SYErrorCode(GetFilterList(nDeviceID, nCount, &filterTypes[0]))
+    if ret != 0:
+        raise RuntimeError(f"Second GetFilterList() returns {ret}.")
+    res = []
+    for i in range(nCount):
+        res.append(SYFilterType(filterTypes[i]))
+
+    return res
+
+def set_default_filter(unsigned int nDeviceID):
+    return SYErrorCode(SetDefaultFilter(nDeviceID))
+
+def add_filter(unsigned int nDeviceID, SYFilterType filterType):
+    return SYErrorCode(AddFilter(nDeviceID, filterType))
+
+def delete_filter(unsigned int nDeviceID, int nIndex):
+    return SYErrorCode(DeleteFilter(nDeviceID, nIndex))
+
+def clear_filter(unsigned int nDeviceID):
+    return SYErrorCode(ClearFilter(nDeviceID))
+
+def set_filter_params(unsigned int nDeviceID, SYFilterType filterType, float[:] filterParams):
+    if filterParams.strides[0] != 4:
+        raise ValueError("Argument 'filterParams' is not contiguous.")
+    return SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
+
+def get_filter_params(unsigned int nDeviceID, SYFilterType filterType):
+    cdef int nCount = 0
+    cdef vector[float] filterParams
+    cdef SYErrorCode ret
+
+    ret = SYErrorCode(GetFilterParam(nDeviceID, filterType, nCount, NULL))
+    if ret != 0:
+        raise RuntimeError(f"First GetFilterParam() returns {ret}.")
+    filterParams.resize(nCount)
+
+    ret = SYErrorCode(GetFilterParam(nDeviceID, filterType, nCount, &filterParams[0]))
+    if ret != 0:
+        raise RuntimeError(f"Second GetFilterParam() returns {ret}.")
+    res = np.empty(nCount, dtype=np.float32)
+    res[:] = filterParams
+
+    return res
