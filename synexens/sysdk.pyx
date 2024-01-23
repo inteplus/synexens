@@ -369,6 +369,146 @@ cdef extern from "SYSDKInterface.h" namespace "Synexens" nogil:
     # @ return 错误码
     SYErrorCode GetFilterParam(unsigned int nDeviceID, SYFilterType filterType, int& nParamCount, float* pFilterParam)
 
+    # 获取水平镜像状态
+    # @ param [in] nDeviceID 设备ID
+    # @ param [out] bMirror 水平镜像状态，true-已开启水平镜像，false-未开启水平镜像
+    # @ return 错误码
+    SYErrorCode GetMirror(unsigned int nDeviceID, bool& bMirror)
+
+    # 开启/关闭水平镜像
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] bMirror 水平镜像开关，true-开启水平镜像，false-关闭水平镜像
+    # @ return 错误码
+    SYErrorCode SetMirror(unsigned int nDeviceID, bool bMirror)
+
+    # 获取垂直翻转状态
+    # @ param [in] nDeviceID 设备ID
+    # @ param [out] bFlip 垂直翻转状态，true-已开启垂直翻转，false-未开启垂直翻转
+    # @ return 错误码
+    SYErrorCode GetFlip(unsigned int nDeviceID, bool& bFlip)
+
+    # 开启/关闭垂直翻转
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] bFlip 垂直翻转开关，true-开启垂直翻转，false-关闭垂直翻转
+    # @ return 错误码
+    SYErrorCode SetFlip(unsigned int nDeviceID, bool bFlip)
+
+    # 获取积分时间
+    # @ param [in] nDeviceID 设备ID
+    # @ param [out] nIntegralTime 积分时间
+    # @ return 错误码
+    SYErrorCode GetIntegralTime(unsigned int nDeviceID, int& nIntegralTime)
+
+    # 设置积分时间
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] nIntegralTime 积分时间
+    # @ return 错误码
+    SYErrorCode SetIntegralTime(unsigned int nDeviceID, int nIntegralTime)
+
+    # 获取积分时间调节范围
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] depthResolution depth分辨率
+    # @ param [out] nMin 积分时间最小值
+    # @ param [out] nMax 积分时间最大值
+    # @ return 错误码
+    SYErrorCode GetIntegralTimeRange(unsigned int nDeviceID, SYResolution depthResolution, int& nMin, int& nMax)
+
+    # 获取测距量程
+    # @ param [in] nDeviceID 设备ID
+    # @ param [out] nMin 量程最小值
+    # @ param [out] nMax 量程最大值
+    # @ return 错误码
+    SYErrorCode GetDistanceMeasureRange(unsigned int nDeviceID, int& nMin, int& nMax)
+
+    # 获取用户测距范围
+    # @ param [in] nDeviceID 设备ID
+    # @ param [out] nMin 测距范围最小值
+    # @ param [out] nMax 测距范围最大值
+    # @ return 错误码
+    SYErrorCode GetDistanceUserRange(unsigned int nDeviceID, int& nMin, int& nMax)
+
+    # 设置用户测距范围
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] nMin 测距范围最小值
+    # @ param [in] nMax 测距范围最大值
+    # @ return 错误码
+    SYErrorCode SetDistanceUserRange(unsigned int nDeviceID, int nMin, int nMax)
+
+    # 读取设备sn号
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in/out] nLength 字符长度
+    # @ param [in/out] pstrSN 设备sn号字符串指针,由外部分配内存，pstrSN传入nullptr时仅获取nLength
+    # @ return 错误码
+    SYErrorCode GetDeviceSN(unsigned int nDeviceID, int& nLength, char* pstrSN)
+
+    # 写入设备sn号
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] nLength 字符长度
+    # @ param [in] pstrSN 设备sn号字符串指针
+    # @ return 错误码
+    SYErrorCode SetDeviceSN(unsigned int nDeviceID, int nLength, const char* pstrSN)
+
+    # 读取设备固件版本号
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in/out] nLength 字符长度
+    # @ param [in/out] pstrHWVersion 固件版本号字符串指针,由外部分配内存，pstrHWVersion传入nullptr时仅获取nLength
+    # @ return 错误码
+    SYErrorCode GetDeviceHWVersion(unsigned int nDeviceID, int& nLength, char* pstrHWVersion)
+
+    # 获取深度对应伪彩色
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] nCount 数据量(内存空间pDepth需要nCount*2字节，pColor需要nCount*3字节)
+    # @ param [in] pDepth 深度数据
+    # @ param [in/out] pColor 深度对应伪彩色(24位RGB格式)
+    # @ return 错误码
+    SYErrorCode GetDepthColor(unsigned int nDeviceID, int nCount, const unsigned short* pDepth, unsigned char* pColor)
+
+    # 获取深度对应点云数据
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] nWidth 宽度
+    # @ param [in] nHeight 高度
+    # @ param [in] pDepth 深度数据
+    # @ param [in/out] pPointCloud 深度对应点云数据,由外部分配内存
+    # @ param [in] bUndistort 裁剪标志，true-裁剪 false-不裁剪
+    # @ return 错误码
+    SYErrorCode GetDepthPointCloud(unsigned int nDeviceID, int nWidth, int nHeight, const unsigned short* pDepth, SYPointCloudData* pPointCloud, bool bUndistort)
+
+    # 获取RGBD
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] nSourceDepthWidth 源深度数据宽度
+    # @ param [in] nSourceDepthHeight 源深度数据高度
+    # @ param [in] pSourceDepth 源深度数据
+    # @ param [in] nSourceRGBWidth 源RGB数据宽度
+    # @ param [in] nSourceRGBHeight 源RGB数据高度
+    # @ param [in] pSourceRGB 源RGB数据
+    # @ param [in] nTargetWidth RGBD数据宽度
+    # @ param [in] nTargetHeight RGBD数据高度
+    # @ param [in/out] pTargetDepth RGBD中的深度数据,由外部分配内存,数据长度与源RGB长度一致
+    # @ param [in/out] pTargetRGB RGBD中的RGB数据,由外部分配内存,数据长度与源RGB长度一致
+    # @ return 错误码
+    SYErrorCode GetRGBD(unsigned int nDeviceID, int nSourceDepthWidth, int nSourceDepthHeight, unsigned short* pSourceDepth, int nSourceRGBWidth, int nSourceRGBHeight, unsigned char* pSourceRGB, int nTargetWidth, int nTargetHeight, unsigned short* pTargetDepth, unsigned char* pTargetRGB)
+
+    # 获取最新一帧数据
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in/out] pFrameData 最后一帧数据
+    # @ return 错误码
+    SYErrorCode GetLastFrameData(unsigned int nDeviceID, SYFrameData*& pFrameData)
+
+    # 去畸变
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] pSource  待去畸变数据指针
+    # @ param [in] nWidth 图像宽度
+    # @ param [in] nHeight 图像高度
+    # @ param [in] bDepth 是否是深度数据/RGB数据
+    # @ param [out] pTarget  去畸变结果数据指针，由外部分配内存,数据长度与待去畸变数据指针长度一致
+    SYErrorCode Undistort(unsigned int nDeviceID, const unsigned short* pSource, int nWidth, int nHeight, bool bDepth, unsigned short* pTarget)
+
+    # 获取相机参数
+    # @ param [in] nDeviceID 设备ID
+    # @ param [in] resolution  分辨率
+    # @ param [in/out] intrinsics 相机参数
+    SYErrorCode GetIntric(unsigned int nDeviceID, SYResolution resolution, SYIntrinsics& intrinsics)
+
 # ----- functions -----
 
 def get_sdk_version():
@@ -551,3 +691,136 @@ def get_filter_params(unsigned int nDeviceID, SYFilterType filterType):
     res[:] = filterParams
 
     return res
+
+def get_mirror(unsigned int nDeviceID):
+    cdef bool bMirror
+    cdef SYErrorCode ret
+
+    ret = SYErrorCode(GetMirror(nDeviceID, bMirror))
+    if ret != 0:
+        raise RuntimeError(f"GetMirror() returns {ret}.")
+
+    return bMirror
+
+def set_mirror(unsigned int nDeviceID, bool bMirror):
+    return SYErrorCode(SetMirror(nDeviceID, bMirror))
+
+def get_flip(unsigned int nDeviceID):
+    cdef bool bFlip
+    cdef SYErrorCode ret
+
+    ret = SYErrorCode(GetFlip(nDeviceID, bFlip))
+    if ret != 0:
+        raise RuntimeError(f"GetFlip() returns {ret}.")
+
+    return bFlip
+
+def set_flip(unsigned int nDeviceID, bool bFlip):
+    return SYErrorCode(SetFlip(nDeviceID, bFlip))
+
+def get_integral_time(unsigned int nDeviceID):
+    cdef int nIntegralTime
+    cdef SYErrorCode ret
+
+    ret = SYErrorCode(GetIntegralTime(nDeviceID, nIntegralTime))
+    if ret != 0:
+        raise RuntimeError(f"GetIntegralTime() returns {ret}.")
+
+    return nIntegralTime
+
+def set_integral_time(unsigned int nDeviceID, int nIntegralTime):
+    return SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
+
+def get_integral_time_range(unsigned int nDeviceID, SYResolution depthResolution):
+    cdef int nMin
+    cdef int nMax
+    cdef SYErrorCode ret
+
+    ret = SYErrorCode(GetIntegralTimeRange(nDeviceID, depthResolution, nMin, nMax))
+    if ret != 0:
+        raise RuntimeError(f"GetIntegralTime() returns {ret}.")
+
+    return nMin, nMax
+
+def get_distance_measure_range(unsigned int nDeviceID):
+    cdef int nMin
+    cdef int nMax
+    cdef SYErrorCode ret
+
+    ret = SYErrorCode(GetDistanceMeasureRange(nDeviceID, nMin, nMax))
+    if ret != 0:
+        raise RuntimeError(f"GetDistanceMeasureRange() returns {ret}.")
+
+    return nMin, nMax
+
+def get_distance_user_range(unsigned int nDeviceID):
+    cdef int nMin
+    cdef int nMax
+    cdef SYErrorCode ret
+
+    ret = SYErrorCode(GetDistanceUserRange(nDeviceID, nMin, nMax))
+    if ret != 0:
+        raise RuntimeError(f"GetDistanceUserRange() returns {ret}.")
+
+    return nMin, nMax
+
+def set_distance_user_range(unsigned int nDeviceID, int nMin, int nMax):
+    return SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
+
+def get_device_sn(unsigned int nDeviceID):
+    cdef char arr[256]
+    cdef int nLength = 256
+    cdef SYErrorCode ret
+
+    ret = SYErrorCode(GetDeviceSN(nDeviceID, nLength, &arr[0]))
+    if ret != 0:
+        raise RuntimeError(f"GetDeviceSN() returns {ret}.")
+
+    return arr[:nLength].decode()
+
+def get_device_hw_version(unsigned int nDeviceID):
+    cdef char arr[256]
+    cdef int nLength = 256
+    cdef SYErrorCode ret
+
+    ret = SYErrorCode(GetDeviceHWVersion(nDeviceID, nLength, &arr[0]))
+    if ret != 0:
+        raise RuntimeError(f"GetDeviceHWVersion() returns {ret}.")
+
+    return arr[:nLength].decode()
+
+def get_depth_color(unsigned int nDeviceID, unsigned short[:,:] pDepth):
+    cdef SYErrorCode ret
+
+    nCount = pDepth.shape[0]
+
+    pColor = np.empty((pDepth.shape[0], pDepth.shape[1], 3), dtype=np.uint8)
+
+    cdef unsigned char [:, :, :] pColor_view = pColor
+
+    ret = SYErrorCode(GetDepthColor(nDeviceID, pDepth.size, <const unsigned short *>&pDepth[0,0], <unsigned char *>&pColor_view[0,0,0]))
+    if ret != 0:
+        raise RuntimeError(f"GetDepthColor() returns {ret}.")
+
+    return pColor
+
+def get_depth_point_cloud(unsigned int nDeviceID, unsigned short[:,:] pDepth, bool bUndistort):
+    cdef SYErrorCode ret
+
+    nHeight = pDepth.shape[0]
+    nWidth = pDepth.shape[1]
+    pPos = np.empty((nHeight, nWidth, 3), dtype=np.float32)
+
+    cdef float [:, :, :] pPos_view = pPos
+
+    ret = SYErrorCode(GetDepthPointCloud(nDeviceID, nWidth, nHeight, <const unsigned short *>&pDepth[0,0], <SYPointCloudData *>&pPos_view[0,0,0], bUndistort))
+    if ret != 0:
+        raise RuntimeError(f"GetDepthPointCloud() returns {ret}.")
+
+    return pPos
+
+def get_last_frame_data(unsigned int nDeviceID):
+    cdef SYErrorCode ret
+    # need to create arrays of SYFrameInfo instances
+    # and to create a contiguous array to store the frames
+    # then we can invoke GetLastFrameData() and return the results in some kind of structure
