@@ -51,6 +51,7 @@ setup(
     install_requires=[
         "mtbase",  # for numpy access
         "cython",  # for wrapping purposes
+        "v4l2py",  # for the interface
     ],
     ext_modules=cythonize(extensions),
 )
