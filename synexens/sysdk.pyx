@@ -854,7 +854,7 @@ def get_last_frame_data(unsigned int nDeviceID):
     if ret != 0:
         raise RuntimeError(f"GetLastFrameData() returns {ret}.")
 
-    d_frames
+    d_frames = {}
     ofs = 0
     for i in range(pFrameData[0].m_nFrameCount):
         pFrameInfo = &pFrameData[0].m_pFrameInfo[i]
