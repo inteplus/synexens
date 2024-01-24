@@ -1,6 +1,7 @@
 # distutils: language = c++
 # distutils: language_level = 3
 
+from libc.string cimport memcpy
 from libcpp.vector cimport vector
 from libcpp cimport bool
 
@@ -831,52 +832,46 @@ def extract_resolution(SYResolution resolution):
     if resolution == SYRESOLUTION_1920_1080:
         return 1920, 1080
 
+
+def extract_dtype(SYFrameType frameType):
+    if frameType in (SYFRAMETYPE_DEPTH, SYFRAMETYPE_IR):
+        return np.uint16
+    return np.uint8
+
+def extract_channel_count(SYFrameType frameType):
+    if frameType in (SYFRAMETYPE_DEPTH, SYFRAMETYPE_IR):
+        return 1
+    return 3
+
 def get_last_frame_data(unsigned int nDeviceID):
     cdef SYErrorCode ret
-    cdef SYResolution resolution
-    cdef SYFrameInfo[2] frame_infos
-    cdef SYFrameData frame_data
-    cdef SYFrameData* pFrameData = &frame_data
-    cdef SYStreamType streamType
-    cdef int nCount
-
-    res = {}
-    streamType = SYStreamType(GetCurrentStreamType(nDeviceID))
-    res["stream_type"] = streamType
-
-    if streamType != SYSTREAMTYPE_DEPTHIR:
-        raise NotImplementedError("Currently only supporting stream type DEPTHIR.")
-
-    frame_infos[0].m_frameType = SYFRAMETYPE_DEPTH
-    ret = SYErrorCode(GetFrameResolution(nDeviceID, frame_infos[0].m_frameType, resolution))
-    if ret != 0:
-        raise RuntimeError(f"First GetFrameResolution() returns {ret}.")
-    frame_infos[0].m_nFrameWidth, frame_infos[0].m_nFrameHeight = extract_resolution(resolution)
-
-    frame_infos[1].m_frameType = SYFRAMETYPE_IR
-    ret = SYErrorCode(GetFrameResolution(nDeviceID, frame_infos[1].m_frameType, resolution))
-    if ret != 0:
-        raise RuntimeError(f"Second GetFrameResolution() returns {ret}.")
-    frame_infos[1].m_nFrameWidth, frame_infos[1].m_nFrameHeight = extract_resolution(resolution)
-
-    nCount1 = frame_infos[0].m_nFrameHeight * frame_infos[0].m_nFrameWidth
-    nCount2 = frame_infos[1].m_nFrameHeight * frame_infos[1].m_nFrameWidth
-    data = np.empty(nCount1 + nCount2, dtype=np.uint16)
-    cdef unsigned short[:] data_view = data
-
-    frame_data.m_nFrameCount = 2
-    frame_data.m_pFrameInfo = &frame_infos[0]
-    frame_data.m_pData = &data_view[0]
-    frame_data.m_nBuffferLength = (nCount1 + nCount2)*2
+    cdef SYFrameData* pFrameData
+    cdef SYFrameInfo* pFrameInfo
+    cdef unsigned short [:,:,:] uint16Data
+    cdef unsigned char [:,:,:] uint8Data
 
     ret = SYErrorCode(GetLastFrameData(nDeviceID, pFrameData))
     if ret != 0:
         raise RuntimeError(f"GetLastFrameData() returns {ret}.")
 
-    res2 = []
-    img = data[:nCount1].reshape((frame_infos[0].m_nFrameHeight, frame_infos[0].m_nFrameWidth))
-    res2.append((frame_infos[0].m_frameType, frame_infos[0].m_nFrameHeight, frame_infos[0].m_nFrameWidth, img))
-    img = data[nCount1:].reshape((frame_infos[1].m_nFrameHeight, frame_infos[1].m_nFrameWidth))
-    res2.append((frame_infos[1].m_frameType, frame_infos[1].m_nFrameHeight, frame_infos[1].m_nFrameWidth, img))
-    res["frames"] = res2
-    return res
+    d_frames
+    ofs = 0
+    for i in range(pFrameData[0].m_nFrameCount):
+        pFrameInfo = &pFrameData[0].m_pFrameInfo[i]
+        frameType = pFrameInfo[0].m_frameType
+        dtype = extract_dtype(frameType)
+        nChannels = extract_channel_count(frameType)
+        width = pFrameInfo[0].m_nFrameWidth
+        height = pFrameInfo[0].m_nFrameHeight
+        size = np.nbytes[dtype]*width*height*nChannels
+        img = np.empty((height, width, nChannels), dtype=dtype)
+        if dtype == np.uint8:
+            uint8Data = img
+            memcpy(<void *>&uint8Data[0,0,0], &(<char*>pFrameData[0].m_pData)[ofs], size)
+        else:
+            uint16Data = img
+            memcpy(<void *>&uint16Data[0,0,0], &(<char*>pFrameData[0].m_pData)[ofs], size)
+        ofs += size
+        d_frames[SYFrameType(frameType)] = img
+
+    return d_frames
