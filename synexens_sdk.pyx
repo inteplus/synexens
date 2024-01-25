@@ -777,7 +777,7 @@ def get_device_sn(unsigned int nDeviceID):
     if ret != 0:
         raise RuntimeError(f"GetDeviceSN() returns {ret}.")
 
-    return arr[:nLength].decode()
+    return arr[:nLength]
 
 def get_device_hw_version(unsigned int nDeviceID):
     cdef char arr[256]

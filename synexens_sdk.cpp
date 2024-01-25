@@ -9189,7 +9189,7 @@ static PyObject *__pyx_pf_12synexens_sdk_66get_device_sn(CYTHON_UNUSED PyObject 
  *     if ret != 0:
  *         raise RuntimeError(f"GetDeviceSN() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
- *     return arr[:nLength].decode()
+ *     return arr[:nLength]
  */
     __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 778, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
@@ -9232,12 +9232,12 @@ static PyObject *__pyx_pf_12synexens_sdk_66get_device_sn(CYTHON_UNUSED PyObject 
   /* "synexens_sdk.pyx":780
  *         raise RuntimeError(f"GetDeviceSN() returns {ret}.")
  * 
- *     return arr[:nLength].decode()             # <<<<<<<<<<<<<<
+ *     return arr[:nLength]             # <<<<<<<<<<<<<<
  * 
  * def get_device_hw_version(unsigned int nDeviceID):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_decode_c_string(__pyx_v_arr, 0, __pyx_v_nLength, NULL, NULL, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 780, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_arr) + 0, __pyx_v_nLength - 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 780, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9266,7 +9266,7 @@ static PyObject *__pyx_pf_12synexens_sdk_66get_device_sn(CYTHON_UNUSED PyObject 
 }
 
 /* "synexens_sdk.pyx":782
- *     return arr[:nLength].decode()
+ *     return arr[:nLength]
  * 
  * def get_device_hw_version(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef char arr[256]
@@ -9429,7 +9429,7 @@ static PyObject *__pyx_pf_12synexens_sdk_68get_device_hw_version(CYTHON_UNUSED P
   goto __pyx_L0;
 
   /* "synexens_sdk.pyx":782
- *     return arr[:nLength].decode()
+ *     return arr[:nLength]
  * 
  * def get_device_hw_version(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef char arr[256]
@@ -28783,7 +28783,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__93 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__92, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_device_sn, 771, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__93)) __PYX_ERR(0, 771, __pyx_L1_error)
 
   /* "synexens_sdk.pyx":782
- *     return arr[:nLength].decode()
+ *     return arr[:nLength]
  * 
  * def get_device_hw_version(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef char arr[256]
@@ -29841,7 +29841,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "synexens_sdk.pyx":782
- *     return arr[:nLength].decode()
+ *     return arr[:nLength]
  * 
  * def get_device_hw_version(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef char arr[256]
