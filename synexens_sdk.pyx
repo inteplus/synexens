@@ -790,31 +790,29 @@ def get_device_hw_version(unsigned int nDeviceID):
 
     return arr[:nLength].decode()
 
-def get_depth_color(unsigned int nDeviceID, unsigned short[:,:] pDepth):
+def get_depth_color(unsigned int nDeviceID, unsigned short[:,:,:] pDepth):
     cdef SYErrorCode ret
-
-    nCount = pDepth.shape[0]
 
     pColor = np.empty((pDepth.shape[0], pDepth.shape[1], 3), dtype=np.uint8)
 
-    cdef unsigned char [:, :, :] pColor_view = pColor
+    cdef unsigned char [:,:,:] pColor_view = pColor
 
-    ret = SYErrorCode(GetDepthColor(nDeviceID, pDepth.size, <const unsigned short *>&pDepth[0,0], <unsigned char *>&pColor_view[0,0,0]))
+    ret = SYErrorCode(GetDepthColor(nDeviceID, pDepth.size, <const unsigned short *>&pDepth[0,0,0], <unsigned char *>&pColor_view[0,0,0]))
     if ret != 0:
         raise RuntimeError(f"GetDepthColor() returns {ret}.")
 
     return pColor
 
-def get_depth_point_cloud(unsigned int nDeviceID, unsigned short[:,:] pDepth, bool bUndistort):
+def get_depth_point_cloud(unsigned int nDeviceID, unsigned short[:,:,:] pDepth, bool bUndistort):
     cdef SYErrorCode ret
 
     nHeight = pDepth.shape[0]
     nWidth = pDepth.shape[1]
     pPos = np.empty((nHeight, nWidth, 3), dtype=np.float32)
 
-    cdef float [:, :, :] pPos_view = pPos
+    cdef float [:,:,:] pPos_view = pPos
 
-    ret = SYErrorCode(GetDepthPointCloud(nDeviceID, nWidth, nHeight, <const unsigned short *>&pDepth[0,0], <SYPointCloudData *>&pPos_view[0,0,0], bUndistort))
+    ret = SYErrorCode(GetDepthPointCloud(nDeviceID, nWidth, nHeight, <const unsigned short *>&pDepth[0,0,0], <SYPointCloudData *>&pPos_view[0,0,0], bUndistort))
     if ret != 0:
         raise RuntimeError(f"GetDepthPointCloud() returns {ret}.")
 
@@ -831,7 +829,6 @@ def extract_resolution(SYResolution resolution):
         return 960, 540
     if resolution == SYRESOLUTION_1920_1080:
         return 1920, 1080
-
 
 def extract_dtype(SYFrameType frameType):
     if frameType in (SYFRAMETYPE_DEPTH, SYFRAMETYPE_IR):
@@ -875,3 +872,54 @@ def get_last_frame_data(unsigned int nDeviceID):
         d_frames[SYFrameType(frameType)] = img
 
     return d_frames
+
+def undistort_depth(unsigned int nDeviceID, unsigned short[:,:,:] pDepth):
+    cdef SYErrorCode ret
+
+    nHeight = pDepth.shape[0]
+    nWidth = pDepth.shape[1]
+    pDepth2 = np.empty((nHeight, nWidth, 1), dtype=np.uint16)
+
+    cdef unsigned short [:,:,:] pDepth2_view = pDepth2
+
+    ret = SYErrorCode(Undistort(nDeviceID, <const unsigned short *>&pDepth[0,0,0], nWidth, nHeight, True, &pDepth2_view[0,0,0]))
+    if ret != 0:
+        raise RuntimeError(f"Undistort() returns {ret}.")
+
+    return pDepth2
+
+def undistort_ir(unsigned int nDeviceID, unsigned short[:,:,:] pIr):
+    cdef SYErrorCode ret
+
+    nHeight = pIr.shape[0]
+    nWidth = pIr.shape[1]
+    pIr2 = np.empty((nHeight, nWidth, 1), dtype=np.uint16)
+
+    cdef unsigned short [:,:,:] pIr2_view = pIr2
+
+    ret = SYErrorCode(Undistort(nDeviceID, <const unsigned short *>&pIr[0,0,0], nWidth, nHeight, False, &pIr2_view[0,0,0]))
+    if ret != 0:
+        raise RuntimeError(f"Undistort() returns {ret}.")
+
+    return pIr2
+
+def get_intrinsics(unsigned int nDeviceID, SYResolution resolution):
+    cdef SYErrorCode ret
+    cdef SYIntrinsics intrinsics
+
+    ret = SYErrorCode(GetIntric(nDeviceID, resolution, intrinsics))
+    if ret != 0:
+        raise RuntimeError(f"GetIntric() returns {ret}.")
+
+    return {
+        "fov_x": intrinsics.m_fltFOV[0],
+	"fov_y": intrinsics.m_fltFOV[1],
+	"distortion_coeff_x": intrinsics.m_fltCoeffs[0],
+	"distortion_coeff_y": intrinsics.m_fltCoeffs[1],
+	"focal_length_x": intrinsics.m_fltFocalDistanceX,
+	"focal_length_y": intrinsics.m_fltFocalDistanceY,
+	"center_point_x": intrinsics.m_fltCenterPointX,
+	"center_point_y": intrinsics.m_fltCenterPointY,
+	"width": intrinsics.m_nWidth,
+	"height": intrinsics.m_nHeight,
+    }
