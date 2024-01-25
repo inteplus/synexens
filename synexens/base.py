@@ -6,7 +6,7 @@ import functools
 import atexit
 import v4l2py as v4l2
 
-import _synexens_sdk as sdk
+import synexens_sdk as sdk
 
 _ret = sdk.init_sdk()
 if _ret != 0:

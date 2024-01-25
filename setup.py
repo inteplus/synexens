@@ -35,7 +35,7 @@ if False:
 
 extensions = [
     Extension(
-        "_synexens_sdk",
+        "synexens_sdk",
         ["synexens_sdk.pyx"],
         include_dirs=["sysdk/include"],
         libraries=["SynexensSDK", "csreconstruction2.0", "SonixCamera"],
