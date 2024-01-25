@@ -10,9 +10,7 @@ import synexens_sdk as sdk
 
 from mt import tp
 
-_ret = sdk.init_sdk()
-if _ret != 0:
-    raise RuntimeError("Unable to initialise the Synexens SDK.")
+sdk.init_sdk()
 atexit.register(sdk.uninit_sdk)
 
 
@@ -41,6 +39,8 @@ def find_devices():
 
 
 class Device(v4l2.device.ReentrantContextManager):
+    """A Synexens device."""
+
     def __init__(self, device_id: tp.Optional[int] = None):
         super().__init__()
 
@@ -59,6 +59,7 @@ class Device(v4l2.device.ReentrantContextManager):
         self.close()
 
     def open(self):
+        """Opens the device and gets the device information."""
         if self.closed:
             device_type = find_devices()[self.index]
             sdk.open_device(self.index, device_type)
@@ -69,16 +70,24 @@ class Device(v4l2.device.ReentrantContextManager):
             }
             l_supportTypes = sdk.query_device_support_frame_type(self.index)
             d_supportTypes = {}
+            s_resolutions = set()
             for supportType in l_supportTypes:
                 l_resolutions = sdk.query_device_support_resolution(
                     self.index, supportType
                 )
                 d_supportTypes[supportType] = l_resolutions
+                s_resolutions.update(l_resolutions)
             self.info["support_frame_types"] = d_supportTypes
+            d_intrinsics = {}
+            for resolution in sorted(s_resolutions):
+                d_intrinsics[resolution] = sdk.get_intrinsics(self.index, resolution)
+            self.info["intrinsics"] = d_intrinsics
             self.closed = False
             self.streaming = False
 
     def close(self):
+        """Closes the device."""
+
         if not self.closed:
             if self.streaming:
                 self.stream_off()
@@ -96,24 +105,17 @@ class Device(v4l2.device.ReentrantContextManager):
     def stream_type(self, stream_type: sdk.SYStreamType):
         if self.streaming:
             return sdk.change_streaming(self.index, stream_type)
-        ret = sdk.start_streaming(self.index, stream_type)
-        if ret != 0:
-            raise RuntimeError(
-                f"synexens_sdk.start_streaming() returns {str(sdk.SYErrorCode(ret))}."
-            )
+        sdk.start_streaming(self.index, stream_type)
         self.streaming = True
 
     def stream_on(self, stream_type: tp.Optional[sdk.SYStreamType] = None):
+        """Starts streaming."""
         self.stream_type = stream_type
 
     def stream_off(self):
-        ret = sdk.stop_streaming(self.index)
-        if ret != 0:
-            raise RuntimeError(
-                f"synexens_sdk.stop_streaming() returns {str(sdk.SYErrorCode(ret))}."
-            )
+        """Stops streaming."""
+        sdk.stop_streaming(self.index)
         self.streaming = False
-        return ret
 
     @property
     def resolution(self):
@@ -129,8 +131,4 @@ class Device(v4l2.device.ReentrantContextManager):
                 l_frameTypes.append(sdk.SYFRAMETYPE_RGB)
 
         for frame_type in l_frameTypes:
-            ret = sdk.set_frame_resolution(self.index, frame_type, resolution)
-            if ret != 0:
-                raise RuntimeError(
-                    f"Unable to set the resolution {str(sdk.SYResolution(resolution))} to frame type {str(sdk.SYFrameType(frame_type))}."
-                )
+            sdk.set_frame_resolution(self.index, frame_type, resolution)

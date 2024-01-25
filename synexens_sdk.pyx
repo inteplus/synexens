@@ -524,10 +524,16 @@ def get_sdk_version():
     return arr[:nLength].decode()
 
 def init_sdk():
-    return SYErrorCode(InitSDK())
+    cdef SYErrorCode ret
+    ret = SYErrorCode(InitSDK())
+    if ret != 0:
+	raise RuntimeError(f"InitSDK() returns {ret}.")
 
 def uninit_sdk():
-    return SYErrorCode(UnInitSDK())
+    cdef SYErrorCode ret
+    ret = SYErrorCode(UnInitSDK())
+    if ret != 0:
+	raise RuntimeError(f"UnInitSDK() returns {ret}.")
 
 def find_device():
     cdef int nCount = 0
@@ -553,15 +559,21 @@ def find_device():
     return res
 
 def open_device(unsigned int nDeviceID, SYDeviceType deviceType):
+    cdef SYErrorCode ret
     cdef SYDeviceInfo di
 
     di.m_nDeviceID = nDeviceID
     di.m_deviceType = deviceType
 
-    return SYErrorCode(OpenDevice(di))
+    ret = SYErrorCode(OpenDevice(di))
+    if ret != 0:
+	raise RuntimeError(f"OpenDevice() returns {ret}.")
 
 def close_device(unsigned int nDeviceID):
-    return SYErrorCode(CloseDevice(nDeviceID))
+    cdef SYErrorCode ret
+    ret = SYErrorCode(CloseDevice(nDeviceID))
+    if ret != 0:
+	raise RuntimeError(f"CloseDevice() returns {ret}.")
 
 def query_device_support_frame_type(unsigned int nDeviceID):
     cdef int nCount = 0
@@ -605,16 +617,28 @@ def get_current_stream_type(unsigned int nDeviceID):
     return SYStreamType(GetCurrentStreamType(nDeviceID))
 
 def start_streaming(unsigned int nDeviceID, SYStreamType streamType):
-    return SYErrorCode(StartStreaming(nDeviceID, streamType))
+    cdef SYErrorCode ret
+    ret = SYErrorCode(StartStreaming(nDeviceID, streamType))
+    if ret != 0:
+	raise RuntimeError(f"StartStreaming() returns {ret}.")
 
 def stop_streaming(unsigned int nDeviceID):
-    return SYErrorCode(StopStreaming(nDeviceID))
+    cdef SYErrorCode ret
+    ret = SYErrorCode(StopStreaming(nDeviceID))
+    if ret != 0:
+	raise RuntimeError(f"StopStreaming() returns {ret}.")
 
 def change_streaming(unsigned int nDeviceID, SYStreamType streamType):
-    return SYErrorCode(ChangeStreaming(nDeviceID, streamType))
+    cdef SYErrorCode ret
+    ret = SYErrorCode(ChangeStreaming(nDeviceID, streamType))
+    if ret != 0:
+	raise RuntimeError(f"ChangeStreaming() returns {ret}.")
 
 def set_frame_resolution(unsigned int nDeviceID, SYFrameType frameType, SYResolution resolution):
-    return SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
+    cdef SYErrorCode ret
+    ret = SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
+    if ret != 0:
+	raise RuntimeError(f"SetFrameResolution() returns {ret}.")
 
 def get_frame_resolution(unsigned int nDeviceID, SYFrameType frameType):
     cdef SYResolution resolution
@@ -637,7 +661,10 @@ def get_filter(unsigned int nDeviceID):
     return bFilter
 
 def set_filter(unsigned int nDeviceID, bool bFilter):
-    return SYErrorCode(SetFilter(nDeviceID, bFilter))
+    cdef SYErrorCode ret
+    ret = SYErrorCode(SetFilter(nDeviceID, bFilter))
+    if ret != 0:
+	raise RuntimeError(f"SetFilter() returns {ret}.")
 
 def get_filter_list(unsigned int nDeviceID):
     cdef int nCount = 0
@@ -659,21 +686,36 @@ def get_filter_list(unsigned int nDeviceID):
     return res
 
 def set_default_filter(unsigned int nDeviceID):
-    return SYErrorCode(SetDefaultFilter(nDeviceID))
+    cdef SYErrorCode ret
+    ret = SYErrorCode(SetDefaultFilter(nDeviceID))
+    if ret != 0:
+	raise RuntimeError(f"SetDefaultFilter() returns {ret}.")
 
 def add_filter(unsigned int nDeviceID, SYFilterType filterType):
-    return SYErrorCode(AddFilter(nDeviceID, filterType))
+    cdef SYErrorCode ret
+    ret = SYErrorCode(AddFilter(nDeviceID, filterType))
+    if ret != 0:
+	raise RuntimeError(f"AddFilter() returns {ret}.")
 
 def delete_filter(unsigned int nDeviceID, int nIndex):
-    return SYErrorCode(DeleteFilter(nDeviceID, nIndex))
+    cdef SYErrorCode ret
+    ret = SYErrorCode(DeleteFilter(nDeviceID, nIndex))
+    if ret != 0:
+	raise RuntimeError(f"DeleteFilter() returns {ret}.")
 
 def clear_filter(unsigned int nDeviceID):
-    return SYErrorCode(ClearFilter(nDeviceID))
+    cdef SYErrorCode ret
+    ret = SYErrorCode(ClearFilter(nDeviceID))
+    if ret != 0:
+	raise RuntimeError(f"ClearFilter() returns {ret}.")
 
 def set_filter_params(unsigned int nDeviceID, SYFilterType filterType, float[:] filterParams):
+    cdef SYErrorCode ret
     if filterParams.strides[0] != 4:
         raise ValueError("Argument 'filterParams' is not contiguous.")
-    return SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
+    ret = SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
+    if ret != 0:
+	raise RuntimeError(f"SetFitlerParam() returns {ret}.")
 
 def get_filter_params(unsigned int nDeviceID, SYFilterType filterType):
     cdef int nCount = 0
@@ -704,7 +746,10 @@ def get_mirror(unsigned int nDeviceID):
     return bMirror
 
 def set_mirror(unsigned int nDeviceID, bool bMirror):
-    return SYErrorCode(SetMirror(nDeviceID, bMirror))
+    cdef SYErrorCode ret
+    ret = SYErrorCode(SetMirror(nDeviceID, bMirror))
+    if ret != 0:
+	raise RuntimeError(f"SetMirror() returns {ret}.")
 
 def get_flip(unsigned int nDeviceID):
     cdef bool bFlip
@@ -717,7 +762,10 @@ def get_flip(unsigned int nDeviceID):
     return bFlip
 
 def set_flip(unsigned int nDeviceID, bool bFlip):
-    return SYErrorCode(SetFlip(nDeviceID, bFlip))
+    cdef SYErrorCode ret
+    ret = SYErrorCode(SetFlip(nDeviceID, bFlip))
+    if ret != 0:
+	raise RuntimeError(f"SetFlip() returns {ret}.")
 
 def get_integral_time(unsigned int nDeviceID):
     cdef int nIntegralTime
@@ -730,7 +778,10 @@ def get_integral_time(unsigned int nDeviceID):
     return nIntegralTime
 
 def set_integral_time(unsigned int nDeviceID, int nIntegralTime):
-    return SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
+    cdef SYErrorCode ret
+    ret = SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
+    if ret != 0:
+	raise RuntimeError(f"SetIntegralTime() returns {ret}.")
 
 def get_integral_time_range(unsigned int nDeviceID, SYResolution depthResolution):
     cdef int nMin
@@ -766,7 +817,10 @@ def get_distance_user_range(unsigned int nDeviceID):
     return nMin, nMax
 
 def set_distance_user_range(unsigned int nDeviceID, int nMin, int nMax):
-    return SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
+    cdef SYErrorCode ret
+    ret = SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
+    if ret != 0:
+	raise RuntimeError(f"SetDistanceUserRange() returns {ret}.")
 
 def get_device_sn(unsigned int nDeviceID):
     cdef char arr[256]
