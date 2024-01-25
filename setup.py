@@ -55,6 +55,9 @@ setup(
         "cython",  # for wrapping purposes
         "v4l2py",  # for the interface
     ],
+    scripts=[
+        "scripts/synexens_demo.py",
+    ],
     ext_modules=cythonize(extensions),
     setup_requires=["setuptools-git-versioning<2"],
     python_requires=">=3.8",  # for asyncio to work properly
