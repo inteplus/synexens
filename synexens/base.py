@@ -8,7 +8,7 @@ import v4l2py as v4l2
 
 import synexens_sdk as sdk
 
-from mt import tp
+from mt import tp, np
 
 sdk.init_sdk()
 atexit.register(sdk.uninit_sdk)
@@ -36,6 +36,24 @@ def find_devices():
         a dictionary mapping each found device id to device type
     """
     return sdk.find_device()
+
+
+def check_depth_image(depth_image: np.ndarray, is_ir: bool = False):
+    depth = "IR" if is_ir else "depth"
+    if not depth_image.flags["C_CONTIGUOUS"]:
+        raise ValueError(f"The {depth} image is not C_CONTIGUOUS.")
+    if len(depth_image.shape) != 3:
+        raise ValueError(
+            f"The {depth} image must have rank 3. Shape: {depth_image.shape}."
+        )
+    if depth_image.shape[2] != 1:
+        raise ValueError(
+            f"The {depth} image must have dim 1 for the last rank. Shape: {depth_image.shape}."
+        )
+    if depth_image.dtype != np.uint16:
+        raise ValueError(
+            f"The {depth} image must have dtype uint16. Dtype: {depth_image.dtype}."
+        )
 
 
 class Device(v4l2.device.ReentrantContextManager):
@@ -78,10 +96,18 @@ class Device(v4l2.device.ReentrantContextManager):
                 d_supportTypes[supportType] = l_resolutions
                 s_resolutions.update(l_resolutions)
             self.info["support_frame_types"] = d_supportTypes
-            d_intrinsics = {}
+            d_resolutions = {}
             for resolution in sorted(s_resolutions):
-                d_intrinsics[resolution] = sdk.get_intrinsics(self.index, resolution)
-            self.info["intrinsics"] = d_intrinsics
+                res = {}
+                res["intrinsics"] = sdk.get_intrinsics(self.index, resolution)
+                nMin, nMax = sdk.get_integral_time_range(self.index, resolution)
+                res["integral_time_min"] = nMin
+                res["integral_time_max"] = nMax
+                d_resolutions[resolution] = res
+            self.info["resolutions"] = d_resolutions
+            nMin, nMax = sdk.get_distance_measure_range(self.index)
+            res["distance_measure_min"] = nMin
+            res["distance_measure_max"] = nMax
             self.closed = False
             self.streaming = False
 
@@ -99,6 +125,7 @@ class Device(v4l2.device.ReentrantContextManager):
 
     @property
     def stream_type(self):
+        """The current stream type."""
         return sdk.get_current_stream_type(self.index)
 
     @stream_type.setter
@@ -119,6 +146,7 @@ class Device(v4l2.device.ReentrantContextManager):
 
     @property
     def resolution(self):
+        """The current resolution."""
         return sdk.get_frame_resolution(self.index, sdk.SYFRAMETYPE_IR)
 
     @resolution.setter
@@ -132,3 +160,91 @@ class Device(v4l2.device.ReentrantContextManager):
 
         for frame_type in l_frameTypes:
             sdk.set_frame_resolution(self.index, frame_type, resolution)
+
+    @property
+    def filter(self):
+        """Whether the filter is on or off."""
+        return sdk.get_filter(self.index)
+
+    @filter.setter
+    def filter(self, bFilter: bool):
+        sdk.set_filter(self.index, bFilter)
+
+    def get_filter_list(self):
+        """Gets the list of filters currently being used."""
+        return sdk.get_filter_list(self.index)
+
+    def set_default_filter(self):
+        """Sets the default filter."""
+        sdk.set_default_filter(self.index)
+
+    def add_filter(self, filter_type: sdk.SYFilterType):
+        """Adds a filter of a given type to the filter list."""
+        sdk.add_filter(self.index, filter_type)
+
+    def delete_filter(self, index: int):
+        """Deletes a filter at a given position on the filter list."""
+        sdk.delete_filter(self.index, index)
+
+    def clear_filter(self):
+        """Clears all filters on the filter list."""
+        sdk.clear_filter(self.index)
+
+    def get_filter_params(self, filter_type: sdk.SYFilterType):
+        """Gets the parameters for a given filter type."""
+        return sdk.get_filter_params(self.index, filter_type)
+
+    def set_filter_params(self, filter_type: sdk.SYFilterType, params: np.ndarray):
+        """Sets the parameters for a given filter type."""
+        return sdk.set_filter_params(self.index, filter_type, params)
+
+    @property
+    def mirror(self):
+        """Whether the mirror is on or off."""
+        return sdk.get_mirror(self.index)
+
+    @mirror.setter
+    def mirror(self, bMirror: bool):
+        sdk.set_mirror(self.index, bMirror)
+
+    @property
+    def flip(self):
+        """Whether the flip is on or off."""
+        return sdk.get_flip(self.index)
+
+    @flip.setter
+    def flip(self, bFlip: bool):
+        sdk.set_flip(self.index, bFlip)
+
+    @property
+    def integral_time(self):
+        """The integral time."""
+        return sdk.get_integral_time(self.index)
+
+    @integral_time.setter
+    def integral_time(self, itime: int):
+        sdk.set_integral_time(self.index, itime)
+
+    def get_depth_color(self, depth_image: np.ndarray):
+        """Gets the depth color for a given depth image."""
+        check_depth_image(depth_image)
+        return sdk.get_depth_color(self.index, depth_image)
+
+    def get_depth_point_cloud(self, depth_image: np.ndarray, undistort: bool):
+        """Gets the depth point cloud for a given depth image."""
+        check_depth_image(depth_image)
+        return sdk.get_depth_point_cloud(self.index, depth_image, undistort)
+
+    def get_last_frame_data(self):
+        """Gets the latest frame(s) of data."""
+        return sdk.get_last_frame_data(self.index)
+
+    def undistort_depth(self, depth_image: np.ndarray):
+        """Undistorts the depth image."""
+        check_depth_image(depth_image)
+        return sdk.undistort_depth(depth_image)
+
+    def undistort_ir(self, ir_image: np.ndarray):
+        """Undistorts the IR image."""
+        check_depth_image(ir_image, is_ir=True)
+        return sdk.undistort_depth(ir_image)

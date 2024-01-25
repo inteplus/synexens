@@ -527,13 +527,13 @@ def init_sdk():
     cdef SYErrorCode ret
     ret = SYErrorCode(InitSDK())
     if ret != 0:
-	raise RuntimeError(f"InitSDK() returns {ret}.")
+        raise RuntimeError(f"InitSDK() returns {ret}.")
 
 def uninit_sdk():
     cdef SYErrorCode ret
     ret = SYErrorCode(UnInitSDK())
     if ret != 0:
-	raise RuntimeError(f"UnInitSDK() returns {ret}.")
+        raise RuntimeError(f"UnInitSDK() returns {ret}.")
 
 def find_device():
     cdef int nCount = 0
@@ -567,13 +567,13 @@ def open_device(unsigned int nDeviceID, SYDeviceType deviceType):
 
     ret = SYErrorCode(OpenDevice(di))
     if ret != 0:
-	raise RuntimeError(f"OpenDevice() returns {ret}.")
+        raise RuntimeError(f"OpenDevice() returns {ret}.")
 
 def close_device(unsigned int nDeviceID):
     cdef SYErrorCode ret
     ret = SYErrorCode(CloseDevice(nDeviceID))
     if ret != 0:
-	raise RuntimeError(f"CloseDevice() returns {ret}.")
+        raise RuntimeError(f"CloseDevice() returns {ret}.")
 
 def query_device_support_frame_type(unsigned int nDeviceID):
     cdef int nCount = 0
@@ -620,25 +620,25 @@ def start_streaming(unsigned int nDeviceID, SYStreamType streamType):
     cdef SYErrorCode ret
     ret = SYErrorCode(StartStreaming(nDeviceID, streamType))
     if ret != 0:
-	raise RuntimeError(f"StartStreaming() returns {ret}.")
+        raise RuntimeError(f"StartStreaming() returns {ret}.")
 
 def stop_streaming(unsigned int nDeviceID):
     cdef SYErrorCode ret
     ret = SYErrorCode(StopStreaming(nDeviceID))
     if ret != 0:
-	raise RuntimeError(f"StopStreaming() returns {ret}.")
+        raise RuntimeError(f"StopStreaming() returns {ret}.")
 
 def change_streaming(unsigned int nDeviceID, SYStreamType streamType):
     cdef SYErrorCode ret
     ret = SYErrorCode(ChangeStreaming(nDeviceID, streamType))
     if ret != 0:
-	raise RuntimeError(f"ChangeStreaming() returns {ret}.")
+        raise RuntimeError(f"ChangeStreaming() returns {ret}.")
 
 def set_frame_resolution(unsigned int nDeviceID, SYFrameType frameType, SYResolution resolution):
     cdef SYErrorCode ret
     ret = SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
     if ret != 0:
-	raise RuntimeError(f"SetFrameResolution() returns {ret}.")
+        raise RuntimeError(f"SetFrameResolution() returns {ret}.")
 
 def get_frame_resolution(unsigned int nDeviceID, SYFrameType frameType):
     cdef SYResolution resolution
@@ -664,7 +664,7 @@ def set_filter(unsigned int nDeviceID, bool bFilter):
     cdef SYErrorCode ret
     ret = SYErrorCode(SetFilter(nDeviceID, bFilter))
     if ret != 0:
-	raise RuntimeError(f"SetFilter() returns {ret}.")
+        raise RuntimeError(f"SetFilter() returns {ret}.")
 
 def get_filter_list(unsigned int nDeviceID):
     cdef int nCount = 0
@@ -689,25 +689,25 @@ def set_default_filter(unsigned int nDeviceID):
     cdef SYErrorCode ret
     ret = SYErrorCode(SetDefaultFilter(nDeviceID))
     if ret != 0:
-	raise RuntimeError(f"SetDefaultFilter() returns {ret}.")
+        raise RuntimeError(f"SetDefaultFilter() returns {ret}.")
 
 def add_filter(unsigned int nDeviceID, SYFilterType filterType):
     cdef SYErrorCode ret
     ret = SYErrorCode(AddFilter(nDeviceID, filterType))
     if ret != 0:
-	raise RuntimeError(f"AddFilter() returns {ret}.")
+        raise RuntimeError(f"AddFilter() returns {ret}.")
 
 def delete_filter(unsigned int nDeviceID, int nIndex):
     cdef SYErrorCode ret
     ret = SYErrorCode(DeleteFilter(nDeviceID, nIndex))
     if ret != 0:
-	raise RuntimeError(f"DeleteFilter() returns {ret}.")
+        raise RuntimeError(f"DeleteFilter() returns {ret}.")
 
 def clear_filter(unsigned int nDeviceID):
     cdef SYErrorCode ret
     ret = SYErrorCode(ClearFilter(nDeviceID))
     if ret != 0:
-	raise RuntimeError(f"ClearFilter() returns {ret}.")
+        raise RuntimeError(f"ClearFilter() returns {ret}.")
 
 def set_filter_params(unsigned int nDeviceID, SYFilterType filterType, float[:] filterParams):
     cdef SYErrorCode ret
@@ -715,7 +715,7 @@ def set_filter_params(unsigned int nDeviceID, SYFilterType filterType, float[:] 
         raise ValueError("Argument 'filterParams' is not contiguous.")
     ret = SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
     if ret != 0:
-	raise RuntimeError(f"SetFitlerParam() returns {ret}.")
+        raise RuntimeError(f"SetFitlerParam() returns {ret}.")
 
 def get_filter_params(unsigned int nDeviceID, SYFilterType filterType):
     cdef int nCount = 0
@@ -749,7 +749,7 @@ def set_mirror(unsigned int nDeviceID, bool bMirror):
     cdef SYErrorCode ret
     ret = SYErrorCode(SetMirror(nDeviceID, bMirror))
     if ret != 0:
-	raise RuntimeError(f"SetMirror() returns {ret}.")
+        raise RuntimeError(f"SetMirror() returns {ret}.")
 
 def get_flip(unsigned int nDeviceID):
     cdef bool bFlip
@@ -765,7 +765,7 @@ def set_flip(unsigned int nDeviceID, bool bFlip):
     cdef SYErrorCode ret
     ret = SYErrorCode(SetFlip(nDeviceID, bFlip))
     if ret != 0:
-	raise RuntimeError(f"SetFlip() returns {ret}.")
+        raise RuntimeError(f"SetFlip() returns {ret}.")
 
 def get_integral_time(unsigned int nDeviceID):
     cdef int nIntegralTime
@@ -781,7 +781,7 @@ def set_integral_time(unsigned int nDeviceID, int nIntegralTime):
     cdef SYErrorCode ret
     ret = SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
     if ret != 0:
-	raise RuntimeError(f"SetIntegralTime() returns {ret}.")
+        raise RuntimeError(f"SetIntegralTime() returns {ret}.")
 
 def get_integral_time_range(unsigned int nDeviceID, SYResolution depthResolution):
     cdef int nMin
@@ -820,7 +820,7 @@ def set_distance_user_range(unsigned int nDeviceID, int nMin, int nMax):
     cdef SYErrorCode ret
     ret = SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
     if ret != 0:
-	raise RuntimeError(f"SetDistanceUserRange() returns {ret}.")
+        raise RuntimeError(f"SetDistanceUserRange() returns {ret}.")
 
 def get_device_sn(unsigned int nDeviceID):
     cdef char arr[256]
@@ -967,13 +967,13 @@ def get_intrinsics(unsigned int nDeviceID, SYResolution resolution):
 
     return {
         "fov_x": intrinsics.m_fltFOV[0],
-	"fov_y": intrinsics.m_fltFOV[1],
-	"distortion_coeff_x": intrinsics.m_fltCoeffs[0],
-	"distortion_coeff_y": intrinsics.m_fltCoeffs[1],
-	"focal_length_x": intrinsics.m_fltFocalDistanceX,
-	"focal_length_y": intrinsics.m_fltFocalDistanceY,
-	"center_point_x": intrinsics.m_fltCenterPointX,
-	"center_point_y": intrinsics.m_fltCenterPointY,
-	"width": intrinsics.m_nWidth,
-	"height": intrinsics.m_nHeight,
+        "fov_y": intrinsics.m_fltFOV[1],
+        "distortion_coeff_x": intrinsics.m_fltCoeffs[0],
+        "distortion_coeff_y": intrinsics.m_fltCoeffs[1],
+        "focal_length_x": intrinsics.m_fltFocalDistanceX,
+        "focal_length_y": intrinsics.m_fltFocalDistanceY,
+        "center_point_x": intrinsics.m_fltCenterPointX,
+        "center_point_y": intrinsics.m_fltCenterPointY,
+        "width": intrinsics.m_nWidth,
+        "height": intrinsics.m_nHeight,
     }

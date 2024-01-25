@@ -2401,8 +2401,10 @@ static const char __pyx_k_focal_length_y[] = "focal_length_y";
 static const char __pyx_k_get_intrinsics[] = "get_intrinsics";
 static const char __pyx_k_stop_streaming[] = "stop_streaming";
 static const char __pyx_k_GetFlip_returns[] = "GetFlip() returns ";
+static const char __pyx_k_InitSDK_returns[] = "InitSDK() returns ";
 static const char __pyx_k_SYFRAMETYPE_RAW[] = "SYFRAMETYPE_RAW";
 static const char __pyx_k_SYFRAMETYPE_RGB[] = "SYFRAMETYPE_RGB";
+static const char __pyx_k_SetFlip_returns[] = "SetFlip() returns ";
 static const char __pyx_k_View_MemoryView[] = "View.MemoryView";
 static const char __pyx_k_allocate_buffer[] = "allocate_buffer";
 static const char __pyx_k_depthResolution[] = "depthResolution";
@@ -2420,6 +2422,7 @@ static const char __pyx_k_SYSTREAMTYPE_RAW[] = "SYSTREAMTYPE_RAW";
 static const char __pyx_k_SYSTREAMTYPE_RGB[] = "SYSTREAMTYPE_RGB";
 static const char __pyx_k_change_streaming[] = "change_streaming";
 static const char __pyx_k_synexens_sdk_pyx[] = "synexens_sdk.pyx";
+static const char __pyx_k_AddFilter_returns[] = "AddFilter() returns ";
 static const char __pyx_k_GetFilter_returns[] = "GetFilter() returns ";
 static const char __pyx_k_GetIntric_returns[] = "GetIntric() returns ";
 static const char __pyx_k_GetMirror_returns[] = "GetMirror() returns ";
@@ -2432,12 +2435,16 @@ static const char __pyx_k_SYRESOLUTION_NULL[] = "SYRESOLUTION_NULL";
 static const char __pyx_k_SYSTREAMTYPE_NULL[] = "SYSTREAMTYPE_NULL";
 static const char __pyx_k_SYSTREAMTYPE_RGBD[] = "SYSTREAMTYPE_RGBD";
 static const char __pyx_k_SYSUPPORTTYPE_RGB[] = "SYSUPPORTTYPE_RGB";
+static const char __pyx_k_SetFilter_returns[] = "SetFilter() returns ";
+static const char __pyx_k_SetMirror_returns[] = "SetMirror() returns ";
+static const char __pyx_k_UnInitSDK_returns[] = "UnInitSDK() returns ";
 static const char __pyx_k_Undistort_returns[] = "Undistort() returns ";
 static const char __pyx_k_get_filter_params[] = "get_filter_params";
 static const char __pyx_k_get_integral_time[] = "get_integral_time";
 static const char __pyx_k_pyx_unpickle_Enum[] = "__pyx_unpickle_Enum";
 static const char __pyx_k_set_filter_params[] = "set_filter_params";
 static const char __pyx_k_set_integral_time[] = "set_integral_time";
+static const char __pyx_k_OpenDevice_returns[] = "OpenDevice() returns ";
 static const char __pyx_k_Pyx_EnumBase___new[] = "__Pyx_EnumBase.__new__";
 static const char __pyx_k_Pyx_EnumBase___str[] = "__Pyx_EnumBase.__str__";
 static const char __pyx_k_SYERRORCODE_FAILED[] = "SYERRORCODE_FAILED";
@@ -2453,6 +2460,8 @@ static const char __pyx_k_distortion_coeff_y[] = "distortion_coeff_y";
 static const char __pyx_k_extract_resolution[] = "extract_resolution";
 static const char __pyx_k_set_default_filter[] = "set_default_filter";
 static const char __pyx_k_strided_and_direct[] = "<strided and direct>";
+static const char __pyx_k_ClearFilter_returns[] = "ClearFilter() returns ";
+static const char __pyx_k_CloseDevice_returns[] = "CloseDevice() returns ";
 static const char __pyx_k_GetDeviceSN_returns[] = "GetDeviceSN() returns ";
 static const char __pyx_k_Pyx_EnumBase___repr[] = "__Pyx_EnumBase.__repr__";
 static const char __pyx_k_SYDEVICETYPE_CS20_P[] = "SYDEVICETYPE_CS20_P";
@@ -2463,6 +2472,7 @@ static const char __pyx_k_SYFILTERTYPE_MEDIAN[] = "SYFILTERTYPE_MEDIAN";
 static const char __pyx_k_SYSTREAMTYPE_RAWRGB[] = "SYSTREAMTYPE_RAWRGB";
 static const char __pyx_k_SYSUPPORTTYPE_DEPTH[] = "SYSUPPORTTYPE_DEPTH";
 static const char __pyx_k_get_last_frame_data[] = "get_last_frame_data";
+static const char __pyx_k_DeleteFilter_returns[] = "DeleteFilter() returns ";
 static const char __pyx_k_SYERRORCODE_UNKOWNSN[] = "SYERRORCODE_UNKOWNSN";
 static const char __pyx_k_SYFILTERTYPE_SPECKLE[] = "SYFILTERTYPE_SPECKLE";
 static const char __pyx_k_SYRESOLUTION_320_240[] = "SYRESOLUTION_320_240";
@@ -2477,6 +2487,7 @@ static const char __pyx_k_GetDepthColor_returns[] = "GetDepthColor() returns ";
 static const char __pyx_k_GetSDKVersion_returns[] = "GetSDKVersion() returns ";
 static const char __pyx_k_SYFILTERTYPE_EDGE_MAD[] = "SYFILTERTYPE_EDGE_MAD";
 static const char __pyx_k_SYSTREAMTYPE_DEPTHRGB[] = "SYSTREAMTYPE_DEPTHRGB";
+static const char __pyx_k_StopStreaming_returns[] = "StopStreaming() returns ";
 static const char __pyx_k_contiguous_and_direct[] = "<contiguous and direct>";
 static const char __pyx_k_extract_channel_count[] = "extract_channel_count";
 static const char __pyx_k_get_depth_point_cloud[] = "get_depth_point_cloud";
@@ -2486,10 +2497,14 @@ static const char __pyx_k_SYDEVICETYPE_CS20_DUAL[] = "SYDEVICETYPE_CS20_DUAL";
 static const char __pyx_k_SYDEVICETYPE_CS30_DUAL[] = "SYDEVICETYPE_CS30_DUAL";
 static const char __pyx_k_SYFILTERTYPE_AMPLITUDE[] = "SYFILTERTYPE_AMPLITUDE";
 static const char __pyx_k_SYRESOLUTION_1920_1080[] = "SYRESOLUTION_1920_1080";
+static const char __pyx_k_SetFitlerParam_returns[] = "SetFitlerParam() returns ";
+static const char __pyx_k_StartStreaming_returns[] = "StartStreaming() returns ";
+static const char __pyx_k_ChangeStreaming_returns[] = "ChangeStreaming() returns ";
 static const char __pyx_k_GetIntegralTime_returns[] = "GetIntegralTime() returns ";
 static const char __pyx_k_MemoryView_of_r_at_0x_x[] = "<MemoryView of %r at 0x%x>";
 static const char __pyx_k_SYERRORCODE_NOSTREAMING[] = "SYERRORCODE_NOSTREAMING";
 static const char __pyx_k_SYSTREAMTYPE_DEPTHIRRGB[] = "SYSTREAMTYPE_DEPTHIRRGB";
+static const char __pyx_k_SetIntegralTime_returns[] = "SetIntegralTime() returns ";
 static const char __pyx_k_contiguous_and_indirect[] = "<contiguous and indirect>";
 static const char __pyx_k_get_current_stream_type[] = "get_current_stream_type";
 static const char __pyx_k_get_distance_user_range[] = "get_distance_user_range";
@@ -2500,6 +2515,7 @@ static const char __pyx_k_First_FindDevice_returns[] = "First FindDevice() retur
 static const char __pyx_k_GetLastFrameData_returns[] = "GetLastFrameData() returns ";
 static const char __pyx_k_SYDEVICETYPE_CS20_SINGLE[] = "SYDEVICETYPE_CS20_SINGLE";
 static const char __pyx_k_SYDEVICETYPE_CS30_SINGLE[] = "SYDEVICETYPE_CS30_SINGLE";
+static const char __pyx_k_SetDefaultFilter_returns[] = "SetDefaultFilter() returns ";
 static const char __pyx_k_Invalid_shape_in_axis_d_d[] = "Invalid shape in axis %d: %d.";
 static const char __pyx_k_SYERRORCODE_COUNTOUTRANGE[] = "SYERRORCODE_COUNTOUTRANGE";
 static const char __pyx_k_SYERRORCODE_OBSERVEREMPTY[] = "SYERRORCODE_OBSERVEREMPTY";
@@ -2511,6 +2527,7 @@ static const char __pyx_k_GetDeviceHWVersion_returns[] = "GetDeviceHWVersion() r
 static const char __pyx_k_GetFrameResolution_returns[] = "GetFrameResolution() returns ";
 static const char __pyx_k_SYERRORCODE_DEVICENOTEXIST[] = "SYERRORCODE_DEVICENOTEXIST";
 static const char __pyx_k_SYERRORCODE_STREAMINGEXIST[] = "SYERRORCODE_STREAMINGEXIST";
+static const char __pyx_k_SetFrameResolution_returns[] = "SetFrameResolution() returns ";
 static const char __pyx_k_get_distance_measure_range[] = "get_distance_measure_range";
 static const char __pyx_k_First_GetFilterList_returns[] = "First GetFilterList() returns ";
 static const char __pyx_k_SYERRORCODE_DATABUFFEREMPTY[] = "SYERRORCODE_DATABUFFEREMPTY";
@@ -2526,6 +2543,7 @@ static const char __pyx_k_SYERRORCODE_UNKOWNRESOLUTION[] = "SYERRORCODE_UNKOWNRE
 static const char __pyx_k_SYERRORCODE_UNKOWNSTREAMTYPE[] = "SYERRORCODE_UNKOWNSTREAMTYPE";
 static const char __pyx_k_SYEVENTTYPE_DEVICEDISCONNECT[] = "SYEVENTTYPE_DEVICEDISCONNECT";
 static const char __pyx_k_Second_GetFilterList_returns[] = "Second GetFilterList() returns ";
+static const char __pyx_k_SetDistanceUserRange_returns[] = "SetDistanceUserRange() returns ";
 static const char __pyx_k_SYERRORCODE_DEVICEHANDLEEMPTY[] = "SYERRORCODE_DEVICEHANDLEEMPTY";
 static const char __pyx_k_SYERRORCODE_DEVICEOBJECTEMPTY[] = "SYERRORCODE_DEVICEOBJECTEMPTY";
 static const char __pyx_k_Second_GetFilterParam_returns[] = "Second GetFilterParam() returns ";
@@ -2562,12 +2580,17 @@ static const char __pyx_k_unable_to_allocate_shape_and_str[] = "unable to alloca
 static const char __pyx_k_Incompatible_checksums_0x_x_vs_0_2[] = "Incompatible checksums (0x%x vs (0xb068931, 0x82a3537, 0x6ae9995) = (name))";
 static PyObject *__pyx_kp_u_;
 static PyObject *__pyx_n_s_ASCII;
+static PyObject *__pyx_kp_u_AddFilter_returns;
 static PyObject *__pyx_kp_s_Argument_filterParams_is_not_con;
 static PyObject *__pyx_kp_s_Buffer_view_does_not_expose_stri;
 static PyObject *__pyx_kp_s_Can_only_create_a_buffer_that_is;
 static PyObject *__pyx_kp_s_Cannot_assign_to_read_only_memor;
 static PyObject *__pyx_kp_s_Cannot_create_writable_memory_vi;
 static PyObject *__pyx_kp_s_Cannot_index_with_type_s;
+static PyObject *__pyx_kp_u_ChangeStreaming_returns;
+static PyObject *__pyx_kp_u_ClearFilter_returns;
+static PyObject *__pyx_kp_u_CloseDevice_returns;
+static PyObject *__pyx_kp_u_DeleteFilter_returns;
 static PyObject *__pyx_n_s_Ellipsis;
 static PyObject *__pyx_kp_s_Empty_shape_tuple_for_cython_arr;
 static PyObject *__pyx_n_s_EnumBase;
@@ -2595,6 +2618,7 @@ static PyObject *__pyx_kp_s_Incompatible_checksums_0x_x_vs_0;
 static PyObject *__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_2;
 static PyObject *__pyx_n_s_IndexError;
 static PyObject *__pyx_kp_s_Indirect_dimensions_not_supporte;
+static PyObject *__pyx_kp_u_InitSDK_returns;
 static PyObject *__pyx_n_s_IntEnum;
 static PyObject *__pyx_kp_s_Invalid_mode_expected_c_or_fortr;
 static PyObject *__pyx_kp_s_Invalid_shape_in_axis_d_d;
@@ -2602,6 +2626,7 @@ static PyObject *__pyx_n_s_MemoryError;
 static PyObject *__pyx_kp_s_MemoryView_of_r_at_0x_x;
 static PyObject *__pyx_kp_s_MemoryView_of_r_object;
 static PyObject *__pyx_n_b_O;
+static PyObject *__pyx_kp_u_OpenDevice_returns;
 static PyObject *__pyx_n_s_OrderedDict;
 static PyObject *__pyx_kp_s_Out_of_bounds_on_buffer_access_a;
 static PyObject *__pyx_n_s_PickleError;
@@ -2692,7 +2717,18 @@ static PyObject *__pyx_kp_u_Second_FindDevice_returns;
 static PyObject *__pyx_kp_u_Second_GetFilterList_returns;
 static PyObject *__pyx_kp_u_Second_GetFilterParam_returns;
 static PyObject *__pyx_kp_u_Second_QueryDeviceSupportFrameTy;
+static PyObject *__pyx_kp_u_SetDefaultFilter_returns;
+static PyObject *__pyx_kp_u_SetDistanceUserRange_returns;
+static PyObject *__pyx_kp_u_SetFilter_returns;
+static PyObject *__pyx_kp_u_SetFitlerParam_returns;
+static PyObject *__pyx_kp_u_SetFlip_returns;
+static PyObject *__pyx_kp_u_SetFrameResolution_returns;
+static PyObject *__pyx_kp_u_SetIntegralTime_returns;
+static PyObject *__pyx_kp_u_SetMirror_returns;
+static PyObject *__pyx_kp_u_StartStreaming_returns;
+static PyObject *__pyx_kp_u_StopStreaming_returns;
 static PyObject *__pyx_n_s_TypeError;
+static PyObject *__pyx_kp_u_UnInitSDK_returns;
 static PyObject *__pyx_kp_s_Unable_to_convert_item_to_object;
 static PyObject *__pyx_kp_u_Undistort_returns;
 static PyObject *__pyx_kp_s_Unknown_enum_value_s;
@@ -3041,6 +3077,7 @@ static PyObject *__pyx_tuple__25;
 static PyObject *__pyx_tuple__26;
 static PyObject *__pyx_tuple__27;
 static PyObject *__pyx_tuple__28;
+static PyObject *__pyx_tuple__30;
 static PyObject *__pyx_tuple__32;
 static PyObject *__pyx_tuple__34;
 static PyObject *__pyx_tuple__36;
@@ -3084,17 +3121,17 @@ static PyObject *__pyx_tuple__110;
 static PyObject *__pyx_tuple__112;
 static PyObject *__pyx_tuple__114;
 static PyObject *__pyx_tuple__116;
-static PyObject *__pyx_tuple__117;
+static PyObject *__pyx_tuple__118;
 static PyObject *__pyx_tuple__119;
 static PyObject *__pyx_tuple__121;
 static PyObject *__pyx_tuple__123;
-static PyObject *__pyx_tuple__124;
 static PyObject *__pyx_tuple__125;
 static PyObject *__pyx_tuple__126;
 static PyObject *__pyx_tuple__127;
 static PyObject *__pyx_tuple__128;
+static PyObject *__pyx_tuple__129;
+static PyObject *__pyx_tuple__130;
 static PyObject *__pyx_codeobj__29;
-static PyObject *__pyx_codeobj__30;
 static PyObject *__pyx_codeobj__31;
 static PyObject *__pyx_codeobj__33;
 static PyObject *__pyx_codeobj__35;
@@ -3138,10 +3175,11 @@ static PyObject *__pyx_codeobj__109;
 static PyObject *__pyx_codeobj__111;
 static PyObject *__pyx_codeobj__113;
 static PyObject *__pyx_codeobj__115;
-static PyObject *__pyx_codeobj__118;
+static PyObject *__pyx_codeobj__117;
 static PyObject *__pyx_codeobj__120;
 static PyObject *__pyx_codeobj__122;
-static PyObject *__pyx_codeobj__129;
+static PyObject *__pyx_codeobj__124;
+static PyObject *__pyx_codeobj__131;
 /* Late includes */
 
 /* "synexens_sdk.pyx":515
@@ -3320,8 +3358,8 @@ static PyObject *__pyx_pf_12synexens_sdk_get_sdk_version(CYTHON_UNUSED PyObject 
  *     return arr[:nLength].decode()
  * 
  * def init_sdk():             # <<<<<<<<<<<<<<
- *     return SYErrorCode(InitSDK())
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(InitSDK())
  */
 
 /* Python wrapper */
@@ -3339,28 +3377,32 @@ static PyObject *__pyx_pw_12synexens_sdk_3init_sdk(PyObject *__pyx_self, CYTHON_
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_2init_sdk(CYTHON_UNUSED PyObject *__pyx_self) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("init_sdk", 0);
 
-  /* "synexens_sdk.pyx":527
- * 
+  /* "synexens_sdk.pyx":528
  * def init_sdk():
- *     return SYErrorCode(InitSDK())             # <<<<<<<<<<<<<<
- * 
- * def uninit_sdk():
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(InitSDK())             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"InitSDK() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 527, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::InitSDK()); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 527, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::InitSDK()); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -3375,22 +3417,79 @@ static PyObject *__pyx_pf_12synexens_sdk_2init_sdk(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 527, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 528, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
+
+  /* "synexens_sdk.pyx":529
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(InitSDK())
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"InitSDK() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":530
+ *     ret = SYErrorCode(InitSDK())
+ *     if ret != 0:
+ *         raise RuntimeError(f"InitSDK() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def uninit_sdk():
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 530, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_InitSDK_returns);
+    __pyx_t_7 += 18;
+    __Pyx_GIVEREF(__pyx_kp_u_InitSDK_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_InitSDK_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 530, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 530, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 530, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 530, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":529
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(InitSDK())
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"InitSDK() returns {ret}.")
+ * 
+ */
+  }
 
   /* "synexens_sdk.pyx":526
  *     return arr[:nLength].decode()
  * 
  * def init_sdk():             # <<<<<<<<<<<<<<
- *     return SYErrorCode(InitSDK())
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(InitSDK())
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -3404,12 +3503,12 @@ static PyObject *__pyx_pf_12synexens_sdk_2init_sdk(CYTHON_UNUSED PyObject *__pyx
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":529
- *     return SYErrorCode(InitSDK())
+/* "synexens_sdk.pyx":532
+ *         raise RuntimeError(f"InitSDK() returns {ret}.")
  * 
  * def uninit_sdk():             # <<<<<<<<<<<<<<
- *     return SYErrorCode(UnInitSDK())
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(UnInitSDK())
  */
 
 /* Python wrapper */
@@ -3427,28 +3526,32 @@ static PyObject *__pyx_pw_12synexens_sdk_5uninit_sdk(PyObject *__pyx_self, CYTHO
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_4uninit_sdk(CYTHON_UNUSED PyObject *__pyx_self) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("uninit_sdk", 0);
 
-  /* "synexens_sdk.pyx":530
- * 
+  /* "synexens_sdk.pyx":534
  * def uninit_sdk():
- *     return SYErrorCode(UnInitSDK())             # <<<<<<<<<<<<<<
- * 
- * def find_device():
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(UnInitSDK())             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"UnInitSDK() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 530, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 534, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::UnInitSDK()); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 530, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::UnInitSDK()); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 534, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -3463,22 +3566,79 @@ static PyObject *__pyx_pf_12synexens_sdk_4uninit_sdk(CYTHON_UNUSED PyObject *__p
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 530, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 534, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 534, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":529
- *     return SYErrorCode(InitSDK())
+  /* "synexens_sdk.pyx":535
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(UnInitSDK())
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"UnInitSDK() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":536
+ *     ret = SYErrorCode(UnInitSDK())
+ *     if ret != 0:
+ *         raise RuntimeError(f"UnInitSDK() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def find_device():
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 536, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_UnInitSDK_returns);
+    __pyx_t_7 += 20;
+    __Pyx_GIVEREF(__pyx_kp_u_UnInitSDK_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_UnInitSDK_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 536, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 536, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 536, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 536, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":535
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(UnInitSDK())
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"UnInitSDK() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":532
+ *         raise RuntimeError(f"InitSDK() returns {ret}.")
  * 
  * def uninit_sdk():             # <<<<<<<<<<<<<<
- *     return SYErrorCode(UnInitSDK())
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(UnInitSDK())
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -3492,8 +3652,8 @@ static PyObject *__pyx_pf_12synexens_sdk_4uninit_sdk(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":532
- *     return SYErrorCode(UnInitSDK())
+/* "synexens_sdk.pyx":538
+ *         raise RuntimeError(f"UnInitSDK() returns {ret}.")
  * 
  * def find_device():             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
@@ -3539,7 +3699,7 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("find_device", 0);
 
-  /* "synexens_sdk.pyx":533
+  /* "synexens_sdk.pyx":539
  * 
  * def find_device():
  *     cdef int nCount = 0             # <<<<<<<<<<<<<<
@@ -3548,16 +3708,16 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
  */
   __pyx_v_nCount = 0;
 
-  /* "synexens_sdk.pyx":538
+  /* "synexens_sdk.pyx":544
  * 
  *     if True:
  *         ret = SYErrorCode(FindDevice(nCount, NULL))             # <<<<<<<<<<<<<<
  *         if ret != 0:
  *             raise RuntimeError(f"First FindDevice() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 538, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 544, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::FindDevice(__pyx_v_nCount, NULL)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 538, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::FindDevice(__pyx_v_nCount, NULL)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 544, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -3572,14 +3732,14 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 538, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 544, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 538, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 544, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":539
+  /* "synexens_sdk.pyx":545
  *     if True:
  *         ret = SYErrorCode(FindDevice(nCount, NULL))
  *         if ret != 0:             # <<<<<<<<<<<<<<
@@ -3589,14 +3749,14 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":540
+    /* "synexens_sdk.pyx":546
  *         ret = SYErrorCode(FindDevice(nCount, NULL))
  *         if ret != 0:
  *             raise RuntimeError(f"First FindDevice() returns {ret}.")             # <<<<<<<<<<<<<<
  *         devices.resize(nCount)
  *     else:
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 540, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 546, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -3604,7 +3764,7 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
     __pyx_t_7 += 27;
     __Pyx_GIVEREF(__pyx_kp_u_First_FindDevice_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_First_FindDevice_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 540, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 546, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -3615,17 +3775,17 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 540, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 546, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 540, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 546, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 540, __pyx_L1_error)
+    __PYX_ERR(0, 546, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":539
+    /* "synexens_sdk.pyx":545
  *     if True:
  *         ret = SYErrorCode(FindDevice(nCount, NULL))
  *         if ret != 0:             # <<<<<<<<<<<<<<
@@ -3634,7 +3794,7 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
  */
   }
 
-  /* "synexens_sdk.pyx":541
+  /* "synexens_sdk.pyx":547
  *         if ret != 0:
  *             raise RuntimeError(f"First FindDevice() returns {ret}.")
  *         devices.resize(nCount)             # <<<<<<<<<<<<<<
@@ -3645,19 +3805,19 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
     __pyx_v_devices.resize(__pyx_v_nCount);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 541, __pyx_L1_error)
+    __PYX_ERR(0, 547, __pyx_L1_error)
   }
 
-  /* "synexens_sdk.pyx":545
+  /* "synexens_sdk.pyx":551
  *         devices.resize(1)
  * 
  *     ret = SYErrorCode(FindDevice(nCount, &devices[0]))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"Second FindDevice() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 545, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 551, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::FindDevice(__pyx_v_nCount, (&(__pyx_v_devices[0])))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 545, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::FindDevice(__pyx_v_nCount, (&(__pyx_v_devices[0])))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 551, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -3672,14 +3832,14 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 545, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 551, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 545, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 551, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":546
+  /* "synexens_sdk.pyx":552
  * 
  *     ret = SYErrorCode(FindDevice(nCount, &devices[0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -3689,14 +3849,14 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":547
+    /* "synexens_sdk.pyx":553
  *     ret = SYErrorCode(FindDevice(nCount, &devices[0]))
  *     if ret != 0:
  *         raise RuntimeError(f"Second FindDevice() returns {ret}.")             # <<<<<<<<<<<<<<
  *     res = {}
  *     for i in range(nCount):
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 547, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 553, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -3704,7 +3864,7 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
     __pyx_t_7 += 28;
     __Pyx_GIVEREF(__pyx_kp_u_Second_FindDevice_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_Second_FindDevice_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 547, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 553, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -3715,17 +3875,17 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 547, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 553, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 547, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 553, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 547, __pyx_L1_error)
+    __PYX_ERR(0, 553, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":546
+    /* "synexens_sdk.pyx":552
  * 
  *     ret = SYErrorCode(FindDevice(nCount, &devices[0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -3734,19 +3894,19 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
  */
   }
 
-  /* "synexens_sdk.pyx":548
+  /* "synexens_sdk.pyx":554
  *     if ret != 0:
  *         raise RuntimeError(f"Second FindDevice() returns {ret}.")
  *     res = {}             # <<<<<<<<<<<<<<
  *     for i in range(nCount):
  *         device = devices[i]
  */
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 548, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 554, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":549
+  /* "synexens_sdk.pyx":555
  *         raise RuntimeError(f"Second FindDevice() returns {ret}.")
  *     res = {}
  *     for i in range(nCount):             # <<<<<<<<<<<<<<
@@ -3758,7 +3918,7 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v_i = __pyx_t_11;
 
-    /* "synexens_sdk.pyx":550
+    /* "synexens_sdk.pyx":556
  *     res = {}
  *     for i in range(nCount):
  *         device = devices[i]             # <<<<<<<<<<<<<<
@@ -3767,16 +3927,16 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
  */
     __pyx_v_device = (__pyx_v_devices[__pyx_v_i]);
 
-    /* "synexens_sdk.pyx":551
+    /* "synexens_sdk.pyx":557
  *     for i in range(nCount):
  *         device = devices[i]
  *         res[device.m_nDeviceID] = SYDeviceType(device.m_deviceType)             # <<<<<<<<<<<<<<
  * 
  *     return res
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYDeviceType); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 551, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYDeviceType); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 557, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYDeviceType(__pyx_v_device.m_deviceType); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 551, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYDeviceType(__pyx_v_device.m_deviceType); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 557, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_4 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -3791,17 +3951,17 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
     __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 551, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 557, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyInt_From_unsigned_int(__pyx_v_device.m_nDeviceID); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 551, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_unsigned_int(__pyx_v_device.m_nDeviceID); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 557, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    if (unlikely(PyDict_SetItem(__pyx_v_res, __pyx_t_2, __pyx_t_1) < 0)) __PYX_ERR(0, 551, __pyx_L1_error)
+    if (unlikely(PyDict_SetItem(__pyx_v_res, __pyx_t_2, __pyx_t_1) < 0)) __PYX_ERR(0, 557, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "synexens_sdk.pyx":553
+  /* "synexens_sdk.pyx":559
  *         res[device.m_nDeviceID] = SYDeviceType(device.m_deviceType)
  * 
  *     return res             # <<<<<<<<<<<<<<
@@ -3813,8 +3973,8 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":532
- *     return SYErrorCode(UnInitSDK())
+  /* "synexens_sdk.pyx":538
+ *         raise RuntimeError(f"UnInitSDK() returns {ret}.")
  * 
  * def find_device():             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
@@ -3836,12 +3996,12 @@ static PyObject *__pyx_pf_12synexens_sdk_6find_device(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":555
+/* "synexens_sdk.pyx":561
  *     return res
  * 
  * def open_device(unsigned int nDeviceID, SYDeviceType deviceType):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
  *     cdef SYDeviceInfo di
- * 
  */
 
 /* Python wrapper */
@@ -3879,11 +4039,11 @@ static PyObject *__pyx_pw_12synexens_sdk_9open_device(PyObject *__pyx_self, PyOb
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_deviceType)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("open_device", 1, 2, 2, 1); __PYX_ERR(0, 555, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("open_device", 1, 2, 2, 1); __PYX_ERR(0, 561, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "open_device") < 0)) __PYX_ERR(0, 555, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "open_device") < 0)) __PYX_ERR(0, 561, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -3891,12 +4051,12 @@ static PyObject *__pyx_pw_12synexens_sdk_9open_device(PyObject *__pyx_self, PyOb
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 555, __pyx_L3_error)
-    __pyx_v_deviceType = ((enum Synexens::SYDeviceType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYDeviceType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 555, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 561, __pyx_L3_error)
+    __pyx_v_deviceType = ((enum Synexens::SYDeviceType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYDeviceType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 561, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("open_device", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 555, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("open_device", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 561, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.open_device", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3910,6 +4070,7 @@ static PyObject *__pyx_pw_12synexens_sdk_9open_device(PyObject *__pyx_self, PyOb
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_8open_device(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID, enum Synexens::SYDeviceType __pyx_v_deviceType) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   Synexens::SYDeviceInfo __pyx_v_di;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -3917,12 +4078,16 @@ static PyObject *__pyx_pf_12synexens_sdk_8open_device(CYTHON_UNUSED PyObject *__
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("open_device", 0);
 
-  /* "synexens_sdk.pyx":558
+  /* "synexens_sdk.pyx":565
  *     cdef SYDeviceInfo di
  * 
  *     di.m_nDeviceID = nDeviceID             # <<<<<<<<<<<<<<
@@ -3931,26 +4096,25 @@ static PyObject *__pyx_pf_12synexens_sdk_8open_device(CYTHON_UNUSED PyObject *__
  */
   __pyx_v_di.m_nDeviceID = __pyx_v_nDeviceID;
 
-  /* "synexens_sdk.pyx":559
+  /* "synexens_sdk.pyx":566
  * 
  *     di.m_nDeviceID = nDeviceID
  *     di.m_deviceType = deviceType             # <<<<<<<<<<<<<<
  * 
- *     return SYErrorCode(OpenDevice(di))
+ *     ret = SYErrorCode(OpenDevice(di))
  */
   __pyx_v_di.m_deviceType = __pyx_v_deviceType;
 
-  /* "synexens_sdk.pyx":561
+  /* "synexens_sdk.pyx":568
  *     di.m_deviceType = deviceType
  * 
- *     return SYErrorCode(OpenDevice(di))             # <<<<<<<<<<<<<<
- * 
- * def close_device(unsigned int nDeviceID):
+ *     ret = SYErrorCode(OpenDevice(di))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"OpenDevice() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 561, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 568, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::OpenDevice(__pyx_v_di)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 561, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::OpenDevice(__pyx_v_di)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 568, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -3965,22 +4129,79 @@ static PyObject *__pyx_pf_12synexens_sdk_8open_device(CYTHON_UNUSED PyObject *__
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 561, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 568, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 568, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":555
+  /* "synexens_sdk.pyx":569
+ * 
+ *     ret = SYErrorCode(OpenDevice(di))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"OpenDevice() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":570
+ *     ret = SYErrorCode(OpenDevice(di))
+ *     if ret != 0:
+ *         raise RuntimeError(f"OpenDevice() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def close_device(unsigned int nDeviceID):
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 570, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_OpenDevice_returns);
+    __pyx_t_7 += 21;
+    __Pyx_GIVEREF(__pyx_kp_u_OpenDevice_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_OpenDevice_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 570, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 570, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 570, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 570, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":569
+ * 
+ *     ret = SYErrorCode(OpenDevice(di))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"OpenDevice() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":561
  *     return res
  * 
  * def open_device(unsigned int nDeviceID, SYDeviceType deviceType):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
  *     cdef SYDeviceInfo di
- * 
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -3994,12 +4215,12 @@ static PyObject *__pyx_pf_12synexens_sdk_8open_device(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":563
- *     return SYErrorCode(OpenDevice(di))
+/* "synexens_sdk.pyx":572
+ *         raise RuntimeError(f"OpenDevice() returns {ret}.")
  * 
  * def close_device(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(CloseDevice(nDeviceID))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(CloseDevice(nDeviceID))
  */
 
 /* Python wrapper */
@@ -4014,7 +4235,7 @@ static PyObject *__pyx_pw_12synexens_sdk_11close_device(PyObject *__pyx_self, Py
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("close_device (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 563, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 572, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4030,28 +4251,32 @@ static PyObject *__pyx_pw_12synexens_sdk_11close_device(PyObject *__pyx_self, Py
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_10close_device(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("close_device", 0);
 
-  /* "synexens_sdk.pyx":564
- * 
+  /* "synexens_sdk.pyx":574
  * def close_device(unsigned int nDeviceID):
- *     return SYErrorCode(CloseDevice(nDeviceID))             # <<<<<<<<<<<<<<
- * 
- * def query_device_support_frame_type(unsigned int nDeviceID):
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(CloseDevice(nDeviceID))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"CloseDevice() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 564, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::CloseDevice(__pyx_v_nDeviceID)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 564, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::CloseDevice(__pyx_v_nDeviceID)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -4066,22 +4291,79 @@ static PyObject *__pyx_pf_12synexens_sdk_10close_device(CYTHON_UNUSED PyObject *
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 564, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 574, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":563
- *     return SYErrorCode(OpenDevice(di))
+  /* "synexens_sdk.pyx":575
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(CloseDevice(nDeviceID))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"CloseDevice() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":576
+ *     ret = SYErrorCode(CloseDevice(nDeviceID))
+ *     if ret != 0:
+ *         raise RuntimeError(f"CloseDevice() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def query_device_support_frame_type(unsigned int nDeviceID):
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 576, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_CloseDevice_returns);
+    __pyx_t_7 += 22;
+    __Pyx_GIVEREF(__pyx_kp_u_CloseDevice_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_CloseDevice_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 576, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 576, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 576, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 576, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":575
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(CloseDevice(nDeviceID))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"CloseDevice() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":572
+ *         raise RuntimeError(f"OpenDevice() returns {ret}.")
  * 
  * def close_device(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(CloseDevice(nDeviceID))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(CloseDevice(nDeviceID))
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -4095,8 +4377,8 @@ static PyObject *__pyx_pf_12synexens_sdk_10close_device(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":566
- *     return SYErrorCode(CloseDevice(nDeviceID))
+/* "synexens_sdk.pyx":578
+ *         raise RuntimeError(f"CloseDevice() returns {ret}.")
  * 
  * def query_device_support_frame_type(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
@@ -4115,7 +4397,7 @@ static PyObject *__pyx_pw_12synexens_sdk_13query_device_support_frame_type(PyObj
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("query_device_support_frame_type (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 566, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 578, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4155,7 +4437,7 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("query_device_support_frame_type", 0);
 
-  /* "synexens_sdk.pyx":567
+  /* "synexens_sdk.pyx":579
  * 
  * def query_device_support_frame_type(unsigned int nDeviceID):
  *     cdef int nCount = 0             # <<<<<<<<<<<<<<
@@ -4164,16 +4446,16 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
  */
   __pyx_v_nCount = 0;
 
-  /* "synexens_sdk.pyx":571
+  /* "synexens_sdk.pyx":583
  *     cdef SYErrorCode ret
  * 
  *     ret = SYErrorCode(QueryDeviceSupportFrameType(nDeviceID, nCount, NULL))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"First QueryDeviceSupportFrameType() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 571, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 583, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::QueryDeviceSupportFrameType(__pyx_v_nDeviceID, __pyx_v_nCount, NULL)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 571, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::QueryDeviceSupportFrameType(__pyx_v_nDeviceID, __pyx_v_nCount, NULL)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 583, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -4188,14 +4470,14 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 571, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 583, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 571, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 583, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":572
+  /* "synexens_sdk.pyx":584
  * 
  *     ret = SYErrorCode(QueryDeviceSupportFrameType(nDeviceID, nCount, NULL))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -4205,14 +4487,14 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":573
+    /* "synexens_sdk.pyx":585
  *     ret = SYErrorCode(QueryDeviceSupportFrameType(nDeviceID, nCount, NULL))
  *     if ret != 0:
  *         raise RuntimeError(f"First QueryDeviceSupportFrameType() returns {ret}.")             # <<<<<<<<<<<<<<
  *     supportTypes.resize(nCount)
  * 
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 573, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -4220,7 +4502,7 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
     __pyx_t_7 += 44;
     __Pyx_GIVEREF(__pyx_kp_u_First_QueryDeviceSupportFrameTyp);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_First_QueryDeviceSupportFrameTyp);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 573, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -4231,17 +4513,17 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 573, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 573, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 573, __pyx_L1_error)
+    __PYX_ERR(0, 585, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":572
+    /* "synexens_sdk.pyx":584
  * 
  *     ret = SYErrorCode(QueryDeviceSupportFrameType(nDeviceID, nCount, NULL))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -4250,7 +4532,7 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
  */
   }
 
-  /* "synexens_sdk.pyx":574
+  /* "synexens_sdk.pyx":586
  *     if ret != 0:
  *         raise RuntimeError(f"First QueryDeviceSupportFrameType() returns {ret}.")
  *     supportTypes.resize(nCount)             # <<<<<<<<<<<<<<
@@ -4261,19 +4543,19 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
     __pyx_v_supportTypes.resize(__pyx_v_nCount);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 574, __pyx_L1_error)
+    __PYX_ERR(0, 586, __pyx_L1_error)
   }
 
-  /* "synexens_sdk.pyx":576
+  /* "synexens_sdk.pyx":588
  *     supportTypes.resize(nCount)
  * 
  *     ret = SYErrorCode(QueryDeviceSupportFrameType(nDeviceID, nCount, &supportTypes[0]))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"Second QueryDeviceSupportFrameType() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 576, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 588, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::QueryDeviceSupportFrameType(__pyx_v_nDeviceID, __pyx_v_nCount, (&(__pyx_v_supportTypes[0])))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 576, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::QueryDeviceSupportFrameType(__pyx_v_nDeviceID, __pyx_v_nCount, (&(__pyx_v_supportTypes[0])))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 588, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -4288,14 +4570,14 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 576, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 588, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 576, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 588, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":577
+  /* "synexens_sdk.pyx":589
  * 
  *     ret = SYErrorCode(QueryDeviceSupportFrameType(nDeviceID, nCount, &supportTypes[0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -4305,14 +4587,14 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":578
+    /* "synexens_sdk.pyx":590
  *     ret = SYErrorCode(QueryDeviceSupportFrameType(nDeviceID, nCount, &supportTypes[0]))
  *     if ret != 0:
  *         raise RuntimeError(f"Second QueryDeviceSupportFrameType() returns {ret}.")             # <<<<<<<<<<<<<<
  *     res = []
  *     for i in range(nCount):
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 578, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 590, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -4320,7 +4602,7 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
     __pyx_t_7 += 45;
     __Pyx_GIVEREF(__pyx_kp_u_Second_QueryDeviceSupportFrameTy);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_Second_QueryDeviceSupportFrameTy);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 578, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 590, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -4331,17 +4613,17 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 578, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 590, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 578, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 590, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 578, __pyx_L1_error)
+    __PYX_ERR(0, 590, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":577
+    /* "synexens_sdk.pyx":589
  * 
  *     ret = SYErrorCode(QueryDeviceSupportFrameType(nDeviceID, nCount, &supportTypes[0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -4350,19 +4632,19 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
  */
   }
 
-  /* "synexens_sdk.pyx":579
+  /* "synexens_sdk.pyx":591
  *     if ret != 0:
  *         raise RuntimeError(f"Second QueryDeviceSupportFrameType() returns {ret}.")
  *     res = []             # <<<<<<<<<<<<<<
  *     for i in range(nCount):
  *         res.append(SYSupportType(supportTypes[i]))
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 579, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 591, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":580
+  /* "synexens_sdk.pyx":592
  *         raise RuntimeError(f"Second QueryDeviceSupportFrameType() returns {ret}.")
  *     res = []
  *     for i in range(nCount):             # <<<<<<<<<<<<<<
@@ -4374,16 +4656,16 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v_i = __pyx_t_11;
 
-    /* "synexens_sdk.pyx":581
+    /* "synexens_sdk.pyx":593
  *     res = []
  *     for i in range(nCount):
  *         res.append(SYSupportType(supportTypes[i]))             # <<<<<<<<<<<<<<
  * 
  *     return res
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYSupportType); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 581, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYSupportType); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 593, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYSupportType((__pyx_v_supportTypes[__pyx_v_i])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 581, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYSupportType((__pyx_v_supportTypes[__pyx_v_i])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 593, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_4 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -4398,14 +4680,14 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
     __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 581, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 593, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_res, __pyx_t_1); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 581, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_res, __pyx_t_1); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 593, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "synexens_sdk.pyx":583
+  /* "synexens_sdk.pyx":595
  *         res.append(SYSupportType(supportTypes[i]))
  * 
  *     return res             # <<<<<<<<<<<<<<
@@ -4417,8 +4699,8 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":566
- *     return SYErrorCode(CloseDevice(nDeviceID))
+  /* "synexens_sdk.pyx":578
+ *         raise RuntimeError(f"CloseDevice() returns {ret}.")
  * 
  * def query_device_support_frame_type(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
@@ -4440,7 +4722,7 @@ static PyObject *__pyx_pf_12synexens_sdk_12query_device_support_frame_type(CYTHO
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":585
+/* "synexens_sdk.pyx":597
  *     return res
  * 
  * def query_device_support_resolution(unsigned int nDeviceID, SYSupportType supportType):             # <<<<<<<<<<<<<<
@@ -4483,11 +4765,11 @@ static PyObject *__pyx_pw_12synexens_sdk_15query_device_support_resolution(PyObj
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_supportType)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("query_device_support_resolution", 1, 2, 2, 1); __PYX_ERR(0, 585, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("query_device_support_resolution", 1, 2, 2, 1); __PYX_ERR(0, 597, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "query_device_support_resolution") < 0)) __PYX_ERR(0, 585, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "query_device_support_resolution") < 0)) __PYX_ERR(0, 597, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -4495,12 +4777,12 @@ static PyObject *__pyx_pw_12synexens_sdk_15query_device_support_resolution(PyObj
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 585, __pyx_L3_error)
-    __pyx_v_supportType = ((enum Synexens::SYSupportType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYSupportType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 585, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 597, __pyx_L3_error)
+    __pyx_v_supportType = ((enum Synexens::SYSupportType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYSupportType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 597, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("query_device_support_resolution", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 585, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("query_device_support_resolution", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 597, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.query_device_support_resolution", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -4538,7 +4820,7 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("query_device_support_resolution", 0);
 
-  /* "synexens_sdk.pyx":586
+  /* "synexens_sdk.pyx":598
  * 
  * def query_device_support_resolution(unsigned int nDeviceID, SYSupportType supportType):
  *     cdef int nCount = 0             # <<<<<<<<<<<<<<
@@ -4547,16 +4829,16 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
  */
   __pyx_v_nCount = 0;
 
-  /* "synexens_sdk.pyx":590
+  /* "synexens_sdk.pyx":602
  *     cdef SYErrorCode ret
  * 
  *     ret = SYErrorCode(QueryDeviceSupportResolution(nDeviceID, supportType, nCount, NULL))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"First QueryDeviceSupportResolution() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 590, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 602, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::QueryDeviceSupportResolution(__pyx_v_nDeviceID, __pyx_v_supportType, __pyx_v_nCount, NULL)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 590, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::QueryDeviceSupportResolution(__pyx_v_nDeviceID, __pyx_v_supportType, __pyx_v_nCount, NULL)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 602, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -4571,14 +4853,14 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 590, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 602, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 590, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 602, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":591
+  /* "synexens_sdk.pyx":603
  * 
  *     ret = SYErrorCode(QueryDeviceSupportResolution(nDeviceID, supportType, nCount, NULL))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -4588,14 +4870,14 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":592
+    /* "synexens_sdk.pyx":604
  *     ret = SYErrorCode(QueryDeviceSupportResolution(nDeviceID, supportType, nCount, NULL))
  *     if ret != 0:
  *         raise RuntimeError(f"First QueryDeviceSupportResolution() returns {ret}.")             # <<<<<<<<<<<<<<
  *     resolutions.resize(nCount)
  * 
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 592, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 604, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -4603,7 +4885,7 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
     __pyx_t_7 += 45;
     __Pyx_GIVEREF(__pyx_kp_u_First_QueryDeviceSupportResoluti);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_First_QueryDeviceSupportResoluti);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 592, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 604, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -4614,17 +4896,17 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 592, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 604, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 592, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 604, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 592, __pyx_L1_error)
+    __PYX_ERR(0, 604, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":591
+    /* "synexens_sdk.pyx":603
  * 
  *     ret = SYErrorCode(QueryDeviceSupportResolution(nDeviceID, supportType, nCount, NULL))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -4633,7 +4915,7 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
  */
   }
 
-  /* "synexens_sdk.pyx":593
+  /* "synexens_sdk.pyx":605
  *     if ret != 0:
  *         raise RuntimeError(f"First QueryDeviceSupportResolution() returns {ret}.")
  *     resolutions.resize(nCount)             # <<<<<<<<<<<<<<
@@ -4644,19 +4926,19 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
     __pyx_v_resolutions.resize(__pyx_v_nCount);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 593, __pyx_L1_error)
+    __PYX_ERR(0, 605, __pyx_L1_error)
   }
 
-  /* "synexens_sdk.pyx":595
+  /* "synexens_sdk.pyx":607
  *     resolutions.resize(nCount)
  * 
  *     ret = SYErrorCode(QueryDeviceSupportResolution(nDeviceID, supportType, nCount, &resolutions[0]))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"Second QueryDeviceSupportFrameType() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 595, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 607, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::QueryDeviceSupportResolution(__pyx_v_nDeviceID, __pyx_v_supportType, __pyx_v_nCount, (&(__pyx_v_resolutions[0])))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 595, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::QueryDeviceSupportResolution(__pyx_v_nDeviceID, __pyx_v_supportType, __pyx_v_nCount, (&(__pyx_v_resolutions[0])))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 607, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -4671,14 +4953,14 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 595, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 607, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 595, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 607, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":596
+  /* "synexens_sdk.pyx":608
  * 
  *     ret = SYErrorCode(QueryDeviceSupportResolution(nDeviceID, supportType, nCount, &resolutions[0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -4688,14 +4970,14 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":597
+    /* "synexens_sdk.pyx":609
  *     ret = SYErrorCode(QueryDeviceSupportResolution(nDeviceID, supportType, nCount, &resolutions[0]))
  *     if ret != 0:
  *         raise RuntimeError(f"Second QueryDeviceSupportFrameType() returns {ret}.")             # <<<<<<<<<<<<<<
  *     res = []
  *     for i in range(nCount):
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 597, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 609, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -4703,7 +4985,7 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
     __pyx_t_7 += 45;
     __Pyx_GIVEREF(__pyx_kp_u_Second_QueryDeviceSupportFrameTy);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_Second_QueryDeviceSupportFrameTy);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 597, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 609, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -4714,17 +4996,17 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 597, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 609, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 597, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 609, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 597, __pyx_L1_error)
+    __PYX_ERR(0, 609, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":596
+    /* "synexens_sdk.pyx":608
  * 
  *     ret = SYErrorCode(QueryDeviceSupportResolution(nDeviceID, supportType, nCount, &resolutions[0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -4733,19 +5015,19 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
  */
   }
 
-  /* "synexens_sdk.pyx":598
+  /* "synexens_sdk.pyx":610
  *     if ret != 0:
  *         raise RuntimeError(f"Second QueryDeviceSupportFrameType() returns {ret}.")
  *     res = []             # <<<<<<<<<<<<<<
  *     for i in range(nCount):
  *         res.append(SYResolution(resolutions[i]))
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 598, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 610, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":599
+  /* "synexens_sdk.pyx":611
  *         raise RuntimeError(f"Second QueryDeviceSupportFrameType() returns {ret}.")
  *     res = []
  *     for i in range(nCount):             # <<<<<<<<<<<<<<
@@ -4757,16 +5039,16 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v_i = __pyx_t_11;
 
-    /* "synexens_sdk.pyx":600
+    /* "synexens_sdk.pyx":612
  *     res = []
  *     for i in range(nCount):
  *         res.append(SYResolution(resolutions[i]))             # <<<<<<<<<<<<<<
  * 
  *     return res
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYResolution); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 600, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYResolution); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 612, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYResolution((__pyx_v_resolutions[__pyx_v_i])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 600, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYResolution((__pyx_v_resolutions[__pyx_v_i])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 612, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_4 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -4781,14 +5063,14 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
     __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 600, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 612, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_res, __pyx_t_1); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 600, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_res, __pyx_t_1); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 612, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "synexens_sdk.pyx":602
+  /* "synexens_sdk.pyx":614
  *         res.append(SYResolution(resolutions[i]))
  * 
  *     return res             # <<<<<<<<<<<<<<
@@ -4800,7 +5082,7 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":585
+  /* "synexens_sdk.pyx":597
  *     return res
  * 
  * def query_device_support_resolution(unsigned int nDeviceID, SYSupportType supportType):             # <<<<<<<<<<<<<<
@@ -4823,7 +5105,7 @@ static PyObject *__pyx_pf_12synexens_sdk_14query_device_support_resolution(CYTHO
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":604
+/* "synexens_sdk.pyx":616
  *     return res
  * 
  * def get_current_stream_type(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
@@ -4843,7 +5125,7 @@ static PyObject *__pyx_pw_12synexens_sdk_17get_current_stream_type(PyObject *__p
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_current_stream_type (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 604, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 616, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4870,7 +5152,7 @@ static PyObject *__pyx_pf_12synexens_sdk_16get_current_stream_type(CYTHON_UNUSED
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_current_stream_type", 0);
 
-  /* "synexens_sdk.pyx":605
+  /* "synexens_sdk.pyx":617
  * 
  * def get_current_stream_type(unsigned int nDeviceID):
  *     return SYStreamType(GetCurrentStreamType(nDeviceID))             # <<<<<<<<<<<<<<
@@ -4878,9 +5160,9 @@ static PyObject *__pyx_pf_12synexens_sdk_16get_current_stream_type(CYTHON_UNUSED
  * def start_streaming(unsigned int nDeviceID, SYStreamType streamType):
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYStreamType); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 605, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYStreamType); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYStreamType(Synexens::GetCurrentStreamType(__pyx_v_nDeviceID)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 605, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYStreamType(Synexens::GetCurrentStreamType(__pyx_v_nDeviceID)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -4895,14 +5177,14 @@ static PyObject *__pyx_pf_12synexens_sdk_16get_current_stream_type(CYTHON_UNUSED
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 605, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":604
+  /* "synexens_sdk.pyx":616
  *     return res
  * 
  * def get_current_stream_type(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
@@ -4924,12 +5206,12 @@ static PyObject *__pyx_pf_12synexens_sdk_16get_current_stream_type(CYTHON_UNUSED
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":607
+/* "synexens_sdk.pyx":619
  *     return SYStreamType(GetCurrentStreamType(nDeviceID))
  * 
  * def start_streaming(unsigned int nDeviceID, SYStreamType streamType):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(StartStreaming(nDeviceID, streamType))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(StartStreaming(nDeviceID, streamType))
  */
 
 /* Python wrapper */
@@ -4967,11 +5249,11 @@ static PyObject *__pyx_pw_12synexens_sdk_19start_streaming(PyObject *__pyx_self,
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_streamType)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("start_streaming", 1, 2, 2, 1); __PYX_ERR(0, 607, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("start_streaming", 1, 2, 2, 1); __PYX_ERR(0, 619, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "start_streaming") < 0)) __PYX_ERR(0, 607, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "start_streaming") < 0)) __PYX_ERR(0, 619, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -4979,12 +5261,12 @@ static PyObject *__pyx_pw_12synexens_sdk_19start_streaming(PyObject *__pyx_self,
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 607, __pyx_L3_error)
-    __pyx_v_streamType = ((enum Synexens::SYStreamType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYStreamType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 607, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 619, __pyx_L3_error)
+    __pyx_v_streamType = ((enum Synexens::SYStreamType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYStreamType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 619, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("start_streaming", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 607, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("start_streaming", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 619, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.start_streaming", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -4998,28 +5280,32 @@ static PyObject *__pyx_pw_12synexens_sdk_19start_streaming(PyObject *__pyx_self,
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_18start_streaming(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID, enum Synexens::SYStreamType __pyx_v_streamType) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("start_streaming", 0);
 
-  /* "synexens_sdk.pyx":608
- * 
+  /* "synexens_sdk.pyx":621
  * def start_streaming(unsigned int nDeviceID, SYStreamType streamType):
- *     return SYErrorCode(StartStreaming(nDeviceID, streamType))             # <<<<<<<<<<<<<<
- * 
- * def stop_streaming(unsigned int nDeviceID):
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(StartStreaming(nDeviceID, streamType))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"StartStreaming() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 608, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 621, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::StartStreaming(__pyx_v_nDeviceID, __pyx_v_streamType)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 608, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::StartStreaming(__pyx_v_nDeviceID, __pyx_v_streamType)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 621, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -5034,22 +5320,79 @@ static PyObject *__pyx_pf_12synexens_sdk_18start_streaming(CYTHON_UNUSED PyObjec
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 608, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 621, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 621, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":607
+  /* "synexens_sdk.pyx":622
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(StartStreaming(nDeviceID, streamType))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"StartStreaming() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":623
+ *     ret = SYErrorCode(StartStreaming(nDeviceID, streamType))
+ *     if ret != 0:
+ *         raise RuntimeError(f"StartStreaming() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def stop_streaming(unsigned int nDeviceID):
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 623, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_StartStreaming_returns);
+    __pyx_t_7 += 25;
+    __Pyx_GIVEREF(__pyx_kp_u_StartStreaming_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_StartStreaming_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 623, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 623, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 623, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 623, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":622
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(StartStreaming(nDeviceID, streamType))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"StartStreaming() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":619
  *     return SYStreamType(GetCurrentStreamType(nDeviceID))
  * 
  * def start_streaming(unsigned int nDeviceID, SYStreamType streamType):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(StartStreaming(nDeviceID, streamType))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(StartStreaming(nDeviceID, streamType))
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -5063,12 +5406,12 @@ static PyObject *__pyx_pf_12synexens_sdk_18start_streaming(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":610
- *     return SYErrorCode(StartStreaming(nDeviceID, streamType))
+/* "synexens_sdk.pyx":625
+ *         raise RuntimeError(f"StartStreaming() returns {ret}.")
  * 
  * def stop_streaming(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(StopStreaming(nDeviceID))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(StopStreaming(nDeviceID))
  */
 
 /* Python wrapper */
@@ -5083,7 +5426,7 @@ static PyObject *__pyx_pw_12synexens_sdk_21stop_streaming(PyObject *__pyx_self, 
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("stop_streaming (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 610, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 625, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -5099,28 +5442,32 @@ static PyObject *__pyx_pw_12synexens_sdk_21stop_streaming(PyObject *__pyx_self, 
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_20stop_streaming(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("stop_streaming", 0);
 
-  /* "synexens_sdk.pyx":611
- * 
+  /* "synexens_sdk.pyx":627
  * def stop_streaming(unsigned int nDeviceID):
- *     return SYErrorCode(StopStreaming(nDeviceID))             # <<<<<<<<<<<<<<
- * 
- * def change_streaming(unsigned int nDeviceID, SYStreamType streamType):
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(StopStreaming(nDeviceID))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"StopStreaming() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 611, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 627, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::StopStreaming(__pyx_v_nDeviceID)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 611, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::StopStreaming(__pyx_v_nDeviceID)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 627, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -5135,22 +5482,79 @@ static PyObject *__pyx_pf_12synexens_sdk_20stop_streaming(CYTHON_UNUSED PyObject
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 611, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 627, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 627, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":610
- *     return SYErrorCode(StartStreaming(nDeviceID, streamType))
+  /* "synexens_sdk.pyx":628
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(StopStreaming(nDeviceID))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"StopStreaming() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":629
+ *     ret = SYErrorCode(StopStreaming(nDeviceID))
+ *     if ret != 0:
+ *         raise RuntimeError(f"StopStreaming() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def change_streaming(unsigned int nDeviceID, SYStreamType streamType):
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 629, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_StopStreaming_returns);
+    __pyx_t_7 += 24;
+    __Pyx_GIVEREF(__pyx_kp_u_StopStreaming_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_StopStreaming_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 629, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 629, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 629, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 629, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":628
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(StopStreaming(nDeviceID))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"StopStreaming() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":625
+ *         raise RuntimeError(f"StartStreaming() returns {ret}.")
  * 
  * def stop_streaming(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(StopStreaming(nDeviceID))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(StopStreaming(nDeviceID))
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -5164,12 +5568,12 @@ static PyObject *__pyx_pf_12synexens_sdk_20stop_streaming(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":613
- *     return SYErrorCode(StopStreaming(nDeviceID))
+/* "synexens_sdk.pyx":631
+ *         raise RuntimeError(f"StopStreaming() returns {ret}.")
  * 
  * def change_streaming(unsigned int nDeviceID, SYStreamType streamType):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(ChangeStreaming(nDeviceID, streamType))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(ChangeStreaming(nDeviceID, streamType))
  */
 
 /* Python wrapper */
@@ -5207,11 +5611,11 @@ static PyObject *__pyx_pw_12synexens_sdk_23change_streaming(PyObject *__pyx_self
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_streamType)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("change_streaming", 1, 2, 2, 1); __PYX_ERR(0, 613, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("change_streaming", 1, 2, 2, 1); __PYX_ERR(0, 631, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "change_streaming") < 0)) __PYX_ERR(0, 613, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "change_streaming") < 0)) __PYX_ERR(0, 631, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -5219,12 +5623,12 @@ static PyObject *__pyx_pw_12synexens_sdk_23change_streaming(PyObject *__pyx_self
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 613, __pyx_L3_error)
-    __pyx_v_streamType = ((enum Synexens::SYStreamType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYStreamType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 613, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 631, __pyx_L3_error)
+    __pyx_v_streamType = ((enum Synexens::SYStreamType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYStreamType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 631, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("change_streaming", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 613, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("change_streaming", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 631, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.change_streaming", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -5238,28 +5642,32 @@ static PyObject *__pyx_pw_12synexens_sdk_23change_streaming(PyObject *__pyx_self
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_22change_streaming(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID, enum Synexens::SYStreamType __pyx_v_streamType) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("change_streaming", 0);
 
-  /* "synexens_sdk.pyx":614
- * 
+  /* "synexens_sdk.pyx":633
  * def change_streaming(unsigned int nDeviceID, SYStreamType streamType):
- *     return SYErrorCode(ChangeStreaming(nDeviceID, streamType))             # <<<<<<<<<<<<<<
- * 
- * def set_frame_resolution(unsigned int nDeviceID, SYFrameType frameType, SYResolution resolution):
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(ChangeStreaming(nDeviceID, streamType))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"ChangeStreaming() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 614, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 633, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::ChangeStreaming(__pyx_v_nDeviceID, __pyx_v_streamType)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 614, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::ChangeStreaming(__pyx_v_nDeviceID, __pyx_v_streamType)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 633, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -5274,22 +5682,79 @@ static PyObject *__pyx_pf_12synexens_sdk_22change_streaming(CYTHON_UNUSED PyObje
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 614, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 633, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 633, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":613
- *     return SYErrorCode(StopStreaming(nDeviceID))
+  /* "synexens_sdk.pyx":634
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(ChangeStreaming(nDeviceID, streamType))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"ChangeStreaming() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":635
+ *     ret = SYErrorCode(ChangeStreaming(nDeviceID, streamType))
+ *     if ret != 0:
+ *         raise RuntimeError(f"ChangeStreaming() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def set_frame_resolution(unsigned int nDeviceID, SYFrameType frameType, SYResolution resolution):
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 635, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_ChangeStreaming_returns);
+    __pyx_t_7 += 26;
+    __Pyx_GIVEREF(__pyx_kp_u_ChangeStreaming_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_ChangeStreaming_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 635, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 635, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 635, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 635, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":634
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(ChangeStreaming(nDeviceID, streamType))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"ChangeStreaming() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":631
+ *         raise RuntimeError(f"StopStreaming() returns {ret}.")
  * 
  * def change_streaming(unsigned int nDeviceID, SYStreamType streamType):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(ChangeStreaming(nDeviceID, streamType))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(ChangeStreaming(nDeviceID, streamType))
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -5303,12 +5768,12 @@ static PyObject *__pyx_pf_12synexens_sdk_22change_streaming(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":616
- *     return SYErrorCode(ChangeStreaming(nDeviceID, streamType))
+/* "synexens_sdk.pyx":637
+ *         raise RuntimeError(f"ChangeStreaming() returns {ret}.")
  * 
  * def set_frame_resolution(unsigned int nDeviceID, SYFrameType frameType, SYResolution resolution):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
  */
 
 /* Python wrapper */
@@ -5349,17 +5814,17 @@ static PyObject *__pyx_pw_12synexens_sdk_25set_frame_resolution(PyObject *__pyx_
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_frameType)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_frame_resolution", 1, 3, 3, 1); __PYX_ERR(0, 616, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_frame_resolution", 1, 3, 3, 1); __PYX_ERR(0, 637, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_resolution)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_frame_resolution", 1, 3, 3, 2); __PYX_ERR(0, 616, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_frame_resolution", 1, 3, 3, 2); __PYX_ERR(0, 637, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_frame_resolution") < 0)) __PYX_ERR(0, 616, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_frame_resolution") < 0)) __PYX_ERR(0, 637, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -5368,13 +5833,13 @@ static PyObject *__pyx_pw_12synexens_sdk_25set_frame_resolution(PyObject *__pyx_
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 616, __pyx_L3_error)
-    __pyx_v_frameType = ((enum Synexens::SYFrameType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYFrameType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 616, __pyx_L3_error)
-    __pyx_v_resolution = ((enum Synexens::SYResolution)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYResolution(values[2])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 616, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 637, __pyx_L3_error)
+    __pyx_v_frameType = ((enum Synexens::SYFrameType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYFrameType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 637, __pyx_L3_error)
+    __pyx_v_resolution = ((enum Synexens::SYResolution)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYResolution(values[2])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 637, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("set_frame_resolution", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 616, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("set_frame_resolution", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 637, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.set_frame_resolution", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -5388,28 +5853,32 @@ static PyObject *__pyx_pw_12synexens_sdk_25set_frame_resolution(PyObject *__pyx_
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_24set_frame_resolution(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID, enum Synexens::SYFrameType __pyx_v_frameType, enum Synexens::SYResolution __pyx_v_resolution) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("set_frame_resolution", 0);
 
-  /* "synexens_sdk.pyx":617
- * 
+  /* "synexens_sdk.pyx":639
  * def set_frame_resolution(unsigned int nDeviceID, SYFrameType frameType, SYResolution resolution):
- *     return SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))             # <<<<<<<<<<<<<<
- * 
- * def get_frame_resolution(unsigned int nDeviceID, SYFrameType frameType):
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetFrameResolution() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 617, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 639, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetFrameResolution(__pyx_v_nDeviceID, __pyx_v_frameType, __pyx_v_resolution)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 617, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetFrameResolution(__pyx_v_nDeviceID, __pyx_v_frameType, __pyx_v_resolution)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 639, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -5424,22 +5893,79 @@ static PyObject *__pyx_pf_12synexens_sdk_24set_frame_resolution(CYTHON_UNUSED Py
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 617, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 639, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 639, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":616
- *     return SYErrorCode(ChangeStreaming(nDeviceID, streamType))
+  /* "synexens_sdk.pyx":640
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetFrameResolution() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":641
+ *     ret = SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetFrameResolution() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def get_frame_resolution(unsigned int nDeviceID, SYFrameType frameType):
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 641, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_SetFrameResolution_returns);
+    __pyx_t_7 += 29;
+    __Pyx_GIVEREF(__pyx_kp_u_SetFrameResolution_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_SetFrameResolution_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 641, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 641, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 641, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 641, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":640
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetFrameResolution() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":637
+ *         raise RuntimeError(f"ChangeStreaming() returns {ret}.")
  * 
  * def set_frame_resolution(unsigned int nDeviceID, SYFrameType frameType, SYResolution resolution):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -5453,8 +5979,8 @@ static PyObject *__pyx_pf_12synexens_sdk_24set_frame_resolution(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":619
- *     return SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
+/* "synexens_sdk.pyx":643
+ *         raise RuntimeError(f"SetFrameResolution() returns {ret}.")
  * 
  * def get_frame_resolution(unsigned int nDeviceID, SYFrameType frameType):             # <<<<<<<<<<<<<<
  *     cdef SYResolution resolution
@@ -5496,11 +6022,11 @@ static PyObject *__pyx_pw_12synexens_sdk_27get_frame_resolution(PyObject *__pyx_
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_frameType)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("get_frame_resolution", 1, 2, 2, 1); __PYX_ERR(0, 619, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("get_frame_resolution", 1, 2, 2, 1); __PYX_ERR(0, 643, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get_frame_resolution") < 0)) __PYX_ERR(0, 619, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get_frame_resolution") < 0)) __PYX_ERR(0, 643, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -5508,12 +6034,12 @@ static PyObject *__pyx_pw_12synexens_sdk_27get_frame_resolution(PyObject *__pyx_
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 619, __pyx_L3_error)
-    __pyx_v_frameType = ((enum Synexens::SYFrameType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYFrameType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 619, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 643, __pyx_L3_error)
+    __pyx_v_frameType = ((enum Synexens::SYFrameType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYFrameType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 643, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("get_frame_resolution", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 619, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("get_frame_resolution", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 643, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.get_frame_resolution", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -5544,16 +6070,16 @@ static PyObject *__pyx_pf_12synexens_sdk_26get_frame_resolution(CYTHON_UNUSED Py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_frame_resolution", 0);
 
-  /* "synexens_sdk.pyx":623
+  /* "synexens_sdk.pyx":647
  *     cdef SYErrorCode ret
  * 
  *     ret = SYErrorCode(GetFrameResolution(nDeviceID, frameType, resolution))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"GetFrameResolution() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 623, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 647, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetFrameResolution(__pyx_v_nDeviceID, __pyx_v_frameType, __pyx_v_resolution)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 623, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetFrameResolution(__pyx_v_nDeviceID, __pyx_v_frameType, __pyx_v_resolution)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 647, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -5568,14 +6094,14 @@ static PyObject *__pyx_pf_12synexens_sdk_26get_frame_resolution(CYTHON_UNUSED Py
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 623, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 647, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 623, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 647, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":624
+  /* "synexens_sdk.pyx":648
  * 
  *     ret = SYErrorCode(GetFrameResolution(nDeviceID, frameType, resolution))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -5585,14 +6111,14 @@ static PyObject *__pyx_pf_12synexens_sdk_26get_frame_resolution(CYTHON_UNUSED Py
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":625
+    /* "synexens_sdk.pyx":649
  *     ret = SYErrorCode(GetFrameResolution(nDeviceID, frameType, resolution))
  *     if ret != 0:
  *         raise RuntimeError(f"GetFrameResolution() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     return SYResolution(resolution)
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 625, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 649, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -5600,7 +6126,7 @@ static PyObject *__pyx_pf_12synexens_sdk_26get_frame_resolution(CYTHON_UNUSED Py
     __pyx_t_7 += 29;
     __Pyx_GIVEREF(__pyx_kp_u_GetFrameResolution_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_GetFrameResolution_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 625, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 649, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -5611,17 +6137,17 @@ static PyObject *__pyx_pf_12synexens_sdk_26get_frame_resolution(CYTHON_UNUSED Py
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 625, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 649, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 625, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 649, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 625, __pyx_L1_error)
+    __PYX_ERR(0, 649, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":624
+    /* "synexens_sdk.pyx":648
  * 
  *     ret = SYErrorCode(GetFrameResolution(nDeviceID, frameType, resolution))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -5630,7 +6156,7 @@ static PyObject *__pyx_pf_12synexens_sdk_26get_frame_resolution(CYTHON_UNUSED Py
  */
   }
 
-  /* "synexens_sdk.pyx":627
+  /* "synexens_sdk.pyx":651
  *         raise RuntimeError(f"GetFrameResolution() returns {ret}.")
  * 
  *     return SYResolution(resolution)             # <<<<<<<<<<<<<<
@@ -5638,9 +6164,9 @@ static PyObject *__pyx_pf_12synexens_sdk_26get_frame_resolution(CYTHON_UNUSED Py
  * def get_filter(unsigned int nDeviceID):
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYResolution); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 627, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYResolution); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 651, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYResolution(__pyx_v_resolution); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 627, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYResolution(__pyx_v_resolution); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 651, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -5655,15 +6181,15 @@ static PyObject *__pyx_pf_12synexens_sdk_26get_frame_resolution(CYTHON_UNUSED Py
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 627, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 651, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":619
- *     return SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
+  /* "synexens_sdk.pyx":643
+ *         raise RuntimeError(f"SetFrameResolution() returns {ret}.")
  * 
  * def get_frame_resolution(unsigned int nDeviceID, SYFrameType frameType):             # <<<<<<<<<<<<<<
  *     cdef SYResolution resolution
@@ -5684,7 +6210,7 @@ static PyObject *__pyx_pf_12synexens_sdk_26get_frame_resolution(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":629
+/* "synexens_sdk.pyx":653
  *     return SYResolution(resolution)
  * 
  * def get_filter(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
@@ -5704,7 +6230,7 @@ static PyObject *__pyx_pw_12synexens_sdk_29get_filter(PyObject *__pyx_self, PyOb
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_filter (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 629, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 653, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -5737,16 +6263,16 @@ static PyObject *__pyx_pf_12synexens_sdk_28get_filter(CYTHON_UNUSED PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_filter", 0);
 
-  /* "synexens_sdk.pyx":633
+  /* "synexens_sdk.pyx":657
  *     cdef SYErrorCode ret
  * 
  *     ret = SYErrorCode(GetFilter(nDeviceID, bFilter))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"GetFilter() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 633, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 657, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetFilter(__pyx_v_nDeviceID, __pyx_v_bFilter)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 633, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetFilter(__pyx_v_nDeviceID, __pyx_v_bFilter)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 657, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -5761,14 +6287,14 @@ static PyObject *__pyx_pf_12synexens_sdk_28get_filter(CYTHON_UNUSED PyObject *__
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 633, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 657, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 633, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 657, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":634
+  /* "synexens_sdk.pyx":658
  * 
  *     ret = SYErrorCode(GetFilter(nDeviceID, bFilter))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -5778,14 +6304,14 @@ static PyObject *__pyx_pf_12synexens_sdk_28get_filter(CYTHON_UNUSED PyObject *__
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":635
+    /* "synexens_sdk.pyx":659
  *     ret = SYErrorCode(GetFilter(nDeviceID, bFilter))
  *     if ret != 0:
  *         raise RuntimeError(f"GetFilter() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     return bFilter
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 635, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 659, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -5793,7 +6319,7 @@ static PyObject *__pyx_pf_12synexens_sdk_28get_filter(CYTHON_UNUSED PyObject *__
     __pyx_t_7 += 20;
     __Pyx_GIVEREF(__pyx_kp_u_GetFilter_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_GetFilter_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 635, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 659, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -5804,17 +6330,17 @@ static PyObject *__pyx_pf_12synexens_sdk_28get_filter(CYTHON_UNUSED PyObject *__
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 635, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 659, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 635, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 659, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 635, __pyx_L1_error)
+    __PYX_ERR(0, 659, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":634
+    /* "synexens_sdk.pyx":658
  * 
  *     ret = SYErrorCode(GetFilter(nDeviceID, bFilter))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -5823,7 +6349,7 @@ static PyObject *__pyx_pf_12synexens_sdk_28get_filter(CYTHON_UNUSED PyObject *__
  */
   }
 
-  /* "synexens_sdk.pyx":637
+  /* "synexens_sdk.pyx":661
  *         raise RuntimeError(f"GetFilter() returns {ret}.")
  * 
  *     return bFilter             # <<<<<<<<<<<<<<
@@ -5831,13 +6357,13 @@ static PyObject *__pyx_pf_12synexens_sdk_28get_filter(CYTHON_UNUSED PyObject *__
  * def set_filter(unsigned int nDeviceID, bool bFilter):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_bFilter); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 637, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_bFilter); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 661, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":629
+  /* "synexens_sdk.pyx":653
  *     return SYResolution(resolution)
  * 
  * def get_filter(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
@@ -5859,12 +6385,12 @@ static PyObject *__pyx_pf_12synexens_sdk_28get_filter(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":639
+/* "synexens_sdk.pyx":663
  *     return bFilter
  * 
  * def set_filter(unsigned int nDeviceID, bool bFilter):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetFilter(nDeviceID, bFilter))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFilter(nDeviceID, bFilter))
  */
 
 /* Python wrapper */
@@ -5902,11 +6428,11 @@ static PyObject *__pyx_pw_12synexens_sdk_31set_filter(PyObject *__pyx_self, PyOb
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_bFilter)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_filter", 1, 2, 2, 1); __PYX_ERR(0, 639, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_filter", 1, 2, 2, 1); __PYX_ERR(0, 663, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_filter") < 0)) __PYX_ERR(0, 639, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_filter") < 0)) __PYX_ERR(0, 663, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -5914,12 +6440,12 @@ static PyObject *__pyx_pw_12synexens_sdk_31set_filter(PyObject *__pyx_self, PyOb
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 639, __pyx_L3_error)
-    __pyx_v_bFilter = __Pyx_PyObject_IsTrue(values[1]); if (unlikely((__pyx_v_bFilter == ((bool)-1)) && PyErr_Occurred())) __PYX_ERR(0, 639, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 663, __pyx_L3_error)
+    __pyx_v_bFilter = __Pyx_PyObject_IsTrue(values[1]); if (unlikely((__pyx_v_bFilter == ((bool)-1)) && PyErr_Occurred())) __PYX_ERR(0, 663, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("set_filter", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 639, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("set_filter", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 663, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.set_filter", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -5933,28 +6459,32 @@ static PyObject *__pyx_pw_12synexens_sdk_31set_filter(PyObject *__pyx_self, PyOb
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_30set_filter(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID, bool __pyx_v_bFilter) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("set_filter", 0);
 
-  /* "synexens_sdk.pyx":640
- * 
+  /* "synexens_sdk.pyx":665
  * def set_filter(unsigned int nDeviceID, bool bFilter):
- *     return SYErrorCode(SetFilter(nDeviceID, bFilter))             # <<<<<<<<<<<<<<
- * 
- * def get_filter_list(unsigned int nDeviceID):
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFilter(nDeviceID, bFilter))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetFilter() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 640, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 665, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetFilter(__pyx_v_nDeviceID, __pyx_v_bFilter)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 640, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetFilter(__pyx_v_nDeviceID, __pyx_v_bFilter)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 665, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -5969,22 +6499,79 @@ static PyObject *__pyx_pf_12synexens_sdk_30set_filter(CYTHON_UNUSED PyObject *__
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 640, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 665, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 665, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":639
+  /* "synexens_sdk.pyx":666
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFilter(nDeviceID, bFilter))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetFilter() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":667
+ *     ret = SYErrorCode(SetFilter(nDeviceID, bFilter))
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetFilter() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def get_filter_list(unsigned int nDeviceID):
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 667, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_SetFilter_returns);
+    __pyx_t_7 += 20;
+    __Pyx_GIVEREF(__pyx_kp_u_SetFilter_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_SetFilter_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 667, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 667, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 667, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 667, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":666
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFilter(nDeviceID, bFilter))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetFilter() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":663
  *     return bFilter
  * 
  * def set_filter(unsigned int nDeviceID, bool bFilter):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetFilter(nDeviceID, bFilter))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFilter(nDeviceID, bFilter))
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -5998,8 +6585,8 @@ static PyObject *__pyx_pf_12synexens_sdk_30set_filter(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":642
- *     return SYErrorCode(SetFilter(nDeviceID, bFilter))
+/* "synexens_sdk.pyx":669
+ *         raise RuntimeError(f"SetFilter() returns {ret}.")
  * 
  * def get_filter_list(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
@@ -6018,7 +6605,7 @@ static PyObject *__pyx_pw_12synexens_sdk_33get_filter_list(PyObject *__pyx_self,
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_filter_list (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 642, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 669, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6058,7 +6645,7 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_filter_list", 0);
 
-  /* "synexens_sdk.pyx":643
+  /* "synexens_sdk.pyx":670
  * 
  * def get_filter_list(unsigned int nDeviceID):
  *     cdef int nCount = 0             # <<<<<<<<<<<<<<
@@ -6067,16 +6654,16 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
  */
   __pyx_v_nCount = 0;
 
-  /* "synexens_sdk.pyx":647
+  /* "synexens_sdk.pyx":674
  *     cdef SYErrorCode ret
  * 
  *     ret = SYErrorCode(GetFilterList(nDeviceID, nCount, NULL))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"First GetFilterList() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 647, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 674, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetFilterList(__pyx_v_nDeviceID, __pyx_v_nCount, NULL)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 647, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetFilterList(__pyx_v_nDeviceID, __pyx_v_nCount, NULL)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 674, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -6091,14 +6678,14 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 647, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 674, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 647, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 674, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":648
+  /* "synexens_sdk.pyx":675
  * 
  *     ret = SYErrorCode(GetFilterList(nDeviceID, nCount, NULL))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -6108,14 +6695,14 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":649
+    /* "synexens_sdk.pyx":676
  *     ret = SYErrorCode(GetFilterList(nDeviceID, nCount, NULL))
  *     if ret != 0:
  *         raise RuntimeError(f"First GetFilterList() returns {ret}.")             # <<<<<<<<<<<<<<
  *     filterTypes.resize(nCount)
  * 
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 649, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 676, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -6123,7 +6710,7 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
     __pyx_t_7 += 30;
     __Pyx_GIVEREF(__pyx_kp_u_First_GetFilterList_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_First_GetFilterList_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 649, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 676, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -6134,17 +6721,17 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 649, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 676, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 649, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 676, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 649, __pyx_L1_error)
+    __PYX_ERR(0, 676, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":648
+    /* "synexens_sdk.pyx":675
  * 
  *     ret = SYErrorCode(GetFilterList(nDeviceID, nCount, NULL))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -6153,7 +6740,7 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
  */
   }
 
-  /* "synexens_sdk.pyx":650
+  /* "synexens_sdk.pyx":677
  *     if ret != 0:
  *         raise RuntimeError(f"First GetFilterList() returns {ret}.")
  *     filterTypes.resize(nCount)             # <<<<<<<<<<<<<<
@@ -6164,19 +6751,19 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
     __pyx_v_filterTypes.resize(__pyx_v_nCount);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 650, __pyx_L1_error)
+    __PYX_ERR(0, 677, __pyx_L1_error)
   }
 
-  /* "synexens_sdk.pyx":652
+  /* "synexens_sdk.pyx":679
  *     filterTypes.resize(nCount)
  * 
  *     ret = SYErrorCode(GetFilterList(nDeviceID, nCount, &filterTypes[0]))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"Second GetFilterList() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 652, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 679, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetFilterList(__pyx_v_nDeviceID, __pyx_v_nCount, (&(__pyx_v_filterTypes[0])))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 652, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetFilterList(__pyx_v_nDeviceID, __pyx_v_nCount, (&(__pyx_v_filterTypes[0])))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 679, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -6191,14 +6778,14 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 652, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 679, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 652, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 679, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":653
+  /* "synexens_sdk.pyx":680
  * 
  *     ret = SYErrorCode(GetFilterList(nDeviceID, nCount, &filterTypes[0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -6208,14 +6795,14 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":654
+    /* "synexens_sdk.pyx":681
  *     ret = SYErrorCode(GetFilterList(nDeviceID, nCount, &filterTypes[0]))
  *     if ret != 0:
  *         raise RuntimeError(f"Second GetFilterList() returns {ret}.")             # <<<<<<<<<<<<<<
  *     res = []
  *     for i in range(nCount):
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 654, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 681, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -6223,7 +6810,7 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
     __pyx_t_7 += 31;
     __Pyx_GIVEREF(__pyx_kp_u_Second_GetFilterList_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_Second_GetFilterList_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 654, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 681, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -6234,17 +6821,17 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 654, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 681, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 654, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 681, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 654, __pyx_L1_error)
+    __PYX_ERR(0, 681, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":653
+    /* "synexens_sdk.pyx":680
  * 
  *     ret = SYErrorCode(GetFilterList(nDeviceID, nCount, &filterTypes[0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -6253,19 +6840,19 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
  */
   }
 
-  /* "synexens_sdk.pyx":655
+  /* "synexens_sdk.pyx":682
  *     if ret != 0:
  *         raise RuntimeError(f"Second GetFilterList() returns {ret}.")
  *     res = []             # <<<<<<<<<<<<<<
  *     for i in range(nCount):
  *         res.append(SYFilterType(filterTypes[i]))
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 655, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 682, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":656
+  /* "synexens_sdk.pyx":683
  *         raise RuntimeError(f"Second GetFilterList() returns {ret}.")
  *     res = []
  *     for i in range(nCount):             # <<<<<<<<<<<<<<
@@ -6277,16 +6864,16 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v_i = __pyx_t_11;
 
-    /* "synexens_sdk.pyx":657
+    /* "synexens_sdk.pyx":684
  *     res = []
  *     for i in range(nCount):
  *         res.append(SYFilterType(filterTypes[i]))             # <<<<<<<<<<<<<<
  * 
  *     return res
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYFilterType); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 657, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYFilterType); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 684, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYFilterType((__pyx_v_filterTypes[__pyx_v_i])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 657, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYFilterType((__pyx_v_filterTypes[__pyx_v_i])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 684, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_4 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -6301,14 +6888,14 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
     __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 657, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 684, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_res, __pyx_t_1); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 657, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_res, __pyx_t_1); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 684, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "synexens_sdk.pyx":659
+  /* "synexens_sdk.pyx":686
  *         res.append(SYFilterType(filterTypes[i]))
  * 
  *     return res             # <<<<<<<<<<<<<<
@@ -6320,8 +6907,8 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":642
- *     return SYErrorCode(SetFilter(nDeviceID, bFilter))
+  /* "synexens_sdk.pyx":669
+ *         raise RuntimeError(f"SetFilter() returns {ret}.")
  * 
  * def get_filter_list(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
@@ -6343,12 +6930,12 @@ static PyObject *__pyx_pf_12synexens_sdk_32get_filter_list(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":661
+/* "synexens_sdk.pyx":688
  *     return res
  * 
  * def set_default_filter(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetDefaultFilter(nDeviceID))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetDefaultFilter(nDeviceID))
  */
 
 /* Python wrapper */
@@ -6363,7 +6950,7 @@ static PyObject *__pyx_pw_12synexens_sdk_35set_default_filter(PyObject *__pyx_se
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("set_default_filter (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 661, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 688, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6379,28 +6966,32 @@ static PyObject *__pyx_pw_12synexens_sdk_35set_default_filter(PyObject *__pyx_se
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_34set_default_filter(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("set_default_filter", 0);
 
-  /* "synexens_sdk.pyx":662
- * 
+  /* "synexens_sdk.pyx":690
  * def set_default_filter(unsigned int nDeviceID):
- *     return SYErrorCode(SetDefaultFilter(nDeviceID))             # <<<<<<<<<<<<<<
- * 
- * def add_filter(unsigned int nDeviceID, SYFilterType filterType):
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetDefaultFilter(nDeviceID))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetDefaultFilter() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 662, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 690, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetDefaultFilter(__pyx_v_nDeviceID)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 662, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetDefaultFilter(__pyx_v_nDeviceID)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 690, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -6415,22 +7006,79 @@ static PyObject *__pyx_pf_12synexens_sdk_34set_default_filter(CYTHON_UNUSED PyOb
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 662, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 690, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 690, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":661
+  /* "synexens_sdk.pyx":691
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetDefaultFilter(nDeviceID))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetDefaultFilter() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":692
+ *     ret = SYErrorCode(SetDefaultFilter(nDeviceID))
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetDefaultFilter() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def add_filter(unsigned int nDeviceID, SYFilterType filterType):
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 692, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_SetDefaultFilter_returns);
+    __pyx_t_7 += 27;
+    __Pyx_GIVEREF(__pyx_kp_u_SetDefaultFilter_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_SetDefaultFilter_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 692, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 692, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 692, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 692, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":691
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetDefaultFilter(nDeviceID))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetDefaultFilter() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":688
  *     return res
  * 
  * def set_default_filter(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetDefaultFilter(nDeviceID))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetDefaultFilter(nDeviceID))
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -6444,12 +7092,12 @@ static PyObject *__pyx_pf_12synexens_sdk_34set_default_filter(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":664
- *     return SYErrorCode(SetDefaultFilter(nDeviceID))
+/* "synexens_sdk.pyx":694
+ *         raise RuntimeError(f"SetDefaultFilter() returns {ret}.")
  * 
  * def add_filter(unsigned int nDeviceID, SYFilterType filterType):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(AddFilter(nDeviceID, filterType))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(AddFilter(nDeviceID, filterType))
  */
 
 /* Python wrapper */
@@ -6487,11 +7135,11 @@ static PyObject *__pyx_pw_12synexens_sdk_37add_filter(PyObject *__pyx_self, PyOb
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_filterType)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("add_filter", 1, 2, 2, 1); __PYX_ERR(0, 664, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("add_filter", 1, 2, 2, 1); __PYX_ERR(0, 694, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "add_filter") < 0)) __PYX_ERR(0, 664, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "add_filter") < 0)) __PYX_ERR(0, 694, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -6499,12 +7147,12 @@ static PyObject *__pyx_pw_12synexens_sdk_37add_filter(PyObject *__pyx_self, PyOb
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 664, __pyx_L3_error)
-    __pyx_v_filterType = ((enum Synexens::SYFilterType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYFilterType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 664, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 694, __pyx_L3_error)
+    __pyx_v_filterType = ((enum Synexens::SYFilterType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYFilterType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 694, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("add_filter", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 664, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("add_filter", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 694, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.add_filter", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -6518,28 +7166,32 @@ static PyObject *__pyx_pw_12synexens_sdk_37add_filter(PyObject *__pyx_self, PyOb
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_36add_filter(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID, enum Synexens::SYFilterType __pyx_v_filterType) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("add_filter", 0);
 
-  /* "synexens_sdk.pyx":665
- * 
+  /* "synexens_sdk.pyx":696
  * def add_filter(unsigned int nDeviceID, SYFilterType filterType):
- *     return SYErrorCode(AddFilter(nDeviceID, filterType))             # <<<<<<<<<<<<<<
- * 
- * def delete_filter(unsigned int nDeviceID, int nIndex):
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(AddFilter(nDeviceID, filterType))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"AddFilter() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 665, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 696, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::AddFilter(__pyx_v_nDeviceID, __pyx_v_filterType)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 665, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::AddFilter(__pyx_v_nDeviceID, __pyx_v_filterType)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 696, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -6554,22 +7206,79 @@ static PyObject *__pyx_pf_12synexens_sdk_36add_filter(CYTHON_UNUSED PyObject *__
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 665, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 696, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 696, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":664
- *     return SYErrorCode(SetDefaultFilter(nDeviceID))
+  /* "synexens_sdk.pyx":697
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(AddFilter(nDeviceID, filterType))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"AddFilter() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":698
+ *     ret = SYErrorCode(AddFilter(nDeviceID, filterType))
+ *     if ret != 0:
+ *         raise RuntimeError(f"AddFilter() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def delete_filter(unsigned int nDeviceID, int nIndex):
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 698, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_AddFilter_returns);
+    __pyx_t_7 += 20;
+    __Pyx_GIVEREF(__pyx_kp_u_AddFilter_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_AddFilter_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 698, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 698, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 698, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 698, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":697
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(AddFilter(nDeviceID, filterType))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"AddFilter() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":694
+ *         raise RuntimeError(f"SetDefaultFilter() returns {ret}.")
  * 
  * def add_filter(unsigned int nDeviceID, SYFilterType filterType):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(AddFilter(nDeviceID, filterType))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(AddFilter(nDeviceID, filterType))
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -6583,12 +7292,12 @@ static PyObject *__pyx_pf_12synexens_sdk_36add_filter(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":667
- *     return SYErrorCode(AddFilter(nDeviceID, filterType))
+/* "synexens_sdk.pyx":700
+ *         raise RuntimeError(f"AddFilter() returns {ret}.")
  * 
  * def delete_filter(unsigned int nDeviceID, int nIndex):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(DeleteFilter(nDeviceID, nIndex))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(DeleteFilter(nDeviceID, nIndex))
  */
 
 /* Python wrapper */
@@ -6626,11 +7335,11 @@ static PyObject *__pyx_pw_12synexens_sdk_39delete_filter(PyObject *__pyx_self, P
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_nIndex)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("delete_filter", 1, 2, 2, 1); __PYX_ERR(0, 667, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("delete_filter", 1, 2, 2, 1); __PYX_ERR(0, 700, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "delete_filter") < 0)) __PYX_ERR(0, 667, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "delete_filter") < 0)) __PYX_ERR(0, 700, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -6638,12 +7347,12 @@ static PyObject *__pyx_pw_12synexens_sdk_39delete_filter(PyObject *__pyx_self, P
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 667, __pyx_L3_error)
-    __pyx_v_nIndex = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_nIndex == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 667, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 700, __pyx_L3_error)
+    __pyx_v_nIndex = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_nIndex == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 700, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("delete_filter", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 667, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("delete_filter", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 700, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.delete_filter", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -6657,28 +7366,32 @@ static PyObject *__pyx_pw_12synexens_sdk_39delete_filter(PyObject *__pyx_self, P
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_38delete_filter(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID, int __pyx_v_nIndex) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("delete_filter", 0);
 
-  /* "synexens_sdk.pyx":668
- * 
+  /* "synexens_sdk.pyx":702
  * def delete_filter(unsigned int nDeviceID, int nIndex):
- *     return SYErrorCode(DeleteFilter(nDeviceID, nIndex))             # <<<<<<<<<<<<<<
- * 
- * def clear_filter(unsigned int nDeviceID):
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(DeleteFilter(nDeviceID, nIndex))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"DeleteFilter() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 668, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 702, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::DeleteFilter(__pyx_v_nDeviceID, __pyx_v_nIndex)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 668, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::DeleteFilter(__pyx_v_nDeviceID, __pyx_v_nIndex)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 702, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -6693,22 +7406,79 @@ static PyObject *__pyx_pf_12synexens_sdk_38delete_filter(CYTHON_UNUSED PyObject 
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 668, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 702, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 702, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":667
- *     return SYErrorCode(AddFilter(nDeviceID, filterType))
+  /* "synexens_sdk.pyx":703
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(DeleteFilter(nDeviceID, nIndex))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"DeleteFilter() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":704
+ *     ret = SYErrorCode(DeleteFilter(nDeviceID, nIndex))
+ *     if ret != 0:
+ *         raise RuntimeError(f"DeleteFilter() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def clear_filter(unsigned int nDeviceID):
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 704, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_DeleteFilter_returns);
+    __pyx_t_7 += 23;
+    __Pyx_GIVEREF(__pyx_kp_u_DeleteFilter_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_DeleteFilter_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 704, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 704, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 704, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 704, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":703
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(DeleteFilter(nDeviceID, nIndex))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"DeleteFilter() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":700
+ *         raise RuntimeError(f"AddFilter() returns {ret}.")
  * 
  * def delete_filter(unsigned int nDeviceID, int nIndex):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(DeleteFilter(nDeviceID, nIndex))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(DeleteFilter(nDeviceID, nIndex))
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -6722,12 +7492,12 @@ static PyObject *__pyx_pf_12synexens_sdk_38delete_filter(CYTHON_UNUSED PyObject 
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":670
- *     return SYErrorCode(DeleteFilter(nDeviceID, nIndex))
+/* "synexens_sdk.pyx":706
+ *         raise RuntimeError(f"DeleteFilter() returns {ret}.")
  * 
  * def clear_filter(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(ClearFilter(nDeviceID))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(ClearFilter(nDeviceID))
  */
 
 /* Python wrapper */
@@ -6742,7 +7512,7 @@ static PyObject *__pyx_pw_12synexens_sdk_41clear_filter(PyObject *__pyx_self, Py
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("clear_filter (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 670, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 706, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6758,28 +7528,32 @@ static PyObject *__pyx_pw_12synexens_sdk_41clear_filter(PyObject *__pyx_self, Py
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_40clear_filter(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("clear_filter", 0);
 
-  /* "synexens_sdk.pyx":671
- * 
+  /* "synexens_sdk.pyx":708
  * def clear_filter(unsigned int nDeviceID):
- *     return SYErrorCode(ClearFilter(nDeviceID))             # <<<<<<<<<<<<<<
- * 
- * def set_filter_params(unsigned int nDeviceID, SYFilterType filterType, float[:] filterParams):
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(ClearFilter(nDeviceID))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"ClearFilter() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 671, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 708, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::ClearFilter(__pyx_v_nDeviceID)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 671, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::ClearFilter(__pyx_v_nDeviceID)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 708, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -6794,22 +7568,79 @@ static PyObject *__pyx_pf_12synexens_sdk_40clear_filter(CYTHON_UNUSED PyObject *
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 671, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 708, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 708, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":670
- *     return SYErrorCode(DeleteFilter(nDeviceID, nIndex))
+  /* "synexens_sdk.pyx":709
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(ClearFilter(nDeviceID))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"ClearFilter() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":710
+ *     ret = SYErrorCode(ClearFilter(nDeviceID))
+ *     if ret != 0:
+ *         raise RuntimeError(f"ClearFilter() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def set_filter_params(unsigned int nDeviceID, SYFilterType filterType, float[:] filterParams):
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 710, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_ClearFilter_returns);
+    __pyx_t_7 += 22;
+    __Pyx_GIVEREF(__pyx_kp_u_ClearFilter_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_ClearFilter_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 710, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 710, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 710, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 710, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":709
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(ClearFilter(nDeviceID))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"ClearFilter() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":706
+ *         raise RuntimeError(f"DeleteFilter() returns {ret}.")
  * 
  * def clear_filter(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(ClearFilter(nDeviceID))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(ClearFilter(nDeviceID))
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -6823,12 +7654,12 @@ static PyObject *__pyx_pf_12synexens_sdk_40clear_filter(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":673
- *     return SYErrorCode(ClearFilter(nDeviceID))
+/* "synexens_sdk.pyx":712
+ *         raise RuntimeError(f"ClearFilter() returns {ret}.")
  * 
  * def set_filter_params(unsigned int nDeviceID, SYFilterType filterType, float[:] filterParams):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
  *     if filterParams.strides[0] != 4:
- *         raise ValueError("Argument 'filterParams' is not contiguous.")
  */
 
 /* Python wrapper */
@@ -6869,17 +7700,17 @@ static PyObject *__pyx_pw_12synexens_sdk_43set_filter_params(PyObject *__pyx_sel
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_filterType)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_filter_params", 1, 3, 3, 1); __PYX_ERR(0, 673, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_filter_params", 1, 3, 3, 1); __PYX_ERR(0, 712, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_filterParams)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_filter_params", 1, 3, 3, 2); __PYX_ERR(0, 673, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_filter_params", 1, 3, 3, 2); __PYX_ERR(0, 712, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_filter_params") < 0)) __PYX_ERR(0, 673, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_filter_params") < 0)) __PYX_ERR(0, 712, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -6888,13 +7719,13 @@ static PyObject *__pyx_pw_12synexens_sdk_43set_filter_params(PyObject *__pyx_sel
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 673, __pyx_L3_error)
-    __pyx_v_filterType = ((enum Synexens::SYFilterType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYFilterType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 673, __pyx_L3_error)
-    __pyx_v_filterParams = __Pyx_PyObject_to_MemoryviewSlice_ds_float(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_filterParams.memview)) __PYX_ERR(0, 673, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 712, __pyx_L3_error)
+    __pyx_v_filterType = ((enum Synexens::SYFilterType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYFilterType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 712, __pyx_L3_error)
+    __pyx_v_filterParams = __Pyx_PyObject_to_MemoryviewSlice_ds_float(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_filterParams.memview)) __PYX_ERR(0, 712, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("set_filter_params", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 673, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("set_filter_params", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 712, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.set_filter_params", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -6908,6 +7739,7 @@ static PyObject *__pyx_pw_12synexens_sdk_43set_filter_params(PyObject *__pyx_sel
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_42set_filter_params(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID, enum Synexens::SYFilterType __pyx_v_filterType, __Pyx_memviewslice __pyx_v_filterParams) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -6917,52 +7749,54 @@ static PyObject *__pyx_pf_12synexens_sdk_42set_filter_params(CYTHON_UNUSED PyObj
   int __pyx_t_5;
   PyObject *__pyx_t_6 = NULL;
   PyObject *__pyx_t_7 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_8;
+  Py_ssize_t __pyx_t_9;
+  Py_UCS4 __pyx_t_10;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("set_filter_params", 0);
 
-  /* "synexens_sdk.pyx":674
- * 
+  /* "synexens_sdk.pyx":714
  * def set_filter_params(unsigned int nDeviceID, SYFilterType filterType, float[:] filterParams):
+ *     cdef SYErrorCode ret
  *     if filterParams.strides[0] != 4:             # <<<<<<<<<<<<<<
  *         raise ValueError("Argument 'filterParams' is not contiguous.")
- *     return SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
+ *     ret = SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
  */
   __pyx_t_1 = (((__pyx_v_filterParams.strides[0]) != 4) != 0);
   if (unlikely(__pyx_t_1)) {
 
-    /* "synexens_sdk.pyx":675
- * def set_filter_params(unsigned int nDeviceID, SYFilterType filterType, float[:] filterParams):
+    /* "synexens_sdk.pyx":715
+ *     cdef SYErrorCode ret
  *     if filterParams.strides[0] != 4:
  *         raise ValueError("Argument 'filterParams' is not contiguous.")             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
- * 
+ *     ret = SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
+ *     if ret != 0:
  */
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 675, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 715, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_Raise(__pyx_t_2, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __PYX_ERR(0, 675, __pyx_L1_error)
+    __PYX_ERR(0, 715, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":674
- * 
+    /* "synexens_sdk.pyx":714
  * def set_filter_params(unsigned int nDeviceID, SYFilterType filterType, float[:] filterParams):
+ *     cdef SYErrorCode ret
  *     if filterParams.strides[0] != 4:             # <<<<<<<<<<<<<<
  *         raise ValueError("Argument 'filterParams' is not contiguous.")
- *     return SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
+ *     ret = SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
  */
   }
 
-  /* "synexens_sdk.pyx":676
+  /* "synexens_sdk.pyx":716
  *     if filterParams.strides[0] != 4:
  *         raise ValueError("Argument 'filterParams' is not contiguous.")
- *     return SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))             # <<<<<<<<<<<<<<
- * 
- * def get_filter_params(unsigned int nDeviceID, SYFilterType filterType):
+ *     ret = SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetFitlerParam() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 676, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 716, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = 0;
   __pyx_t_5 = -1;
@@ -6972,9 +7806,9 @@ static PyObject *__pyx_pf_12synexens_sdk_42set_filter_params(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_4 >= __pyx_v_filterParams.shape[0])) __pyx_t_5 = 0;
   if (unlikely(__pyx_t_5 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_5);
-    __PYX_ERR(0, 676, __pyx_L1_error)
+    __PYX_ERR(0, 716, __pyx_L1_error)
   }
-  __pyx_t_6 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetFilterParam(__pyx_v_nDeviceID, __pyx_v_filterType, (__pyx_v_filterParams.shape[0]), (&(*((float *) ( /* dim=0 */ (__pyx_v_filterParams.data + __pyx_t_4 * __pyx_v_filterParams.strides[0]) )))))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 676, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetFilterParam(__pyx_v_nDeviceID, __pyx_v_filterType, (__pyx_v_filterParams.shape[0]), (&(*((float *) ( /* dim=0 */ (__pyx_v_filterParams.data + __pyx_t_4 * __pyx_v_filterParams.strides[0]) )))))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 716, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_7 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -6989,22 +7823,79 @@ static PyObject *__pyx_pf_12synexens_sdk_42set_filter_params(CYTHON_UNUSED PyObj
   __pyx_t_2 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_7, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 676, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 716, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_r = __pyx_t_2;
-  __pyx_t_2 = 0;
-  goto __pyx_L0;
+  __pyx_t_8 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_2)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 716, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_v_ret = __pyx_t_8;
 
-  /* "synexens_sdk.pyx":673
- *     return SYErrorCode(ClearFilter(nDeviceID))
+  /* "synexens_sdk.pyx":717
+ *         raise ValueError("Argument 'filterParams' is not contiguous.")
+ *     ret = SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetFitlerParam() returns {ret}.")
+ * 
+ */
+  __pyx_t_1 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_1)) {
+
+    /* "synexens_sdk.pyx":718
+ *     ret = SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetFitlerParam() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def get_filter_params(unsigned int nDeviceID, SYFilterType filterType):
+ */
+    __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 718, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_9 = 0;
+    __pyx_t_10 = 127;
+    __Pyx_INCREF(__pyx_kp_u_SetFitlerParam_returns);
+    __pyx_t_9 += 25;
+    __Pyx_GIVEREF(__pyx_kp_u_SetFitlerParam_returns);
+    PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_kp_u_SetFitlerParam_returns);
+    __pyx_t_3 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 718, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_10 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_3) > __pyx_t_10) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_3) : __pyx_t_10;
+    __pyx_t_9 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_3);
+    __Pyx_GIVEREF(__pyx_t_3);
+    PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_3);
+    __pyx_t_3 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_9 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_kp_u_);
+    __pyx_t_3 = __Pyx_PyUnicode_Join(__pyx_t_2, 3, __pyx_t_9, __pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 718, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 718, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_Raise(__pyx_t_2, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __PYX_ERR(0, 718, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":717
+ *         raise ValueError("Argument 'filterParams' is not contiguous.")
+ *     ret = SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetFitlerParam() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":712
+ *         raise RuntimeError(f"ClearFilter() returns {ret}.")
  * 
  * def set_filter_params(unsigned int nDeviceID, SYFilterType filterType, float[:] filterParams):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
  *     if filterParams.strides[0] != 4:
- *         raise ValueError("Argument 'filterParams' is not contiguous.")
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
@@ -7019,8 +7910,8 @@ static PyObject *__pyx_pf_12synexens_sdk_42set_filter_params(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":678
- *     return SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
+/* "synexens_sdk.pyx":720
+ *         raise RuntimeError(f"SetFitlerParam() returns {ret}.")
  * 
  * def get_filter_params(unsigned int nDeviceID, SYFilterType filterType):             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
@@ -7062,11 +7953,11 @@ static PyObject *__pyx_pw_12synexens_sdk_45get_filter_params(PyObject *__pyx_sel
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_filterType)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("get_filter_params", 1, 2, 2, 1); __PYX_ERR(0, 678, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("get_filter_params", 1, 2, 2, 1); __PYX_ERR(0, 720, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get_filter_params") < 0)) __PYX_ERR(0, 678, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get_filter_params") < 0)) __PYX_ERR(0, 720, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -7074,12 +7965,12 @@ static PyObject *__pyx_pw_12synexens_sdk_45get_filter_params(PyObject *__pyx_sel
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 678, __pyx_L3_error)
-    __pyx_v_filterType = ((enum Synexens::SYFilterType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYFilterType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 678, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 720, __pyx_L3_error)
+    __pyx_v_filterType = ((enum Synexens::SYFilterType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYFilterType(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 720, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("get_filter_params", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 678, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("get_filter_params", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 720, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.get_filter_params", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -7113,7 +8004,7 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_filter_params", 0);
 
-  /* "synexens_sdk.pyx":679
+  /* "synexens_sdk.pyx":721
  * 
  * def get_filter_params(unsigned int nDeviceID, SYFilterType filterType):
  *     cdef int nCount = 0             # <<<<<<<<<<<<<<
@@ -7122,16 +8013,16 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
  */
   __pyx_v_nCount = 0;
 
-  /* "synexens_sdk.pyx":683
+  /* "synexens_sdk.pyx":725
  *     cdef SYErrorCode ret
  * 
  *     ret = SYErrorCode(GetFilterParam(nDeviceID, filterType, nCount, NULL))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"First GetFilterParam() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 683, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 725, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetFilterParam(__pyx_v_nDeviceID, __pyx_v_filterType, __pyx_v_nCount, NULL)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 683, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetFilterParam(__pyx_v_nDeviceID, __pyx_v_filterType, __pyx_v_nCount, NULL)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 725, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -7146,14 +8037,14 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 683, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 725, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 683, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 725, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":684
+  /* "synexens_sdk.pyx":726
  * 
  *     ret = SYErrorCode(GetFilterParam(nDeviceID, filterType, nCount, NULL))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -7163,14 +8054,14 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":685
+    /* "synexens_sdk.pyx":727
  *     ret = SYErrorCode(GetFilterParam(nDeviceID, filterType, nCount, NULL))
  *     if ret != 0:
  *         raise RuntimeError(f"First GetFilterParam() returns {ret}.")             # <<<<<<<<<<<<<<
  *     filterParams.resize(nCount)
  * 
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 685, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 727, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -7178,7 +8069,7 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
     __pyx_t_7 += 31;
     __Pyx_GIVEREF(__pyx_kp_u_First_GetFilterParam_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_First_GetFilterParam_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 685, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 727, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -7189,17 +8080,17 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 685, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 727, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 685, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 727, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 685, __pyx_L1_error)
+    __PYX_ERR(0, 727, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":684
+    /* "synexens_sdk.pyx":726
  * 
  *     ret = SYErrorCode(GetFilterParam(nDeviceID, filterType, nCount, NULL))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -7208,7 +8099,7 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
  */
   }
 
-  /* "synexens_sdk.pyx":686
+  /* "synexens_sdk.pyx":728
  *     if ret != 0:
  *         raise RuntimeError(f"First GetFilterParam() returns {ret}.")
  *     filterParams.resize(nCount)             # <<<<<<<<<<<<<<
@@ -7219,19 +8110,19 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
     __pyx_v_filterParams.resize(__pyx_v_nCount);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 686, __pyx_L1_error)
+    __PYX_ERR(0, 728, __pyx_L1_error)
   }
 
-  /* "synexens_sdk.pyx":688
+  /* "synexens_sdk.pyx":730
  *     filterParams.resize(nCount)
  * 
  *     ret = SYErrorCode(GetFilterParam(nDeviceID, filterType, nCount, &filterParams[0]))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"Second GetFilterParam() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 688, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 730, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetFilterParam(__pyx_v_nDeviceID, __pyx_v_filterType, __pyx_v_nCount, (&(__pyx_v_filterParams[0])))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 688, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetFilterParam(__pyx_v_nDeviceID, __pyx_v_filterType, __pyx_v_nCount, (&(__pyx_v_filterParams[0])))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 730, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -7246,14 +8137,14 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 688, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 730, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 688, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 730, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":689
+  /* "synexens_sdk.pyx":731
  * 
  *     ret = SYErrorCode(GetFilterParam(nDeviceID, filterType, nCount, &filterParams[0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -7263,14 +8154,14 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":690
+    /* "synexens_sdk.pyx":732
  *     ret = SYErrorCode(GetFilterParam(nDeviceID, filterType, nCount, &filterParams[0]))
  *     if ret != 0:
  *         raise RuntimeError(f"Second GetFilterParam() returns {ret}.")             # <<<<<<<<<<<<<<
  *     res = np.empty(nCount, dtype=np.float32)
  *     res[:] = filterParams
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 690, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 732, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -7278,7 +8169,7 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
     __pyx_t_7 += 32;
     __Pyx_GIVEREF(__pyx_kp_u_Second_GetFilterParam_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_Second_GetFilterParam_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 690, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 732, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -7289,17 +8180,17 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 690, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 732, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 690, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 732, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 690, __pyx_L1_error)
+    __PYX_ERR(0, 732, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":689
+    /* "synexens_sdk.pyx":731
  * 
  *     ret = SYErrorCode(GetFilterParam(nDeviceID, filterType, nCount, &filterParams[0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -7308,35 +8199,35 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
  */
   }
 
-  /* "synexens_sdk.pyx":691
+  /* "synexens_sdk.pyx":733
  *     if ret != 0:
  *         raise RuntimeError(f"Second GetFilterParam() returns {ret}.")
  *     res = np.empty(nCount, dtype=np.float32)             # <<<<<<<<<<<<<<
  *     res[:] = filterParams
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 691, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 733, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 691, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 733, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_nCount); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 691, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_nCount); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 733, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 691, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 733, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 691, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 733, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 691, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 733, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float32); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 691, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float32); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 733, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_9) < 0) __PYX_ERR(0, 691, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_9) < 0) __PYX_ERR(0, 733, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 691, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 733, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -7344,19 +8235,19 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
   __pyx_v_res = __pyx_t_9;
   __pyx_t_9 = 0;
 
-  /* "synexens_sdk.pyx":692
+  /* "synexens_sdk.pyx":734
  *         raise RuntimeError(f"Second GetFilterParam() returns {ret}.")
  *     res = np.empty(nCount, dtype=np.float32)
  *     res[:] = filterParams             # <<<<<<<<<<<<<<
  * 
  *     return res
  */
-  __pyx_t_9 = __pyx_convert_vector_to_py_float(__pyx_v_filterParams); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 692, __pyx_L1_error)
+  __pyx_t_9 = __pyx_convert_vector_to_py_float(__pyx_v_filterParams); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 734, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  if (__Pyx_PyObject_SetSlice(__pyx_v_res, __pyx_t_9, 0, 0, NULL, NULL, &__pyx_slice__3, 0, 0, 1) < 0) __PYX_ERR(0, 692, __pyx_L1_error)
+  if (__Pyx_PyObject_SetSlice(__pyx_v_res, __pyx_t_9, 0, 0, NULL, NULL, &__pyx_slice__3, 0, 0, 1) < 0) __PYX_ERR(0, 734, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "synexens_sdk.pyx":694
+  /* "synexens_sdk.pyx":736
  *     res[:] = filterParams
  * 
  *     return res             # <<<<<<<<<<<<<<
@@ -7368,8 +8259,8 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":678
- *     return SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
+  /* "synexens_sdk.pyx":720
+ *         raise RuntimeError(f"SetFitlerParam() returns {ret}.")
  * 
  * def get_filter_params(unsigned int nDeviceID, SYFilterType filterType):             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
@@ -7392,7 +8283,7 @@ static PyObject *__pyx_pf_12synexens_sdk_44get_filter_params(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":696
+/* "synexens_sdk.pyx":738
  *     return res
  * 
  * def get_mirror(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
@@ -7412,7 +8303,7 @@ static PyObject *__pyx_pw_12synexens_sdk_47get_mirror(PyObject *__pyx_self, PyOb
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_mirror (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 696, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 738, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -7445,16 +8336,16 @@ static PyObject *__pyx_pf_12synexens_sdk_46get_mirror(CYTHON_UNUSED PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_mirror", 0);
 
-  /* "synexens_sdk.pyx":700
+  /* "synexens_sdk.pyx":742
  *     cdef SYErrorCode ret
  * 
  *     ret = SYErrorCode(GetMirror(nDeviceID, bMirror))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"GetMirror() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 700, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 742, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetMirror(__pyx_v_nDeviceID, __pyx_v_bMirror)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 700, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetMirror(__pyx_v_nDeviceID, __pyx_v_bMirror)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 742, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -7469,14 +8360,14 @@ static PyObject *__pyx_pf_12synexens_sdk_46get_mirror(CYTHON_UNUSED PyObject *__
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 700, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 742, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 700, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 742, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":701
+  /* "synexens_sdk.pyx":743
  * 
  *     ret = SYErrorCode(GetMirror(nDeviceID, bMirror))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -7486,14 +8377,14 @@ static PyObject *__pyx_pf_12synexens_sdk_46get_mirror(CYTHON_UNUSED PyObject *__
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":702
+    /* "synexens_sdk.pyx":744
  *     ret = SYErrorCode(GetMirror(nDeviceID, bMirror))
  *     if ret != 0:
  *         raise RuntimeError(f"GetMirror() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     return bMirror
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 702, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 744, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -7501,7 +8392,7 @@ static PyObject *__pyx_pf_12synexens_sdk_46get_mirror(CYTHON_UNUSED PyObject *__
     __pyx_t_7 += 20;
     __Pyx_GIVEREF(__pyx_kp_u_GetMirror_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_GetMirror_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 702, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 744, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -7512,17 +8403,17 @@ static PyObject *__pyx_pf_12synexens_sdk_46get_mirror(CYTHON_UNUSED PyObject *__
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 702, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 744, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 702, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 744, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 702, __pyx_L1_error)
+    __PYX_ERR(0, 744, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":701
+    /* "synexens_sdk.pyx":743
  * 
  *     ret = SYErrorCode(GetMirror(nDeviceID, bMirror))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -7531,7 +8422,7 @@ static PyObject *__pyx_pf_12synexens_sdk_46get_mirror(CYTHON_UNUSED PyObject *__
  */
   }
 
-  /* "synexens_sdk.pyx":704
+  /* "synexens_sdk.pyx":746
  *         raise RuntimeError(f"GetMirror() returns {ret}.")
  * 
  *     return bMirror             # <<<<<<<<<<<<<<
@@ -7539,13 +8430,13 @@ static PyObject *__pyx_pf_12synexens_sdk_46get_mirror(CYTHON_UNUSED PyObject *__
  * def set_mirror(unsigned int nDeviceID, bool bMirror):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_bMirror); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 704, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_bMirror); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 746, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":696
+  /* "synexens_sdk.pyx":738
  *     return res
  * 
  * def get_mirror(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
@@ -7567,12 +8458,12 @@ static PyObject *__pyx_pf_12synexens_sdk_46get_mirror(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":706
+/* "synexens_sdk.pyx":748
  *     return bMirror
  * 
  * def set_mirror(unsigned int nDeviceID, bool bMirror):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetMirror(nDeviceID, bMirror))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetMirror(nDeviceID, bMirror))
  */
 
 /* Python wrapper */
@@ -7610,11 +8501,11 @@ static PyObject *__pyx_pw_12synexens_sdk_49set_mirror(PyObject *__pyx_self, PyOb
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_bMirror)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_mirror", 1, 2, 2, 1); __PYX_ERR(0, 706, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_mirror", 1, 2, 2, 1); __PYX_ERR(0, 748, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_mirror") < 0)) __PYX_ERR(0, 706, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_mirror") < 0)) __PYX_ERR(0, 748, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -7622,12 +8513,12 @@ static PyObject *__pyx_pw_12synexens_sdk_49set_mirror(PyObject *__pyx_self, PyOb
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 706, __pyx_L3_error)
-    __pyx_v_bMirror = __Pyx_PyObject_IsTrue(values[1]); if (unlikely((__pyx_v_bMirror == ((bool)-1)) && PyErr_Occurred())) __PYX_ERR(0, 706, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 748, __pyx_L3_error)
+    __pyx_v_bMirror = __Pyx_PyObject_IsTrue(values[1]); if (unlikely((__pyx_v_bMirror == ((bool)-1)) && PyErr_Occurred())) __PYX_ERR(0, 748, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("set_mirror", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 706, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("set_mirror", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 748, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.set_mirror", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -7641,28 +8532,32 @@ static PyObject *__pyx_pw_12synexens_sdk_49set_mirror(PyObject *__pyx_self, PyOb
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_48set_mirror(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID, bool __pyx_v_bMirror) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("set_mirror", 0);
 
-  /* "synexens_sdk.pyx":707
- * 
+  /* "synexens_sdk.pyx":750
  * def set_mirror(unsigned int nDeviceID, bool bMirror):
- *     return SYErrorCode(SetMirror(nDeviceID, bMirror))             # <<<<<<<<<<<<<<
- * 
- * def get_flip(unsigned int nDeviceID):
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetMirror(nDeviceID, bMirror))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetMirror() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 707, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 750, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetMirror(__pyx_v_nDeviceID, __pyx_v_bMirror)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 707, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetMirror(__pyx_v_nDeviceID, __pyx_v_bMirror)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 750, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -7677,22 +8572,79 @@ static PyObject *__pyx_pf_12synexens_sdk_48set_mirror(CYTHON_UNUSED PyObject *__
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 707, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 750, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 750, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":706
+  /* "synexens_sdk.pyx":751
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetMirror(nDeviceID, bMirror))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetMirror() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":752
+ *     ret = SYErrorCode(SetMirror(nDeviceID, bMirror))
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetMirror() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def get_flip(unsigned int nDeviceID):
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 752, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_SetMirror_returns);
+    __pyx_t_7 += 20;
+    __Pyx_GIVEREF(__pyx_kp_u_SetMirror_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_SetMirror_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 752, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 752, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 752, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 752, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":751
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetMirror(nDeviceID, bMirror))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetMirror() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":748
  *     return bMirror
  * 
  * def set_mirror(unsigned int nDeviceID, bool bMirror):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetMirror(nDeviceID, bMirror))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetMirror(nDeviceID, bMirror))
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -7706,8 +8658,8 @@ static PyObject *__pyx_pf_12synexens_sdk_48set_mirror(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":709
- *     return SYErrorCode(SetMirror(nDeviceID, bMirror))
+/* "synexens_sdk.pyx":754
+ *         raise RuntimeError(f"SetMirror() returns {ret}.")
  * 
  * def get_flip(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef bool bFlip
@@ -7726,7 +8678,7 @@ static PyObject *__pyx_pw_12synexens_sdk_51get_flip(PyObject *__pyx_self, PyObje
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_flip (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 709, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 754, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -7759,16 +8711,16 @@ static PyObject *__pyx_pf_12synexens_sdk_50get_flip(CYTHON_UNUSED PyObject *__py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_flip", 0);
 
-  /* "synexens_sdk.pyx":713
+  /* "synexens_sdk.pyx":758
  *     cdef SYErrorCode ret
  * 
  *     ret = SYErrorCode(GetFlip(nDeviceID, bFlip))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"GetFlip() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 713, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 758, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetFlip(__pyx_v_nDeviceID, __pyx_v_bFlip)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 713, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetFlip(__pyx_v_nDeviceID, __pyx_v_bFlip)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 758, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -7783,14 +8735,14 @@ static PyObject *__pyx_pf_12synexens_sdk_50get_flip(CYTHON_UNUSED PyObject *__py
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 713, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 758, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 713, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 758, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":714
+  /* "synexens_sdk.pyx":759
  * 
  *     ret = SYErrorCode(GetFlip(nDeviceID, bFlip))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -7800,14 +8752,14 @@ static PyObject *__pyx_pf_12synexens_sdk_50get_flip(CYTHON_UNUSED PyObject *__py
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":715
+    /* "synexens_sdk.pyx":760
  *     ret = SYErrorCode(GetFlip(nDeviceID, bFlip))
  *     if ret != 0:
  *         raise RuntimeError(f"GetFlip() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     return bFlip
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 715, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 760, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -7815,7 +8767,7 @@ static PyObject *__pyx_pf_12synexens_sdk_50get_flip(CYTHON_UNUSED PyObject *__py
     __pyx_t_7 += 18;
     __Pyx_GIVEREF(__pyx_kp_u_GetFlip_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_GetFlip_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 715, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 760, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -7826,17 +8778,17 @@ static PyObject *__pyx_pf_12synexens_sdk_50get_flip(CYTHON_UNUSED PyObject *__py
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 715, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 760, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 715, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 760, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 715, __pyx_L1_error)
+    __PYX_ERR(0, 760, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":714
+    /* "synexens_sdk.pyx":759
  * 
  *     ret = SYErrorCode(GetFlip(nDeviceID, bFlip))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -7845,7 +8797,7 @@ static PyObject *__pyx_pf_12synexens_sdk_50get_flip(CYTHON_UNUSED PyObject *__py
  */
   }
 
-  /* "synexens_sdk.pyx":717
+  /* "synexens_sdk.pyx":762
  *         raise RuntimeError(f"GetFlip() returns {ret}.")
  * 
  *     return bFlip             # <<<<<<<<<<<<<<
@@ -7853,14 +8805,14 @@ static PyObject *__pyx_pf_12synexens_sdk_50get_flip(CYTHON_UNUSED PyObject *__py
  * def set_flip(unsigned int nDeviceID, bool bFlip):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_bFlip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 717, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_bFlip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 762, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":709
- *     return SYErrorCode(SetMirror(nDeviceID, bMirror))
+  /* "synexens_sdk.pyx":754
+ *         raise RuntimeError(f"SetMirror() returns {ret}.")
  * 
  * def get_flip(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef bool bFlip
@@ -7881,12 +8833,12 @@ static PyObject *__pyx_pf_12synexens_sdk_50get_flip(CYTHON_UNUSED PyObject *__py
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":719
+/* "synexens_sdk.pyx":764
  *     return bFlip
  * 
  * def set_flip(unsigned int nDeviceID, bool bFlip):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetFlip(nDeviceID, bFlip))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFlip(nDeviceID, bFlip))
  */
 
 /* Python wrapper */
@@ -7924,11 +8876,11 @@ static PyObject *__pyx_pw_12synexens_sdk_53set_flip(PyObject *__pyx_self, PyObje
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_bFlip)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_flip", 1, 2, 2, 1); __PYX_ERR(0, 719, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_flip", 1, 2, 2, 1); __PYX_ERR(0, 764, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_flip") < 0)) __PYX_ERR(0, 719, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_flip") < 0)) __PYX_ERR(0, 764, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -7936,12 +8888,12 @@ static PyObject *__pyx_pw_12synexens_sdk_53set_flip(PyObject *__pyx_self, PyObje
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 719, __pyx_L3_error)
-    __pyx_v_bFlip = __Pyx_PyObject_IsTrue(values[1]); if (unlikely((__pyx_v_bFlip == ((bool)-1)) && PyErr_Occurred())) __PYX_ERR(0, 719, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 764, __pyx_L3_error)
+    __pyx_v_bFlip = __Pyx_PyObject_IsTrue(values[1]); if (unlikely((__pyx_v_bFlip == ((bool)-1)) && PyErr_Occurred())) __PYX_ERR(0, 764, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("set_flip", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 719, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("set_flip", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 764, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.set_flip", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -7955,28 +8907,32 @@ static PyObject *__pyx_pw_12synexens_sdk_53set_flip(PyObject *__pyx_self, PyObje
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_52set_flip(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID, bool __pyx_v_bFlip) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("set_flip", 0);
 
-  /* "synexens_sdk.pyx":720
- * 
+  /* "synexens_sdk.pyx":766
  * def set_flip(unsigned int nDeviceID, bool bFlip):
- *     return SYErrorCode(SetFlip(nDeviceID, bFlip))             # <<<<<<<<<<<<<<
- * 
- * def get_integral_time(unsigned int nDeviceID):
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFlip(nDeviceID, bFlip))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetFlip() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 720, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 766, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetFlip(__pyx_v_nDeviceID, __pyx_v_bFlip)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 720, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetFlip(__pyx_v_nDeviceID, __pyx_v_bFlip)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 766, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -7991,22 +8947,79 @@ static PyObject *__pyx_pf_12synexens_sdk_52set_flip(CYTHON_UNUSED PyObject *__py
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 720, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 766, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 766, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":719
+  /* "synexens_sdk.pyx":767
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFlip(nDeviceID, bFlip))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetFlip() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":768
+ *     ret = SYErrorCode(SetFlip(nDeviceID, bFlip))
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetFlip() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def get_integral_time(unsigned int nDeviceID):
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 768, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_SetFlip_returns);
+    __pyx_t_7 += 18;
+    __Pyx_GIVEREF(__pyx_kp_u_SetFlip_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_SetFlip_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 768, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 768, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 768, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 768, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":767
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFlip(nDeviceID, bFlip))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetFlip() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":764
  *     return bFlip
  * 
  * def set_flip(unsigned int nDeviceID, bool bFlip):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetFlip(nDeviceID, bFlip))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFlip(nDeviceID, bFlip))
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -8020,8 +9033,8 @@ static PyObject *__pyx_pf_12synexens_sdk_52set_flip(CYTHON_UNUSED PyObject *__py
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":722
- *     return SYErrorCode(SetFlip(nDeviceID, bFlip))
+/* "synexens_sdk.pyx":770
+ *         raise RuntimeError(f"SetFlip() returns {ret}.")
  * 
  * def get_integral_time(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nIntegralTime
@@ -8040,7 +9053,7 @@ static PyObject *__pyx_pw_12synexens_sdk_55get_integral_time(PyObject *__pyx_sel
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_integral_time (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 722, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 770, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -8073,16 +9086,16 @@ static PyObject *__pyx_pf_12synexens_sdk_54get_integral_time(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_integral_time", 0);
 
-  /* "synexens_sdk.pyx":726
+  /* "synexens_sdk.pyx":774
  *     cdef SYErrorCode ret
  * 
  *     ret = SYErrorCode(GetIntegralTime(nDeviceID, nIntegralTime))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"GetIntegralTime() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 726, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 774, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetIntegralTime(__pyx_v_nDeviceID, __pyx_v_nIntegralTime)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 726, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetIntegralTime(__pyx_v_nDeviceID, __pyx_v_nIntegralTime)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 774, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -8097,14 +9110,14 @@ static PyObject *__pyx_pf_12synexens_sdk_54get_integral_time(CYTHON_UNUSED PyObj
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 726, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 774, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 726, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 774, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":727
+  /* "synexens_sdk.pyx":775
  * 
  *     ret = SYErrorCode(GetIntegralTime(nDeviceID, nIntegralTime))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -8114,14 +9127,14 @@ static PyObject *__pyx_pf_12synexens_sdk_54get_integral_time(CYTHON_UNUSED PyObj
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":728
+    /* "synexens_sdk.pyx":776
  *     ret = SYErrorCode(GetIntegralTime(nDeviceID, nIntegralTime))
  *     if ret != 0:
  *         raise RuntimeError(f"GetIntegralTime() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     return nIntegralTime
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 728, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 776, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -8129,7 +9142,7 @@ static PyObject *__pyx_pf_12synexens_sdk_54get_integral_time(CYTHON_UNUSED PyObj
     __pyx_t_7 += 26;
     __Pyx_GIVEREF(__pyx_kp_u_GetIntegralTime_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_GetIntegralTime_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 728, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 776, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -8140,17 +9153,17 @@ static PyObject *__pyx_pf_12synexens_sdk_54get_integral_time(CYTHON_UNUSED PyObj
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 728, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 776, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 728, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 776, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 728, __pyx_L1_error)
+    __PYX_ERR(0, 776, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":727
+    /* "synexens_sdk.pyx":775
  * 
  *     ret = SYErrorCode(GetIntegralTime(nDeviceID, nIntegralTime))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -8159,7 +9172,7 @@ static PyObject *__pyx_pf_12synexens_sdk_54get_integral_time(CYTHON_UNUSED PyObj
  */
   }
 
-  /* "synexens_sdk.pyx":730
+  /* "synexens_sdk.pyx":778
  *         raise RuntimeError(f"GetIntegralTime() returns {ret}.")
  * 
  *     return nIntegralTime             # <<<<<<<<<<<<<<
@@ -8167,14 +9180,14 @@ static PyObject *__pyx_pf_12synexens_sdk_54get_integral_time(CYTHON_UNUSED PyObj
  * def set_integral_time(unsigned int nDeviceID, int nIntegralTime):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_nIntegralTime); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 730, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_nIntegralTime); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 778, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":722
- *     return SYErrorCode(SetFlip(nDeviceID, bFlip))
+  /* "synexens_sdk.pyx":770
+ *         raise RuntimeError(f"SetFlip() returns {ret}.")
  * 
  * def get_integral_time(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nIntegralTime
@@ -8195,12 +9208,12 @@ static PyObject *__pyx_pf_12synexens_sdk_54get_integral_time(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":732
+/* "synexens_sdk.pyx":780
  *     return nIntegralTime
  * 
  * def set_integral_time(unsigned int nDeviceID, int nIntegralTime):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
  */
 
 /* Python wrapper */
@@ -8238,11 +9251,11 @@ static PyObject *__pyx_pw_12synexens_sdk_57set_integral_time(PyObject *__pyx_sel
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_nIntegralTime)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_integral_time", 1, 2, 2, 1); __PYX_ERR(0, 732, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_integral_time", 1, 2, 2, 1); __PYX_ERR(0, 780, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_integral_time") < 0)) __PYX_ERR(0, 732, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_integral_time") < 0)) __PYX_ERR(0, 780, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -8250,12 +9263,12 @@ static PyObject *__pyx_pw_12synexens_sdk_57set_integral_time(PyObject *__pyx_sel
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 732, __pyx_L3_error)
-    __pyx_v_nIntegralTime = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_nIntegralTime == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 732, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 780, __pyx_L3_error)
+    __pyx_v_nIntegralTime = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_nIntegralTime == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 780, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("set_integral_time", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 732, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("set_integral_time", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 780, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.set_integral_time", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -8269,28 +9282,32 @@ static PyObject *__pyx_pw_12synexens_sdk_57set_integral_time(PyObject *__pyx_sel
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_56set_integral_time(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID, int __pyx_v_nIntegralTime) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("set_integral_time", 0);
 
-  /* "synexens_sdk.pyx":733
- * 
+  /* "synexens_sdk.pyx":782
  * def set_integral_time(unsigned int nDeviceID, int nIntegralTime):
- *     return SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))             # <<<<<<<<<<<<<<
- * 
- * def get_integral_time_range(unsigned int nDeviceID, SYResolution depthResolution):
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetIntegralTime() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 733, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 782, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetIntegralTime(__pyx_v_nDeviceID, __pyx_v_nIntegralTime)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 733, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetIntegralTime(__pyx_v_nDeviceID, __pyx_v_nIntegralTime)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 782, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -8305,22 +9322,79 @@ static PyObject *__pyx_pf_12synexens_sdk_56set_integral_time(CYTHON_UNUSED PyObj
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 733, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 782, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 782, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":732
+  /* "synexens_sdk.pyx":783
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetIntegralTime() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":784
+ *     ret = SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetIntegralTime() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def get_integral_time_range(unsigned int nDeviceID, SYResolution depthResolution):
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 784, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_SetIntegralTime_returns);
+    __pyx_t_7 += 26;
+    __Pyx_GIVEREF(__pyx_kp_u_SetIntegralTime_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_SetIntegralTime_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 784, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 784, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 784, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 784, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":783
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetIntegralTime() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":780
  *     return nIntegralTime
  * 
  * def set_integral_time(unsigned int nDeviceID, int nIntegralTime):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -8334,8 +9408,8 @@ static PyObject *__pyx_pf_12synexens_sdk_56set_integral_time(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":735
- *     return SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
+/* "synexens_sdk.pyx":786
+ *         raise RuntimeError(f"SetIntegralTime() returns {ret}.")
  * 
  * def get_integral_time_range(unsigned int nDeviceID, SYResolution depthResolution):             # <<<<<<<<<<<<<<
  *     cdef int nMin
@@ -8377,11 +9451,11 @@ static PyObject *__pyx_pw_12synexens_sdk_59get_integral_time_range(PyObject *__p
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_depthResolution)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("get_integral_time_range", 1, 2, 2, 1); __PYX_ERR(0, 735, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("get_integral_time_range", 1, 2, 2, 1); __PYX_ERR(0, 786, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get_integral_time_range") < 0)) __PYX_ERR(0, 735, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get_integral_time_range") < 0)) __PYX_ERR(0, 786, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -8389,12 +9463,12 @@ static PyObject *__pyx_pw_12synexens_sdk_59get_integral_time_range(PyObject *__p
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 735, __pyx_L3_error)
-    __pyx_v_depthResolution = ((enum Synexens::SYResolution)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYResolution(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 735, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 786, __pyx_L3_error)
+    __pyx_v_depthResolution = ((enum Synexens::SYResolution)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYResolution(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 786, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("get_integral_time_range", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 735, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("get_integral_time_range", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 786, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.get_integral_time_range", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -8426,16 +9500,16 @@ static PyObject *__pyx_pf_12synexens_sdk_58get_integral_time_range(CYTHON_UNUSED
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_integral_time_range", 0);
 
-  /* "synexens_sdk.pyx":740
+  /* "synexens_sdk.pyx":791
  *     cdef SYErrorCode ret
  * 
  *     ret = SYErrorCode(GetIntegralTimeRange(nDeviceID, depthResolution, nMin, nMax))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"GetIntegralTime() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 740, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 791, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetIntegralTimeRange(__pyx_v_nDeviceID, __pyx_v_depthResolution, __pyx_v_nMin, __pyx_v_nMax)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 740, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetIntegralTimeRange(__pyx_v_nDeviceID, __pyx_v_depthResolution, __pyx_v_nMin, __pyx_v_nMax)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 791, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -8450,14 +9524,14 @@ static PyObject *__pyx_pf_12synexens_sdk_58get_integral_time_range(CYTHON_UNUSED
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 740, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 791, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 740, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 791, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":741
+  /* "synexens_sdk.pyx":792
  * 
  *     ret = SYErrorCode(GetIntegralTimeRange(nDeviceID, depthResolution, nMin, nMax))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -8467,14 +9541,14 @@ static PyObject *__pyx_pf_12synexens_sdk_58get_integral_time_range(CYTHON_UNUSED
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":742
+    /* "synexens_sdk.pyx":793
  *     ret = SYErrorCode(GetIntegralTimeRange(nDeviceID, depthResolution, nMin, nMax))
  *     if ret != 0:
  *         raise RuntimeError(f"GetIntegralTime() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     return nMin, nMax
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 742, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 793, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -8482,7 +9556,7 @@ static PyObject *__pyx_pf_12synexens_sdk_58get_integral_time_range(CYTHON_UNUSED
     __pyx_t_7 += 26;
     __Pyx_GIVEREF(__pyx_kp_u_GetIntegralTime_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_GetIntegralTime_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 742, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 793, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -8493,17 +9567,17 @@ static PyObject *__pyx_pf_12synexens_sdk_58get_integral_time_range(CYTHON_UNUSED
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 742, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 793, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 742, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 793, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 742, __pyx_L1_error)
+    __PYX_ERR(0, 793, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":741
+    /* "synexens_sdk.pyx":792
  * 
  *     ret = SYErrorCode(GetIntegralTimeRange(nDeviceID, depthResolution, nMin, nMax))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -8512,7 +9586,7 @@ static PyObject *__pyx_pf_12synexens_sdk_58get_integral_time_range(CYTHON_UNUSED
  */
   }
 
-  /* "synexens_sdk.pyx":744
+  /* "synexens_sdk.pyx":795
  *         raise RuntimeError(f"GetIntegralTime() returns {ret}.")
  * 
  *     return nMin, nMax             # <<<<<<<<<<<<<<
@@ -8520,11 +9594,11 @@ static PyObject *__pyx_pf_12synexens_sdk_58get_integral_time_range(CYTHON_UNUSED
  * def get_distance_measure_range(unsigned int nDeviceID):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_nMin); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 744, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_nMin); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 795, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_nMax); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 744, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_nMax); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 795, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 744, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 795, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
@@ -8536,8 +9610,8 @@ static PyObject *__pyx_pf_12synexens_sdk_58get_integral_time_range(CYTHON_UNUSED
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":735
- *     return SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
+  /* "synexens_sdk.pyx":786
+ *         raise RuntimeError(f"SetIntegralTime() returns {ret}.")
  * 
  * def get_integral_time_range(unsigned int nDeviceID, SYResolution depthResolution):             # <<<<<<<<<<<<<<
  *     cdef int nMin
@@ -8558,7 +9632,7 @@ static PyObject *__pyx_pf_12synexens_sdk_58get_integral_time_range(CYTHON_UNUSED
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":746
+/* "synexens_sdk.pyx":797
  *     return nMin, nMax
  * 
  * def get_distance_measure_range(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
@@ -8578,7 +9652,7 @@ static PyObject *__pyx_pw_12synexens_sdk_61get_distance_measure_range(PyObject *
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_distance_measure_range (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 746, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 797, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -8612,16 +9686,16 @@ static PyObject *__pyx_pf_12synexens_sdk_60get_distance_measure_range(CYTHON_UNU
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_distance_measure_range", 0);
 
-  /* "synexens_sdk.pyx":751
+  /* "synexens_sdk.pyx":802
  *     cdef SYErrorCode ret
  * 
  *     ret = SYErrorCode(GetDistanceMeasureRange(nDeviceID, nMin, nMax))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"GetDistanceMeasureRange() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 751, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 802, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetDistanceMeasureRange(__pyx_v_nDeviceID, __pyx_v_nMin, __pyx_v_nMax)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 751, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetDistanceMeasureRange(__pyx_v_nDeviceID, __pyx_v_nMin, __pyx_v_nMax)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 802, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -8636,14 +9710,14 @@ static PyObject *__pyx_pf_12synexens_sdk_60get_distance_measure_range(CYTHON_UNU
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 751, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 802, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 751, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 802, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":752
+  /* "synexens_sdk.pyx":803
  * 
  *     ret = SYErrorCode(GetDistanceMeasureRange(nDeviceID, nMin, nMax))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -8653,14 +9727,14 @@ static PyObject *__pyx_pf_12synexens_sdk_60get_distance_measure_range(CYTHON_UNU
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":753
+    /* "synexens_sdk.pyx":804
  *     ret = SYErrorCode(GetDistanceMeasureRange(nDeviceID, nMin, nMax))
  *     if ret != 0:
  *         raise RuntimeError(f"GetDistanceMeasureRange() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     return nMin, nMax
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 753, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 804, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -8668,7 +9742,7 @@ static PyObject *__pyx_pf_12synexens_sdk_60get_distance_measure_range(CYTHON_UNU
     __pyx_t_7 += 34;
     __Pyx_GIVEREF(__pyx_kp_u_GetDistanceMeasureRange_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_GetDistanceMeasureRange_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 753, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 804, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -8679,17 +9753,17 @@ static PyObject *__pyx_pf_12synexens_sdk_60get_distance_measure_range(CYTHON_UNU
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 753, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 804, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 753, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 804, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 753, __pyx_L1_error)
+    __PYX_ERR(0, 804, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":752
+    /* "synexens_sdk.pyx":803
  * 
  *     ret = SYErrorCode(GetDistanceMeasureRange(nDeviceID, nMin, nMax))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -8698,7 +9772,7 @@ static PyObject *__pyx_pf_12synexens_sdk_60get_distance_measure_range(CYTHON_UNU
  */
   }
 
-  /* "synexens_sdk.pyx":755
+  /* "synexens_sdk.pyx":806
  *         raise RuntimeError(f"GetDistanceMeasureRange() returns {ret}.")
  * 
  *     return nMin, nMax             # <<<<<<<<<<<<<<
@@ -8706,11 +9780,11 @@ static PyObject *__pyx_pf_12synexens_sdk_60get_distance_measure_range(CYTHON_UNU
  * def get_distance_user_range(unsigned int nDeviceID):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_nMin); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 755, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_nMin); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 806, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_nMax); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 755, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_nMax); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 806, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 755, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 806, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
@@ -8722,7 +9796,7 @@ static PyObject *__pyx_pf_12synexens_sdk_60get_distance_measure_range(CYTHON_UNU
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":746
+  /* "synexens_sdk.pyx":797
  *     return nMin, nMax
  * 
  * def get_distance_measure_range(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
@@ -8744,7 +9818,7 @@ static PyObject *__pyx_pf_12synexens_sdk_60get_distance_measure_range(CYTHON_UNU
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":757
+/* "synexens_sdk.pyx":808
  *     return nMin, nMax
  * 
  * def get_distance_user_range(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
@@ -8764,7 +9838,7 @@ static PyObject *__pyx_pw_12synexens_sdk_63get_distance_user_range(PyObject *__p
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_distance_user_range (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 757, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 808, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -8798,16 +9872,16 @@ static PyObject *__pyx_pf_12synexens_sdk_62get_distance_user_range(CYTHON_UNUSED
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_distance_user_range", 0);
 
-  /* "synexens_sdk.pyx":762
+  /* "synexens_sdk.pyx":813
  *     cdef SYErrorCode ret
  * 
  *     ret = SYErrorCode(GetDistanceUserRange(nDeviceID, nMin, nMax))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"GetDistanceUserRange() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 762, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 813, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetDistanceUserRange(__pyx_v_nDeviceID, __pyx_v_nMin, __pyx_v_nMax)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 762, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetDistanceUserRange(__pyx_v_nDeviceID, __pyx_v_nMin, __pyx_v_nMax)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 813, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -8822,14 +9896,14 @@ static PyObject *__pyx_pf_12synexens_sdk_62get_distance_user_range(CYTHON_UNUSED
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 762, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 813, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 762, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 813, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":763
+  /* "synexens_sdk.pyx":814
  * 
  *     ret = SYErrorCode(GetDistanceUserRange(nDeviceID, nMin, nMax))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -8839,14 +9913,14 @@ static PyObject *__pyx_pf_12synexens_sdk_62get_distance_user_range(CYTHON_UNUSED
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":764
+    /* "synexens_sdk.pyx":815
  *     ret = SYErrorCode(GetDistanceUserRange(nDeviceID, nMin, nMax))
  *     if ret != 0:
  *         raise RuntimeError(f"GetDistanceUserRange() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     return nMin, nMax
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 764, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 815, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -8854,7 +9928,7 @@ static PyObject *__pyx_pf_12synexens_sdk_62get_distance_user_range(CYTHON_UNUSED
     __pyx_t_7 += 31;
     __Pyx_GIVEREF(__pyx_kp_u_GetDistanceUserRange_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_GetDistanceUserRange_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 764, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 815, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -8865,17 +9939,17 @@ static PyObject *__pyx_pf_12synexens_sdk_62get_distance_user_range(CYTHON_UNUSED
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 764, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 815, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 764, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 815, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 764, __pyx_L1_error)
+    __PYX_ERR(0, 815, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":763
+    /* "synexens_sdk.pyx":814
  * 
  *     ret = SYErrorCode(GetDistanceUserRange(nDeviceID, nMin, nMax))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -8884,7 +9958,7 @@ static PyObject *__pyx_pf_12synexens_sdk_62get_distance_user_range(CYTHON_UNUSED
  */
   }
 
-  /* "synexens_sdk.pyx":766
+  /* "synexens_sdk.pyx":817
  *         raise RuntimeError(f"GetDistanceUserRange() returns {ret}.")
  * 
  *     return nMin, nMax             # <<<<<<<<<<<<<<
@@ -8892,11 +9966,11 @@ static PyObject *__pyx_pf_12synexens_sdk_62get_distance_user_range(CYTHON_UNUSED
  * def set_distance_user_range(unsigned int nDeviceID, int nMin, int nMax):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_nMin); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 766, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_nMin); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 817, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_nMax); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 766, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_nMax); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 817, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 766, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 817, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
@@ -8908,7 +9982,7 @@ static PyObject *__pyx_pf_12synexens_sdk_62get_distance_user_range(CYTHON_UNUSED
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":757
+  /* "synexens_sdk.pyx":808
  *     return nMin, nMax
  * 
  * def get_distance_user_range(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
@@ -8930,12 +10004,12 @@ static PyObject *__pyx_pf_12synexens_sdk_62get_distance_user_range(CYTHON_UNUSED
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":768
+/* "synexens_sdk.pyx":819
  *     return nMin, nMax
  * 
  * def set_distance_user_range(unsigned int nDeviceID, int nMin, int nMax):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
  */
 
 /* Python wrapper */
@@ -8976,17 +10050,17 @@ static PyObject *__pyx_pw_12synexens_sdk_65set_distance_user_range(PyObject *__p
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_nMin)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_distance_user_range", 1, 3, 3, 1); __PYX_ERR(0, 768, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_distance_user_range", 1, 3, 3, 1); __PYX_ERR(0, 819, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_nMax)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_distance_user_range", 1, 3, 3, 2); __PYX_ERR(0, 768, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_distance_user_range", 1, 3, 3, 2); __PYX_ERR(0, 819, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_distance_user_range") < 0)) __PYX_ERR(0, 768, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_distance_user_range") < 0)) __PYX_ERR(0, 819, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -8995,13 +10069,13 @@ static PyObject *__pyx_pw_12synexens_sdk_65set_distance_user_range(PyObject *__p
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 768, __pyx_L3_error)
-    __pyx_v_nMin = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_nMin == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 768, __pyx_L3_error)
-    __pyx_v_nMax = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_nMax == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 768, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 819, __pyx_L3_error)
+    __pyx_v_nMin = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_nMin == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 819, __pyx_L3_error)
+    __pyx_v_nMax = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_nMax == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 819, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("set_distance_user_range", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 768, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("set_distance_user_range", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 819, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.set_distance_user_range", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -9015,28 +10089,32 @@ static PyObject *__pyx_pw_12synexens_sdk_65set_distance_user_range(PyObject *__p
 }
 
 static PyObject *__pyx_pf_12synexens_sdk_64set_distance_user_range(CYTHON_UNUSED PyObject *__pyx_self, unsigned int __pyx_v_nDeviceID, int __pyx_v_nMin, int __pyx_v_nMax) {
+  enum Synexens::SYErrorCode __pyx_v_ret;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
+  enum Synexens::SYErrorCode __pyx_t_5;
+  int __pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  Py_UCS4 __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("set_distance_user_range", 0);
 
-  /* "synexens_sdk.pyx":769
- * 
+  /* "synexens_sdk.pyx":821
  * def set_distance_user_range(unsigned int nDeviceID, int nMin, int nMax):
- *     return SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))             # <<<<<<<<<<<<<<
- * 
- * def get_device_sn(unsigned int nDeviceID):
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))             # <<<<<<<<<<<<<<
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetDistanceUserRange() returns {ret}.")
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 769, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 821, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetDistanceUserRange(__pyx_v_nDeviceID, __pyx_v_nMin, __pyx_v_nMax)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 769, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::SetDistanceUserRange(__pyx_v_nDeviceID, __pyx_v_nMin, __pyx_v_nMax)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 821, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -9051,22 +10129,79 @@ static PyObject *__pyx_pf_12synexens_sdk_64set_distance_user_range(CYTHON_UNUSED
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 769, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 821, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 821, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":768
+  /* "synexens_sdk.pyx":822
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetDistanceUserRange() returns {ret}.")
+ * 
+ */
+  __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "synexens_sdk.pyx":823
+ *     ret = SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
+ *     if ret != 0:
+ *         raise RuntimeError(f"SetDistanceUserRange() returns {ret}.")             # <<<<<<<<<<<<<<
+ * 
+ * def get_device_sn(unsigned int nDeviceID):
+ */
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 823, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = 0;
+    __pyx_t_8 = 127;
+    __Pyx_INCREF(__pyx_kp_u_SetDistanceUserRange_returns);
+    __pyx_t_7 += 31;
+    __Pyx_GIVEREF(__pyx_kp_u_SetDistanceUserRange_returns);
+    PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_SetDistanceUserRange_returns);
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 823, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
+    __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __Pyx_INCREF(__pyx_kp_u_);
+    __pyx_t_7 += 1;
+    __Pyx_GIVEREF(__pyx_kp_u_);
+    PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 823, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 823, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 823, __pyx_L1_error)
+
+    /* "synexens_sdk.pyx":822
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
+ *     if ret != 0:             # <<<<<<<<<<<<<<
+ *         raise RuntimeError(f"SetDistanceUserRange() returns {ret}.")
+ * 
+ */
+  }
+
+  /* "synexens_sdk.pyx":819
  *     return nMin, nMax
  * 
  * def set_distance_user_range(unsigned int nDeviceID, int nMin, int nMax):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
@@ -9080,8 +10215,8 @@ static PyObject *__pyx_pf_12synexens_sdk_64set_distance_user_range(CYTHON_UNUSED
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":771
- *     return SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
+/* "synexens_sdk.pyx":825
+ *         raise RuntimeError(f"SetDistanceUserRange() returns {ret}.")
  * 
  * def get_device_sn(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef char arr[256]
@@ -9100,7 +10235,7 @@ static PyObject *__pyx_pw_12synexens_sdk_67get_device_sn(PyObject *__pyx_self, P
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_device_sn (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 771, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 825, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -9134,7 +10269,7 @@ static PyObject *__pyx_pf_12synexens_sdk_66get_device_sn(CYTHON_UNUSED PyObject 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_device_sn", 0);
 
-  /* "synexens_sdk.pyx":773
+  /* "synexens_sdk.pyx":827
  * def get_device_sn(unsigned int nDeviceID):
  *     cdef char arr[256]
  *     cdef int nLength = 256             # <<<<<<<<<<<<<<
@@ -9143,16 +10278,16 @@ static PyObject *__pyx_pf_12synexens_sdk_66get_device_sn(CYTHON_UNUSED PyObject 
  */
   __pyx_v_nLength = 0x100;
 
-  /* "synexens_sdk.pyx":776
+  /* "synexens_sdk.pyx":830
  *     cdef SYErrorCode ret
  * 
  *     ret = SYErrorCode(GetDeviceSN(nDeviceID, nLength, &arr[0]))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"GetDeviceSN() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 776, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 830, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetDeviceSN(__pyx_v_nDeviceID, __pyx_v_nLength, (&(__pyx_v_arr[0])))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 776, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetDeviceSN(__pyx_v_nDeviceID, __pyx_v_nLength, (&(__pyx_v_arr[0])))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 830, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -9167,14 +10302,14 @@ static PyObject *__pyx_pf_12synexens_sdk_66get_device_sn(CYTHON_UNUSED PyObject 
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 776, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 830, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 776, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 830, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":777
+  /* "synexens_sdk.pyx":831
  * 
  *     ret = SYErrorCode(GetDeviceSN(nDeviceID, nLength, &arr[0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -9184,14 +10319,14 @@ static PyObject *__pyx_pf_12synexens_sdk_66get_device_sn(CYTHON_UNUSED PyObject 
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":778
+    /* "synexens_sdk.pyx":832
  *     ret = SYErrorCode(GetDeviceSN(nDeviceID, nLength, &arr[0]))
  *     if ret != 0:
  *         raise RuntimeError(f"GetDeviceSN() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     return arr[:nLength]
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 778, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 832, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -9199,7 +10334,7 @@ static PyObject *__pyx_pf_12synexens_sdk_66get_device_sn(CYTHON_UNUSED PyObject 
     __pyx_t_7 += 22;
     __Pyx_GIVEREF(__pyx_kp_u_GetDeviceSN_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_GetDeviceSN_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 778, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 832, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -9210,17 +10345,17 @@ static PyObject *__pyx_pf_12synexens_sdk_66get_device_sn(CYTHON_UNUSED PyObject 
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 778, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 832, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 778, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 832, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 778, __pyx_L1_error)
+    __PYX_ERR(0, 832, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":777
+    /* "synexens_sdk.pyx":831
  * 
  *     ret = SYErrorCode(GetDeviceSN(nDeviceID, nLength, &arr[0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -9229,7 +10364,7 @@ static PyObject *__pyx_pf_12synexens_sdk_66get_device_sn(CYTHON_UNUSED PyObject 
  */
   }
 
-  /* "synexens_sdk.pyx":780
+  /* "synexens_sdk.pyx":834
  *         raise RuntimeError(f"GetDeviceSN() returns {ret}.")
  * 
  *     return arr[:nLength]             # <<<<<<<<<<<<<<
@@ -9237,14 +10372,14 @@ static PyObject *__pyx_pf_12synexens_sdk_66get_device_sn(CYTHON_UNUSED PyObject 
  * def get_device_hw_version(unsigned int nDeviceID):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_arr) + 0, __pyx_v_nLength - 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 780, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_arr) + 0, __pyx_v_nLength - 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 834, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":771
- *     return SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
+  /* "synexens_sdk.pyx":825
+ *         raise RuntimeError(f"SetDistanceUserRange() returns {ret}.")
  * 
  * def get_device_sn(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef char arr[256]
@@ -9265,7 +10400,7 @@ static PyObject *__pyx_pf_12synexens_sdk_66get_device_sn(CYTHON_UNUSED PyObject 
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":782
+/* "synexens_sdk.pyx":836
  *     return arr[:nLength]
  * 
  * def get_device_hw_version(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
@@ -9285,7 +10420,7 @@ static PyObject *__pyx_pw_12synexens_sdk_69get_device_hw_version(PyObject *__pyx
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_device_hw_version (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 782, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 836, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -9319,7 +10454,7 @@ static PyObject *__pyx_pf_12synexens_sdk_68get_device_hw_version(CYTHON_UNUSED P
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_device_hw_version", 0);
 
-  /* "synexens_sdk.pyx":784
+  /* "synexens_sdk.pyx":838
  * def get_device_hw_version(unsigned int nDeviceID):
  *     cdef char arr[256]
  *     cdef int nLength = 256             # <<<<<<<<<<<<<<
@@ -9328,16 +10463,16 @@ static PyObject *__pyx_pf_12synexens_sdk_68get_device_hw_version(CYTHON_UNUSED P
  */
   __pyx_v_nLength = 0x100;
 
-  /* "synexens_sdk.pyx":787
+  /* "synexens_sdk.pyx":841
  *     cdef SYErrorCode ret
  * 
  *     ret = SYErrorCode(GetDeviceHWVersion(nDeviceID, nLength, &arr[0]))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"GetDeviceHWVersion() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 787, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 841, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetDeviceHWVersion(__pyx_v_nDeviceID, __pyx_v_nLength, (&(__pyx_v_arr[0])))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 787, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetDeviceHWVersion(__pyx_v_nDeviceID, __pyx_v_nLength, (&(__pyx_v_arr[0])))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 841, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -9352,14 +10487,14 @@ static PyObject *__pyx_pf_12synexens_sdk_68get_device_hw_version(CYTHON_UNUSED P
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 787, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 841, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 787, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 841, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":788
+  /* "synexens_sdk.pyx":842
  * 
  *     ret = SYErrorCode(GetDeviceHWVersion(nDeviceID, nLength, &arr[0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -9369,14 +10504,14 @@ static PyObject *__pyx_pf_12synexens_sdk_68get_device_hw_version(CYTHON_UNUSED P
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":789
+    /* "synexens_sdk.pyx":843
  *     ret = SYErrorCode(GetDeviceHWVersion(nDeviceID, nLength, &arr[0]))
  *     if ret != 0:
  *         raise RuntimeError(f"GetDeviceHWVersion() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     return arr[:nLength].decode()
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 789, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 843, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -9384,7 +10519,7 @@ static PyObject *__pyx_pf_12synexens_sdk_68get_device_hw_version(CYTHON_UNUSED P
     __pyx_t_7 += 29;
     __Pyx_GIVEREF(__pyx_kp_u_GetDeviceHWVersion_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_GetDeviceHWVersion_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 789, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 843, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -9395,17 +10530,17 @@ static PyObject *__pyx_pf_12synexens_sdk_68get_device_hw_version(CYTHON_UNUSED P
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 789, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 843, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 789, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 843, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 789, __pyx_L1_error)
+    __PYX_ERR(0, 843, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":788
+    /* "synexens_sdk.pyx":842
  * 
  *     ret = SYErrorCode(GetDeviceHWVersion(nDeviceID, nLength, &arr[0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -9414,7 +10549,7 @@ static PyObject *__pyx_pf_12synexens_sdk_68get_device_hw_version(CYTHON_UNUSED P
  */
   }
 
-  /* "synexens_sdk.pyx":791
+  /* "synexens_sdk.pyx":845
  *         raise RuntimeError(f"GetDeviceHWVersion() returns {ret}.")
  * 
  *     return arr[:nLength].decode()             # <<<<<<<<<<<<<<
@@ -9422,13 +10557,13 @@ static PyObject *__pyx_pf_12synexens_sdk_68get_device_hw_version(CYTHON_UNUSED P
  * def get_depth_color(unsigned int nDeviceID, unsigned short[:,:,:] pDepth):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_decode_c_string(__pyx_v_arr, 0, __pyx_v_nLength, NULL, NULL, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 791, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_decode_c_string(__pyx_v_arr, 0, __pyx_v_nLength, NULL, NULL, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 845, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":782
+  /* "synexens_sdk.pyx":836
  *     return arr[:nLength]
  * 
  * def get_device_hw_version(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
@@ -9450,7 +10585,7 @@ static PyObject *__pyx_pf_12synexens_sdk_68get_device_hw_version(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":793
+/* "synexens_sdk.pyx":847
  *     return arr[:nLength].decode()
  * 
  * def get_depth_color(unsigned int nDeviceID, unsigned short[:,:,:] pDepth):             # <<<<<<<<<<<<<<
@@ -9493,11 +10628,11 @@ static PyObject *__pyx_pw_12synexens_sdk_71get_depth_color(PyObject *__pyx_self,
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_pDepth)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("get_depth_color", 1, 2, 2, 1); __PYX_ERR(0, 793, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("get_depth_color", 1, 2, 2, 1); __PYX_ERR(0, 847, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get_depth_color") < 0)) __PYX_ERR(0, 793, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get_depth_color") < 0)) __PYX_ERR(0, 847, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -9505,12 +10640,12 @@ static PyObject *__pyx_pw_12synexens_sdk_71get_depth_color(PyObject *__pyx_self,
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 793, __pyx_L3_error)
-    __pyx_v_pDepth = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_short(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_pDepth.memview)) __PYX_ERR(0, 793, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 847, __pyx_L3_error)
+    __pyx_v_pDepth = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_short(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_pDepth.memview)) __PYX_ERR(0, 847, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("get_depth_color", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 793, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("get_depth_color", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 847, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.get_depth_color", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -9552,23 +10687,23 @@ static PyObject *__pyx_pf_12synexens_sdk_70get_depth_color(CYTHON_UNUSED PyObjec
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_depth_color", 0);
 
-  /* "synexens_sdk.pyx":796
+  /* "synexens_sdk.pyx":850
  *     cdef SYErrorCode ret
  * 
  *     pColor = np.empty((pDepth.shape[0], pDepth.shape[1], 3), dtype=np.uint8)             # <<<<<<<<<<<<<<
  * 
  *     cdef unsigned char [:,:,:] pColor_view = pColor
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 796, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 850, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 796, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 850, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyInt_FromSsize_t((__pyx_v_pDepth.shape[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 796, __pyx_L1_error)
+  __pyx_t_1 = PyInt_FromSsize_t((__pyx_v_pDepth.shape[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 850, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyInt_FromSsize_t((__pyx_v_pDepth.shape[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 796, __pyx_L1_error)
+  __pyx_t_3 = PyInt_FromSsize_t((__pyx_v_pDepth.shape[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 850, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 796, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 850, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
@@ -9579,21 +10714,21 @@ static PyObject *__pyx_pf_12synexens_sdk_70get_depth_color(CYTHON_UNUSED PyObjec
   PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_int_3);
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 796, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 850, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 796, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 850, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 796, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 850, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_uint8); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 796, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_uint8); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 850, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 796, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 850, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 796, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 850, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -9601,33 +10736,33 @@ static PyObject *__pyx_pf_12synexens_sdk_70get_depth_color(CYTHON_UNUSED PyObjec
   __pyx_v_pColor = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "synexens_sdk.pyx":798
+  /* "synexens_sdk.pyx":852
  *     pColor = np.empty((pDepth.shape[0], pDepth.shape[1], 3), dtype=np.uint8)
  * 
  *     cdef unsigned char [:,:,:] pColor_view = pColor             # <<<<<<<<<<<<<<
  * 
  *     ret = SYErrorCode(GetDepthColor(nDeviceID, pDepth.size, <const unsigned short *>&pDepth[0,0,0], <unsigned char *>&pColor_view[0,0,0]))
  */
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_char(__pyx_v_pColor, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 798, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_char(__pyx_v_pColor, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 852, __pyx_L1_error)
   __pyx_v_pColor_view = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "synexens_sdk.pyx":800
+  /* "synexens_sdk.pyx":854
  *     cdef unsigned char [:,:,:] pColor_view = pColor
  * 
  *     ret = SYErrorCode(GetDepthColor(nDeviceID, pDepth.size, <const unsigned short *>&pDepth[0,0,0], <unsigned char *>&pColor_view[0,0,0]))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"GetDepthColor() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 800, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 854, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_pDepth, 3, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_short, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_short, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 800, __pyx_L1_error)
+  __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_pDepth, 3, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_short, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_short, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 854, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_size); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 800, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_size); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 854, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 800, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 854, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_8 = 0;
   __pyx_t_9 = 0;
@@ -9647,7 +10782,7 @@ static PyObject *__pyx_pf_12synexens_sdk_70get_depth_color(CYTHON_UNUSED PyObjec
   } else if (unlikely(__pyx_t_10 >= __pyx_v_pDepth.shape[2])) __pyx_t_11 = 2;
   if (unlikely(__pyx_t_11 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_11);
-    __PYX_ERR(0, 800, __pyx_L1_error)
+    __PYX_ERR(0, 854, __pyx_L1_error)
   }
   __pyx_t_12 = 0;
   __pyx_t_13 = 0;
@@ -9667,9 +10802,9 @@ static PyObject *__pyx_pf_12synexens_sdk_70get_depth_color(CYTHON_UNUSED PyObjec
   } else if (unlikely(__pyx_t_14 >= __pyx_v_pColor_view.shape[2])) __pyx_t_11 = 2;
   if (unlikely(__pyx_t_11 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_11);
-    __PYX_ERR(0, 800, __pyx_L1_error)
+    __PYX_ERR(0, 854, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetDepthColor(__pyx_v_nDeviceID, __pyx_t_7, ((unsigned short const *)(&(*((unsigned short *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pDepth.data + __pyx_t_8 * __pyx_v_pDepth.strides[0]) ) + __pyx_t_9 * __pyx_v_pDepth.strides[1]) ) + __pyx_t_10 * __pyx_v_pDepth.strides[2]) ))))), ((unsigned char *)(&(*((unsigned char *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pColor_view.data + __pyx_t_12 * __pyx_v_pColor_view.strides[0]) ) + __pyx_t_13 * __pyx_v_pColor_view.strides[1]) ) + __pyx_t_14 * __pyx_v_pColor_view.strides[2]) ))))))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 800, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetDepthColor(__pyx_v_nDeviceID, __pyx_t_7, ((unsigned short const *)(&(*((unsigned short *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pDepth.data + __pyx_t_8 * __pyx_v_pDepth.strides[0]) ) + __pyx_t_9 * __pyx_v_pDepth.strides[1]) ) + __pyx_t_10 * __pyx_v_pDepth.strides[2]) ))))), ((unsigned char *)(&(*((unsigned char *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pColor_view.data + __pyx_t_12 * __pyx_v_pColor_view.strides[0]) ) + __pyx_t_13 * __pyx_v_pColor_view.strides[1]) ) + __pyx_t_14 * __pyx_v_pColor_view.strides[2]) ))))))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 854, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
@@ -9684,14 +10819,14 @@ static PyObject *__pyx_pf_12synexens_sdk_70get_depth_color(CYTHON_UNUSED PyObjec
   __pyx_t_5 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 800, __pyx_L1_error)
+  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 854, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_15 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_5)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 800, __pyx_L1_error)
+  __pyx_t_15 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_5)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 854, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_ret = __pyx_t_15;
 
-  /* "synexens_sdk.pyx":801
+  /* "synexens_sdk.pyx":855
  * 
  *     ret = SYErrorCode(GetDepthColor(nDeviceID, pDepth.size, <const unsigned short *>&pDepth[0,0,0], <unsigned char *>&pColor_view[0,0,0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -9701,14 +10836,14 @@ static PyObject *__pyx_pf_12synexens_sdk_70get_depth_color(CYTHON_UNUSED PyObjec
   __pyx_t_16 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_16)) {
 
-    /* "synexens_sdk.pyx":802
+    /* "synexens_sdk.pyx":856
  *     ret = SYErrorCode(GetDepthColor(nDeviceID, pDepth.size, <const unsigned short *>&pDepth[0,0,0], <unsigned char *>&pColor_view[0,0,0]))
  *     if ret != 0:
  *         raise RuntimeError(f"GetDepthColor() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     return pColor
  */
-    __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 802, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 856, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_17 = 0;
     __pyx_t_18 = 127;
@@ -9716,7 +10851,7 @@ static PyObject *__pyx_pf_12synexens_sdk_70get_depth_color(CYTHON_UNUSED PyObjec
     __pyx_t_17 += 24;
     __Pyx_GIVEREF(__pyx_kp_u_GetDepthColor_returns);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_kp_u_GetDepthColor_returns);
-    __pyx_t_4 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 802, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 856, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_18 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) > __pyx_t_18) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) : __pyx_t_18;
     __pyx_t_17 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_4);
@@ -9727,17 +10862,17 @@ static PyObject *__pyx_pf_12synexens_sdk_70get_depth_color(CYTHON_UNUSED PyObjec
     __pyx_t_17 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_5, 2, __pyx_kp_u_);
-    __pyx_t_4 = __Pyx_PyUnicode_Join(__pyx_t_5, 3, __pyx_t_17, __pyx_t_18); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 802, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyUnicode_Join(__pyx_t_5, 3, __pyx_t_17, __pyx_t_18); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 856, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 802, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 856, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_Raise(__pyx_t_5, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __PYX_ERR(0, 802, __pyx_L1_error)
+    __PYX_ERR(0, 856, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":801
+    /* "synexens_sdk.pyx":855
  * 
  *     ret = SYErrorCode(GetDepthColor(nDeviceID, pDepth.size, <const unsigned short *>&pDepth[0,0,0], <unsigned char *>&pColor_view[0,0,0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -9746,7 +10881,7 @@ static PyObject *__pyx_pf_12synexens_sdk_70get_depth_color(CYTHON_UNUSED PyObjec
  */
   }
 
-  /* "synexens_sdk.pyx":804
+  /* "synexens_sdk.pyx":858
  *         raise RuntimeError(f"GetDepthColor() returns {ret}.")
  * 
  *     return pColor             # <<<<<<<<<<<<<<
@@ -9758,7 +10893,7 @@ static PyObject *__pyx_pf_12synexens_sdk_70get_depth_color(CYTHON_UNUSED PyObjec
   __pyx_r = __pyx_v_pColor;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":793
+  /* "synexens_sdk.pyx":847
  *     return arr[:nLength].decode()
  * 
  * def get_depth_color(unsigned int nDeviceID, unsigned short[:,:,:] pDepth):             # <<<<<<<<<<<<<<
@@ -9785,7 +10920,7 @@ static PyObject *__pyx_pf_12synexens_sdk_70get_depth_color(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":806
+/* "synexens_sdk.pyx":860
  *     return pColor
  * 
  * def get_depth_point_cloud(unsigned int nDeviceID, unsigned short[:,:,:] pDepth, bool bUndistort):             # <<<<<<<<<<<<<<
@@ -9831,17 +10966,17 @@ static PyObject *__pyx_pw_12synexens_sdk_73get_depth_point_cloud(PyObject *__pyx
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_pDepth)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("get_depth_point_cloud", 1, 3, 3, 1); __PYX_ERR(0, 806, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("get_depth_point_cloud", 1, 3, 3, 1); __PYX_ERR(0, 860, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_bUndistort)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("get_depth_point_cloud", 1, 3, 3, 2); __PYX_ERR(0, 806, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("get_depth_point_cloud", 1, 3, 3, 2); __PYX_ERR(0, 860, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get_depth_point_cloud") < 0)) __PYX_ERR(0, 806, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get_depth_point_cloud") < 0)) __PYX_ERR(0, 860, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -9850,13 +10985,13 @@ static PyObject *__pyx_pw_12synexens_sdk_73get_depth_point_cloud(PyObject *__pyx
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 806, __pyx_L3_error)
-    __pyx_v_pDepth = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_short(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_pDepth.memview)) __PYX_ERR(0, 806, __pyx_L3_error)
-    __pyx_v_bUndistort = __Pyx_PyObject_IsTrue(values[2]); if (unlikely((__pyx_v_bUndistort == ((bool)-1)) && PyErr_Occurred())) __PYX_ERR(0, 806, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 860, __pyx_L3_error)
+    __pyx_v_pDepth = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_short(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_pDepth.memview)) __PYX_ERR(0, 860, __pyx_L3_error)
+    __pyx_v_bUndistort = __Pyx_PyObject_IsTrue(values[2]); if (unlikely((__pyx_v_bUndistort == ((bool)-1)) && PyErr_Occurred())) __PYX_ERR(0, 860, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("get_depth_point_cloud", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 806, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("get_depth_point_cloud", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 860, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.get_depth_point_cloud", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -9899,7 +11034,7 @@ static PyObject *__pyx_pf_12synexens_sdk_72get_depth_point_cloud(CYTHON_UNUSED P
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_depth_point_cloud", 0);
 
-  /* "synexens_sdk.pyx":809
+  /* "synexens_sdk.pyx":863
  *     cdef SYErrorCode ret
  * 
  *     nHeight = pDepth.shape[0]             # <<<<<<<<<<<<<<
@@ -9908,7 +11043,7 @@ static PyObject *__pyx_pf_12synexens_sdk_72get_depth_point_cloud(CYTHON_UNUSED P
  */
   __pyx_v_nHeight = (__pyx_v_pDepth.shape[0]);
 
-  /* "synexens_sdk.pyx":810
+  /* "synexens_sdk.pyx":864
  * 
  *     nHeight = pDepth.shape[0]
  *     nWidth = pDepth.shape[1]             # <<<<<<<<<<<<<<
@@ -9917,23 +11052,23 @@ static PyObject *__pyx_pf_12synexens_sdk_72get_depth_point_cloud(CYTHON_UNUSED P
  */
   __pyx_v_nWidth = (__pyx_v_pDepth.shape[1]);
 
-  /* "synexens_sdk.pyx":811
+  /* "synexens_sdk.pyx":865
  *     nHeight = pDepth.shape[0]
  *     nWidth = pDepth.shape[1]
  *     pPos = np.empty((nHeight, nWidth, 3), dtype=np.float32)             # <<<<<<<<<<<<<<
  * 
  *     cdef float [:,:,:] pPos_view = pPos
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 811, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 865, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 811, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 865, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyInt_FromSsize_t(__pyx_v_nHeight); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 811, __pyx_L1_error)
+  __pyx_t_1 = PyInt_FromSsize_t(__pyx_v_nHeight); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 865, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyInt_FromSsize_t(__pyx_v_nWidth); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 811, __pyx_L1_error)
+  __pyx_t_3 = PyInt_FromSsize_t(__pyx_v_nWidth); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 865, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 811, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 865, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
@@ -9944,21 +11079,21 @@ static PyObject *__pyx_pf_12synexens_sdk_72get_depth_point_cloud(CYTHON_UNUSED P
   PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_int_3);
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 811, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 865, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 811, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 865, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 811, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 865, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float32); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 811, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float32); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 865, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 811, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 865, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 811, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 865, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -9966,26 +11101,26 @@ static PyObject *__pyx_pf_12synexens_sdk_72get_depth_point_cloud(CYTHON_UNUSED P
   __pyx_v_pPos = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "synexens_sdk.pyx":813
+  /* "synexens_sdk.pyx":867
  *     pPos = np.empty((nHeight, nWidth, 3), dtype=np.float32)
  * 
  *     cdef float [:,:,:] pPos_view = pPos             # <<<<<<<<<<<<<<
  * 
  *     ret = SYErrorCode(GetDepthPointCloud(nDeviceID, nWidth, nHeight, <const unsigned short *>&pDepth[0,0,0], <SYPointCloudData *>&pPos_view[0,0,0], bUndistort))
  */
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_float(__pyx_v_pPos, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 813, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_float(__pyx_v_pPos, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 867, __pyx_L1_error)
   __pyx_v_pPos_view = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "synexens_sdk.pyx":815
+  /* "synexens_sdk.pyx":869
  *     cdef float [:,:,:] pPos_view = pPos
  * 
  *     ret = SYErrorCode(GetDepthPointCloud(nDeviceID, nWidth, nHeight, <const unsigned short *>&pDepth[0,0,0], <SYPointCloudData *>&pPos_view[0,0,0], bUndistort))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"GetDepthPointCloud() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 815, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 869, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_7 = 0;
   __pyx_t_8 = 0;
@@ -10005,7 +11140,7 @@ static PyObject *__pyx_pf_12synexens_sdk_72get_depth_point_cloud(CYTHON_UNUSED P
   } else if (unlikely(__pyx_t_9 >= __pyx_v_pDepth.shape[2])) __pyx_t_10 = 2;
   if (unlikely(__pyx_t_10 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_10);
-    __PYX_ERR(0, 815, __pyx_L1_error)
+    __PYX_ERR(0, 869, __pyx_L1_error)
   }
   __pyx_t_11 = 0;
   __pyx_t_12 = 0;
@@ -10025,9 +11160,9 @@ static PyObject *__pyx_pf_12synexens_sdk_72get_depth_point_cloud(CYTHON_UNUSED P
   } else if (unlikely(__pyx_t_13 >= __pyx_v_pPos_view.shape[2])) __pyx_t_10 = 2;
   if (unlikely(__pyx_t_10 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_10);
-    __PYX_ERR(0, 815, __pyx_L1_error)
+    __PYX_ERR(0, 869, __pyx_L1_error)
   }
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetDepthPointCloud(__pyx_v_nDeviceID, __pyx_v_nWidth, __pyx_v_nHeight, ((unsigned short const *)(&(*((unsigned short *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pDepth.data + __pyx_t_7 * __pyx_v_pDepth.strides[0]) ) + __pyx_t_8 * __pyx_v_pDepth.strides[1]) ) + __pyx_t_9 * __pyx_v_pDepth.strides[2]) ))))), ((Synexens::SYPointCloudData *)(&(*((float *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pPos_view.data + __pyx_t_11 * __pyx_v_pPos_view.strides[0]) ) + __pyx_t_12 * __pyx_v_pPos_view.strides[1]) ) + __pyx_t_13 * __pyx_v_pPos_view.strides[2]) ))))), __pyx_v_bUndistort)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 815, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetDepthPointCloud(__pyx_v_nDeviceID, __pyx_v_nWidth, __pyx_v_nHeight, ((unsigned short const *)(&(*((unsigned short *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pDepth.data + __pyx_t_7 * __pyx_v_pDepth.strides[0]) ) + __pyx_t_8 * __pyx_v_pDepth.strides[1]) ) + __pyx_t_9 * __pyx_v_pDepth.strides[2]) ))))), ((Synexens::SYPointCloudData *)(&(*((float *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pPos_view.data + __pyx_t_11 * __pyx_v_pPos_view.strides[0]) ) + __pyx_t_12 * __pyx_v_pPos_view.strides[1]) ) + __pyx_t_13 * __pyx_v_pPos_view.strides[2]) ))))), __pyx_v_bUndistort)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 869, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
@@ -10042,14 +11177,14 @@ static PyObject *__pyx_pf_12synexens_sdk_72get_depth_point_cloud(CYTHON_UNUSED P
   __pyx_t_5 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 815, __pyx_L1_error)
+  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 869, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_14 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_5)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 815, __pyx_L1_error)
+  __pyx_t_14 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_5)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 869, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_ret = __pyx_t_14;
 
-  /* "synexens_sdk.pyx":816
+  /* "synexens_sdk.pyx":870
  * 
  *     ret = SYErrorCode(GetDepthPointCloud(nDeviceID, nWidth, nHeight, <const unsigned short *>&pDepth[0,0,0], <SYPointCloudData *>&pPos_view[0,0,0], bUndistort))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -10059,14 +11194,14 @@ static PyObject *__pyx_pf_12synexens_sdk_72get_depth_point_cloud(CYTHON_UNUSED P
   __pyx_t_15 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_15)) {
 
-    /* "synexens_sdk.pyx":817
+    /* "synexens_sdk.pyx":871
  *     ret = SYErrorCode(GetDepthPointCloud(nDeviceID, nWidth, nHeight, <const unsigned short *>&pDepth[0,0,0], <SYPointCloudData *>&pPos_view[0,0,0], bUndistort))
  *     if ret != 0:
  *         raise RuntimeError(f"GetDepthPointCloud() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     return pPos
  */
-    __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 817, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 871, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_16 = 0;
     __pyx_t_17 = 127;
@@ -10074,7 +11209,7 @@ static PyObject *__pyx_pf_12synexens_sdk_72get_depth_point_cloud(CYTHON_UNUSED P
     __pyx_t_16 += 29;
     __Pyx_GIVEREF(__pyx_kp_u_GetDepthPointCloud_returns);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_kp_u_GetDepthPointCloud_returns);
-    __pyx_t_4 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 817, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 871, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_17 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) > __pyx_t_17) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) : __pyx_t_17;
     __pyx_t_16 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_4);
@@ -10085,17 +11220,17 @@ static PyObject *__pyx_pf_12synexens_sdk_72get_depth_point_cloud(CYTHON_UNUSED P
     __pyx_t_16 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_5, 2, __pyx_kp_u_);
-    __pyx_t_4 = __Pyx_PyUnicode_Join(__pyx_t_5, 3, __pyx_t_16, __pyx_t_17); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 817, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyUnicode_Join(__pyx_t_5, 3, __pyx_t_16, __pyx_t_17); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 871, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 817, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 871, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_Raise(__pyx_t_5, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __PYX_ERR(0, 817, __pyx_L1_error)
+    __PYX_ERR(0, 871, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":816
+    /* "synexens_sdk.pyx":870
  * 
  *     ret = SYErrorCode(GetDepthPointCloud(nDeviceID, nWidth, nHeight, <const unsigned short *>&pDepth[0,0,0], <SYPointCloudData *>&pPos_view[0,0,0], bUndistort))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -10104,7 +11239,7 @@ static PyObject *__pyx_pf_12synexens_sdk_72get_depth_point_cloud(CYTHON_UNUSED P
  */
   }
 
-  /* "synexens_sdk.pyx":819
+  /* "synexens_sdk.pyx":873
  *         raise RuntimeError(f"GetDepthPointCloud() returns {ret}.")
  * 
  *     return pPos             # <<<<<<<<<<<<<<
@@ -10116,7 +11251,7 @@ static PyObject *__pyx_pf_12synexens_sdk_72get_depth_point_cloud(CYTHON_UNUSED P
   __pyx_r = __pyx_v_pPos;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":806
+  /* "synexens_sdk.pyx":860
  *     return pColor
  * 
  * def get_depth_point_cloud(unsigned int nDeviceID, unsigned short[:,:,:] pDepth, bool bUndistort):             # <<<<<<<<<<<<<<
@@ -10143,7 +11278,7 @@ static PyObject *__pyx_pf_12synexens_sdk_72get_depth_point_cloud(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":821
+/* "synexens_sdk.pyx":875
  *     return pPos
  * 
  * def extract_resolution(SYResolution resolution):             # <<<<<<<<<<<<<<
@@ -10163,7 +11298,7 @@ static PyObject *__pyx_pw_12synexens_sdk_75extract_resolution(PyObject *__pyx_se
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("extract_resolution (wrapper)", 0);
   assert(__pyx_arg_resolution); {
-    __pyx_v_resolution = ((enum Synexens::SYResolution)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYResolution(__pyx_arg_resolution)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 821, __pyx_L3_error)
+    __pyx_v_resolution = ((enum Synexens::SYResolution)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYResolution(__pyx_arg_resolution)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 875, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -10184,7 +11319,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("extract_resolution", 0);
 
-  /* "synexens_sdk.pyx":822
+  /* "synexens_sdk.pyx":876
  * 
  * def extract_resolution(SYResolution resolution):
  *     if resolution == SYRESOLUTION_NULL:             # <<<<<<<<<<<<<<
@@ -10194,7 +11329,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
   __pyx_t_1 = ((__pyx_v_resolution == Synexens::SYRESOLUTION_NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "synexens_sdk.pyx":823
+    /* "synexens_sdk.pyx":877
  * def extract_resolution(SYResolution resolution):
  *     if resolution == SYRESOLUTION_NULL:
  *         return 0, 0             # <<<<<<<<<<<<<<
@@ -10206,7 +11341,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
     __pyx_r = __pyx_tuple__4;
     goto __pyx_L0;
 
-    /* "synexens_sdk.pyx":822
+    /* "synexens_sdk.pyx":876
  * 
  * def extract_resolution(SYResolution resolution):
  *     if resolution == SYRESOLUTION_NULL:             # <<<<<<<<<<<<<<
@@ -10215,7 +11350,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
  */
   }
 
-  /* "synexens_sdk.pyx":824
+  /* "synexens_sdk.pyx":878
  *     if resolution == SYRESOLUTION_NULL:
  *         return 0, 0
  *     if resolution == SYRESOLUTION_320_240:             # <<<<<<<<<<<<<<
@@ -10225,7 +11360,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
   __pyx_t_1 = ((__pyx_v_resolution == Synexens::SYRESOLUTION_320_240) != 0);
   if (__pyx_t_1) {
 
-    /* "synexens_sdk.pyx":825
+    /* "synexens_sdk.pyx":879
  *         return 0, 0
  *     if resolution == SYRESOLUTION_320_240:
  *         return 320, 240             # <<<<<<<<<<<<<<
@@ -10237,7 +11372,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
     __pyx_r = __pyx_tuple__5;
     goto __pyx_L0;
 
-    /* "synexens_sdk.pyx":824
+    /* "synexens_sdk.pyx":878
  *     if resolution == SYRESOLUTION_NULL:
  *         return 0, 0
  *     if resolution == SYRESOLUTION_320_240:             # <<<<<<<<<<<<<<
@@ -10246,7 +11381,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
  */
   }
 
-  /* "synexens_sdk.pyx":826
+  /* "synexens_sdk.pyx":880
  *     if resolution == SYRESOLUTION_320_240:
  *         return 320, 240
  *     if resolution == SYRESOLUTION_640_480:             # <<<<<<<<<<<<<<
@@ -10256,7 +11391,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
   __pyx_t_1 = ((__pyx_v_resolution == Synexens::SYRESOLUTION_640_480) != 0);
   if (__pyx_t_1) {
 
-    /* "synexens_sdk.pyx":827
+    /* "synexens_sdk.pyx":881
  *         return 320, 240
  *     if resolution == SYRESOLUTION_640_480:
  *         return 640, 480             # <<<<<<<<<<<<<<
@@ -10268,7 +11403,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
     __pyx_r = __pyx_tuple__6;
     goto __pyx_L0;
 
-    /* "synexens_sdk.pyx":826
+    /* "synexens_sdk.pyx":880
  *     if resolution == SYRESOLUTION_320_240:
  *         return 320, 240
  *     if resolution == SYRESOLUTION_640_480:             # <<<<<<<<<<<<<<
@@ -10277,7 +11412,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
  */
   }
 
-  /* "synexens_sdk.pyx":828
+  /* "synexens_sdk.pyx":882
  *     if resolution == SYRESOLUTION_640_480:
  *         return 640, 480
  *     if resolution == SYRESOLUTION_960_540:             # <<<<<<<<<<<<<<
@@ -10287,7 +11422,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
   __pyx_t_1 = ((__pyx_v_resolution == Synexens::SYRESOLUTION_960_540) != 0);
   if (__pyx_t_1) {
 
-    /* "synexens_sdk.pyx":829
+    /* "synexens_sdk.pyx":883
  *         return 640, 480
  *     if resolution == SYRESOLUTION_960_540:
  *         return 960, 540             # <<<<<<<<<<<<<<
@@ -10299,7 +11434,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
     __pyx_r = __pyx_tuple__7;
     goto __pyx_L0;
 
-    /* "synexens_sdk.pyx":828
+    /* "synexens_sdk.pyx":882
  *     if resolution == SYRESOLUTION_640_480:
  *         return 640, 480
  *     if resolution == SYRESOLUTION_960_540:             # <<<<<<<<<<<<<<
@@ -10308,7 +11443,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
  */
   }
 
-  /* "synexens_sdk.pyx":830
+  /* "synexens_sdk.pyx":884
  *     if resolution == SYRESOLUTION_960_540:
  *         return 960, 540
  *     if resolution == SYRESOLUTION_1920_1080:             # <<<<<<<<<<<<<<
@@ -10318,7 +11453,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
   __pyx_t_1 = ((__pyx_v_resolution == Synexens::SYRESOLUTION_1920_1080) != 0);
   if (__pyx_t_1) {
 
-    /* "synexens_sdk.pyx":831
+    /* "synexens_sdk.pyx":885
  *         return 960, 540
  *     if resolution == SYRESOLUTION_1920_1080:
  *         return 1920, 1080             # <<<<<<<<<<<<<<
@@ -10330,7 +11465,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
     __pyx_r = __pyx_tuple__8;
     goto __pyx_L0;
 
-    /* "synexens_sdk.pyx":830
+    /* "synexens_sdk.pyx":884
  *     if resolution == SYRESOLUTION_960_540:
  *         return 960, 540
  *     if resolution == SYRESOLUTION_1920_1080:             # <<<<<<<<<<<<<<
@@ -10339,7 +11474,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
  */
   }
 
-  /* "synexens_sdk.pyx":821
+  /* "synexens_sdk.pyx":875
  *     return pPos
  * 
  * def extract_resolution(SYResolution resolution):             # <<<<<<<<<<<<<<
@@ -10355,7 +11490,7 @@ static PyObject *__pyx_pf_12synexens_sdk_74extract_resolution(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":833
+/* "synexens_sdk.pyx":887
  *         return 1920, 1080
  * 
  * def extract_dtype(SYFrameType frameType):             # <<<<<<<<<<<<<<
@@ -10375,7 +11510,7 @@ static PyObject *__pyx_pw_12synexens_sdk_77extract_dtype(PyObject *__pyx_self, P
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("extract_dtype (wrapper)", 0);
   assert(__pyx_arg_frameType); {
-    __pyx_v_frameType = ((enum Synexens::SYFrameType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYFrameType(__pyx_arg_frameType)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 833, __pyx_L3_error)
+    __pyx_v_frameType = ((enum Synexens::SYFrameType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYFrameType(__pyx_arg_frameType)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 887, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -10400,7 +11535,7 @@ static PyObject *__pyx_pf_12synexens_sdk_76extract_dtype(CYTHON_UNUSED PyObject 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("extract_dtype", 0);
 
-  /* "synexens_sdk.pyx":834
+  /* "synexens_sdk.pyx":888
  * 
  * def extract_dtype(SYFrameType frameType):
  *     if frameType in (SYFRAMETYPE_DEPTH, SYFRAMETYPE_IR):             # <<<<<<<<<<<<<<
@@ -10411,7 +11546,7 @@ static PyObject *__pyx_pf_12synexens_sdk_76extract_dtype(CYTHON_UNUSED PyObject 
     case Synexens::SYFRAMETYPE_DEPTH:
     case Synexens::SYFRAMETYPE_IR:
 
-    /* "synexens_sdk.pyx":835
+    /* "synexens_sdk.pyx":889
  * def extract_dtype(SYFrameType frameType):
  *     if frameType in (SYFRAMETYPE_DEPTH, SYFRAMETYPE_IR):
  *         return np.uint16             # <<<<<<<<<<<<<<
@@ -10419,16 +11554,16 @@ static PyObject *__pyx_pf_12synexens_sdk_76extract_dtype(CYTHON_UNUSED PyObject 
  * 
  */
     __Pyx_XDECREF(__pyx_r);
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 835, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 889, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_uint16); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 835, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_uint16); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 889, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_r = __pyx_t_2;
     __pyx_t_2 = 0;
     goto __pyx_L0;
 
-    /* "synexens_sdk.pyx":834
+    /* "synexens_sdk.pyx":888
  * 
  * def extract_dtype(SYFrameType frameType):
  *     if frameType in (SYFRAMETYPE_DEPTH, SYFRAMETYPE_IR):             # <<<<<<<<<<<<<<
@@ -10439,7 +11574,7 @@ static PyObject *__pyx_pf_12synexens_sdk_76extract_dtype(CYTHON_UNUSED PyObject 
     default: break;
   }
 
-  /* "synexens_sdk.pyx":836
+  /* "synexens_sdk.pyx":890
  *     if frameType in (SYFRAMETYPE_DEPTH, SYFRAMETYPE_IR):
  *         return np.uint16
  *     return np.uint8             # <<<<<<<<<<<<<<
@@ -10447,16 +11582,16 @@ static PyObject *__pyx_pf_12synexens_sdk_76extract_dtype(CYTHON_UNUSED PyObject 
  * def extract_channel_count(SYFrameType frameType):
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 836, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 890, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_uint8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 836, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_uint8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 890, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":833
+  /* "synexens_sdk.pyx":887
  *         return 1920, 1080
  * 
  * def extract_dtype(SYFrameType frameType):             # <<<<<<<<<<<<<<
@@ -10476,7 +11611,7 @@ static PyObject *__pyx_pf_12synexens_sdk_76extract_dtype(CYTHON_UNUSED PyObject 
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":838
+/* "synexens_sdk.pyx":892
  *     return np.uint8
  * 
  * def extract_channel_count(SYFrameType frameType):             # <<<<<<<<<<<<<<
@@ -10496,7 +11631,7 @@ static PyObject *__pyx_pw_12synexens_sdk_79extract_channel_count(PyObject *__pyx
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("extract_channel_count (wrapper)", 0);
   assert(__pyx_arg_frameType); {
-    __pyx_v_frameType = ((enum Synexens::SYFrameType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYFrameType(__pyx_arg_frameType)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 838, __pyx_L3_error)
+    __pyx_v_frameType = ((enum Synexens::SYFrameType)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYFrameType(__pyx_arg_frameType)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 892, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -10516,7 +11651,7 @@ static PyObject *__pyx_pf_12synexens_sdk_78extract_channel_count(CYTHON_UNUSED P
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("extract_channel_count", 0);
 
-  /* "synexens_sdk.pyx":839
+  /* "synexens_sdk.pyx":893
  * 
  * def extract_channel_count(SYFrameType frameType):
  *     if frameType in (SYFRAMETYPE_DEPTH, SYFRAMETYPE_IR):             # <<<<<<<<<<<<<<
@@ -10527,7 +11662,7 @@ static PyObject *__pyx_pf_12synexens_sdk_78extract_channel_count(CYTHON_UNUSED P
     case Synexens::SYFRAMETYPE_DEPTH:
     case Synexens::SYFRAMETYPE_IR:
 
-    /* "synexens_sdk.pyx":840
+    /* "synexens_sdk.pyx":894
  * def extract_channel_count(SYFrameType frameType):
  *     if frameType in (SYFRAMETYPE_DEPTH, SYFRAMETYPE_IR):
  *         return 1             # <<<<<<<<<<<<<<
@@ -10539,7 +11674,7 @@ static PyObject *__pyx_pf_12synexens_sdk_78extract_channel_count(CYTHON_UNUSED P
     __pyx_r = __pyx_int_1;
     goto __pyx_L0;
 
-    /* "synexens_sdk.pyx":839
+    /* "synexens_sdk.pyx":893
  * 
  * def extract_channel_count(SYFrameType frameType):
  *     if frameType in (SYFRAMETYPE_DEPTH, SYFRAMETYPE_IR):             # <<<<<<<<<<<<<<
@@ -10550,7 +11685,7 @@ static PyObject *__pyx_pf_12synexens_sdk_78extract_channel_count(CYTHON_UNUSED P
     default: break;
   }
 
-  /* "synexens_sdk.pyx":841
+  /* "synexens_sdk.pyx":895
  *     if frameType in (SYFRAMETYPE_DEPTH, SYFRAMETYPE_IR):
  *         return 1
  *     return 3             # <<<<<<<<<<<<<<
@@ -10562,7 +11697,7 @@ static PyObject *__pyx_pf_12synexens_sdk_78extract_channel_count(CYTHON_UNUSED P
   __pyx_r = __pyx_int_3;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":838
+  /* "synexens_sdk.pyx":892
  *     return np.uint8
  * 
  * def extract_channel_count(SYFrameType frameType):             # <<<<<<<<<<<<<<
@@ -10577,7 +11712,7 @@ static PyObject *__pyx_pf_12synexens_sdk_78extract_channel_count(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":843
+/* "synexens_sdk.pyx":897
  *     return 3
  * 
  * def get_last_frame_data(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
@@ -10597,7 +11732,7 @@ static PyObject *__pyx_pw_12synexens_sdk_81get_last_frame_data(PyObject *__pyx_s
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_last_frame_data (wrapper)", 0);
   assert(__pyx_arg_nDeviceID); {
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 843, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(__pyx_arg_nDeviceID); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 897, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -10654,16 +11789,16 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_last_frame_data", 0);
 
-  /* "synexens_sdk.pyx":850
+  /* "synexens_sdk.pyx":904
  *     cdef unsigned char [:,:,:] uint8Data
  * 
  *     ret = SYErrorCode(GetLastFrameData(nDeviceID, pFrameData))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"GetLastFrameData() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 850, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 904, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetLastFrameData(__pyx_v_nDeviceID, __pyx_v_pFrameData)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 850, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetLastFrameData(__pyx_v_nDeviceID, __pyx_v_pFrameData)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 904, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -10678,14 +11813,14 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 850, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 904, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 850, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 904, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":851
+  /* "synexens_sdk.pyx":905
  * 
  *     ret = SYErrorCode(GetLastFrameData(nDeviceID, pFrameData))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -10695,14 +11830,14 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":852
+    /* "synexens_sdk.pyx":906
  *     ret = SYErrorCode(GetLastFrameData(nDeviceID, pFrameData))
  *     if ret != 0:
  *         raise RuntimeError(f"GetLastFrameData() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     d_frames = {}
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 852, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 906, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -10710,7 +11845,7 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
     __pyx_t_7 += 27;
     __Pyx_GIVEREF(__pyx_kp_u_GetLastFrameData_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_GetLastFrameData_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 852, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 906, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -10721,17 +11856,17 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 852, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 906, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 852, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 906, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 852, __pyx_L1_error)
+    __PYX_ERR(0, 906, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":851
+    /* "synexens_sdk.pyx":905
  * 
  *     ret = SYErrorCode(GetLastFrameData(nDeviceID, pFrameData))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -10740,19 +11875,19 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
  */
   }
 
-  /* "synexens_sdk.pyx":854
+  /* "synexens_sdk.pyx":908
  *         raise RuntimeError(f"GetLastFrameData() returns {ret}.")
  * 
  *     d_frames = {}             # <<<<<<<<<<<<<<
  *     ofs = 0
  *     for i in range(pFrameData[0].m_nFrameCount):
  */
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 854, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 908, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_d_frames = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":855
+  /* "synexens_sdk.pyx":909
  * 
  *     d_frames = {}
  *     ofs = 0             # <<<<<<<<<<<<<<
@@ -10762,7 +11897,7 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_ofs = __pyx_int_0;
 
-  /* "synexens_sdk.pyx":856
+  /* "synexens_sdk.pyx":910
  *     d_frames = {}
  *     ofs = 0
  *     for i in range(pFrameData[0].m_nFrameCount):             # <<<<<<<<<<<<<<
@@ -10774,7 +11909,7 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v_i = __pyx_t_11;
 
-    /* "synexens_sdk.pyx":857
+    /* "synexens_sdk.pyx":911
  *     ofs = 0
  *     for i in range(pFrameData[0].m_nFrameCount):
  *         pFrameInfo = &pFrameData[0].m_pFrameInfo[i]             # <<<<<<<<<<<<<<
@@ -10783,7 +11918,7 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
  */
     __pyx_v_pFrameInfo = (&((__pyx_v_pFrameData[0]).m_pFrameInfo[__pyx_v_i]));
 
-    /* "synexens_sdk.pyx":858
+    /* "synexens_sdk.pyx":912
  *     for i in range(pFrameData[0].m_nFrameCount):
  *         pFrameInfo = &pFrameData[0].m_pFrameInfo[i]
  *         frameType = pFrameInfo[0].m_frameType             # <<<<<<<<<<<<<<
@@ -10793,16 +11928,16 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
     __pyx_t_12 = (__pyx_v_pFrameInfo[0]).m_frameType;
     __pyx_v_frameType = __pyx_t_12;
 
-    /* "synexens_sdk.pyx":859
+    /* "synexens_sdk.pyx":913
  *         pFrameInfo = &pFrameData[0].m_pFrameInfo[i]
  *         frameType = pFrameInfo[0].m_frameType
  *         dtype = extract_dtype(frameType)             # <<<<<<<<<<<<<<
  *         nChannels = extract_channel_count(frameType)
  *         width = pFrameInfo[0].m_nFrameWidth
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_extract_dtype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 859, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_extract_dtype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 913, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYFrameType(__pyx_v_frameType); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 859, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYFrameType(__pyx_v_frameType); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 913, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_4 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -10817,22 +11952,22 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
     __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 859, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 913, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_XDECREF_SET(__pyx_v_dtype, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "synexens_sdk.pyx":860
+    /* "synexens_sdk.pyx":914
  *         frameType = pFrameInfo[0].m_frameType
  *         dtype = extract_dtype(frameType)
  *         nChannels = extract_channel_count(frameType)             # <<<<<<<<<<<<<<
  *         width = pFrameInfo[0].m_nFrameWidth
  *         height = pFrameInfo[0].m_nFrameHeight
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_extract_channel_count); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 860, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_extract_channel_count); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 914, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYFrameType(__pyx_v_frameType); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 860, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYFrameType(__pyx_v_frameType); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 914, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_4 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -10847,76 +11982,76 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
     __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 860, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 914, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_XDECREF_SET(__pyx_v_nChannels, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "synexens_sdk.pyx":861
+    /* "synexens_sdk.pyx":915
  *         dtype = extract_dtype(frameType)
  *         nChannels = extract_channel_count(frameType)
  *         width = pFrameInfo[0].m_nFrameWidth             # <<<<<<<<<<<<<<
  *         height = pFrameInfo[0].m_nFrameHeight
  *         size = np.nbytes[dtype]*width*height*nChannels
  */
-    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_pFrameInfo[0]).m_nFrameWidth); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 861, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_pFrameInfo[0]).m_nFrameWidth); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 915, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_XDECREF_SET(__pyx_v_width, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "synexens_sdk.pyx":862
+    /* "synexens_sdk.pyx":916
  *         nChannels = extract_channel_count(frameType)
  *         width = pFrameInfo[0].m_nFrameWidth
  *         height = pFrameInfo[0].m_nFrameHeight             # <<<<<<<<<<<<<<
  *         size = np.nbytes[dtype]*width*height*nChannels
  *         img = np.empty((height, width, nChannels), dtype=dtype)
  */
-    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_pFrameInfo[0]).m_nFrameHeight); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 862, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_pFrameInfo[0]).m_nFrameHeight); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 916, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_XDECREF_SET(__pyx_v_height, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "synexens_sdk.pyx":863
+    /* "synexens_sdk.pyx":917
  *         width = pFrameInfo[0].m_nFrameWidth
  *         height = pFrameInfo[0].m_nFrameHeight
  *         size = np.nbytes[dtype]*width*height*nChannels             # <<<<<<<<<<<<<<
  *         img = np.empty((height, width, nChannels), dtype=dtype)
  *         if dtype == np.uint8:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 863, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 917, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_nbytes); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 863, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_nbytes); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 917, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_v_dtype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 863, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_v_dtype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 917, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyNumber_Multiply(__pyx_t_1, __pyx_v_width); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 863, __pyx_L1_error)
+    __pyx_t_2 = PyNumber_Multiply(__pyx_t_1, __pyx_v_width); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 917, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyNumber_Multiply(__pyx_t_2, __pyx_v_height); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 863, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Multiply(__pyx_t_2, __pyx_v_height); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 917, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyNumber_Multiply(__pyx_t_1, __pyx_v_nChannels); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 863, __pyx_L1_error)
+    __pyx_t_2 = PyNumber_Multiply(__pyx_t_1, __pyx_v_nChannels); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 917, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_XDECREF_SET(__pyx_v_size, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "synexens_sdk.pyx":864
+    /* "synexens_sdk.pyx":918
  *         height = pFrameInfo[0].m_nFrameHeight
  *         size = np.nbytes[dtype]*width*height*nChannels
  *         img = np.empty((height, width, nChannels), dtype=dtype)             # <<<<<<<<<<<<<<
  *         if dtype == np.uint8:
  *             uint8Data = img
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 864, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 918, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_empty); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 864, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_empty); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 918, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 864, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 918, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_INCREF(__pyx_v_height);
     __Pyx_GIVEREF(__pyx_v_height);
@@ -10927,15 +12062,15 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
     __Pyx_INCREF(__pyx_v_nChannels);
     __Pyx_GIVEREF(__pyx_v_nChannels);
     PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_v_nChannels);
-    __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 864, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 918, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_2);
     PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2);
     __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 864, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 918, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_v_dtype) < 0) __PYX_ERR(0, 864, __pyx_L1_error)
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 864, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_v_dtype) < 0) __PYX_ERR(0, 918, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 918, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -10943,38 +12078,38 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
     __Pyx_XDECREF_SET(__pyx_v_img, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "synexens_sdk.pyx":865
+    /* "synexens_sdk.pyx":919
  *         size = np.nbytes[dtype]*width*height*nChannels
  *         img = np.empty((height, width, nChannels), dtype=dtype)
  *         if dtype == np.uint8:             # <<<<<<<<<<<<<<
  *             uint8Data = img
  *             memcpy(<void *>&uint8Data[0,0,0], &(<char*>pFrameData[0].m_pData)[ofs], size)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 865, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 919, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_uint8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 865, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_uint8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 919, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = PyObject_RichCompare(__pyx_v_dtype, __pyx_t_2, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 865, __pyx_L1_error)
+    __pyx_t_4 = PyObject_RichCompare(__pyx_v_dtype, __pyx_t_2, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 919, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 865, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 919, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (__pyx_t_6) {
 
-      /* "synexens_sdk.pyx":866
+      /* "synexens_sdk.pyx":920
  *         img = np.empty((height, width, nChannels), dtype=dtype)
  *         if dtype == np.uint8:
  *             uint8Data = img             # <<<<<<<<<<<<<<
  *             memcpy(<void *>&uint8Data[0,0,0], &(<char*>pFrameData[0].m_pData)[ofs], size)
  *         else:
  */
-      __pyx_t_13 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_char(__pyx_v_img, PyBUF_WRITABLE); if (unlikely(!__pyx_t_13.memview)) __PYX_ERR(0, 866, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_char(__pyx_v_img, PyBUF_WRITABLE); if (unlikely(!__pyx_t_13.memview)) __PYX_ERR(0, 920, __pyx_L1_error)
       __PYX_XDEC_MEMVIEW(&__pyx_v_uint8Data, 1);
       __pyx_v_uint8Data = __pyx_t_13;
       __pyx_t_13.memview = NULL;
       __pyx_t_13.data = NULL;
 
-      /* "synexens_sdk.pyx":867
+      /* "synexens_sdk.pyx":921
  *         if dtype == np.uint8:
  *             uint8Data = img
  *             memcpy(<void *>&uint8Data[0,0,0], &(<char*>pFrameData[0].m_pData)[ofs], size)             # <<<<<<<<<<<<<<
@@ -10999,13 +12134,13 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
       } else if (unlikely(__pyx_t_16 >= __pyx_v_uint8Data.shape[2])) __pyx_t_17 = 2;
       if (unlikely(__pyx_t_17 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_17);
-        __PYX_ERR(0, 867, __pyx_L1_error)
+        __PYX_ERR(0, 921, __pyx_L1_error)
       }
-      __pyx_t_7 = __Pyx_PyIndex_AsSsize_t(__pyx_v_ofs); if (unlikely((__pyx_t_7 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 867, __pyx_L1_error)
-      __pyx_t_18 = __Pyx_PyInt_As_size_t(__pyx_v_size); if (unlikely((__pyx_t_18 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 867, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyIndex_AsSsize_t(__pyx_v_ofs); if (unlikely((__pyx_t_7 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 921, __pyx_L1_error)
+      __pyx_t_18 = __Pyx_PyInt_As_size_t(__pyx_v_size); if (unlikely((__pyx_t_18 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 921, __pyx_L1_error)
       (void)(memcpy(((void *)(&(*((unsigned char *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_uint8Data.data + __pyx_t_14 * __pyx_v_uint8Data.strides[0]) ) + __pyx_t_15 * __pyx_v_uint8Data.strides[1]) ) + __pyx_t_16 * __pyx_v_uint8Data.strides[2]) ))))), (&(((char *)(__pyx_v_pFrameData[0]).m_pData)[__pyx_t_7])), __pyx_t_18));
 
-      /* "synexens_sdk.pyx":865
+      /* "synexens_sdk.pyx":919
  *         size = np.nbytes[dtype]*width*height*nChannels
  *         img = np.empty((height, width, nChannels), dtype=dtype)
  *         if dtype == np.uint8:             # <<<<<<<<<<<<<<
@@ -11015,7 +12150,7 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
       goto __pyx_L6;
     }
 
-    /* "synexens_sdk.pyx":869
+    /* "synexens_sdk.pyx":923
  *             memcpy(<void *>&uint8Data[0,0,0], &(<char*>pFrameData[0].m_pData)[ofs], size)
  *         else:
  *             uint16Data = img             # <<<<<<<<<<<<<<
@@ -11023,13 +12158,13 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
  *         ofs += size
  */
     /*else*/ {
-      __pyx_t_19 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_short(__pyx_v_img, PyBUF_WRITABLE); if (unlikely(!__pyx_t_19.memview)) __PYX_ERR(0, 869, __pyx_L1_error)
+      __pyx_t_19 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_short(__pyx_v_img, PyBUF_WRITABLE); if (unlikely(!__pyx_t_19.memview)) __PYX_ERR(0, 923, __pyx_L1_error)
       __PYX_XDEC_MEMVIEW(&__pyx_v_uint16Data, 1);
       __pyx_v_uint16Data = __pyx_t_19;
       __pyx_t_19.memview = NULL;
       __pyx_t_19.data = NULL;
 
-      /* "synexens_sdk.pyx":870
+      /* "synexens_sdk.pyx":924
  *         else:
  *             uint16Data = img
  *             memcpy(<void *>&uint16Data[0,0,0], &(<char*>pFrameData[0].m_pData)[ofs], size)             # <<<<<<<<<<<<<<
@@ -11054,36 +12189,36 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
       } else if (unlikely(__pyx_t_14 >= __pyx_v_uint16Data.shape[2])) __pyx_t_17 = 2;
       if (unlikely(__pyx_t_17 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_17);
-        __PYX_ERR(0, 870, __pyx_L1_error)
+        __PYX_ERR(0, 924, __pyx_L1_error)
       }
-      __pyx_t_7 = __Pyx_PyIndex_AsSsize_t(__pyx_v_ofs); if (unlikely((__pyx_t_7 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 870, __pyx_L1_error)
-      __pyx_t_18 = __Pyx_PyInt_As_size_t(__pyx_v_size); if (unlikely((__pyx_t_18 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 870, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyIndex_AsSsize_t(__pyx_v_ofs); if (unlikely((__pyx_t_7 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 924, __pyx_L1_error)
+      __pyx_t_18 = __Pyx_PyInt_As_size_t(__pyx_v_size); if (unlikely((__pyx_t_18 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 924, __pyx_L1_error)
       (void)(memcpy(((void *)(&(*((unsigned short *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_uint16Data.data + __pyx_t_16 * __pyx_v_uint16Data.strides[0]) ) + __pyx_t_15 * __pyx_v_uint16Data.strides[1]) ) + __pyx_t_14 * __pyx_v_uint16Data.strides[2]) ))))), (&(((char *)(__pyx_v_pFrameData[0]).m_pData)[__pyx_t_7])), __pyx_t_18));
     }
     __pyx_L6:;
 
-    /* "synexens_sdk.pyx":871
+    /* "synexens_sdk.pyx":925
  *             uint16Data = img
  *             memcpy(<void *>&uint16Data[0,0,0], &(<char*>pFrameData[0].m_pData)[ofs], size)
  *         ofs += size             # <<<<<<<<<<<<<<
  *         d_frames[SYFrameType(frameType)] = img
  * 
  */
-    __pyx_t_4 = PyNumber_InPlaceAdd(__pyx_v_ofs, __pyx_v_size); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 871, __pyx_L1_error)
+    __pyx_t_4 = PyNumber_InPlaceAdd(__pyx_v_ofs, __pyx_v_size); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 925, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF_SET(__pyx_v_ofs, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "synexens_sdk.pyx":872
+    /* "synexens_sdk.pyx":926
  *             memcpy(<void *>&uint16Data[0,0,0], &(<char*>pFrameData[0].m_pData)[ofs], size)
  *         ofs += size
  *         d_frames[SYFrameType(frameType)] = img             # <<<<<<<<<<<<<<
  * 
  *     return d_frames
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYFrameType); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 872, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYFrameType); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 926, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYFrameType(__pyx_v_frameType); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 872, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYFrameType(__pyx_v_frameType); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 926, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_1 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -11098,14 +12233,14 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
     __pyx_t_4 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 872, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 926, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(PyDict_SetItem(__pyx_v_d_frames, __pyx_t_4, __pyx_v_img) < 0)) __PYX_ERR(0, 872, __pyx_L1_error)
+    if (unlikely(PyDict_SetItem(__pyx_v_d_frames, __pyx_t_4, __pyx_v_img) < 0)) __PYX_ERR(0, 926, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
 
-  /* "synexens_sdk.pyx":874
+  /* "synexens_sdk.pyx":928
  *         d_frames[SYFrameType(frameType)] = img
  * 
  *     return d_frames             # <<<<<<<<<<<<<<
@@ -11117,7 +12252,7 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
   __pyx_r = __pyx_v_d_frames;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":843
+  /* "synexens_sdk.pyx":897
  *     return 3
  * 
  * def get_last_frame_data(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
@@ -11151,7 +12286,7 @@ static PyObject *__pyx_pf_12synexens_sdk_80get_last_frame_data(CYTHON_UNUSED PyO
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":876
+/* "synexens_sdk.pyx":930
  *     return d_frames
  * 
  * def undistort_depth(unsigned int nDeviceID, unsigned short[:,:,:] pDepth):             # <<<<<<<<<<<<<<
@@ -11194,11 +12329,11 @@ static PyObject *__pyx_pw_12synexens_sdk_83undistort_depth(PyObject *__pyx_self,
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_pDepth)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("undistort_depth", 1, 2, 2, 1); __PYX_ERR(0, 876, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("undistort_depth", 1, 2, 2, 1); __PYX_ERR(0, 930, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "undistort_depth") < 0)) __PYX_ERR(0, 876, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "undistort_depth") < 0)) __PYX_ERR(0, 930, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -11206,12 +12341,12 @@ static PyObject *__pyx_pw_12synexens_sdk_83undistort_depth(PyObject *__pyx_self,
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 876, __pyx_L3_error)
-    __pyx_v_pDepth = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_short(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_pDepth.memview)) __PYX_ERR(0, 876, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 930, __pyx_L3_error)
+    __pyx_v_pDepth = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_short(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_pDepth.memview)) __PYX_ERR(0, 930, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("undistort_depth", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 876, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("undistort_depth", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 930, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.undistort_depth", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -11254,7 +12389,7 @@ static PyObject *__pyx_pf_12synexens_sdk_82undistort_depth(CYTHON_UNUSED PyObjec
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("undistort_depth", 0);
 
-  /* "synexens_sdk.pyx":879
+  /* "synexens_sdk.pyx":933
  *     cdef SYErrorCode ret
  * 
  *     nHeight = pDepth.shape[0]             # <<<<<<<<<<<<<<
@@ -11263,7 +12398,7 @@ static PyObject *__pyx_pf_12synexens_sdk_82undistort_depth(CYTHON_UNUSED PyObjec
  */
   __pyx_v_nHeight = (__pyx_v_pDepth.shape[0]);
 
-  /* "synexens_sdk.pyx":880
+  /* "synexens_sdk.pyx":934
  * 
  *     nHeight = pDepth.shape[0]
  *     nWidth = pDepth.shape[1]             # <<<<<<<<<<<<<<
@@ -11272,23 +12407,23 @@ static PyObject *__pyx_pf_12synexens_sdk_82undistort_depth(CYTHON_UNUSED PyObjec
  */
   __pyx_v_nWidth = (__pyx_v_pDepth.shape[1]);
 
-  /* "synexens_sdk.pyx":881
+  /* "synexens_sdk.pyx":935
  *     nHeight = pDepth.shape[0]
  *     nWidth = pDepth.shape[1]
  *     pDepth2 = np.empty((nHeight, nWidth, 1), dtype=np.uint16)             # <<<<<<<<<<<<<<
  * 
  *     cdef unsigned short [:,:,:] pDepth2_view = pDepth2
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 881, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 935, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 881, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 935, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyInt_FromSsize_t(__pyx_v_nHeight); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 881, __pyx_L1_error)
+  __pyx_t_1 = PyInt_FromSsize_t(__pyx_v_nHeight); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 935, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyInt_FromSsize_t(__pyx_v_nWidth); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 881, __pyx_L1_error)
+  __pyx_t_3 = PyInt_FromSsize_t(__pyx_v_nWidth); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 935, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 881, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 935, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
@@ -11299,21 +12434,21 @@ static PyObject *__pyx_pf_12synexens_sdk_82undistort_depth(CYTHON_UNUSED PyObjec
   PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_int_1);
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 881, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 935, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 881, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 935, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 881, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 935, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_uint16); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 881, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_uint16); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 935, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 881, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 935, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 881, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 935, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -11321,26 +12456,26 @@ static PyObject *__pyx_pf_12synexens_sdk_82undistort_depth(CYTHON_UNUSED PyObjec
   __pyx_v_pDepth2 = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "synexens_sdk.pyx":883
+  /* "synexens_sdk.pyx":937
  *     pDepth2 = np.empty((nHeight, nWidth, 1), dtype=np.uint16)
  * 
  *     cdef unsigned short [:,:,:] pDepth2_view = pDepth2             # <<<<<<<<<<<<<<
  * 
  *     ret = SYErrorCode(Undistort(nDeviceID, <const unsigned short *>&pDepth[0,0,0], nWidth, nHeight, True, &pDepth2_view[0,0,0]))
  */
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_short(__pyx_v_pDepth2, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 883, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_short(__pyx_v_pDepth2, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 937, __pyx_L1_error)
   __pyx_v_pDepth2_view = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "synexens_sdk.pyx":885
+  /* "synexens_sdk.pyx":939
  *     cdef unsigned short [:,:,:] pDepth2_view = pDepth2
  * 
  *     ret = SYErrorCode(Undistort(nDeviceID, <const unsigned short *>&pDepth[0,0,0], nWidth, nHeight, True, &pDepth2_view[0,0,0]))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"Undistort() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 885, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 939, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_7 = 0;
   __pyx_t_8 = 0;
@@ -11360,7 +12495,7 @@ static PyObject *__pyx_pf_12synexens_sdk_82undistort_depth(CYTHON_UNUSED PyObjec
   } else if (unlikely(__pyx_t_9 >= __pyx_v_pDepth.shape[2])) __pyx_t_10 = 2;
   if (unlikely(__pyx_t_10 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_10);
-    __PYX_ERR(0, 885, __pyx_L1_error)
+    __PYX_ERR(0, 939, __pyx_L1_error)
   }
   __pyx_t_11 = 0;
   __pyx_t_12 = 0;
@@ -11380,9 +12515,9 @@ static PyObject *__pyx_pf_12synexens_sdk_82undistort_depth(CYTHON_UNUSED PyObjec
   } else if (unlikely(__pyx_t_13 >= __pyx_v_pDepth2_view.shape[2])) __pyx_t_10 = 2;
   if (unlikely(__pyx_t_10 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_10);
-    __PYX_ERR(0, 885, __pyx_L1_error)
+    __PYX_ERR(0, 939, __pyx_L1_error)
   }
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::Undistort(__pyx_v_nDeviceID, ((unsigned short const *)(&(*((unsigned short *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pDepth.data + __pyx_t_7 * __pyx_v_pDepth.strides[0]) ) + __pyx_t_8 * __pyx_v_pDepth.strides[1]) ) + __pyx_t_9 * __pyx_v_pDepth.strides[2]) ))))), __pyx_v_nWidth, __pyx_v_nHeight, 1, (&(*((unsigned short *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pDepth2_view.data + __pyx_t_11 * __pyx_v_pDepth2_view.strides[0]) ) + __pyx_t_12 * __pyx_v_pDepth2_view.strides[1]) ) + __pyx_t_13 * __pyx_v_pDepth2_view.strides[2]) )))))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 885, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::Undistort(__pyx_v_nDeviceID, ((unsigned short const *)(&(*((unsigned short *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pDepth.data + __pyx_t_7 * __pyx_v_pDepth.strides[0]) ) + __pyx_t_8 * __pyx_v_pDepth.strides[1]) ) + __pyx_t_9 * __pyx_v_pDepth.strides[2]) ))))), __pyx_v_nWidth, __pyx_v_nHeight, 1, (&(*((unsigned short *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pDepth2_view.data + __pyx_t_11 * __pyx_v_pDepth2_view.strides[0]) ) + __pyx_t_12 * __pyx_v_pDepth2_view.strides[1]) ) + __pyx_t_13 * __pyx_v_pDepth2_view.strides[2]) )))))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 939, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
@@ -11397,14 +12532,14 @@ static PyObject *__pyx_pf_12synexens_sdk_82undistort_depth(CYTHON_UNUSED PyObjec
   __pyx_t_5 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 885, __pyx_L1_error)
+  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 939, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_14 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_5)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 885, __pyx_L1_error)
+  __pyx_t_14 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_5)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 939, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_ret = __pyx_t_14;
 
-  /* "synexens_sdk.pyx":886
+  /* "synexens_sdk.pyx":940
  * 
  *     ret = SYErrorCode(Undistort(nDeviceID, <const unsigned short *>&pDepth[0,0,0], nWidth, nHeight, True, &pDepth2_view[0,0,0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -11414,14 +12549,14 @@ static PyObject *__pyx_pf_12synexens_sdk_82undistort_depth(CYTHON_UNUSED PyObjec
   __pyx_t_15 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_15)) {
 
-    /* "synexens_sdk.pyx":887
+    /* "synexens_sdk.pyx":941
  *     ret = SYErrorCode(Undistort(nDeviceID, <const unsigned short *>&pDepth[0,0,0], nWidth, nHeight, True, &pDepth2_view[0,0,0]))
  *     if ret != 0:
  *         raise RuntimeError(f"Undistort() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     return pDepth2
  */
-    __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 887, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 941, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_16 = 0;
     __pyx_t_17 = 127;
@@ -11429,7 +12564,7 @@ static PyObject *__pyx_pf_12synexens_sdk_82undistort_depth(CYTHON_UNUSED PyObjec
     __pyx_t_16 += 20;
     __Pyx_GIVEREF(__pyx_kp_u_Undistort_returns);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_kp_u_Undistort_returns);
-    __pyx_t_4 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 887, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 941, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_17 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) > __pyx_t_17) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) : __pyx_t_17;
     __pyx_t_16 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_4);
@@ -11440,17 +12575,17 @@ static PyObject *__pyx_pf_12synexens_sdk_82undistort_depth(CYTHON_UNUSED PyObjec
     __pyx_t_16 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_5, 2, __pyx_kp_u_);
-    __pyx_t_4 = __Pyx_PyUnicode_Join(__pyx_t_5, 3, __pyx_t_16, __pyx_t_17); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 887, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyUnicode_Join(__pyx_t_5, 3, __pyx_t_16, __pyx_t_17); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 941, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 887, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 941, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_Raise(__pyx_t_5, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __PYX_ERR(0, 887, __pyx_L1_error)
+    __PYX_ERR(0, 941, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":886
+    /* "synexens_sdk.pyx":940
  * 
  *     ret = SYErrorCode(Undistort(nDeviceID, <const unsigned short *>&pDepth[0,0,0], nWidth, nHeight, True, &pDepth2_view[0,0,0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -11459,7 +12594,7 @@ static PyObject *__pyx_pf_12synexens_sdk_82undistort_depth(CYTHON_UNUSED PyObjec
  */
   }
 
-  /* "synexens_sdk.pyx":889
+  /* "synexens_sdk.pyx":943
  *         raise RuntimeError(f"Undistort() returns {ret}.")
  * 
  *     return pDepth2             # <<<<<<<<<<<<<<
@@ -11471,7 +12606,7 @@ static PyObject *__pyx_pf_12synexens_sdk_82undistort_depth(CYTHON_UNUSED PyObjec
   __pyx_r = __pyx_v_pDepth2;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":876
+  /* "synexens_sdk.pyx":930
  *     return d_frames
  * 
  * def undistort_depth(unsigned int nDeviceID, unsigned short[:,:,:] pDepth):             # <<<<<<<<<<<<<<
@@ -11498,7 +12633,7 @@ static PyObject *__pyx_pf_12synexens_sdk_82undistort_depth(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":891
+/* "synexens_sdk.pyx":945
  *     return pDepth2
  * 
  * def undistort_ir(unsigned int nDeviceID, unsigned short[:,:,:] pIr):             # <<<<<<<<<<<<<<
@@ -11541,11 +12676,11 @@ static PyObject *__pyx_pw_12synexens_sdk_85undistort_ir(PyObject *__pyx_self, Py
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_pIr)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("undistort_ir", 1, 2, 2, 1); __PYX_ERR(0, 891, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("undistort_ir", 1, 2, 2, 1); __PYX_ERR(0, 945, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "undistort_ir") < 0)) __PYX_ERR(0, 891, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "undistort_ir") < 0)) __PYX_ERR(0, 945, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -11553,12 +12688,12 @@ static PyObject *__pyx_pw_12synexens_sdk_85undistort_ir(PyObject *__pyx_self, Py
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 891, __pyx_L3_error)
-    __pyx_v_pIr = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_short(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_pIr.memview)) __PYX_ERR(0, 891, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 945, __pyx_L3_error)
+    __pyx_v_pIr = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_short(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_pIr.memview)) __PYX_ERR(0, 945, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("undistort_ir", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 891, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("undistort_ir", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 945, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.undistort_ir", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -11601,7 +12736,7 @@ static PyObject *__pyx_pf_12synexens_sdk_84undistort_ir(CYTHON_UNUSED PyObject *
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("undistort_ir", 0);
 
-  /* "synexens_sdk.pyx":894
+  /* "synexens_sdk.pyx":948
  *     cdef SYErrorCode ret
  * 
  *     nHeight = pIr.shape[0]             # <<<<<<<<<<<<<<
@@ -11610,7 +12745,7 @@ static PyObject *__pyx_pf_12synexens_sdk_84undistort_ir(CYTHON_UNUSED PyObject *
  */
   __pyx_v_nHeight = (__pyx_v_pIr.shape[0]);
 
-  /* "synexens_sdk.pyx":895
+  /* "synexens_sdk.pyx":949
  * 
  *     nHeight = pIr.shape[0]
  *     nWidth = pIr.shape[1]             # <<<<<<<<<<<<<<
@@ -11619,23 +12754,23 @@ static PyObject *__pyx_pf_12synexens_sdk_84undistort_ir(CYTHON_UNUSED PyObject *
  */
   __pyx_v_nWidth = (__pyx_v_pIr.shape[1]);
 
-  /* "synexens_sdk.pyx":896
+  /* "synexens_sdk.pyx":950
  *     nHeight = pIr.shape[0]
  *     nWidth = pIr.shape[1]
  *     pIr2 = np.empty((nHeight, nWidth, 1), dtype=np.uint16)             # <<<<<<<<<<<<<<
  * 
  *     cdef unsigned short [:,:,:] pIr2_view = pIr2
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 950, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 950, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyInt_FromSsize_t(__pyx_v_nHeight); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __pyx_t_1 = PyInt_FromSsize_t(__pyx_v_nHeight); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 950, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyInt_FromSsize_t(__pyx_v_nWidth); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __pyx_t_3 = PyInt_FromSsize_t(__pyx_v_nWidth); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 950, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 950, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
@@ -11646,21 +12781,21 @@ static PyObject *__pyx_pf_12synexens_sdk_84undistort_ir(CYTHON_UNUSED PyObject *
   PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_int_1);
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 950, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 950, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 950, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_uint16); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_uint16); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 950, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 896, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 950, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 950, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -11668,26 +12803,26 @@ static PyObject *__pyx_pf_12synexens_sdk_84undistort_ir(CYTHON_UNUSED PyObject *
   __pyx_v_pIr2 = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "synexens_sdk.pyx":898
+  /* "synexens_sdk.pyx":952
  *     pIr2 = np.empty((nHeight, nWidth, 1), dtype=np.uint16)
  * 
  *     cdef unsigned short [:,:,:] pIr2_view = pIr2             # <<<<<<<<<<<<<<
  * 
  *     ret = SYErrorCode(Undistort(nDeviceID, <const unsigned short *>&pIr[0,0,0], nWidth, nHeight, False, &pIr2_view[0,0,0]))
  */
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_short(__pyx_v_pIr2, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 898, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_short(__pyx_v_pIr2, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 952, __pyx_L1_error)
   __pyx_v_pIr2_view = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "synexens_sdk.pyx":900
+  /* "synexens_sdk.pyx":954
  *     cdef unsigned short [:,:,:] pIr2_view = pIr2
  * 
  *     ret = SYErrorCode(Undistort(nDeviceID, <const unsigned short *>&pIr[0,0,0], nWidth, nHeight, False, &pIr2_view[0,0,0]))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"Undistort() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 900, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 954, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_7 = 0;
   __pyx_t_8 = 0;
@@ -11707,7 +12842,7 @@ static PyObject *__pyx_pf_12synexens_sdk_84undistort_ir(CYTHON_UNUSED PyObject *
   } else if (unlikely(__pyx_t_9 >= __pyx_v_pIr.shape[2])) __pyx_t_10 = 2;
   if (unlikely(__pyx_t_10 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_10);
-    __PYX_ERR(0, 900, __pyx_L1_error)
+    __PYX_ERR(0, 954, __pyx_L1_error)
   }
   __pyx_t_11 = 0;
   __pyx_t_12 = 0;
@@ -11727,9 +12862,9 @@ static PyObject *__pyx_pf_12synexens_sdk_84undistort_ir(CYTHON_UNUSED PyObject *
   } else if (unlikely(__pyx_t_13 >= __pyx_v_pIr2_view.shape[2])) __pyx_t_10 = 2;
   if (unlikely(__pyx_t_10 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_10);
-    __PYX_ERR(0, 900, __pyx_L1_error)
+    __PYX_ERR(0, 954, __pyx_L1_error)
   }
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::Undistort(__pyx_v_nDeviceID, ((unsigned short const *)(&(*((unsigned short *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pIr.data + __pyx_t_7 * __pyx_v_pIr.strides[0]) ) + __pyx_t_8 * __pyx_v_pIr.strides[1]) ) + __pyx_t_9 * __pyx_v_pIr.strides[2]) ))))), __pyx_v_nWidth, __pyx_v_nHeight, 0, (&(*((unsigned short *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pIr2_view.data + __pyx_t_11 * __pyx_v_pIr2_view.strides[0]) ) + __pyx_t_12 * __pyx_v_pIr2_view.strides[1]) ) + __pyx_t_13 * __pyx_v_pIr2_view.strides[2]) )))))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 900, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::Undistort(__pyx_v_nDeviceID, ((unsigned short const *)(&(*((unsigned short *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pIr.data + __pyx_t_7 * __pyx_v_pIr.strides[0]) ) + __pyx_t_8 * __pyx_v_pIr.strides[1]) ) + __pyx_t_9 * __pyx_v_pIr.strides[2]) ))))), __pyx_v_nWidth, __pyx_v_nHeight, 0, (&(*((unsigned short *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_pIr2_view.data + __pyx_t_11 * __pyx_v_pIr2_view.strides[0]) ) + __pyx_t_12 * __pyx_v_pIr2_view.strides[1]) ) + __pyx_t_13 * __pyx_v_pIr2_view.strides[2]) )))))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 954, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
@@ -11744,14 +12879,14 @@ static PyObject *__pyx_pf_12synexens_sdk_84undistort_ir(CYTHON_UNUSED PyObject *
   __pyx_t_5 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 900, __pyx_L1_error)
+  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 954, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_14 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_5)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 900, __pyx_L1_error)
+  __pyx_t_14 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_5)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 954, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_ret = __pyx_t_14;
 
-  /* "synexens_sdk.pyx":901
+  /* "synexens_sdk.pyx":955
  * 
  *     ret = SYErrorCode(Undistort(nDeviceID, <const unsigned short *>&pIr[0,0,0], nWidth, nHeight, False, &pIr2_view[0,0,0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -11761,14 +12896,14 @@ static PyObject *__pyx_pf_12synexens_sdk_84undistort_ir(CYTHON_UNUSED PyObject *
   __pyx_t_15 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_15)) {
 
-    /* "synexens_sdk.pyx":902
+    /* "synexens_sdk.pyx":956
  *     ret = SYErrorCode(Undistort(nDeviceID, <const unsigned short *>&pIr[0,0,0], nWidth, nHeight, False, &pIr2_view[0,0,0]))
  *     if ret != 0:
  *         raise RuntimeError(f"Undistort() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     return pIr2
  */
-    __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 902, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 956, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_16 = 0;
     __pyx_t_17 = 127;
@@ -11776,7 +12911,7 @@ static PyObject *__pyx_pf_12synexens_sdk_84undistort_ir(CYTHON_UNUSED PyObject *
     __pyx_t_16 += 20;
     __Pyx_GIVEREF(__pyx_kp_u_Undistort_returns);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_kp_u_Undistort_returns);
-    __pyx_t_4 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 902, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 956, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_17 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) > __pyx_t_17) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) : __pyx_t_17;
     __pyx_t_16 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_4);
@@ -11787,17 +12922,17 @@ static PyObject *__pyx_pf_12synexens_sdk_84undistort_ir(CYTHON_UNUSED PyObject *
     __pyx_t_16 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_5, 2, __pyx_kp_u_);
-    __pyx_t_4 = __Pyx_PyUnicode_Join(__pyx_t_5, 3, __pyx_t_16, __pyx_t_17); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 902, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyUnicode_Join(__pyx_t_5, 3, __pyx_t_16, __pyx_t_17); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 956, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 902, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 956, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_Raise(__pyx_t_5, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __PYX_ERR(0, 902, __pyx_L1_error)
+    __PYX_ERR(0, 956, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":901
+    /* "synexens_sdk.pyx":955
  * 
  *     ret = SYErrorCode(Undistort(nDeviceID, <const unsigned short *>&pIr[0,0,0], nWidth, nHeight, False, &pIr2_view[0,0,0]))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -11806,7 +12941,7 @@ static PyObject *__pyx_pf_12synexens_sdk_84undistort_ir(CYTHON_UNUSED PyObject *
  */
   }
 
-  /* "synexens_sdk.pyx":904
+  /* "synexens_sdk.pyx":958
  *         raise RuntimeError(f"Undistort() returns {ret}.")
  * 
  *     return pIr2             # <<<<<<<<<<<<<<
@@ -11818,7 +12953,7 @@ static PyObject *__pyx_pf_12synexens_sdk_84undistort_ir(CYTHON_UNUSED PyObject *
   __pyx_r = __pyx_v_pIr2;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":891
+  /* "synexens_sdk.pyx":945
  *     return pDepth2
  * 
  * def undistort_ir(unsigned int nDeviceID, unsigned short[:,:,:] pIr):             # <<<<<<<<<<<<<<
@@ -11845,7 +12980,7 @@ static PyObject *__pyx_pf_12synexens_sdk_84undistort_ir(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "synexens_sdk.pyx":906
+/* "synexens_sdk.pyx":960
  *     return pIr2
  * 
  * def get_intrinsics(unsigned int nDeviceID, SYResolution resolution):             # <<<<<<<<<<<<<<
@@ -11888,11 +13023,11 @@ static PyObject *__pyx_pw_12synexens_sdk_87get_intrinsics(PyObject *__pyx_self, 
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_resolution)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("get_intrinsics", 1, 2, 2, 1); __PYX_ERR(0, 906, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("get_intrinsics", 1, 2, 2, 1); __PYX_ERR(0, 960, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get_intrinsics") < 0)) __PYX_ERR(0, 906, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get_intrinsics") < 0)) __PYX_ERR(0, 960, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -11900,12 +13035,12 @@ static PyObject *__pyx_pw_12synexens_sdk_87get_intrinsics(PyObject *__pyx_self, 
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 906, __pyx_L3_error)
-    __pyx_v_resolution = ((enum Synexens::SYResolution)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYResolution(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 906, __pyx_L3_error)
+    __pyx_v_nDeviceID = __Pyx_PyInt_As_unsigned_int(values[0]); if (unlikely((__pyx_v_nDeviceID == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 960, __pyx_L3_error)
+    __pyx_v_resolution = ((enum Synexens::SYResolution)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYResolution(values[1])); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 960, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("get_intrinsics", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 906, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("get_intrinsics", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 960, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("synexens_sdk.get_intrinsics", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -11936,16 +13071,16 @@ static PyObject *__pyx_pf_12synexens_sdk_86get_intrinsics(CYTHON_UNUSED PyObject
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_intrinsics", 0);
 
-  /* "synexens_sdk.pyx":910
+  /* "synexens_sdk.pyx":964
  *     cdef SYIntrinsics intrinsics
  * 
  *     ret = SYErrorCode(GetIntric(nDeviceID, resolution, intrinsics))             # <<<<<<<<<<<<<<
  *     if ret != 0:
  *         raise RuntimeError(f"GetIntric() returns {ret}.")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 910, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SYErrorCode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 964, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetIntric(__pyx_v_nDeviceID, __pyx_v_resolution, __pyx_v_intrinsics)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 910, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_enum__Synexens_3a__3a_SYErrorCode(Synexens::GetIntric(__pyx_v_nDeviceID, __pyx_v_resolution, __pyx_v_intrinsics)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 964, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -11960,14 +13095,14 @@ static PyObject *__pyx_pf_12synexens_sdk_86get_intrinsics(CYTHON_UNUSED PyObject
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 910, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 964, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 910, __pyx_L1_error)
+  __pyx_t_5 = ((enum Synexens::SYErrorCode)__Pyx_PyInt_As_enum__Synexens_3a__3a_SYErrorCode(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 964, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ret = __pyx_t_5;
 
-  /* "synexens_sdk.pyx":911
+  /* "synexens_sdk.pyx":965
  * 
  *     ret = SYErrorCode(GetIntric(nDeviceID, resolution, intrinsics))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -11977,14 +13112,14 @@ static PyObject *__pyx_pf_12synexens_sdk_86get_intrinsics(CYTHON_UNUSED PyObject
   __pyx_t_6 = ((__pyx_v_ret != 0) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "synexens_sdk.pyx":912
+    /* "synexens_sdk.pyx":966
  *     ret = SYErrorCode(GetIntric(nDeviceID, resolution, intrinsics))
  *     if ret != 0:
  *         raise RuntimeError(f"GetIntric() returns {ret}.")             # <<<<<<<<<<<<<<
  * 
  *     return {
  */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 912, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 966, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -11992,7 +13127,7 @@ static PyObject *__pyx_pf_12synexens_sdk_86get_intrinsics(CYTHON_UNUSED PyObject
     __pyx_t_7 += 20;
     __Pyx_GIVEREF(__pyx_kp_u_GetIntric_returns);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_GetIntric_returns);
-    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 912, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_From_enum__Synexens_3a__3a_SYErrorCode(__pyx_v_ret, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 966, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -12003,17 +13138,17 @@ static PyObject *__pyx_pf_12synexens_sdk_86get_intrinsics(CYTHON_UNUSED PyObject
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u_);
     PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_);
-    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 912, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 966, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 912, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_RuntimeError, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 966, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 912, __pyx_L1_error)
+    __PYX_ERR(0, 966, __pyx_L1_error)
 
-    /* "synexens_sdk.pyx":911
+    /* "synexens_sdk.pyx":965
  * 
  *     ret = SYErrorCode(GetIntric(nDeviceID, resolution, intrinsics))
  *     if ret != 0:             # <<<<<<<<<<<<<<
@@ -12022,140 +13157,140 @@ static PyObject *__pyx_pf_12synexens_sdk_86get_intrinsics(CYTHON_UNUSED PyObject
  */
   }
 
-  /* "synexens_sdk.pyx":914
+  /* "synexens_sdk.pyx":968
  *         raise RuntimeError(f"GetIntric() returns {ret}.")
  * 
  *     return {             # <<<<<<<<<<<<<<
  *         "fov_x": intrinsics.m_fltFOV[0],
- * 	"fov_y": intrinsics.m_fltFOV[1],
+ *         "fov_y": intrinsics.m_fltFOV[1],
  */
   __Pyx_XDECREF(__pyx_r);
 
-  /* "synexens_sdk.pyx":915
+  /* "synexens_sdk.pyx":969
  * 
  *     return {
  *         "fov_x": intrinsics.m_fltFOV[0],             # <<<<<<<<<<<<<<
- * 	"fov_y": intrinsics.m_fltFOV[1],
- * 	"distortion_coeff_x": intrinsics.m_fltCoeffs[0],
+ *         "fov_y": intrinsics.m_fltFOV[1],
+ *         "distortion_coeff_x": intrinsics.m_fltCoeffs[0],
  */
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(10); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 915, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(10); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 969, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyFloat_FromDouble((__pyx_v_intrinsics.m_fltFOV[0])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 915, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble((__pyx_v_intrinsics.m_fltFOV[0])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 969, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_fov_x, __pyx_t_2) < 0) __PYX_ERR(0, 915, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_fov_x, __pyx_t_2) < 0) __PYX_ERR(0, 969, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "synexens_sdk.pyx":916
+  /* "synexens_sdk.pyx":970
  *     return {
  *         "fov_x": intrinsics.m_fltFOV[0],
- * 	"fov_y": intrinsics.m_fltFOV[1],             # <<<<<<<<<<<<<<
- * 	"distortion_coeff_x": intrinsics.m_fltCoeffs[0],
- * 	"distortion_coeff_y": intrinsics.m_fltCoeffs[1],
+ *         "fov_y": intrinsics.m_fltFOV[1],             # <<<<<<<<<<<<<<
+ *         "distortion_coeff_x": intrinsics.m_fltCoeffs[0],
+ *         "distortion_coeff_y": intrinsics.m_fltCoeffs[1],
  */
-  __pyx_t_2 = PyFloat_FromDouble((__pyx_v_intrinsics.m_fltFOV[1])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 916, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble((__pyx_v_intrinsics.m_fltFOV[1])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 970, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_fov_y, __pyx_t_2) < 0) __PYX_ERR(0, 915, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_fov_y, __pyx_t_2) < 0) __PYX_ERR(0, 969, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "synexens_sdk.pyx":917
+  /* "synexens_sdk.pyx":971
  *         "fov_x": intrinsics.m_fltFOV[0],
- * 	"fov_y": intrinsics.m_fltFOV[1],
- * 	"distortion_coeff_x": intrinsics.m_fltCoeffs[0],             # <<<<<<<<<<<<<<
- * 	"distortion_coeff_y": intrinsics.m_fltCoeffs[1],
- * 	"focal_length_x": intrinsics.m_fltFocalDistanceX,
+ *         "fov_y": intrinsics.m_fltFOV[1],
+ *         "distortion_coeff_x": intrinsics.m_fltCoeffs[0],             # <<<<<<<<<<<<<<
+ *         "distortion_coeff_y": intrinsics.m_fltCoeffs[1],
+ *         "focal_length_x": intrinsics.m_fltFocalDistanceX,
  */
-  __pyx_t_2 = PyFloat_FromDouble((__pyx_v_intrinsics.m_fltCoeffs[0])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 917, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble((__pyx_v_intrinsics.m_fltCoeffs[0])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 971, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_distortion_coeff_x, __pyx_t_2) < 0) __PYX_ERR(0, 915, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_distortion_coeff_x, __pyx_t_2) < 0) __PYX_ERR(0, 969, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "synexens_sdk.pyx":918
- * 	"fov_y": intrinsics.m_fltFOV[1],
- * 	"distortion_coeff_x": intrinsics.m_fltCoeffs[0],
- * 	"distortion_coeff_y": intrinsics.m_fltCoeffs[1],             # <<<<<<<<<<<<<<
- * 	"focal_length_x": intrinsics.m_fltFocalDistanceX,
- * 	"focal_length_y": intrinsics.m_fltFocalDistanceY,
+  /* "synexens_sdk.pyx":972
+ *         "fov_y": intrinsics.m_fltFOV[1],
+ *         "distortion_coeff_x": intrinsics.m_fltCoeffs[0],
+ *         "distortion_coeff_y": intrinsics.m_fltCoeffs[1],             # <<<<<<<<<<<<<<
+ *         "focal_length_x": intrinsics.m_fltFocalDistanceX,
+ *         "focal_length_y": intrinsics.m_fltFocalDistanceY,
  */
-  __pyx_t_2 = PyFloat_FromDouble((__pyx_v_intrinsics.m_fltCoeffs[1])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 918, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble((__pyx_v_intrinsics.m_fltCoeffs[1])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 972, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_distortion_coeff_y, __pyx_t_2) < 0) __PYX_ERR(0, 915, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_distortion_coeff_y, __pyx_t_2) < 0) __PYX_ERR(0, 969, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "synexens_sdk.pyx":919
- * 	"distortion_coeff_x": intrinsics.m_fltCoeffs[0],
- * 	"distortion_coeff_y": intrinsics.m_fltCoeffs[1],
- * 	"focal_length_x": intrinsics.m_fltFocalDistanceX,             # <<<<<<<<<<<<<<
- * 	"focal_length_y": intrinsics.m_fltFocalDistanceY,
- * 	"center_point_x": intrinsics.m_fltCenterPointX,
+  /* "synexens_sdk.pyx":973
+ *         "distortion_coeff_x": intrinsics.m_fltCoeffs[0],
+ *         "distortion_coeff_y": intrinsics.m_fltCoeffs[1],
+ *         "focal_length_x": intrinsics.m_fltFocalDistanceX,             # <<<<<<<<<<<<<<
+ *         "focal_length_y": intrinsics.m_fltFocalDistanceY,
+ *         "center_point_x": intrinsics.m_fltCenterPointX,
  */
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_intrinsics.m_fltFocalDistanceX); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 919, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_intrinsics.m_fltFocalDistanceX); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 973, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_focal_length_x, __pyx_t_2) < 0) __PYX_ERR(0, 915, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_focal_length_x, __pyx_t_2) < 0) __PYX_ERR(0, 969, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "synexens_sdk.pyx":920
- * 	"distortion_coeff_y": intrinsics.m_fltCoeffs[1],
- * 	"focal_length_x": intrinsics.m_fltFocalDistanceX,
- * 	"focal_length_y": intrinsics.m_fltFocalDistanceY,             # <<<<<<<<<<<<<<
- * 	"center_point_x": intrinsics.m_fltCenterPointX,
- * 	"center_point_y": intrinsics.m_fltCenterPointY,
+  /* "synexens_sdk.pyx":974
+ *         "distortion_coeff_y": intrinsics.m_fltCoeffs[1],
+ *         "focal_length_x": intrinsics.m_fltFocalDistanceX,
+ *         "focal_length_y": intrinsics.m_fltFocalDistanceY,             # <<<<<<<<<<<<<<
+ *         "center_point_x": intrinsics.m_fltCenterPointX,
+ *         "center_point_y": intrinsics.m_fltCenterPointY,
  */
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_intrinsics.m_fltFocalDistanceY); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 920, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_intrinsics.m_fltFocalDistanceY); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 974, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_focal_length_y, __pyx_t_2) < 0) __PYX_ERR(0, 915, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_focal_length_y, __pyx_t_2) < 0) __PYX_ERR(0, 969, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "synexens_sdk.pyx":921
- * 	"focal_length_x": intrinsics.m_fltFocalDistanceX,
- * 	"focal_length_y": intrinsics.m_fltFocalDistanceY,
- * 	"center_point_x": intrinsics.m_fltCenterPointX,             # <<<<<<<<<<<<<<
- * 	"center_point_y": intrinsics.m_fltCenterPointY,
- * 	"width": intrinsics.m_nWidth,
+  /* "synexens_sdk.pyx":975
+ *         "focal_length_x": intrinsics.m_fltFocalDistanceX,
+ *         "focal_length_y": intrinsics.m_fltFocalDistanceY,
+ *         "center_point_x": intrinsics.m_fltCenterPointX,             # <<<<<<<<<<<<<<
+ *         "center_point_y": intrinsics.m_fltCenterPointY,
+ *         "width": intrinsics.m_nWidth,
  */
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_intrinsics.m_fltCenterPointX); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 921, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_intrinsics.m_fltCenterPointX); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 975, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_center_point_x, __pyx_t_2) < 0) __PYX_ERR(0, 915, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_center_point_x, __pyx_t_2) < 0) __PYX_ERR(0, 969, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "synexens_sdk.pyx":922
- * 	"focal_length_y": intrinsics.m_fltFocalDistanceY,
- * 	"center_point_x": intrinsics.m_fltCenterPointX,
- * 	"center_point_y": intrinsics.m_fltCenterPointY,             # <<<<<<<<<<<<<<
- * 	"width": intrinsics.m_nWidth,
- * 	"height": intrinsics.m_nHeight,
+  /* "synexens_sdk.pyx":976
+ *         "focal_length_y": intrinsics.m_fltFocalDistanceY,
+ *         "center_point_x": intrinsics.m_fltCenterPointX,
+ *         "center_point_y": intrinsics.m_fltCenterPointY,             # <<<<<<<<<<<<<<
+ *         "width": intrinsics.m_nWidth,
+ *         "height": intrinsics.m_nHeight,
  */
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_intrinsics.m_fltCenterPointY); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 922, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_intrinsics.m_fltCenterPointY); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 976, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_center_point_y, __pyx_t_2) < 0) __PYX_ERR(0, 915, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_center_point_y, __pyx_t_2) < 0) __PYX_ERR(0, 969, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "synexens_sdk.pyx":923
- * 	"center_point_x": intrinsics.m_fltCenterPointX,
- * 	"center_point_y": intrinsics.m_fltCenterPointY,
- * 	"width": intrinsics.m_nWidth,             # <<<<<<<<<<<<<<
- * 	"height": intrinsics.m_nHeight,
+  /* "synexens_sdk.pyx":977
+ *         "center_point_x": intrinsics.m_fltCenterPointX,
+ *         "center_point_y": intrinsics.m_fltCenterPointY,
+ *         "width": intrinsics.m_nWidth,             # <<<<<<<<<<<<<<
+ *         "height": intrinsics.m_nHeight,
  *     }
  */
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_intrinsics.m_nWidth); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 923, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_intrinsics.m_nWidth); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 977, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_width, __pyx_t_2) < 0) __PYX_ERR(0, 915, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_width, __pyx_t_2) < 0) __PYX_ERR(0, 969, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "synexens_sdk.pyx":924
- * 	"center_point_y": intrinsics.m_fltCenterPointY,
- * 	"width": intrinsics.m_nWidth,
- * 	"height": intrinsics.m_nHeight,             # <<<<<<<<<<<<<<
+  /* "synexens_sdk.pyx":978
+ *         "center_point_y": intrinsics.m_fltCenterPointY,
+ *         "width": intrinsics.m_nWidth,
+ *         "height": intrinsics.m_nHeight,             # <<<<<<<<<<<<<<
  *     }
  */
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_intrinsics.m_nHeight); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 924, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_intrinsics.m_nHeight); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 978, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_height, __pyx_t_2) < 0) __PYX_ERR(0, 915, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_height, __pyx_t_2) < 0) __PYX_ERR(0, 969, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "synexens_sdk.pyx":906
+  /* "synexens_sdk.pyx":960
  *     return pIr2
  * 
  * def get_intrinsics(unsigned int nDeviceID, SYResolution resolution):             # <<<<<<<<<<<<<<
@@ -27753,12 +28888,17 @@ static struct PyModuleDef __pyx_moduledef = {
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_, __pyx_k_, sizeof(__pyx_k_), 0, 1, 0, 0},
   {&__pyx_n_s_ASCII, __pyx_k_ASCII, sizeof(__pyx_k_ASCII), 0, 0, 1, 1},
+  {&__pyx_kp_u_AddFilter_returns, __pyx_k_AddFilter_returns, sizeof(__pyx_k_AddFilter_returns), 0, 1, 0, 0},
   {&__pyx_kp_s_Argument_filterParams_is_not_con, __pyx_k_Argument_filterParams_is_not_con, sizeof(__pyx_k_Argument_filterParams_is_not_con), 0, 0, 1, 0},
   {&__pyx_kp_s_Buffer_view_does_not_expose_stri, __pyx_k_Buffer_view_does_not_expose_stri, sizeof(__pyx_k_Buffer_view_does_not_expose_stri), 0, 0, 1, 0},
   {&__pyx_kp_s_Can_only_create_a_buffer_that_is, __pyx_k_Can_only_create_a_buffer_that_is, sizeof(__pyx_k_Can_only_create_a_buffer_that_is), 0, 0, 1, 0},
   {&__pyx_kp_s_Cannot_assign_to_read_only_memor, __pyx_k_Cannot_assign_to_read_only_memor, sizeof(__pyx_k_Cannot_assign_to_read_only_memor), 0, 0, 1, 0},
   {&__pyx_kp_s_Cannot_create_writable_memory_vi, __pyx_k_Cannot_create_writable_memory_vi, sizeof(__pyx_k_Cannot_create_writable_memory_vi), 0, 0, 1, 0},
   {&__pyx_kp_s_Cannot_index_with_type_s, __pyx_k_Cannot_index_with_type_s, sizeof(__pyx_k_Cannot_index_with_type_s), 0, 0, 1, 0},
+  {&__pyx_kp_u_ChangeStreaming_returns, __pyx_k_ChangeStreaming_returns, sizeof(__pyx_k_ChangeStreaming_returns), 0, 1, 0, 0},
+  {&__pyx_kp_u_ClearFilter_returns, __pyx_k_ClearFilter_returns, sizeof(__pyx_k_ClearFilter_returns), 0, 1, 0, 0},
+  {&__pyx_kp_u_CloseDevice_returns, __pyx_k_CloseDevice_returns, sizeof(__pyx_k_CloseDevice_returns), 0, 1, 0, 0},
+  {&__pyx_kp_u_DeleteFilter_returns, __pyx_k_DeleteFilter_returns, sizeof(__pyx_k_DeleteFilter_returns), 0, 1, 0, 0},
   {&__pyx_n_s_Ellipsis, __pyx_k_Ellipsis, sizeof(__pyx_k_Ellipsis), 0, 0, 1, 1},
   {&__pyx_kp_s_Empty_shape_tuple_for_cython_arr, __pyx_k_Empty_shape_tuple_for_cython_arr, sizeof(__pyx_k_Empty_shape_tuple_for_cython_arr), 0, 0, 1, 0},
   {&__pyx_n_s_EnumBase, __pyx_k_EnumBase, sizeof(__pyx_k_EnumBase), 0, 0, 1, 1},
@@ -27786,6 +28926,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_2, __pyx_k_Incompatible_checksums_0x_x_vs_0_2, sizeof(__pyx_k_Incompatible_checksums_0x_x_vs_0_2), 0, 0, 1, 0},
   {&__pyx_n_s_IndexError, __pyx_k_IndexError, sizeof(__pyx_k_IndexError), 0, 0, 1, 1},
   {&__pyx_kp_s_Indirect_dimensions_not_supporte, __pyx_k_Indirect_dimensions_not_supporte, sizeof(__pyx_k_Indirect_dimensions_not_supporte), 0, 0, 1, 0},
+  {&__pyx_kp_u_InitSDK_returns, __pyx_k_InitSDK_returns, sizeof(__pyx_k_InitSDK_returns), 0, 1, 0, 0},
   {&__pyx_n_s_IntEnum, __pyx_k_IntEnum, sizeof(__pyx_k_IntEnum), 0, 0, 1, 1},
   {&__pyx_kp_s_Invalid_mode_expected_c_or_fortr, __pyx_k_Invalid_mode_expected_c_or_fortr, sizeof(__pyx_k_Invalid_mode_expected_c_or_fortr), 0, 0, 1, 0},
   {&__pyx_kp_s_Invalid_shape_in_axis_d_d, __pyx_k_Invalid_shape_in_axis_d_d, sizeof(__pyx_k_Invalid_shape_in_axis_d_d), 0, 0, 1, 0},
@@ -27793,6 +28934,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_MemoryView_of_r_at_0x_x, __pyx_k_MemoryView_of_r_at_0x_x, sizeof(__pyx_k_MemoryView_of_r_at_0x_x), 0, 0, 1, 0},
   {&__pyx_kp_s_MemoryView_of_r_object, __pyx_k_MemoryView_of_r_object, sizeof(__pyx_k_MemoryView_of_r_object), 0, 0, 1, 0},
   {&__pyx_n_b_O, __pyx_k_O, sizeof(__pyx_k_O), 0, 0, 0, 1},
+  {&__pyx_kp_u_OpenDevice_returns, __pyx_k_OpenDevice_returns, sizeof(__pyx_k_OpenDevice_returns), 0, 1, 0, 0},
   {&__pyx_n_s_OrderedDict, __pyx_k_OrderedDict, sizeof(__pyx_k_OrderedDict), 0, 0, 1, 1},
   {&__pyx_kp_s_Out_of_bounds_on_buffer_access_a, __pyx_k_Out_of_bounds_on_buffer_access_a, sizeof(__pyx_k_Out_of_bounds_on_buffer_access_a), 0, 0, 1, 0},
   {&__pyx_n_s_PickleError, __pyx_k_PickleError, sizeof(__pyx_k_PickleError), 0, 0, 1, 1},
@@ -27883,7 +29025,18 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_Second_GetFilterList_returns, __pyx_k_Second_GetFilterList_returns, sizeof(__pyx_k_Second_GetFilterList_returns), 0, 1, 0, 0},
   {&__pyx_kp_u_Second_GetFilterParam_returns, __pyx_k_Second_GetFilterParam_returns, sizeof(__pyx_k_Second_GetFilterParam_returns), 0, 1, 0, 0},
   {&__pyx_kp_u_Second_QueryDeviceSupportFrameTy, __pyx_k_Second_QueryDeviceSupportFrameTy, sizeof(__pyx_k_Second_QueryDeviceSupportFrameTy), 0, 1, 0, 0},
+  {&__pyx_kp_u_SetDefaultFilter_returns, __pyx_k_SetDefaultFilter_returns, sizeof(__pyx_k_SetDefaultFilter_returns), 0, 1, 0, 0},
+  {&__pyx_kp_u_SetDistanceUserRange_returns, __pyx_k_SetDistanceUserRange_returns, sizeof(__pyx_k_SetDistanceUserRange_returns), 0, 1, 0, 0},
+  {&__pyx_kp_u_SetFilter_returns, __pyx_k_SetFilter_returns, sizeof(__pyx_k_SetFilter_returns), 0, 1, 0, 0},
+  {&__pyx_kp_u_SetFitlerParam_returns, __pyx_k_SetFitlerParam_returns, sizeof(__pyx_k_SetFitlerParam_returns), 0, 1, 0, 0},
+  {&__pyx_kp_u_SetFlip_returns, __pyx_k_SetFlip_returns, sizeof(__pyx_k_SetFlip_returns), 0, 1, 0, 0},
+  {&__pyx_kp_u_SetFrameResolution_returns, __pyx_k_SetFrameResolution_returns, sizeof(__pyx_k_SetFrameResolution_returns), 0, 1, 0, 0},
+  {&__pyx_kp_u_SetIntegralTime_returns, __pyx_k_SetIntegralTime_returns, sizeof(__pyx_k_SetIntegralTime_returns), 0, 1, 0, 0},
+  {&__pyx_kp_u_SetMirror_returns, __pyx_k_SetMirror_returns, sizeof(__pyx_k_SetMirror_returns), 0, 1, 0, 0},
+  {&__pyx_kp_u_StartStreaming_returns, __pyx_k_StartStreaming_returns, sizeof(__pyx_k_StartStreaming_returns), 0, 1, 0, 0},
+  {&__pyx_kp_u_StopStreaming_returns, __pyx_k_StopStreaming_returns, sizeof(__pyx_k_StopStreaming_returns), 0, 1, 0, 0},
   {&__pyx_n_s_TypeError, __pyx_k_TypeError, sizeof(__pyx_k_TypeError), 0, 0, 1, 1},
+  {&__pyx_kp_u_UnInitSDK_returns, __pyx_k_UnInitSDK_returns, sizeof(__pyx_k_UnInitSDK_returns), 0, 1, 0, 0},
   {&__pyx_kp_s_Unable_to_convert_item_to_object, __pyx_k_Unable_to_convert_item_to_object, sizeof(__pyx_k_Unable_to_convert_item_to_object), 0, 0, 1, 0},
   {&__pyx_kp_u_Undistort_returns, __pyx_k_Undistort_returns, sizeof(__pyx_k_Undistort_returns), 0, 1, 0, 0},
   {&__pyx_kp_s_Unknown_enum_value_s, __pyx_k_Unknown_enum_value_s, sizeof(__pyx_k_Unknown_enum_value_s), 0, 0, 1, 0},
@@ -28091,8 +29244,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(0, 522, __pyx_L1_error)
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 549, __pyx_L1_error)
-  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 675, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 555, __pyx_L1_error)
+  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 715, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 149, __pyx_L1_error)
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(1, 152, __pyx_L1_error)
   __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(1, 2, __pyx_L1_error)
@@ -28108,80 +29261,80 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "synexens_sdk.pyx":675
- * def set_filter_params(unsigned int nDeviceID, SYFilterType filterType, float[:] filterParams):
+  /* "synexens_sdk.pyx":715
+ *     cdef SYErrorCode ret
  *     if filterParams.strides[0] != 4:
  *         raise ValueError("Argument 'filterParams' is not contiguous.")             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
- * 
+ *     ret = SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
+ *     if ret != 0:
  */
-  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_kp_s_Argument_filterParams_is_not_con); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 675, __pyx_L1_error)
+  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_kp_s_Argument_filterParams_is_not_con); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 715, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "synexens_sdk.pyx":692
+  /* "synexens_sdk.pyx":734
  *         raise RuntimeError(f"Second GetFilterParam() returns {ret}.")
  *     res = np.empty(nCount, dtype=np.float32)
  *     res[:] = filterParams             # <<<<<<<<<<<<<<
  * 
  *     return res
  */
-  __pyx_slice__3 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__3)) __PYX_ERR(0, 692, __pyx_L1_error)
+  __pyx_slice__3 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__3)) __PYX_ERR(0, 734, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__3);
   __Pyx_GIVEREF(__pyx_slice__3);
 
-  /* "synexens_sdk.pyx":823
+  /* "synexens_sdk.pyx":877
  * def extract_resolution(SYResolution resolution):
  *     if resolution == SYRESOLUTION_NULL:
  *         return 0, 0             # <<<<<<<<<<<<<<
  *     if resolution == SYRESOLUTION_320_240:
  *         return 320, 240
  */
-  __pyx_tuple__4 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 823, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 877, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "synexens_sdk.pyx":825
+  /* "synexens_sdk.pyx":879
  *         return 0, 0
  *     if resolution == SYRESOLUTION_320_240:
  *         return 320, 240             # <<<<<<<<<<<<<<
  *     if resolution == SYRESOLUTION_640_480:
  *         return 640, 480
  */
-  __pyx_tuple__5 = PyTuple_Pack(2, __pyx_int_320, __pyx_int_240); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 825, __pyx_L1_error)
+  __pyx_tuple__5 = PyTuple_Pack(2, __pyx_int_320, __pyx_int_240); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 879, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "synexens_sdk.pyx":827
+  /* "synexens_sdk.pyx":881
  *         return 320, 240
  *     if resolution == SYRESOLUTION_640_480:
  *         return 640, 480             # <<<<<<<<<<<<<<
  *     if resolution == SYRESOLUTION_960_540:
  *         return 960, 540
  */
-  __pyx_tuple__6 = PyTuple_Pack(2, __pyx_int_640, __pyx_int_480); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 827, __pyx_L1_error)
+  __pyx_tuple__6 = PyTuple_Pack(2, __pyx_int_640, __pyx_int_480); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 881, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
 
-  /* "synexens_sdk.pyx":829
+  /* "synexens_sdk.pyx":883
  *         return 640, 480
  *     if resolution == SYRESOLUTION_960_540:
  *         return 960, 540             # <<<<<<<<<<<<<<
  *     if resolution == SYRESOLUTION_1920_1080:
  *         return 1920, 1080
  */
-  __pyx_tuple__7 = PyTuple_Pack(2, __pyx_int_960, __pyx_int_540); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 829, __pyx_L1_error)
+  __pyx_tuple__7 = PyTuple_Pack(2, __pyx_int_960, __pyx_int_540); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 883, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "synexens_sdk.pyx":831
+  /* "synexens_sdk.pyx":885
  *         return 960, 540
  *     if resolution == SYRESOLUTION_1920_1080:
  *         return 1920, 1080             # <<<<<<<<<<<<<<
  * 
  * def extract_dtype(SYFrameType frameType):
  */
-  __pyx_tuple__8 = PyTuple_Pack(2, __pyx_int_1920, __pyx_int_1080); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 831, __pyx_L1_error)
+  __pyx_tuple__8 = PyTuple_Pack(2, __pyx_int_1920, __pyx_int_1080); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 885, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
@@ -28396,511 +29549,517 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *     return arr[:nLength].decode()
  * 
  * def init_sdk():             # <<<<<<<<<<<<<<
- *     return SYErrorCode(InitSDK())
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(InitSDK())
  */
-  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_init_sdk, 526, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 526, __pyx_L1_error)
-
-  /* "synexens_sdk.pyx":529
- *     return SYErrorCode(InitSDK())
- * 
- * def uninit_sdk():             # <<<<<<<<<<<<<<
- *     return SYErrorCode(UnInitSDK())
- * 
- */
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_uninit_sdk, 529, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 529, __pyx_L1_error)
+  __pyx_tuple__30 = PyTuple_Pack(1, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 526, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__30);
+  __Pyx_GIVEREF(__pyx_tuple__30);
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_init_sdk, 526, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 526, __pyx_L1_error)
 
   /* "synexens_sdk.pyx":532
- *     return SYErrorCode(UnInitSDK())
+ *         raise RuntimeError(f"InitSDK() returns {ret}.")
+ * 
+ * def uninit_sdk():             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(UnInitSDK())
+ */
+  __pyx_tuple__32 = PyTuple_Pack(1, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__32)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__32);
+  __Pyx_GIVEREF(__pyx_tuple__32);
+  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_uninit_sdk, 532, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 532, __pyx_L1_error)
+
+  /* "synexens_sdk.pyx":538
+ *         raise RuntimeError(f"UnInitSDK() returns {ret}.")
  * 
  * def find_device():             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
  *     cdef vector[SYDeviceInfo] devices
  */
-  __pyx_tuple__32 = PyTuple_Pack(6, __pyx_n_s_nCount, __pyx_n_s_devices, __pyx_n_s_ret, __pyx_n_s_res, __pyx_n_s_i, __pyx_n_s_device); if (unlikely(!__pyx_tuple__32)) __PYX_ERR(0, 532, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__32);
-  __Pyx_GIVEREF(__pyx_tuple__32);
-  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_find_device, 532, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __pyx_tuple__34 = PyTuple_Pack(6, __pyx_n_s_nCount, __pyx_n_s_devices, __pyx_n_s_ret, __pyx_n_s_res, __pyx_n_s_i, __pyx_n_s_device); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 538, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__34);
+  __Pyx_GIVEREF(__pyx_tuple__34);
+  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_find_device, 538, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 538, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":555
+  /* "synexens_sdk.pyx":561
  *     return res
  * 
  * def open_device(unsigned int nDeviceID, SYDeviceType deviceType):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
  *     cdef SYDeviceInfo di
- * 
  */
-  __pyx_tuple__34 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_deviceType, __pyx_n_s_di); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 555, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__34);
-  __Pyx_GIVEREF(__pyx_tuple__34);
-  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_open_device, 555, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 555, __pyx_L1_error)
-
-  /* "synexens_sdk.pyx":563
- *     return SYErrorCode(OpenDevice(di))
- * 
- * def close_device(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(CloseDevice(nDeviceID))
- * 
- */
-  __pyx_tuple__36 = PyTuple_Pack(2, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID); if (unlikely(!__pyx_tuple__36)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __pyx_tuple__36 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_deviceType, __pyx_n_s_ret, __pyx_n_s_di); if (unlikely(!__pyx_tuple__36)) __PYX_ERR(0, 561, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__36);
   __Pyx_GIVEREF(__pyx_tuple__36);
-  __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_close_device, 563, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_open_device, 561, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) __PYX_ERR(0, 561, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":566
- *     return SYErrorCode(CloseDevice(nDeviceID))
+  /* "synexens_sdk.pyx":572
+ *         raise RuntimeError(f"OpenDevice() returns {ret}.")
+ * 
+ * def close_device(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(CloseDevice(nDeviceID))
+ */
+  __pyx_tuple__38 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__38)) __PYX_ERR(0, 572, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__38);
+  __Pyx_GIVEREF(__pyx_tuple__38);
+  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_close_device, 572, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 572, __pyx_L1_error)
+
+  /* "synexens_sdk.pyx":578
+ *         raise RuntimeError(f"CloseDevice() returns {ret}.")
  * 
  * def query_device_support_frame_type(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
  *     cdef vector[SYSupportType] supportTypes
  */
-  __pyx_tuple__38 = PyTuple_Pack(7, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_nCount, __pyx_n_s_supportTypes, __pyx_n_s_ret, __pyx_n_s_res, __pyx_n_s_i); if (unlikely(!__pyx_tuple__38)) __PYX_ERR(0, 566, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__38);
-  __Pyx_GIVEREF(__pyx_tuple__38);
-  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(1, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_query_device_support_frame_type, 566, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 566, __pyx_L1_error)
+  __pyx_tuple__40 = PyTuple_Pack(7, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_nCount, __pyx_n_s_supportTypes, __pyx_n_s_ret, __pyx_n_s_res, __pyx_n_s_i); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 578, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__40);
+  __Pyx_GIVEREF(__pyx_tuple__40);
+  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(1, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_query_device_support_frame_type, 578, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 578, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":585
+  /* "synexens_sdk.pyx":597
  *     return res
  * 
  * def query_device_support_resolution(unsigned int nDeviceID, SYSupportType supportType):             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
  *     cdef vector[SYResolution] resolutions
  */
-  __pyx_tuple__40 = PyTuple_Pack(7, __pyx_n_s_nDeviceID, __pyx_n_s_supportType, __pyx_n_s_nCount, __pyx_n_s_resolutions, __pyx_n_s_ret, __pyx_n_s_res, __pyx_n_s_i); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 585, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__40);
-  __Pyx_GIVEREF(__pyx_tuple__40);
-  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_query_device_support_resolution, 585, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 585, __pyx_L1_error)
+  __pyx_tuple__42 = PyTuple_Pack(7, __pyx_n_s_nDeviceID, __pyx_n_s_supportType, __pyx_n_s_nCount, __pyx_n_s_resolutions, __pyx_n_s_ret, __pyx_n_s_res, __pyx_n_s_i); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 597, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__42);
+  __Pyx_GIVEREF(__pyx_tuple__42);
+  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_query_device_support_resolution, 597, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 597, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":604
+  /* "synexens_sdk.pyx":616
  *     return res
  * 
  * def get_current_stream_type(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     return SYStreamType(GetCurrentStreamType(nDeviceID))
  * 
  */
-  __pyx_tuple__42 = PyTuple_Pack(2, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 604, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__42);
-  __Pyx_GIVEREF(__pyx_tuple__42);
-  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_current_stream_type, 604, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 604, __pyx_L1_error)
+  __pyx_tuple__44 = PyTuple_Pack(2, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 616, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__44);
+  __Pyx_GIVEREF(__pyx_tuple__44);
+  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_current_stream_type, 616, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 616, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":607
+  /* "synexens_sdk.pyx":619
  *     return SYStreamType(GetCurrentStreamType(nDeviceID))
  * 
  * def start_streaming(unsigned int nDeviceID, SYStreamType streamType):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(StartStreaming(nDeviceID, streamType))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(StartStreaming(nDeviceID, streamType))
  */
-  __pyx_tuple__44 = PyTuple_Pack(2, __pyx_n_s_nDeviceID, __pyx_n_s_streamType); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 607, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__44);
-  __Pyx_GIVEREF(__pyx_tuple__44);
-  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_start_streaming, 607, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 607, __pyx_L1_error)
-
-  /* "synexens_sdk.pyx":610
- *     return SYErrorCode(StartStreaming(nDeviceID, streamType))
- * 
- * def stop_streaming(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(StopStreaming(nDeviceID))
- * 
- */
-  __pyx_tuple__46 = PyTuple_Pack(2, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID); if (unlikely(!__pyx_tuple__46)) __PYX_ERR(0, 610, __pyx_L1_error)
+  __pyx_tuple__46 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_streamType, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__46)) __PYX_ERR(0, 619, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__46);
   __Pyx_GIVEREF(__pyx_tuple__46);
-  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_stop_streaming, 610, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 610, __pyx_L1_error)
+  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_start_streaming, 619, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 619, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":613
- *     return SYErrorCode(StopStreaming(nDeviceID))
+  /* "synexens_sdk.pyx":625
+ *         raise RuntimeError(f"StartStreaming() returns {ret}.")
  * 
- * def change_streaming(unsigned int nDeviceID, SYStreamType streamType):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(ChangeStreaming(nDeviceID, streamType))
- * 
+ * def stop_streaming(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(StopStreaming(nDeviceID))
  */
-  __pyx_tuple__48 = PyTuple_Pack(2, __pyx_n_s_nDeviceID, __pyx_n_s_streamType); if (unlikely(!__pyx_tuple__48)) __PYX_ERR(0, 613, __pyx_L1_error)
+  __pyx_tuple__48 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__48)) __PYX_ERR(0, 625, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__48);
   __Pyx_GIVEREF(__pyx_tuple__48);
-  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_change_streaming, 613, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 613, __pyx_L1_error)
+  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_stop_streaming, 625, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 625, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":616
- *     return SYErrorCode(ChangeStreaming(nDeviceID, streamType))
+  /* "synexens_sdk.pyx":631
+ *         raise RuntimeError(f"StopStreaming() returns {ret}.")
  * 
- * def set_frame_resolution(unsigned int nDeviceID, SYFrameType frameType, SYResolution resolution):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
- * 
+ * def change_streaming(unsigned int nDeviceID, SYStreamType streamType):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(ChangeStreaming(nDeviceID, streamType))
  */
-  __pyx_tuple__50 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_frameType, __pyx_n_s_resolution); if (unlikely(!__pyx_tuple__50)) __PYX_ERR(0, 616, __pyx_L1_error)
+  __pyx_tuple__50 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_streamType, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__50)) __PYX_ERR(0, 631, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__50);
   __Pyx_GIVEREF(__pyx_tuple__50);
-  __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_frame_resolution, 616, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 616, __pyx_L1_error)
+  __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_change_streaming, 631, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 631, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":619
- *     return SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
+  /* "synexens_sdk.pyx":637
+ *         raise RuntimeError(f"ChangeStreaming() returns {ret}.")
+ * 
+ * def set_frame_resolution(unsigned int nDeviceID, SYFrameType frameType, SYResolution resolution):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
+ */
+  __pyx_tuple__52 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_frameType, __pyx_n_s_resolution, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__52)) __PYX_ERR(0, 637, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__52);
+  __Pyx_GIVEREF(__pyx_tuple__52);
+  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(3, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_frame_resolution, 637, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 637, __pyx_L1_error)
+
+  /* "synexens_sdk.pyx":643
+ *         raise RuntimeError(f"SetFrameResolution() returns {ret}.")
  * 
  * def get_frame_resolution(unsigned int nDeviceID, SYFrameType frameType):             # <<<<<<<<<<<<<<
  *     cdef SYResolution resolution
  *     cdef SYErrorCode ret
  */
-  __pyx_tuple__52 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_frameType, __pyx_n_s_resolution, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__52)) __PYX_ERR(0, 619, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__52);
-  __Pyx_GIVEREF(__pyx_tuple__52);
-  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_frame_resolution, 619, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 619, __pyx_L1_error)
+  __pyx_tuple__54 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_frameType, __pyx_n_s_resolution, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__54)) __PYX_ERR(0, 643, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__54);
+  __Pyx_GIVEREF(__pyx_tuple__54);
+  __pyx_codeobj__55 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__54, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_frame_resolution, 643, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__55)) __PYX_ERR(0, 643, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":629
+  /* "synexens_sdk.pyx":653
  *     return SYResolution(resolution)
  * 
  * def get_filter(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef bool bFilter
  *     cdef SYErrorCode ret
  */
-  __pyx_tuple__54 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_bFilter, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__54)) __PYX_ERR(0, 629, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__54);
-  __Pyx_GIVEREF(__pyx_tuple__54);
-  __pyx_codeobj__55 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__54, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_filter, 629, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__55)) __PYX_ERR(0, 629, __pyx_L1_error)
+  __pyx_tuple__56 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_bFilter, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__56)) __PYX_ERR(0, 653, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__56);
+  __Pyx_GIVEREF(__pyx_tuple__56);
+  __pyx_codeobj__57 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__56, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_filter, 653, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__57)) __PYX_ERR(0, 653, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":639
+  /* "synexens_sdk.pyx":663
  *     return bFilter
  * 
  * def set_filter(unsigned int nDeviceID, bool bFilter):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetFilter(nDeviceID, bFilter))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFilter(nDeviceID, bFilter))
  */
-  __pyx_tuple__56 = PyTuple_Pack(2, __pyx_n_s_nDeviceID, __pyx_n_s_bFilter); if (unlikely(!__pyx_tuple__56)) __PYX_ERR(0, 639, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__56);
-  __Pyx_GIVEREF(__pyx_tuple__56);
-  __pyx_codeobj__57 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__56, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_filter, 639, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__57)) __PYX_ERR(0, 639, __pyx_L1_error)
+  __pyx_tuple__58 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_bFilter, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__58)) __PYX_ERR(0, 663, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__58);
+  __Pyx_GIVEREF(__pyx_tuple__58);
+  __pyx_codeobj__59 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__58, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_filter, 663, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__59)) __PYX_ERR(0, 663, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":642
- *     return SYErrorCode(SetFilter(nDeviceID, bFilter))
+  /* "synexens_sdk.pyx":669
+ *         raise RuntimeError(f"SetFilter() returns {ret}.")
  * 
  * def get_filter_list(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
  *     cdef vector[SYFilterType] filterTypes
  */
-  __pyx_tuple__58 = PyTuple_Pack(7, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_nCount, __pyx_n_s_filterTypes, __pyx_n_s_ret, __pyx_n_s_res, __pyx_n_s_i); if (unlikely(!__pyx_tuple__58)) __PYX_ERR(0, 642, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__58);
-  __Pyx_GIVEREF(__pyx_tuple__58);
-  __pyx_codeobj__59 = (PyObject*)__Pyx_PyCode_New(1, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__58, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_filter_list, 642, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__59)) __PYX_ERR(0, 642, __pyx_L1_error)
+  __pyx_tuple__60 = PyTuple_Pack(7, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_nCount, __pyx_n_s_filterTypes, __pyx_n_s_ret, __pyx_n_s_res, __pyx_n_s_i); if (unlikely(!__pyx_tuple__60)) __PYX_ERR(0, 669, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__60);
+  __Pyx_GIVEREF(__pyx_tuple__60);
+  __pyx_codeobj__61 = (PyObject*)__Pyx_PyCode_New(1, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__60, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_filter_list, 669, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__61)) __PYX_ERR(0, 669, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":661
+  /* "synexens_sdk.pyx":688
  *     return res
  * 
  * def set_default_filter(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetDefaultFilter(nDeviceID))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetDefaultFilter(nDeviceID))
  */
-  __pyx_tuple__60 = PyTuple_Pack(2, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID); if (unlikely(!__pyx_tuple__60)) __PYX_ERR(0, 661, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__60);
-  __Pyx_GIVEREF(__pyx_tuple__60);
-  __pyx_codeobj__61 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__60, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_default_filter, 661, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__61)) __PYX_ERR(0, 661, __pyx_L1_error)
-
-  /* "synexens_sdk.pyx":664
- *     return SYErrorCode(SetDefaultFilter(nDeviceID))
- * 
- * def add_filter(unsigned int nDeviceID, SYFilterType filterType):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(AddFilter(nDeviceID, filterType))
- * 
- */
-  __pyx_tuple__62 = PyTuple_Pack(2, __pyx_n_s_nDeviceID, __pyx_n_s_filterType); if (unlikely(!__pyx_tuple__62)) __PYX_ERR(0, 664, __pyx_L1_error)
+  __pyx_tuple__62 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__62)) __PYX_ERR(0, 688, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__62);
   __Pyx_GIVEREF(__pyx_tuple__62);
-  __pyx_codeobj__63 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__62, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_add_filter, 664, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__63)) __PYX_ERR(0, 664, __pyx_L1_error)
+  __pyx_codeobj__63 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__62, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_default_filter, 688, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__63)) __PYX_ERR(0, 688, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":667
- *     return SYErrorCode(AddFilter(nDeviceID, filterType))
+  /* "synexens_sdk.pyx":694
+ *         raise RuntimeError(f"SetDefaultFilter() returns {ret}.")
  * 
- * def delete_filter(unsigned int nDeviceID, int nIndex):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(DeleteFilter(nDeviceID, nIndex))
- * 
+ * def add_filter(unsigned int nDeviceID, SYFilterType filterType):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(AddFilter(nDeviceID, filterType))
  */
-  __pyx_tuple__64 = PyTuple_Pack(2, __pyx_n_s_nDeviceID, __pyx_n_s_nIndex); if (unlikely(!__pyx_tuple__64)) __PYX_ERR(0, 667, __pyx_L1_error)
+  __pyx_tuple__64 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_filterType, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__64)) __PYX_ERR(0, 694, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__64);
   __Pyx_GIVEREF(__pyx_tuple__64);
-  __pyx_codeobj__65 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__64, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_delete_filter, 667, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__65)) __PYX_ERR(0, 667, __pyx_L1_error)
+  __pyx_codeobj__65 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__64, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_add_filter, 694, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__65)) __PYX_ERR(0, 694, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":670
- *     return SYErrorCode(DeleteFilter(nDeviceID, nIndex))
+  /* "synexens_sdk.pyx":700
+ *         raise RuntimeError(f"AddFilter() returns {ret}.")
  * 
- * def clear_filter(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(ClearFilter(nDeviceID))
- * 
+ * def delete_filter(unsigned int nDeviceID, int nIndex):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(DeleteFilter(nDeviceID, nIndex))
  */
-  __pyx_tuple__66 = PyTuple_Pack(2, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID); if (unlikely(!__pyx_tuple__66)) __PYX_ERR(0, 670, __pyx_L1_error)
+  __pyx_tuple__66 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_nIndex, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__66)) __PYX_ERR(0, 700, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__66);
   __Pyx_GIVEREF(__pyx_tuple__66);
-  __pyx_codeobj__67 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__66, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_clear_filter, 670, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__67)) __PYX_ERR(0, 670, __pyx_L1_error)
+  __pyx_codeobj__67 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__66, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_delete_filter, 700, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__67)) __PYX_ERR(0, 700, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":673
- *     return SYErrorCode(ClearFilter(nDeviceID))
+  /* "synexens_sdk.pyx":706
+ *         raise RuntimeError(f"DeleteFilter() returns {ret}.")
  * 
- * def set_filter_params(unsigned int nDeviceID, SYFilterType filterType, float[:] filterParams):             # <<<<<<<<<<<<<<
- *     if filterParams.strides[0] != 4:
- *         raise ValueError("Argument 'filterParams' is not contiguous.")
+ * def clear_filter(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(ClearFilter(nDeviceID))
  */
-  __pyx_tuple__68 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_filterType, __pyx_n_s_filterParams); if (unlikely(!__pyx_tuple__68)) __PYX_ERR(0, 673, __pyx_L1_error)
+  __pyx_tuple__68 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__68)) __PYX_ERR(0, 706, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__68);
   __Pyx_GIVEREF(__pyx_tuple__68);
-  __pyx_codeobj__69 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__68, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_filter_params, 673, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__69)) __PYX_ERR(0, 673, __pyx_L1_error)
+  __pyx_codeobj__69 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__68, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_clear_filter, 706, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__69)) __PYX_ERR(0, 706, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":678
- *     return SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
+  /* "synexens_sdk.pyx":712
+ *         raise RuntimeError(f"ClearFilter() returns {ret}.")
+ * 
+ * def set_filter_params(unsigned int nDeviceID, SYFilterType filterType, float[:] filterParams):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
+ *     if filterParams.strides[0] != 4:
+ */
+  __pyx_tuple__70 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_filterType, __pyx_n_s_filterParams, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__70)) __PYX_ERR(0, 712, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__70);
+  __Pyx_GIVEREF(__pyx_tuple__70);
+  __pyx_codeobj__71 = (PyObject*)__Pyx_PyCode_New(3, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__70, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_filter_params, 712, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__71)) __PYX_ERR(0, 712, __pyx_L1_error)
+
+  /* "synexens_sdk.pyx":720
+ *         raise RuntimeError(f"SetFitlerParam() returns {ret}.")
  * 
  * def get_filter_params(unsigned int nDeviceID, SYFilterType filterType):             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
  *     cdef vector[float] filterParams
  */
-  __pyx_tuple__70 = PyTuple_Pack(6, __pyx_n_s_nDeviceID, __pyx_n_s_filterType, __pyx_n_s_nCount, __pyx_n_s_filterParams, __pyx_n_s_ret, __pyx_n_s_res); if (unlikely(!__pyx_tuple__70)) __PYX_ERR(0, 678, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__70);
-  __Pyx_GIVEREF(__pyx_tuple__70);
-  __pyx_codeobj__71 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__70, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_filter_params, 678, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__71)) __PYX_ERR(0, 678, __pyx_L1_error)
+  __pyx_tuple__72 = PyTuple_Pack(6, __pyx_n_s_nDeviceID, __pyx_n_s_filterType, __pyx_n_s_nCount, __pyx_n_s_filterParams, __pyx_n_s_ret, __pyx_n_s_res); if (unlikely(!__pyx_tuple__72)) __PYX_ERR(0, 720, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__72);
+  __Pyx_GIVEREF(__pyx_tuple__72);
+  __pyx_codeobj__73 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__72, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_filter_params, 720, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__73)) __PYX_ERR(0, 720, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":696
+  /* "synexens_sdk.pyx":738
  *     return res
  * 
  * def get_mirror(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef bool bMirror
  *     cdef SYErrorCode ret
  */
-  __pyx_tuple__72 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_bMirror, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__72)) __PYX_ERR(0, 696, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__72);
-  __Pyx_GIVEREF(__pyx_tuple__72);
-  __pyx_codeobj__73 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__72, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_mirror, 696, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__73)) __PYX_ERR(0, 696, __pyx_L1_error)
+  __pyx_tuple__74 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_bMirror, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__74)) __PYX_ERR(0, 738, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__74);
+  __Pyx_GIVEREF(__pyx_tuple__74);
+  __pyx_codeobj__75 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__74, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_mirror, 738, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__75)) __PYX_ERR(0, 738, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":706
+  /* "synexens_sdk.pyx":748
  *     return bMirror
  * 
  * def set_mirror(unsigned int nDeviceID, bool bMirror):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetMirror(nDeviceID, bMirror))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetMirror(nDeviceID, bMirror))
  */
-  __pyx_tuple__74 = PyTuple_Pack(2, __pyx_n_s_nDeviceID, __pyx_n_s_bMirror); if (unlikely(!__pyx_tuple__74)) __PYX_ERR(0, 706, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__74);
-  __Pyx_GIVEREF(__pyx_tuple__74);
-  __pyx_codeobj__75 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__74, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_mirror, 706, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__75)) __PYX_ERR(0, 706, __pyx_L1_error)
+  __pyx_tuple__76 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_bMirror, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__76)) __PYX_ERR(0, 748, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__76);
+  __Pyx_GIVEREF(__pyx_tuple__76);
+  __pyx_codeobj__77 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__76, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_mirror, 748, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__77)) __PYX_ERR(0, 748, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":709
- *     return SYErrorCode(SetMirror(nDeviceID, bMirror))
+  /* "synexens_sdk.pyx":754
+ *         raise RuntimeError(f"SetMirror() returns {ret}.")
  * 
  * def get_flip(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef bool bFlip
  *     cdef SYErrorCode ret
  */
-  __pyx_tuple__76 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_bFlip, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__76)) __PYX_ERR(0, 709, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__76);
-  __Pyx_GIVEREF(__pyx_tuple__76);
-  __pyx_codeobj__77 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__76, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_flip, 709, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__77)) __PYX_ERR(0, 709, __pyx_L1_error)
+  __pyx_tuple__78 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_bFlip, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__78)) __PYX_ERR(0, 754, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__78);
+  __Pyx_GIVEREF(__pyx_tuple__78);
+  __pyx_codeobj__79 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__78, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_flip, 754, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__79)) __PYX_ERR(0, 754, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":719
+  /* "synexens_sdk.pyx":764
  *     return bFlip
  * 
  * def set_flip(unsigned int nDeviceID, bool bFlip):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetFlip(nDeviceID, bFlip))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFlip(nDeviceID, bFlip))
  */
-  __pyx_tuple__78 = PyTuple_Pack(2, __pyx_n_s_nDeviceID, __pyx_n_s_bFlip); if (unlikely(!__pyx_tuple__78)) __PYX_ERR(0, 719, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__78);
-  __Pyx_GIVEREF(__pyx_tuple__78);
-  __pyx_codeobj__79 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__78, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_flip, 719, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__79)) __PYX_ERR(0, 719, __pyx_L1_error)
+  __pyx_tuple__80 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_bFlip, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__80)) __PYX_ERR(0, 764, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__80);
+  __Pyx_GIVEREF(__pyx_tuple__80);
+  __pyx_codeobj__81 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__80, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_flip, 764, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__81)) __PYX_ERR(0, 764, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":722
- *     return SYErrorCode(SetFlip(nDeviceID, bFlip))
+  /* "synexens_sdk.pyx":770
+ *         raise RuntimeError(f"SetFlip() returns {ret}.")
  * 
  * def get_integral_time(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nIntegralTime
  *     cdef SYErrorCode ret
  */
-  __pyx_tuple__80 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_nIntegralTime, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__80)) __PYX_ERR(0, 722, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__80);
-  __Pyx_GIVEREF(__pyx_tuple__80);
-  __pyx_codeobj__81 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__80, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_integral_time, 722, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__81)) __PYX_ERR(0, 722, __pyx_L1_error)
+  __pyx_tuple__82 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_nIntegralTime, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__82)) __PYX_ERR(0, 770, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__82);
+  __Pyx_GIVEREF(__pyx_tuple__82);
+  __pyx_codeobj__83 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__82, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_integral_time, 770, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__83)) __PYX_ERR(0, 770, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":732
+  /* "synexens_sdk.pyx":780
  *     return nIntegralTime
  * 
  * def set_integral_time(unsigned int nDeviceID, int nIntegralTime):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
  */
-  __pyx_tuple__82 = PyTuple_Pack(2, __pyx_n_s_nDeviceID, __pyx_n_s_nIntegralTime); if (unlikely(!__pyx_tuple__82)) __PYX_ERR(0, 732, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__82);
-  __Pyx_GIVEREF(__pyx_tuple__82);
-  __pyx_codeobj__83 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__82, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_integral_time, 732, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__83)) __PYX_ERR(0, 732, __pyx_L1_error)
+  __pyx_tuple__84 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_nIntegralTime, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__84)) __PYX_ERR(0, 780, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__84);
+  __Pyx_GIVEREF(__pyx_tuple__84);
+  __pyx_codeobj__85 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__84, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_integral_time, 780, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__85)) __PYX_ERR(0, 780, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":735
- *     return SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
+  /* "synexens_sdk.pyx":786
+ *         raise RuntimeError(f"SetIntegralTime() returns {ret}.")
  * 
  * def get_integral_time_range(unsigned int nDeviceID, SYResolution depthResolution):             # <<<<<<<<<<<<<<
  *     cdef int nMin
  *     cdef int nMax
  */
-  __pyx_tuple__84 = PyTuple_Pack(5, __pyx_n_s_nDeviceID, __pyx_n_s_depthResolution, __pyx_n_s_nMin, __pyx_n_s_nMax, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__84)) __PYX_ERR(0, 735, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__84);
-  __Pyx_GIVEREF(__pyx_tuple__84);
-  __pyx_codeobj__85 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__84, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_integral_time_range, 735, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__85)) __PYX_ERR(0, 735, __pyx_L1_error)
+  __pyx_tuple__86 = PyTuple_Pack(5, __pyx_n_s_nDeviceID, __pyx_n_s_depthResolution, __pyx_n_s_nMin, __pyx_n_s_nMax, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__86)) __PYX_ERR(0, 786, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__86);
+  __Pyx_GIVEREF(__pyx_tuple__86);
+  __pyx_codeobj__87 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__86, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_integral_time_range, 786, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__87)) __PYX_ERR(0, 786, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":746
+  /* "synexens_sdk.pyx":797
  *     return nMin, nMax
  * 
  * def get_distance_measure_range(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nMin
  *     cdef int nMax
  */
-  __pyx_tuple__86 = PyTuple_Pack(5, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_nMin, __pyx_n_s_nMax, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__86)) __PYX_ERR(0, 746, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__86);
-  __Pyx_GIVEREF(__pyx_tuple__86);
-  __pyx_codeobj__87 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__86, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_distance_measure_range, 746, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__87)) __PYX_ERR(0, 746, __pyx_L1_error)
+  __pyx_tuple__88 = PyTuple_Pack(5, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_nMin, __pyx_n_s_nMax, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__88)) __PYX_ERR(0, 797, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__88);
+  __Pyx_GIVEREF(__pyx_tuple__88);
+  __pyx_codeobj__89 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__88, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_distance_measure_range, 797, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__89)) __PYX_ERR(0, 797, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":757
+  /* "synexens_sdk.pyx":808
  *     return nMin, nMax
  * 
  * def get_distance_user_range(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nMin
  *     cdef int nMax
  */
-  __pyx_tuple__88 = PyTuple_Pack(5, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_nMin, __pyx_n_s_nMax, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__88)) __PYX_ERR(0, 757, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__88);
-  __Pyx_GIVEREF(__pyx_tuple__88);
-  __pyx_codeobj__89 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__88, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_distance_user_range, 757, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__89)) __PYX_ERR(0, 757, __pyx_L1_error)
+  __pyx_tuple__90 = PyTuple_Pack(5, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_nMin, __pyx_n_s_nMax, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__90)) __PYX_ERR(0, 808, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__90);
+  __Pyx_GIVEREF(__pyx_tuple__90);
+  __pyx_codeobj__91 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__90, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_distance_user_range, 808, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__91)) __PYX_ERR(0, 808, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":768
+  /* "synexens_sdk.pyx":819
  *     return nMin, nMax
  * 
  * def set_distance_user_range(unsigned int nDeviceID, int nMin, int nMax):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
  */
-  __pyx_tuple__90 = PyTuple_Pack(3, __pyx_n_s_nDeviceID, __pyx_n_s_nMin, __pyx_n_s_nMax); if (unlikely(!__pyx_tuple__90)) __PYX_ERR(0, 768, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__90);
-  __Pyx_GIVEREF(__pyx_tuple__90);
-  __pyx_codeobj__91 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__90, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_distance_user_range, 768, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__91)) __PYX_ERR(0, 768, __pyx_L1_error)
+  __pyx_tuple__92 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_nMin, __pyx_n_s_nMax, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__92)) __PYX_ERR(0, 819, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__92);
+  __Pyx_GIVEREF(__pyx_tuple__92);
+  __pyx_codeobj__93 = (PyObject*)__Pyx_PyCode_New(3, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__92, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_set_distance_user_range, 819, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__93)) __PYX_ERR(0, 819, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":771
- *     return SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
+  /* "synexens_sdk.pyx":825
+ *         raise RuntimeError(f"SetDistanceUserRange() returns {ret}.")
  * 
  * def get_device_sn(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef char arr[256]
  *     cdef int nLength = 256
  */
-  __pyx_tuple__92 = PyTuple_Pack(5, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_arr, __pyx_n_s_nLength, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__92)) __PYX_ERR(0, 771, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__92);
-  __Pyx_GIVEREF(__pyx_tuple__92);
-  __pyx_codeobj__93 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__92, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_device_sn, 771, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__93)) __PYX_ERR(0, 771, __pyx_L1_error)
+  __pyx_tuple__94 = PyTuple_Pack(5, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_arr, __pyx_n_s_nLength, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__94)) __PYX_ERR(0, 825, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__94);
+  __Pyx_GIVEREF(__pyx_tuple__94);
+  __pyx_codeobj__95 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__94, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_device_sn, 825, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__95)) __PYX_ERR(0, 825, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":782
+  /* "synexens_sdk.pyx":836
  *     return arr[:nLength]
  * 
  * def get_device_hw_version(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef char arr[256]
  *     cdef int nLength = 256
  */
-  __pyx_tuple__94 = PyTuple_Pack(5, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_arr, __pyx_n_s_nLength, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__94)) __PYX_ERR(0, 782, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__94);
-  __Pyx_GIVEREF(__pyx_tuple__94);
-  __pyx_codeobj__95 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__94, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_device_hw_version, 782, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__95)) __PYX_ERR(0, 782, __pyx_L1_error)
+  __pyx_tuple__96 = PyTuple_Pack(5, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_arr, __pyx_n_s_nLength, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__96)) __PYX_ERR(0, 836, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__96);
+  __Pyx_GIVEREF(__pyx_tuple__96);
+  __pyx_codeobj__97 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__96, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_device_hw_version, 836, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__97)) __PYX_ERR(0, 836, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":793
+  /* "synexens_sdk.pyx":847
  *     return arr[:nLength].decode()
  * 
  * def get_depth_color(unsigned int nDeviceID, unsigned short[:,:,:] pDepth):             # <<<<<<<<<<<<<<
  *     cdef SYErrorCode ret
  * 
  */
-  __pyx_tuple__96 = PyTuple_Pack(5, __pyx_n_s_nDeviceID, __pyx_n_s_pDepth, __pyx_n_s_ret, __pyx_n_s_pColor, __pyx_n_s_pColor_view); if (unlikely(!__pyx_tuple__96)) __PYX_ERR(0, 793, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__96);
-  __Pyx_GIVEREF(__pyx_tuple__96);
-  __pyx_codeobj__97 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__96, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_depth_color, 793, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__97)) __PYX_ERR(0, 793, __pyx_L1_error)
+  __pyx_tuple__98 = PyTuple_Pack(5, __pyx_n_s_nDeviceID, __pyx_n_s_pDepth, __pyx_n_s_ret, __pyx_n_s_pColor, __pyx_n_s_pColor_view); if (unlikely(!__pyx_tuple__98)) __PYX_ERR(0, 847, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__98);
+  __Pyx_GIVEREF(__pyx_tuple__98);
+  __pyx_codeobj__99 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__98, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_depth_color, 847, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__99)) __PYX_ERR(0, 847, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":806
+  /* "synexens_sdk.pyx":860
  *     return pColor
  * 
  * def get_depth_point_cloud(unsigned int nDeviceID, unsigned short[:,:,:] pDepth, bool bUndistort):             # <<<<<<<<<<<<<<
  *     cdef SYErrorCode ret
  * 
  */
-  __pyx_tuple__98 = PyTuple_Pack(8, __pyx_n_s_nDeviceID, __pyx_n_s_pDepth, __pyx_n_s_bUndistort, __pyx_n_s_ret, __pyx_n_s_nHeight, __pyx_n_s_nWidth, __pyx_n_s_pPos, __pyx_n_s_pPos_view); if (unlikely(!__pyx_tuple__98)) __PYX_ERR(0, 806, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__98);
-  __Pyx_GIVEREF(__pyx_tuple__98);
-  __pyx_codeobj__99 = (PyObject*)__Pyx_PyCode_New(3, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__98, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_depth_point_cloud, 806, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__99)) __PYX_ERR(0, 806, __pyx_L1_error)
+  __pyx_tuple__100 = PyTuple_Pack(8, __pyx_n_s_nDeviceID, __pyx_n_s_pDepth, __pyx_n_s_bUndistort, __pyx_n_s_ret, __pyx_n_s_nHeight, __pyx_n_s_nWidth, __pyx_n_s_pPos, __pyx_n_s_pPos_view); if (unlikely(!__pyx_tuple__100)) __PYX_ERR(0, 860, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__100);
+  __Pyx_GIVEREF(__pyx_tuple__100);
+  __pyx_codeobj__101 = (PyObject*)__Pyx_PyCode_New(3, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__100, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_depth_point_cloud, 860, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__101)) __PYX_ERR(0, 860, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":821
+  /* "synexens_sdk.pyx":875
  *     return pPos
  * 
  * def extract_resolution(SYResolution resolution):             # <<<<<<<<<<<<<<
  *     if resolution == SYRESOLUTION_NULL:
  *         return 0, 0
  */
-  __pyx_tuple__100 = PyTuple_Pack(2, __pyx_n_s_resolution, __pyx_n_s_resolution); if (unlikely(!__pyx_tuple__100)) __PYX_ERR(0, 821, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__100);
-  __Pyx_GIVEREF(__pyx_tuple__100);
-  __pyx_codeobj__101 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__100, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_extract_resolution, 821, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__101)) __PYX_ERR(0, 821, __pyx_L1_error)
+  __pyx_tuple__102 = PyTuple_Pack(2, __pyx_n_s_resolution, __pyx_n_s_resolution); if (unlikely(!__pyx_tuple__102)) __PYX_ERR(0, 875, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__102);
+  __Pyx_GIVEREF(__pyx_tuple__102);
+  __pyx_codeobj__103 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__102, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_extract_resolution, 875, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__103)) __PYX_ERR(0, 875, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":833
+  /* "synexens_sdk.pyx":887
  *         return 1920, 1080
  * 
  * def extract_dtype(SYFrameType frameType):             # <<<<<<<<<<<<<<
  *     if frameType in (SYFRAMETYPE_DEPTH, SYFRAMETYPE_IR):
  *         return np.uint16
  */
-  __pyx_tuple__102 = PyTuple_Pack(2, __pyx_n_s_frameType, __pyx_n_s_frameType); if (unlikely(!__pyx_tuple__102)) __PYX_ERR(0, 833, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__102);
-  __Pyx_GIVEREF(__pyx_tuple__102);
-  __pyx_codeobj__103 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__102, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_extract_dtype, 833, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__103)) __PYX_ERR(0, 833, __pyx_L1_error)
+  __pyx_tuple__104 = PyTuple_Pack(2, __pyx_n_s_frameType, __pyx_n_s_frameType); if (unlikely(!__pyx_tuple__104)) __PYX_ERR(0, 887, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__104);
+  __Pyx_GIVEREF(__pyx_tuple__104);
+  __pyx_codeobj__105 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__104, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_extract_dtype, 887, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__105)) __PYX_ERR(0, 887, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":838
+  /* "synexens_sdk.pyx":892
  *     return np.uint8
  * 
  * def extract_channel_count(SYFrameType frameType):             # <<<<<<<<<<<<<<
  *     if frameType in (SYFRAMETYPE_DEPTH, SYFRAMETYPE_IR):
  *         return 1
  */
-  __pyx_tuple__104 = PyTuple_Pack(2, __pyx_n_s_frameType, __pyx_n_s_frameType); if (unlikely(!__pyx_tuple__104)) __PYX_ERR(0, 838, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__104);
-  __Pyx_GIVEREF(__pyx_tuple__104);
-  __pyx_codeobj__105 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__104, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_extract_channel_count, 838, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__105)) __PYX_ERR(0, 838, __pyx_L1_error)
+  __pyx_tuple__106 = PyTuple_Pack(2, __pyx_n_s_frameType, __pyx_n_s_frameType); if (unlikely(!__pyx_tuple__106)) __PYX_ERR(0, 892, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__106);
+  __Pyx_GIVEREF(__pyx_tuple__106);
+  __pyx_codeobj__107 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__106, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_extract_channel_count, 892, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__107)) __PYX_ERR(0, 892, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":843
+  /* "synexens_sdk.pyx":897
  *     return 3
  * 
  * def get_last_frame_data(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef SYErrorCode ret
  *     cdef SYFrameData* pFrameData
  */
-  __pyx_tuple__106 = PyTuple_Pack(17, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_ret, __pyx_n_s_pFrameData, __pyx_n_s_pFrameInfo, __pyx_n_s_uint16Data, __pyx_n_s_uint8Data, __pyx_n_s_d_frames, __pyx_n_s_ofs, __pyx_n_s_i, __pyx_n_s_frameType, __pyx_n_s_dtype, __pyx_n_s_nChannels, __pyx_n_s_width, __pyx_n_s_height, __pyx_n_s_size, __pyx_n_s_img); if (unlikely(!__pyx_tuple__106)) __PYX_ERR(0, 843, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__106);
-  __Pyx_GIVEREF(__pyx_tuple__106);
-  __pyx_codeobj__107 = (PyObject*)__Pyx_PyCode_New(1, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__106, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_last_frame_data, 843, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__107)) __PYX_ERR(0, 843, __pyx_L1_error)
+  __pyx_tuple__108 = PyTuple_Pack(17, __pyx_n_s_nDeviceID, __pyx_n_s_nDeviceID, __pyx_n_s_ret, __pyx_n_s_pFrameData, __pyx_n_s_pFrameInfo, __pyx_n_s_uint16Data, __pyx_n_s_uint8Data, __pyx_n_s_d_frames, __pyx_n_s_ofs, __pyx_n_s_i, __pyx_n_s_frameType, __pyx_n_s_dtype, __pyx_n_s_nChannels, __pyx_n_s_width, __pyx_n_s_height, __pyx_n_s_size, __pyx_n_s_img); if (unlikely(!__pyx_tuple__108)) __PYX_ERR(0, 897, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__108);
+  __Pyx_GIVEREF(__pyx_tuple__108);
+  __pyx_codeobj__109 = (PyObject*)__Pyx_PyCode_New(1, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__108, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_last_frame_data, 897, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__109)) __PYX_ERR(0, 897, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":876
+  /* "synexens_sdk.pyx":930
  *     return d_frames
  * 
  * def undistort_depth(unsigned int nDeviceID, unsigned short[:,:,:] pDepth):             # <<<<<<<<<<<<<<
  *     cdef SYErrorCode ret
  * 
  */
-  __pyx_tuple__108 = PyTuple_Pack(7, __pyx_n_s_nDeviceID, __pyx_n_s_pDepth, __pyx_n_s_ret, __pyx_n_s_nHeight, __pyx_n_s_nWidth, __pyx_n_s_pDepth2, __pyx_n_s_pDepth2_view); if (unlikely(!__pyx_tuple__108)) __PYX_ERR(0, 876, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__108);
-  __Pyx_GIVEREF(__pyx_tuple__108);
-  __pyx_codeobj__109 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__108, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_undistort_depth, 876, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__109)) __PYX_ERR(0, 876, __pyx_L1_error)
+  __pyx_tuple__110 = PyTuple_Pack(7, __pyx_n_s_nDeviceID, __pyx_n_s_pDepth, __pyx_n_s_ret, __pyx_n_s_nHeight, __pyx_n_s_nWidth, __pyx_n_s_pDepth2, __pyx_n_s_pDepth2_view); if (unlikely(!__pyx_tuple__110)) __PYX_ERR(0, 930, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__110);
+  __Pyx_GIVEREF(__pyx_tuple__110);
+  __pyx_codeobj__111 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__110, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_undistort_depth, 930, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__111)) __PYX_ERR(0, 930, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":891
+  /* "synexens_sdk.pyx":945
  *     return pDepth2
  * 
  * def undistort_ir(unsigned int nDeviceID, unsigned short[:,:,:] pIr):             # <<<<<<<<<<<<<<
  *     cdef SYErrorCode ret
  * 
  */
-  __pyx_tuple__110 = PyTuple_Pack(7, __pyx_n_s_nDeviceID, __pyx_n_s_pIr, __pyx_n_s_ret, __pyx_n_s_nHeight, __pyx_n_s_nWidth, __pyx_n_s_pIr2, __pyx_n_s_pIr2_view); if (unlikely(!__pyx_tuple__110)) __PYX_ERR(0, 891, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__110);
-  __Pyx_GIVEREF(__pyx_tuple__110);
-  __pyx_codeobj__111 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__110, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_undistort_ir, 891, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__111)) __PYX_ERR(0, 891, __pyx_L1_error)
+  __pyx_tuple__112 = PyTuple_Pack(7, __pyx_n_s_nDeviceID, __pyx_n_s_pIr, __pyx_n_s_ret, __pyx_n_s_nHeight, __pyx_n_s_nWidth, __pyx_n_s_pIr2, __pyx_n_s_pIr2_view); if (unlikely(!__pyx_tuple__112)) __PYX_ERR(0, 945, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__112);
+  __Pyx_GIVEREF(__pyx_tuple__112);
+  __pyx_codeobj__113 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__112, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_undistort_ir, 945, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__113)) __PYX_ERR(0, 945, __pyx_L1_error)
 
-  /* "synexens_sdk.pyx":906
+  /* "synexens_sdk.pyx":960
  *     return pIr2
  * 
  * def get_intrinsics(unsigned int nDeviceID, SYResolution resolution):             # <<<<<<<<<<<<<<
  *     cdef SYErrorCode ret
  *     cdef SYIntrinsics intrinsics
  */
-  __pyx_tuple__112 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_resolution, __pyx_n_s_ret, __pyx_n_s_intrinsics); if (unlikely(!__pyx_tuple__112)) __PYX_ERR(0, 906, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__112);
-  __Pyx_GIVEREF(__pyx_tuple__112);
-  __pyx_codeobj__113 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__112, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_intrinsics, 906, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__113)) __PYX_ERR(0, 906, __pyx_L1_error)
+  __pyx_tuple__114 = PyTuple_Pack(4, __pyx_n_s_nDeviceID, __pyx_n_s_resolution, __pyx_n_s_ret, __pyx_n_s_intrinsics); if (unlikely(!__pyx_tuple__114)) __PYX_ERR(0, 960, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__114);
+  __Pyx_GIVEREF(__pyx_tuple__114);
+  __pyx_codeobj__115 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__114, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_synexens_sdk_pyx, __pyx_n_s_get_intrinsics, 960, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__115)) __PYX_ERR(0, 960, __pyx_L1_error)
 
   /* "EnumBase":28
  * class __Pyx_EnumBase(int):
@@ -28909,13 +30068,13 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         for v in cls:
  *             if v == value:
  */
-  __pyx_tuple__114 = PyTuple_Pack(5, __pyx_n_s_cls, __pyx_n_s_value, __pyx_n_s_name, __pyx_n_s_v, __pyx_n_s_res); if (unlikely(!__pyx_tuple__114)) __PYX_ERR(1, 28, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__114);
-  __Pyx_GIVEREF(__pyx_tuple__114);
-  __pyx_codeobj__115 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__114, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_new, 28, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__115)) __PYX_ERR(1, 28, __pyx_L1_error)
-  __pyx_tuple__116 = PyTuple_Pack(1, ((PyObject *)Py_None)); if (unlikely(!__pyx_tuple__116)) __PYX_ERR(1, 28, __pyx_L1_error)
+  __pyx_tuple__116 = PyTuple_Pack(5, __pyx_n_s_cls, __pyx_n_s_value, __pyx_n_s_name, __pyx_n_s_v, __pyx_n_s_res); if (unlikely(!__pyx_tuple__116)) __PYX_ERR(1, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__116);
   __Pyx_GIVEREF(__pyx_tuple__116);
+  __pyx_codeobj__117 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__116, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_new, 28, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__117)) __PYX_ERR(1, 28, __pyx_L1_error)
+  __pyx_tuple__118 = PyTuple_Pack(1, ((PyObject *)Py_None)); if (unlikely(!__pyx_tuple__118)) __PYX_ERR(1, 28, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__118);
+  __Pyx_GIVEREF(__pyx_tuple__118);
 
   /* "EnumBase":39
  *         cls.__members__[name] = res
@@ -28924,10 +30083,10 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         return "<%s.%s: %d>" % (self.__class__.__name__, self.name, self)
  *     def __str__(self):
  */
-  __pyx_tuple__117 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__117)) __PYX_ERR(1, 39, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__117);
-  __Pyx_GIVEREF(__pyx_tuple__117);
-  __pyx_codeobj__118 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__117, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_repr, 39, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__118)) __PYX_ERR(1, 39, __pyx_L1_error)
+  __pyx_tuple__119 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__119)) __PYX_ERR(1, 39, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__119);
+  __Pyx_GIVEREF(__pyx_tuple__119);
+  __pyx_codeobj__120 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__119, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_repr, 39, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__120)) __PYX_ERR(1, 39, __pyx_L1_error)
 
   /* "EnumBase":41
  *     def __repr__(self):
@@ -28936,20 +30095,20 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         return "%s.%s" % (self.__class__.__name__, self.name)
  * 
  */
-  __pyx_tuple__119 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__119)) __PYX_ERR(1, 41, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__119);
-  __Pyx_GIVEREF(__pyx_tuple__119);
-  __pyx_codeobj__120 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__119, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_str, 41, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__120)) __PYX_ERR(1, 41, __pyx_L1_error)
+  __pyx_tuple__121 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__121)) __PYX_ERR(1, 41, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__121);
+  __Pyx_GIVEREF(__pyx_tuple__121);
+  __pyx_codeobj__122 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__121, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_str, 41, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__122)) __PYX_ERR(1, 41, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __pyx_unpickle___Pyx_EnumMeta(__pyx_type, long __pyx_checksum, __pyx_state):             # <<<<<<<<<<<<<<
  *     cdef object __pyx_PickleError
  *     cdef object __pyx_result
  */
-  __pyx_tuple__121 = PyTuple_Pack(5, __pyx_n_s_pyx_type, __pyx_n_s_pyx_checksum, __pyx_n_s_pyx_state, __pyx_n_s_pyx_PickleError, __pyx_n_s_pyx_result); if (unlikely(!__pyx_tuple__121)) __PYX_ERR(1, 1, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__121);
-  __Pyx_GIVEREF(__pyx_tuple__121);
-  __pyx_codeobj__122 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__121, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle___Pyx_EnumMeta, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__122)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_tuple__123 = PyTuple_Pack(5, __pyx_n_s_pyx_type, __pyx_n_s_pyx_checksum, __pyx_n_s_pyx_state, __pyx_n_s_pyx_PickleError, __pyx_n_s_pyx_result); if (unlikely(!__pyx_tuple__123)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__123);
+  __Pyx_GIVEREF(__pyx_tuple__123);
+  __pyx_codeobj__124 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__123, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle___Pyx_EnumMeta, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__124)) __PYX_ERR(1, 1, __pyx_L1_error)
 
   /* "View.MemoryView":287
  *         return self.name
@@ -28958,9 +30117,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * cdef strided = Enum("<strided and direct>") # default
  * cdef indirect = Enum("<strided and indirect>")
  */
-  __pyx_tuple__123 = PyTuple_Pack(1, __pyx_kp_s_strided_and_direct_or_indirect); if (unlikely(!__pyx_tuple__123)) __PYX_ERR(1, 287, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__123);
-  __Pyx_GIVEREF(__pyx_tuple__123);
+  __pyx_tuple__125 = PyTuple_Pack(1, __pyx_kp_s_strided_and_direct_or_indirect); if (unlikely(!__pyx_tuple__125)) __PYX_ERR(1, 287, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__125);
+  __Pyx_GIVEREF(__pyx_tuple__125);
 
   /* "View.MemoryView":288
  * 
@@ -28969,9 +30128,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * cdef indirect = Enum("<strided and indirect>")
  * 
  */
-  __pyx_tuple__124 = PyTuple_Pack(1, __pyx_kp_s_strided_and_direct); if (unlikely(!__pyx_tuple__124)) __PYX_ERR(1, 288, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__124);
-  __Pyx_GIVEREF(__pyx_tuple__124);
+  __pyx_tuple__126 = PyTuple_Pack(1, __pyx_kp_s_strided_and_direct); if (unlikely(!__pyx_tuple__126)) __PYX_ERR(1, 288, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__126);
+  __Pyx_GIVEREF(__pyx_tuple__126);
 
   /* "View.MemoryView":289
  * cdef generic = Enum("<strided and direct or indirect>")
@@ -28980,9 +30139,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  * 
  */
-  __pyx_tuple__125 = PyTuple_Pack(1, __pyx_kp_s_strided_and_indirect); if (unlikely(!__pyx_tuple__125)) __PYX_ERR(1, 289, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__125);
-  __Pyx_GIVEREF(__pyx_tuple__125);
+  __pyx_tuple__127 = PyTuple_Pack(1, __pyx_kp_s_strided_and_indirect); if (unlikely(!__pyx_tuple__127)) __PYX_ERR(1, 289, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__127);
+  __Pyx_GIVEREF(__pyx_tuple__127);
 
   /* "View.MemoryView":292
  * 
@@ -28991,9 +30150,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * cdef indirect_contiguous = Enum("<contiguous and indirect>")
  * 
  */
-  __pyx_tuple__126 = PyTuple_Pack(1, __pyx_kp_s_contiguous_and_direct); if (unlikely(!__pyx_tuple__126)) __PYX_ERR(1, 292, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__126);
-  __Pyx_GIVEREF(__pyx_tuple__126);
+  __pyx_tuple__128 = PyTuple_Pack(1, __pyx_kp_s_contiguous_and_direct); if (unlikely(!__pyx_tuple__128)) __PYX_ERR(1, 292, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__128);
+  __Pyx_GIVEREF(__pyx_tuple__128);
 
   /* "View.MemoryView":293
  * 
@@ -29002,19 +30161,19 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  * 
  */
-  __pyx_tuple__127 = PyTuple_Pack(1, __pyx_kp_s_contiguous_and_indirect); if (unlikely(!__pyx_tuple__127)) __PYX_ERR(1, 293, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__127);
-  __Pyx_GIVEREF(__pyx_tuple__127);
+  __pyx_tuple__129 = PyTuple_Pack(1, __pyx_kp_s_contiguous_and_indirect); if (unlikely(!__pyx_tuple__129)) __PYX_ERR(1, 293, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__129);
+  __Pyx_GIVEREF(__pyx_tuple__129);
 
   /* "(tree fragment)":1
  * def __pyx_unpickle_Enum(__pyx_type, long __pyx_checksum, __pyx_state):             # <<<<<<<<<<<<<<
  *     cdef object __pyx_PickleError
  *     cdef object __pyx_result
  */
-  __pyx_tuple__128 = PyTuple_Pack(5, __pyx_n_s_pyx_type, __pyx_n_s_pyx_checksum, __pyx_n_s_pyx_state, __pyx_n_s_pyx_PickleError, __pyx_n_s_pyx_result); if (unlikely(!__pyx_tuple__128)) __PYX_ERR(1, 1, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__128);
-  __Pyx_GIVEREF(__pyx_tuple__128);
-  __pyx_codeobj__129 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__128, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_Enum, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__129)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_tuple__130 = PyTuple_Pack(5, __pyx_n_s_pyx_type, __pyx_n_s_pyx_checksum, __pyx_n_s_pyx_state, __pyx_n_s_pyx_PickleError, __pyx_n_s_pyx_result); if (unlikely(!__pyx_tuple__130)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__130);
+  __Pyx_GIVEREF(__pyx_tuple__130);
+  __pyx_codeobj__131 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__130, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_Enum, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__131)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -29448,516 +30607,516 @@ if (!__Pyx_RefNanny) {
  *     return arr[:nLength].decode()
  * 
  * def init_sdk():             # <<<<<<<<<<<<<<
- *     return SYErrorCode(InitSDK())
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(InitSDK())
  */
   __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_3init_sdk, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 526, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_init_sdk, __pyx_t_1) < 0) __PYX_ERR(0, 526, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":529
- *     return SYErrorCode(InitSDK())
+  /* "synexens_sdk.pyx":532
+ *         raise RuntimeError(f"InitSDK() returns {ret}.")
  * 
  * def uninit_sdk():             # <<<<<<<<<<<<<<
- *     return SYErrorCode(UnInitSDK())
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(UnInitSDK())
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_5uninit_sdk, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 529, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_5uninit_sdk, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_uninit_sdk, __pyx_t_1) < 0) __PYX_ERR(0, 529, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_uninit_sdk, __pyx_t_1) < 0) __PYX_ERR(0, 532, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":532
- *     return SYErrorCode(UnInitSDK())
+  /* "synexens_sdk.pyx":538
+ *         raise RuntimeError(f"UnInitSDK() returns {ret}.")
  * 
  * def find_device():             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
  *     cdef vector[SYDeviceInfo] devices
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_7find_device, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_7find_device, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 538, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_find_device, __pyx_t_1) < 0) __PYX_ERR(0, 532, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_find_device, __pyx_t_1) < 0) __PYX_ERR(0, 538, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":555
+  /* "synexens_sdk.pyx":561
  *     return res
  * 
  * def open_device(unsigned int nDeviceID, SYDeviceType deviceType):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
  *     cdef SYDeviceInfo di
- * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_9open_device, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 555, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_9open_device, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 561, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_open_device, __pyx_t_1) < 0) __PYX_ERR(0, 555, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_open_device, __pyx_t_1) < 0) __PYX_ERR(0, 561, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":563
- *     return SYErrorCode(OpenDevice(di))
+  /* "synexens_sdk.pyx":572
+ *         raise RuntimeError(f"OpenDevice() returns {ret}.")
  * 
  * def close_device(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(CloseDevice(nDeviceID))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(CloseDevice(nDeviceID))
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_11close_device, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_11close_device, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 572, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_close_device, __pyx_t_1) < 0) __PYX_ERR(0, 563, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_close_device, __pyx_t_1) < 0) __PYX_ERR(0, 572, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":566
- *     return SYErrorCode(CloseDevice(nDeviceID))
+  /* "synexens_sdk.pyx":578
+ *         raise RuntimeError(f"CloseDevice() returns {ret}.")
  * 
  * def query_device_support_frame_type(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
  *     cdef vector[SYSupportType] supportTypes
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_13query_device_support_frame_type, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 566, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_13query_device_support_frame_type, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 578, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_query_device_support_frame_type, __pyx_t_1) < 0) __PYX_ERR(0, 566, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_query_device_support_frame_type, __pyx_t_1) < 0) __PYX_ERR(0, 578, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":585
+  /* "synexens_sdk.pyx":597
  *     return res
  * 
  * def query_device_support_resolution(unsigned int nDeviceID, SYSupportType supportType):             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
  *     cdef vector[SYResolution] resolutions
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_15query_device_support_resolution, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 585, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_15query_device_support_resolution, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 597, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_query_device_support_resolution, __pyx_t_1) < 0) __PYX_ERR(0, 585, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_query_device_support_resolution, __pyx_t_1) < 0) __PYX_ERR(0, 597, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":604
+  /* "synexens_sdk.pyx":616
  *     return res
  * 
  * def get_current_stream_type(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     return SYStreamType(GetCurrentStreamType(nDeviceID))
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_17get_current_stream_type, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 604, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_17get_current_stream_type, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 616, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_current_stream_type, __pyx_t_1) < 0) __PYX_ERR(0, 604, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "synexens_sdk.pyx":607
- *     return SYStreamType(GetCurrentStreamType(nDeviceID))
- * 
- * def start_streaming(unsigned int nDeviceID, SYStreamType streamType):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(StartStreaming(nDeviceID, streamType))
- * 
- */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_19start_streaming, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 607, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_start_streaming, __pyx_t_1) < 0) __PYX_ERR(0, 607, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "synexens_sdk.pyx":610
- *     return SYErrorCode(StartStreaming(nDeviceID, streamType))
- * 
- * def stop_streaming(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(StopStreaming(nDeviceID))
- * 
- */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_21stop_streaming, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 610, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_stop_streaming, __pyx_t_1) < 0) __PYX_ERR(0, 610, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "synexens_sdk.pyx":613
- *     return SYErrorCode(StopStreaming(nDeviceID))
- * 
- * def change_streaming(unsigned int nDeviceID, SYStreamType streamType):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(ChangeStreaming(nDeviceID, streamType))
- * 
- */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_23change_streaming, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 613, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_change_streaming, __pyx_t_1) < 0) __PYX_ERR(0, 613, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "synexens_sdk.pyx":616
- *     return SYErrorCode(ChangeStreaming(nDeviceID, streamType))
- * 
- * def set_frame_resolution(unsigned int nDeviceID, SYFrameType frameType, SYResolution resolution):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
- * 
- */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_25set_frame_resolution, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 616, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_frame_resolution, __pyx_t_1) < 0) __PYX_ERR(0, 616, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_current_stream_type, __pyx_t_1) < 0) __PYX_ERR(0, 616, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "synexens_sdk.pyx":619
- *     return SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
+ *     return SYStreamType(GetCurrentStreamType(nDeviceID))
+ * 
+ * def start_streaming(unsigned int nDeviceID, SYStreamType streamType):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(StartStreaming(nDeviceID, streamType))
+ */
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_19start_streaming, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 619, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_start_streaming, __pyx_t_1) < 0) __PYX_ERR(0, 619, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "synexens_sdk.pyx":625
+ *         raise RuntimeError(f"StartStreaming() returns {ret}.")
+ * 
+ * def stop_streaming(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(StopStreaming(nDeviceID))
+ */
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_21stop_streaming, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 625, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_stop_streaming, __pyx_t_1) < 0) __PYX_ERR(0, 625, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "synexens_sdk.pyx":631
+ *         raise RuntimeError(f"StopStreaming() returns {ret}.")
+ * 
+ * def change_streaming(unsigned int nDeviceID, SYStreamType streamType):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(ChangeStreaming(nDeviceID, streamType))
+ */
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_23change_streaming, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 631, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_change_streaming, __pyx_t_1) < 0) __PYX_ERR(0, 631, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "synexens_sdk.pyx":637
+ *         raise RuntimeError(f"ChangeStreaming() returns {ret}.")
+ * 
+ * def set_frame_resolution(unsigned int nDeviceID, SYFrameType frameType, SYResolution resolution):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFrameResolution(nDeviceID, frameType, resolution))
+ */
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_25set_frame_resolution, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 637, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_frame_resolution, __pyx_t_1) < 0) __PYX_ERR(0, 637, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "synexens_sdk.pyx":643
+ *         raise RuntimeError(f"SetFrameResolution() returns {ret}.")
  * 
  * def get_frame_resolution(unsigned int nDeviceID, SYFrameType frameType):             # <<<<<<<<<<<<<<
  *     cdef SYResolution resolution
  *     cdef SYErrorCode ret
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_27get_frame_resolution, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 619, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_27get_frame_resolution, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 643, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_frame_resolution, __pyx_t_1) < 0) __PYX_ERR(0, 619, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_frame_resolution, __pyx_t_1) < 0) __PYX_ERR(0, 643, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":629
+  /* "synexens_sdk.pyx":653
  *     return SYResolution(resolution)
  * 
  * def get_filter(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef bool bFilter
  *     cdef SYErrorCode ret
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_29get_filter, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 629, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_29get_filter, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 653, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_filter, __pyx_t_1) < 0) __PYX_ERR(0, 629, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_filter, __pyx_t_1) < 0) __PYX_ERR(0, 653, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":639
+  /* "synexens_sdk.pyx":663
  *     return bFilter
  * 
  * def set_filter(unsigned int nDeviceID, bool bFilter):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetFilter(nDeviceID, bFilter))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFilter(nDeviceID, bFilter))
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_31set_filter, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 639, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_31set_filter, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 663, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_filter, __pyx_t_1) < 0) __PYX_ERR(0, 639, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_filter, __pyx_t_1) < 0) __PYX_ERR(0, 663, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":642
- *     return SYErrorCode(SetFilter(nDeviceID, bFilter))
+  /* "synexens_sdk.pyx":669
+ *         raise RuntimeError(f"SetFilter() returns {ret}.")
  * 
  * def get_filter_list(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
  *     cdef vector[SYFilterType] filterTypes
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_33get_filter_list, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 642, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_33get_filter_list, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 669, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_filter_list, __pyx_t_1) < 0) __PYX_ERR(0, 642, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_filter_list, __pyx_t_1) < 0) __PYX_ERR(0, 669, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":661
+  /* "synexens_sdk.pyx":688
  *     return res
  * 
  * def set_default_filter(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetDefaultFilter(nDeviceID))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetDefaultFilter(nDeviceID))
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_35set_default_filter, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 661, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_35set_default_filter, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 688, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_default_filter, __pyx_t_1) < 0) __PYX_ERR(0, 661, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_default_filter, __pyx_t_1) < 0) __PYX_ERR(0, 688, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":664
- *     return SYErrorCode(SetDefaultFilter(nDeviceID))
+  /* "synexens_sdk.pyx":694
+ *         raise RuntimeError(f"SetDefaultFilter() returns {ret}.")
  * 
  * def add_filter(unsigned int nDeviceID, SYFilterType filterType):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(AddFilter(nDeviceID, filterType))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(AddFilter(nDeviceID, filterType))
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_37add_filter, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 664, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_37add_filter, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 694, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_add_filter, __pyx_t_1) < 0) __PYX_ERR(0, 664, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_add_filter, __pyx_t_1) < 0) __PYX_ERR(0, 694, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":667
- *     return SYErrorCode(AddFilter(nDeviceID, filterType))
+  /* "synexens_sdk.pyx":700
+ *         raise RuntimeError(f"AddFilter() returns {ret}.")
  * 
  * def delete_filter(unsigned int nDeviceID, int nIndex):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(DeleteFilter(nDeviceID, nIndex))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(DeleteFilter(nDeviceID, nIndex))
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_39delete_filter, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 667, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_39delete_filter, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 700, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_delete_filter, __pyx_t_1) < 0) __PYX_ERR(0, 667, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_delete_filter, __pyx_t_1) < 0) __PYX_ERR(0, 700, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":670
- *     return SYErrorCode(DeleteFilter(nDeviceID, nIndex))
+  /* "synexens_sdk.pyx":706
+ *         raise RuntimeError(f"DeleteFilter() returns {ret}.")
  * 
  * def clear_filter(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(ClearFilter(nDeviceID))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(ClearFilter(nDeviceID))
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_41clear_filter, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 670, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_41clear_filter, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 706, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_clear_filter, __pyx_t_1) < 0) __PYX_ERR(0, 670, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_clear_filter, __pyx_t_1) < 0) __PYX_ERR(0, 706, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":673
- *     return SYErrorCode(ClearFilter(nDeviceID))
+  /* "synexens_sdk.pyx":712
+ *         raise RuntimeError(f"ClearFilter() returns {ret}.")
  * 
  * def set_filter_params(unsigned int nDeviceID, SYFilterType filterType, float[:] filterParams):             # <<<<<<<<<<<<<<
+ *     cdef SYErrorCode ret
  *     if filterParams.strides[0] != 4:
- *         raise ValueError("Argument 'filterParams' is not contiguous.")
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_43set_filter_params, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 673, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_43set_filter_params, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 712, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_filter_params, __pyx_t_1) < 0) __PYX_ERR(0, 673, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_filter_params, __pyx_t_1) < 0) __PYX_ERR(0, 712, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":678
- *     return SYErrorCode(SetFilterParam(nDeviceID, filterType, filterParams.shape[0], &filterParams[0]))
+  /* "synexens_sdk.pyx":720
+ *         raise RuntimeError(f"SetFitlerParam() returns {ret}.")
  * 
  * def get_filter_params(unsigned int nDeviceID, SYFilterType filterType):             # <<<<<<<<<<<<<<
  *     cdef int nCount = 0
  *     cdef vector[float] filterParams
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_45get_filter_params, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 678, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_45get_filter_params, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 720, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_filter_params, __pyx_t_1) < 0) __PYX_ERR(0, 678, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_filter_params, __pyx_t_1) < 0) __PYX_ERR(0, 720, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":696
+  /* "synexens_sdk.pyx":738
  *     return res
  * 
  * def get_mirror(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef bool bMirror
  *     cdef SYErrorCode ret
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_47get_mirror, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 696, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_47get_mirror, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 738, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_mirror, __pyx_t_1) < 0) __PYX_ERR(0, 696, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_mirror, __pyx_t_1) < 0) __PYX_ERR(0, 738, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":706
+  /* "synexens_sdk.pyx":748
  *     return bMirror
  * 
  * def set_mirror(unsigned int nDeviceID, bool bMirror):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetMirror(nDeviceID, bMirror))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetMirror(nDeviceID, bMirror))
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_49set_mirror, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 706, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_49set_mirror, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 748, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_mirror, __pyx_t_1) < 0) __PYX_ERR(0, 706, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_mirror, __pyx_t_1) < 0) __PYX_ERR(0, 748, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":709
- *     return SYErrorCode(SetMirror(nDeviceID, bMirror))
+  /* "synexens_sdk.pyx":754
+ *         raise RuntimeError(f"SetMirror() returns {ret}.")
  * 
  * def get_flip(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef bool bFlip
  *     cdef SYErrorCode ret
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_51get_flip, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 709, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_51get_flip, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 754, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_flip, __pyx_t_1) < 0) __PYX_ERR(0, 709, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_flip, __pyx_t_1) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":719
+  /* "synexens_sdk.pyx":764
  *     return bFlip
  * 
  * def set_flip(unsigned int nDeviceID, bool bFlip):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetFlip(nDeviceID, bFlip))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetFlip(nDeviceID, bFlip))
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_53set_flip, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 719, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_53set_flip, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 764, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_flip, __pyx_t_1) < 0) __PYX_ERR(0, 719, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_flip, __pyx_t_1) < 0) __PYX_ERR(0, 764, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":722
- *     return SYErrorCode(SetFlip(nDeviceID, bFlip))
+  /* "synexens_sdk.pyx":770
+ *         raise RuntimeError(f"SetFlip() returns {ret}.")
  * 
  * def get_integral_time(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nIntegralTime
  *     cdef SYErrorCode ret
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_55get_integral_time, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 722, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_55get_integral_time, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 770, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_integral_time, __pyx_t_1) < 0) __PYX_ERR(0, 722, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_integral_time, __pyx_t_1) < 0) __PYX_ERR(0, 770, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":732
+  /* "synexens_sdk.pyx":780
  *     return nIntegralTime
  * 
  * def set_integral_time(unsigned int nDeviceID, int nIntegralTime):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_57set_integral_time, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 732, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_57set_integral_time, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 780, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_integral_time, __pyx_t_1) < 0) __PYX_ERR(0, 732, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_integral_time, __pyx_t_1) < 0) __PYX_ERR(0, 780, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":735
- *     return SYErrorCode(SetIntegralTime(nDeviceID, nIntegralTime))
+  /* "synexens_sdk.pyx":786
+ *         raise RuntimeError(f"SetIntegralTime() returns {ret}.")
  * 
  * def get_integral_time_range(unsigned int nDeviceID, SYResolution depthResolution):             # <<<<<<<<<<<<<<
  *     cdef int nMin
  *     cdef int nMax
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_59get_integral_time_range, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 735, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_59get_integral_time_range, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 786, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_integral_time_range, __pyx_t_1) < 0) __PYX_ERR(0, 735, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_integral_time_range, __pyx_t_1) < 0) __PYX_ERR(0, 786, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":746
+  /* "synexens_sdk.pyx":797
  *     return nMin, nMax
  * 
  * def get_distance_measure_range(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nMin
  *     cdef int nMax
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_61get_distance_measure_range, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 746, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_61get_distance_measure_range, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 797, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_distance_measure_range, __pyx_t_1) < 0) __PYX_ERR(0, 746, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_distance_measure_range, __pyx_t_1) < 0) __PYX_ERR(0, 797, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":757
+  /* "synexens_sdk.pyx":808
  *     return nMin, nMax
  * 
  * def get_distance_user_range(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef int nMin
  *     cdef int nMax
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_63get_distance_user_range, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 757, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_63get_distance_user_range, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 808, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_distance_user_range, __pyx_t_1) < 0) __PYX_ERR(0, 757, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_distance_user_range, __pyx_t_1) < 0) __PYX_ERR(0, 808, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":768
+  /* "synexens_sdk.pyx":819
  *     return nMin, nMax
  * 
  * def set_distance_user_range(unsigned int nDeviceID, int nMin, int nMax):             # <<<<<<<<<<<<<<
- *     return SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
- * 
+ *     cdef SYErrorCode ret
+ *     ret = SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_65set_distance_user_range, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 768, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_65set_distance_user_range, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 819, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_distance_user_range, __pyx_t_1) < 0) __PYX_ERR(0, 768, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_distance_user_range, __pyx_t_1) < 0) __PYX_ERR(0, 819, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":771
- *     return SYErrorCode(SetDistanceUserRange(nDeviceID, nMin, nMax))
+  /* "synexens_sdk.pyx":825
+ *         raise RuntimeError(f"SetDistanceUserRange() returns {ret}.")
  * 
  * def get_device_sn(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef char arr[256]
  *     cdef int nLength = 256
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_67get_device_sn, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 771, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_67get_device_sn, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 825, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_device_sn, __pyx_t_1) < 0) __PYX_ERR(0, 771, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_device_sn, __pyx_t_1) < 0) __PYX_ERR(0, 825, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":782
+  /* "synexens_sdk.pyx":836
  *     return arr[:nLength]
  * 
  * def get_device_hw_version(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef char arr[256]
  *     cdef int nLength = 256
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_69get_device_hw_version, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 782, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_69get_device_hw_version, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 836, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_device_hw_version, __pyx_t_1) < 0) __PYX_ERR(0, 782, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_device_hw_version, __pyx_t_1) < 0) __PYX_ERR(0, 836, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":793
+  /* "synexens_sdk.pyx":847
  *     return arr[:nLength].decode()
  * 
  * def get_depth_color(unsigned int nDeviceID, unsigned short[:,:,:] pDepth):             # <<<<<<<<<<<<<<
  *     cdef SYErrorCode ret
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_71get_depth_color, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 793, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_71get_depth_color, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 847, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_depth_color, __pyx_t_1) < 0) __PYX_ERR(0, 793, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_depth_color, __pyx_t_1) < 0) __PYX_ERR(0, 847, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":806
+  /* "synexens_sdk.pyx":860
  *     return pColor
  * 
  * def get_depth_point_cloud(unsigned int nDeviceID, unsigned short[:,:,:] pDepth, bool bUndistort):             # <<<<<<<<<<<<<<
  *     cdef SYErrorCode ret
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_73get_depth_point_cloud, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 806, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_73get_depth_point_cloud, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 860, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_depth_point_cloud, __pyx_t_1) < 0) __PYX_ERR(0, 806, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_depth_point_cloud, __pyx_t_1) < 0) __PYX_ERR(0, 860, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":821
+  /* "synexens_sdk.pyx":875
  *     return pPos
  * 
  * def extract_resolution(SYResolution resolution):             # <<<<<<<<<<<<<<
  *     if resolution == SYRESOLUTION_NULL:
  *         return 0, 0
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_75extract_resolution, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 821, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_75extract_resolution, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 875, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_extract_resolution, __pyx_t_1) < 0) __PYX_ERR(0, 821, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_extract_resolution, __pyx_t_1) < 0) __PYX_ERR(0, 875, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":833
+  /* "synexens_sdk.pyx":887
  *         return 1920, 1080
  * 
  * def extract_dtype(SYFrameType frameType):             # <<<<<<<<<<<<<<
  *     if frameType in (SYFRAMETYPE_DEPTH, SYFRAMETYPE_IR):
  *         return np.uint16
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_77extract_dtype, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 833, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_77extract_dtype, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 887, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_extract_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 833, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_extract_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 887, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":838
+  /* "synexens_sdk.pyx":892
  *     return np.uint8
  * 
  * def extract_channel_count(SYFrameType frameType):             # <<<<<<<<<<<<<<
  *     if frameType in (SYFRAMETYPE_DEPTH, SYFRAMETYPE_IR):
  *         return 1
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_79extract_channel_count, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 838, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_79extract_channel_count, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 892, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_extract_channel_count, __pyx_t_1) < 0) __PYX_ERR(0, 838, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_extract_channel_count, __pyx_t_1) < 0) __PYX_ERR(0, 892, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":843
+  /* "synexens_sdk.pyx":897
  *     return 3
  * 
  * def get_last_frame_data(unsigned int nDeviceID):             # <<<<<<<<<<<<<<
  *     cdef SYErrorCode ret
  *     cdef SYFrameData* pFrameData
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_81get_last_frame_data, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 843, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_81get_last_frame_data, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 897, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_last_frame_data, __pyx_t_1) < 0) __PYX_ERR(0, 843, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_last_frame_data, __pyx_t_1) < 0) __PYX_ERR(0, 897, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":876
+  /* "synexens_sdk.pyx":930
  *     return d_frames
  * 
  * def undistort_depth(unsigned int nDeviceID, unsigned short[:,:,:] pDepth):             # <<<<<<<<<<<<<<
  *     cdef SYErrorCode ret
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_83undistort_depth, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 876, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_83undistort_depth, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 930, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_undistort_depth, __pyx_t_1) < 0) __PYX_ERR(0, 876, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_undistort_depth, __pyx_t_1) < 0) __PYX_ERR(0, 930, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":891
+  /* "synexens_sdk.pyx":945
  *     return pDepth2
  * 
  * def undistort_ir(unsigned int nDeviceID, unsigned short[:,:,:] pIr):             # <<<<<<<<<<<<<<
  *     cdef SYErrorCode ret
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_85undistort_ir, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 891, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_85undistort_ir, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_undistort_ir, __pyx_t_1) < 0) __PYX_ERR(0, 891, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_undistort_ir, __pyx_t_1) < 0) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "synexens_sdk.pyx":906
+  /* "synexens_sdk.pyx":960
  *     return pIr2
  * 
  * def get_intrinsics(unsigned int nDeviceID, SYResolution resolution):             # <<<<<<<<<<<<<<
  *     cdef SYErrorCode ret
  *     cdef SYIntrinsics intrinsics
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_87get_intrinsics, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 906, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12synexens_sdk_87get_intrinsics, NULL, __pyx_n_s_synexens_sdk); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 960, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_intrinsics, __pyx_t_1) < 0) __PYX_ERR(0, 906, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_intrinsics, __pyx_t_1) < 0) __PYX_ERR(0, 960, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "synexens_sdk.pyx":1
@@ -30062,9 +31221,9 @@ if (!__Pyx_RefNanny) {
  *         for v in cls:
  *             if v == value:
  */
-  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_8EnumBase_14__Pyx_EnumBase_1__new__, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_Pyx_EnumBase___new, NULL, __pyx_n_s_EnumBase, __pyx_d, ((PyObject *)__pyx_codeobj__115)); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 28, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_8EnumBase_14__Pyx_EnumBase_1__new__, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_Pyx_EnumBase___new, NULL, __pyx_n_s_EnumBase, __pyx_d, ((PyObject *)__pyx_codeobj__117)); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__116);
+  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__118);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_new, __pyx_t_5) < 0) __PYX_ERR(1, 28, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
@@ -30075,7 +31234,7 @@ if (!__Pyx_RefNanny) {
  *         return "<%s.%s: %d>" % (self.__class__.__name__, self.name, self)
  *     def __str__(self):
  */
-  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_8EnumBase_14__Pyx_EnumBase_3__repr__, 0, __pyx_n_s_Pyx_EnumBase___repr, NULL, __pyx_n_s_EnumBase, __pyx_d, ((PyObject *)__pyx_codeobj__118)); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 39, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_8EnumBase_14__Pyx_EnumBase_3__repr__, 0, __pyx_n_s_Pyx_EnumBase___repr, NULL, __pyx_n_s_EnumBase, __pyx_d, ((PyObject *)__pyx_codeobj__120)); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_repr, __pyx_t_5) < 0) __PYX_ERR(1, 39, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -30087,7 +31246,7 @@ if (!__Pyx_RefNanny) {
  *         return "%s.%s" % (self.__class__.__name__, self.name)
  * 
  */
-  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_8EnumBase_14__Pyx_EnumBase_5__str__, 0, __pyx_n_s_Pyx_EnumBase___str, NULL, __pyx_n_s_EnumBase, __pyx_d, ((PyObject *)__pyx_codeobj__120)); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 41, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_8EnumBase_14__Pyx_EnumBase_5__str__, 0, __pyx_n_s_Pyx_EnumBase___str, NULL, __pyx_n_s_EnumBase, __pyx_d, ((PyObject *)__pyx_codeobj__122)); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_str, __pyx_t_5) < 0) __PYX_ERR(1, 41, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -30181,7 +31340,7 @@ if (!__Pyx_RefNanny) {
  * cdef strided = Enum("<strided and direct>") # default
  * cdef indirect = Enum("<strided and indirect>")
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__123, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 287, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__125, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 287, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_XGOTREF(generic);
   __Pyx_DECREF_SET(generic, __pyx_t_1);
@@ -30195,7 +31354,7 @@ if (!__Pyx_RefNanny) {
  * cdef indirect = Enum("<strided and indirect>")
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__124, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 288, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__126, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 288, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_XGOTREF(strided);
   __Pyx_DECREF_SET(strided, __pyx_t_1);
@@ -30209,7 +31368,7 @@ if (!__Pyx_RefNanny) {
  * 
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__125, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 289, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__127, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 289, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_XGOTREF(indirect);
   __Pyx_DECREF_SET(indirect, __pyx_t_1);
@@ -30223,7 +31382,7 @@ if (!__Pyx_RefNanny) {
  * cdef indirect_contiguous = Enum("<contiguous and indirect>")
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__126, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 292, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__128, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 292, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_XGOTREF(contiguous);
   __Pyx_DECREF_SET(contiguous, __pyx_t_1);
@@ -30237,7 +31396,7 @@ if (!__Pyx_RefNanny) {
  * 
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__127, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 293, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__129, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 293, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_XGOTREF(indirect_contiguous);
   __Pyx_DECREF_SET(indirect_contiguous, __pyx_t_1);
