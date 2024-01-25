@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 
+import os
 import platform
+from setuptools import Extension, setup, find_packages
+from Cython.Build import cythonize
 
 from mt import path, shutil
 
-from setuptools import Extension, setup, find_packages
-from Cython.Build import cythonize
-from synexens.version import version
+
+VERSION_FILE = os.path.join(os.path.dirname(__file__), "VERSION.txt")
+version_from_file = open(VERSION_FILE).read()
 
 if platform.machine() == "x86_64":
     plat = "amd64"
@@ -42,7 +45,6 @@ extensions = [
 
 setup(
     name="synexens",
-    version=version,
     description="Wrapper for Synexens SDK to access their LiDAR devices",
     author=["Minh-Tri Pham"],
     packages=find_packages(),
@@ -54,4 +56,14 @@ setup(
         "v4l2py",  # for the interface
     ],
     ext_modules=cythonize(extensions),
+    setup_requires=["setuptools-git-versioning<2"],
+    python_requires=">=3.8",  # for asyncio to work properly
+    setuptools_git_versioning={
+        "enabled": True,
+        "version_file": VERSION_FILE,
+        "count_commits_from_version_file": True,
+        "template": "{tag}",
+        "dev_template": "{tag}.dev{ccount}+{branch}",
+        "dirty_template": "{tag}.post{ccount}",
+    },
 )
