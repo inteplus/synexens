@@ -136,3 +136,4 @@ dmypy.json
 synexens/*.so*
 synexens/*.c
 synexens/*.cpp
+log/
