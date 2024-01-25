@@ -80,9 +80,10 @@ class Device(v4l2.device.ReentrantContextManager):
 
     def close(self):
         if not self.closed:
+            if self.streaming:
+                self.stream_off()
             sdk.close_device(self.index)
             self.closed = True
-            self.streaming = False
 
     def __repr__(self):
         return f"<{type(self).__name__} index={self.index}, closed={self.closed}>"
@@ -113,3 +114,23 @@ class Device(v4l2.device.ReentrantContextManager):
             )
         self.streaming = False
         return ret
+
+    @property
+    def resolution(self):
+        return sdk.get_frame_resolution(self.index, sdk.SYFRAMETYPE_IR)
+
+    @resolution.setter
+    def resolution(self, resolution: sdk.SYResolution):
+        l_frameTypes = [sdk.SYFRAMETYPE_IR]
+        for support_frame_type in self.info["support_frame_types"]:
+            if support_frame_type == sdk.SYSUPPORTTYPE_DEPTH:
+                l_frameTypes.append(sdk.SYFRAMETYPE_DEPTH)
+            elif support_frame_type == sdk.SYSUPPORTTYPE_RGB:
+                l_frameTypes.append(sdk.SYFRAMETYPE_RGB)
+
+        for frame_type in l_frameTypes:
+            ret = sdk.set_frame_resolution(self.index, frame_type, resolution)
+            if ret != 0:
+                raise RuntimeError(
+                    f"Unable to set the resolution {str(sdk.SYResolution(resolution))} to frame type {str(sdk.SYFrameType(frame_type))}."
+                )
