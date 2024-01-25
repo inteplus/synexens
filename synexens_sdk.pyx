@@ -901,9 +901,12 @@ def get_last_frame_data(unsigned int nDeviceID):
     cdef unsigned short [:,:,:] uint16Data
     cdef unsigned char [:,:,:] uint8Data
 
-    ret = SYErrorCode(GetLastFrameData(nDeviceID, pFrameData))
+    ret = GetLastFrameData(nDeviceID, pFrameData)
+    if ret == SYERRORCODE_NOFRAME:
+        return None
+
     if ret != 0:
-        raise RuntimeError(f"GetLastFrameData() returns {ret}.")
+        raise RuntimeError(f"GetLastFrameData() returns {str(SYErrorCode(ret))}.")
 
     d_frames = {}
     ofs = 0
