@@ -207,11 +207,9 @@ def main():
     # IO using numpy
     try:
         file = sys.argv[1]
-        MODE = sys.argv[2]
+        MODE = "gpu"
     except IndexError:
-        print(
-            'Command line execution needs 2 arguments: path to txt file and "gpu" or "cpu"'
-        )
+        print("Command line execution needs 1 arguments: path to txt file")
         return
 
     # IO Skipping header row in csv
