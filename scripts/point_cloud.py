@@ -7,7 +7,7 @@ from OpenGL.GL.shaders import *
 import numpy as np
 import sys
 
-global COORDS, COLORS, X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW, MODE, VERTEX_VBO, COLOR_VBO
+global COORDS, COLORS, X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW, MODE, VERTEX_VBO, COLOR_VBO, MX, MY
 
 
 def display_cpu():
@@ -202,6 +202,21 @@ def onKeyDown(*args):
         display_gpu()
 
 
+def onMouseButton(button: int, state: int, x: int, y: int):
+    global MX, MY
+    if button == GLUT_LEFT_BUTTON:
+        if state == GLUT_DOWN:
+            MX = x
+            MY = y
+            print(f"lbutton down {x} {y}")
+        else:
+            print(f"lbutton up {x-MX} {y-MY}")
+
+
+def onMouseDrag(x: int, y: int):
+    print(f"dragging along {x} {y}")
+
+
 def main():
     global COORDS, COLORS, VERTEX_VBO, COLOR_VBO, MODE
     # IO using numpy
@@ -231,6 +246,8 @@ def main():
         print('Please use either "gpu" or "cpu" as the mode argument')
         return
     glutKeyboardFunc(onKeyDown)
+    glutMouseFunc(onMouseButton)
+    glutMotionFunc(onMouseDrag)
     glClearColor(0.0, 0.0, 0.0, 0.0)
     glClearDepth(1.0)
     glDepthFunc(GL_LESS)
