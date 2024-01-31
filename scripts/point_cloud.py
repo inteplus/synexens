@@ -10,60 +10,6 @@ import sys
 global COORDS, COLORS, X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW, MODE, VERTEX_VBO, COLOR_VBO, MX, MY
 
 
-def display_cpu():
-    global X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW, COORDS, COLORS
-
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
-    glLoadIdentity()
-
-    # Performing 'camera' translation and rotation
-    glTranslatef(X_AXIS, Y_AXIS, Z_AXIS)
-    glRotatef(PITCH, 1.0, 0.0, 0.0)
-    glRotatef(ROLL, 0.0, 1.0, 0.0)
-    glRotatef(YAW, 0.0, 0.0, 1.0)
-
-    # Draw each face of each cube
-    i = 0
-    glBegin(GL_QUADS)
-    for p1, p2, p3, p4, p5, p6, p7, p8 in COORDS:
-        glColor3f(COLORS[i][0], COLORS[i][1], COLORS[i][2])
-
-        glVertex3f(p1[0], p1[1], p1[2])
-        glVertex3f(p2[0], p2[1], p2[2])
-        glVertex3f(p3[0], p3[1], p3[2])
-        glVertex3f(p4[0], p4[1], p4[2])
-
-        glVertex3f(p5[0], p5[1], p5[2])
-        glVertex3f(p6[0], p6[1], p6[2])
-        glVertex3f(p7[0], p7[1], p7[2])
-        glVertex3f(p8[0], p8[1], p8[2])
-
-        glVertex3f(p1[0], p1[1], p1[2])
-        glVertex3f(p4[0], p4[1], p4[2])
-        glVertex3f(p8[0], p8[1], p8[2])
-        glVertex3f(p5[0], p5[1], p5[2])
-
-        glVertex3f(p1[0], p1[1], p1[2])
-        glVertex3f(p3[0], p3[1], p3[2])
-        glVertex3f(p7[0], p7[1], p7[2])
-        glVertex3f(p6[0], p6[1], p6[2])
-
-        glVertex3f(p1[0], p1[1], p1[2])
-        glVertex3f(p2[0], p2[1], p2[2])
-        glVertex3f(p6[0], p6[1], p6[2])
-        glVertex3f(p5[0], p5[1], p5[2])
-
-        glVertex3f(p4[0], p4[1], p4[2])
-        glVertex3f(p3[0], p3[1], p3[2])
-        glVertex3f(p7[0], p7[1], p7[2])
-        glVertex3f(p8[0], p8[1], p8[2])
-
-        i += 1
-
-    glEnd()
-    glutSwapBuffers()
-
-
 def display_gpu():
     global X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW, VERTEX_VBO, COLOR_VBO, COORDS
     glGetError()
@@ -100,33 +46,6 @@ def calculate_centroid():
     Y_AXIS /= len(COORDS)
     Z_AXIS /= len(COORDS)
     Z_AXIS -= 20.0
-
-
-def generate_cube_vertices_cpu(point_vals):
-    global X_AXIS, Y_AXIS, Z_AXIS, COORDS, COLORS, PITCH, ROLL, YAW
-    X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW = 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
-    coords_arr = []
-    colors_arr = []
-    # Add 8 vertices in cube array and add colors for each vertex
-    for x, y, z, r, g, b in point_vals:
-        # Coord sum for centroid calculation
-        X_AXIS += x
-        Y_AXIS += y
-        Z_AXIS += z
-        cube = []
-        cube.append([x, y, z])
-        cube.append([x + 0.25, y, z])
-        cube.append([x + 0.25, y + 0.25, z])
-        cube.append([x, y + 0.25, z])
-        cube.append([x, y, z + 0.25])
-        cube.append([x + 0.25, y, z + 0.25])
-        cube.append([x + 0.25, y + 0.25, z + 0.25])
-        cube.append([x, y + 0.25, z + 0.25])
-        coords_arr.append(cube)
-        colors_arr.append([r, g, b])
-    COORDS = np.array(coords_arr, dtype=np.float32)
-    COLORS = np.array(colors_arr, dtype=np.float32)
-    calculate_centroid()
 
 
 def generate_cube_vertices_gpu(point_vals):
@@ -196,10 +115,7 @@ def onKeyDown(*args):
     np.clip(PITCH, -360.0, 360.0)
     np.clip(YAW, -360.0, 360.0)
     # Re-render
-    if MODE == "cpu":
-        display_cpu()
-    elif MODE == "gpu":
-        display_gpu()
+    display_gpu()
 
 
 def onMouseButton(button: int, state: int, x: int, y: int):
@@ -236,15 +152,8 @@ def main():
     glutInitWindowPosition(200, 200)
     window = glutCreateWindow("Point Cloud Viewer")
     # Assign mode specific display function
-    if MODE == "cpu":
-        generate_cube_vertices_cpu(point_vals)
-        glutDisplayFunc(display_cpu)
-    elif MODE == "gpu":
-        generate_cube_vertices_gpu(point_vals)
-        glutDisplayFunc(display_gpu)
-    else:
-        print('Please use either "gpu" or "cpu" as the mode argument')
-        return
+    generate_cube_vertices_gpu(point_vals)
+    glutDisplayFunc(display_gpu)
     glutKeyboardFunc(onKeyDown)
     glutMouseFunc(onMouseButton)
     glutMotionFunc(onMouseDrag)
