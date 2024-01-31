@@ -39,15 +39,6 @@ def display_gpu():
     glutSwapBuffers()
 
 
-def calculate_centroid():
-    global COORDS, X_AXIS, Y_AXIS, Z_AXIS
-    # Calculate centroid for all vertices across cubes in each axis
-    X_AXIS /= len(COORDS)
-    Y_AXIS /= len(COORDS)
-    Z_AXIS /= len(COORDS)
-    Z_AXIS -= 20.0
-
-
 def generate_cube_vertices_gpu(point_vals):
     global X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW, COORDS, COLORS
     X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW = 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
@@ -77,7 +68,12 @@ def generate_cube_vertices_gpu(point_vals):
             colors_arr.append([r, g, b])
     COORDS = np.array(coords_arr, dtype=np.float32)
     COLORS = np.array(colors_arr, dtype=np.float32)
-    calculate_centroid()
+
+    # Calculate centroid for all vertices across cubes in each axis
+    X_AXIS /= len(COORDS)
+    Y_AXIS /= len(COORDS)
+    Z_AXIS /= len(COORDS)
+    Z_AXIS -= 20.0
 
 
 def onKeyDown(*args):
