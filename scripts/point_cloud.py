@@ -1,23 +1,31 @@
 #!/usr/bin/python3
 
+from mt import np, geo3d
+
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
 from OpenGL.GL.shaders import *
-import numpy as np
 import sys
 
-global COORDS, COLORS, X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW, MODE, VERTEX_VBO, COLOR_VBO, MX, MY
+global COORDS, COLORS, X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW, MODE, VERTEX_VBO, COLOR_VBO, MX, MY, CAMERA_POSE
 
 
 def display_gpu():
     global X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW, VERTEX_VBO, COLOR_VBO, COORDS
     glGetError()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
-    glLoadIdentity()
 
     # Performing translation and rotation
-    glTranslatef(X_AXIS, Y_AXIS, Z_AXIS)
+    if True:
+        CAMERA_POSE = geo3d.Aff3d(offset=(X_AXIS, Y_AXIS, Z_AXIS))
+        z = CAMERA_POSE.matrix
+        print(z, z.strides, z.shape, z.size)
+        print(z.T.ravel())
+        glLoadMatrixf(z.T)
+    else:
+        glLoadIdentity()
+        glTranslatef(X_AXIS, Y_AXIS, Z_AXIS)
     glRotatef(PITCH, 1.0, 0.0, 0.0)
     glRotatef(ROLL, 0.0, 1.0, 0.0)
     glRotatef(YAW, 0.0, 0.0, 1.0)
