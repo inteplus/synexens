@@ -8,27 +8,22 @@ from OpenGL.GLU import *
 from OpenGL.GL.shaders import *
 import sys
 
-global COORDS, COLORS, X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW, MODE, VERTEX_VBO, COLOR_VBO, MX, MY, CAMERA_POSE
+global COORDS, COLORS, CAMERA_POSE, MPOSE, VERTEX_VBO, COLOR_VBO, MB, MX, MY, INVALID, SPEED
 
 
-def display_gpu():
-    global X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW, VERTEX_VBO, COLOR_VBO, COORDS
+def display_gpu(*args):
+    global CAMERA_POSE, MPOSE, VERTEX_VBO, COLOR_VBO, COORDS, INVALID
+
+    glutTimerFunc(50, display_gpu, 0)
+
+    if not INVALID:
+        return
+
     glGetError()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
 
     # Performing translation and rotation
-    if True:
-        CAMERA_POSE = geo3d.Aff3d(offset=(X_AXIS, Y_AXIS, Z_AXIS))
-        z = CAMERA_POSE.matrix
-        print(z, z.strides, z.shape, z.size)
-        print(z.T.ravel())
-        glLoadMatrixf(z.T)
-    else:
-        glLoadIdentity()
-        glTranslatef(X_AXIS, Y_AXIS, Z_AXIS)
-    glRotatef(PITCH, 1.0, 0.0, 0.0)
-    glRotatef(ROLL, 0.0, 1.0, 0.0)
-    glRotatef(YAW, 0.0, 0.0, 1.0)
+    glLoadMatrixf((MPOSE * CAMERA_POSE).matrix.T)
 
     glBindBuffer(GL_ARRAY_BUFFER, VERTEX_VBO)
     glVertexPointer(3, GL_FLOAT, 0, None)
@@ -46,17 +41,19 @@ def display_gpu():
     glFlush()
     glutSwapBuffers()
 
+    INVALID = False
+
 
 def generate_cube_vertices_gpu(point_vals):
-    global X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW, COORDS, COLORS
-    X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW = 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+    global CAMERA_POSE, MPOSE, MB, COORDS, COLORS, INVALID, SPEED
+    X, Y, Z = 0.0, 0.0, 0.0
     coords_arr = []
     colors_arr = []
     # Add 8 vertices in cube, colors for each vertex
     for x, y, z, r, g, b in point_vals:
-        X_AXIS += x
-        Y_AXIS += y
-        Z_AXIS += z
+        X += x
+        Y += y
+        Z += z
         vertex_1 = [x, y, z]
         vertex_2 = [x + 0.25, y, z]
         vertex_3 = [x + 0.25, y + 0.25, z]
@@ -78,82 +75,130 @@ def generate_cube_vertices_gpu(point_vals):
     COLORS = np.array(colors_arr, dtype=np.float32)
 
     # Calculate centroid for all vertices across cubes in each axis
-    X_AXIS /= len(COORDS)
-    Y_AXIS /= len(COORDS)
-    Z_AXIS /= len(COORDS)
-    Z_AXIS -= 20.0
+    X /= len(COORDS)
+    Y /= len(COORDS)
+    Z /= len(COORDS)
+    Z -= 20.0
+    CAMERA_POSE = geo3d.Aff3d(offset=(X, Y, Z))
+    MB = None
+    MPOSE = geo3d.Aff3d()
+    SPEED = 1
+    INVALID = True
 
 
 def onKeyDown(*args):
-    global X_AXIS, Y_AXIS, Z_AXIS, PITCH, ROLL, YAW
+    global CAMERA_POSE, INVALID
+
     # Retrieving key events and storing translation/rotation values
     key = args[0].decode("utf-8")
     if key == "q":
         sys.exit()
     elif key == "w":
-        Y_AXIS -= 0.1
+        pose = geo3d.Aff3d(offset=(0, -0.1, 0))
     elif key == "s":
-        Y_AXIS += 0.1
+        pose = geo3d.Aff3d(offset=(0, 0.1, 0))
     elif key == "a":
-        X_AXIS += 0.1
+        pose = geo3d.Aff3d(offset=(0.1, 0, 0))
     elif key == "d":
-        X_AXIS -= 0.1
+        pose = geo3d.Aff3d(offset=(-0.1, 0, 0))
     elif key == "z":
-        Z_AXIS -= 0.1
+        pose = geo3d.Aff3d(offset=(0, 0, -0.1))
     elif key == "x":
-        Z_AXIS += 0.1
+        pose = geo3d.Aff3d(offset=(0, 0, +0.1))
     elif key == "i":
-        YAW -= 1.0
+        pose = geo3d.rot3d_z(-0.01)
     elif key == "k":
-        YAW += 1.0
+        pose = geo3d.rot3d_z(+0.01)
     elif key == "j":
-        PITCH += 1.0
+        pose = geo3d.rot3d_y(+0.01)
     elif key == "l":
-        PITCH -= 1.0
+        pose = geo3d.rot3d_y(-0.01)
     elif key == "n":
-        ROLL += 1.0
+        pose = geo3d.rot3d_z(+0.01)
     elif key == "m":
-        ROLL -= 1.0
-    # Clamping rotation
-    np.clip(ROLL, -360.0, 360.0)
-    np.clip(PITCH, -360.0, 360.0)
-    np.clip(YAW, -360.0, 360.0)
-    # Re-render
-    display_gpu()
+        pose = geo3d.rot3d_z(-0.01)
+    else:
+        pose = None
+
+    if pose:
+        CAMERA_POSE = pose * CAMERA_POSE
+        INVALID = True
 
 
 def onMouseButton(button: int, state: int, x: int, y: int):
-    global MX, MY
-    if button == GLUT_LEFT_BUTTON:
-        if state == GLUT_DOWN:
-            MX = x
-            MY = y
-            print(f"lbutton down {x} {y}")
-        else:
-            print(f"lbutton up {x-MX} {y-MY}")
+    global MB, MX, MY, CAMERA_POSE, MPOSE, INVALID, SPEED
+
+    print(f"{button} {state} {x} {y}")
+
+    if state == GLUT_DOWN:
+        MX = x
+        MY = y
+        MB = button
+        INVALID = True
+    elif state == GLUT_UP:
+        MPOSE = geo3d.Aff3d()
+        if MB == GLUT_LEFT_BUTTON:
+            pose = geo3d.Aff3d(
+                offset=((x - MX) * 0.05 * SPEED, (y - MY) * -0.05 * SPEED, 0)
+            )
+            CAMERA_POSE = pose * CAMERA_POSE
+            INVALID = True
+        elif MB == GLUT_MIDDLE_BUTTON:
+            pose = geo3d.Aff3d(
+                offset=((x - MX) * 0.05 * SPEED, 0, (y - MY) * -0.05 * SPEED)
+            )
+            CAMERA_POSE = pose * CAMERA_POSE
+            INVALID = True
+        elif MB == GLUT_RIGHT_BUTTON:
+            rotX = geo3d.rot3d_y((x - MX) * -0.002)
+            rotY = geo3d.rot3d_x((y - MY) * -0.002)
+            CAMERA_POSE = rotY * rotX * CAMERA_POSE
+            INVALID = True
+        elif MB == 3:  # wheel scrolling up
+            SPEED *= 2
+            if SPEED > 10:
+                SPEED = 10
+            print(f"Speed: {SPEED}")
+        elif MB == 4:  # wheel scrolling down
+            SPEED /= 2
+            if SPEED < 0.1:
+                SPEED = 0.1
+            print(f"Speed: {SPEED}")
 
 
 def onMouseDrag(x: int, y: int):
-    print(f"dragging along {x} {y}")
+    global MPOSE, MB, INVALID, SPEED
+
+    print(f"{x} {y}")
+
+    if MB == GLUT_LEFT_BUTTON:
+        MPOSE = geo3d.Aff3d(
+            offset=((x - MX) * 0.05 * SPEED, (y - MY) * -0.05 * SPEED, 0)
+        )
+        INVALID = True
+    elif MB == GLUT_MIDDLE_BUTTON:
+        MPOSE = geo3d.Aff3d(
+            offset=((x - MX) * 0.05 * SPEED, 0, (y - MY) * -0.05 * SPEED)
+        )
+        INVALID = True
+    elif MB == GLUT_RIGHT_BUTTON:
+        rotX = geo3d.rot3d_y((x - MX) * -0.002)
+        rotY = geo3d.rot3d_x((y - MY) * -0.002)
+        MPOSE = rotY * rotX
+        INVALID = True
 
 
 def main():
-    global COORDS, COLORS, VERTEX_VBO, COLOR_VBO, MODE
-    # IO using numpy
-    try:
-        file = sys.argv[1]
-        MODE = "gpu"
-    except IndexError:
-        print("Command line execution needs 1 arguments: path to txt file")
-        return
+    global COORDS, COLORS, VERTEX_VBO, COLOR_VBO
+    file = sys.argv[1]
 
     # IO Skipping header row in csv
     point_vals = np.loadtxt(file, delimiter=",", skiprows=1)
     # OpenGL Boilerplate setup
     glutInit(sys.argv)
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH)
-    glutInitWindowSize(500, 500)
-    glutInitWindowPosition(200, 200)
+    glutInitWindowSize(1200, 800)
+    glutInitWindowPosition(100, 100)
     window = glutCreateWindow("Point Cloud Viewer")
     # Assign mode specific display function
     generate_cube_vertices_gpu(point_vals)
