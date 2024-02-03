@@ -2,23 +2,46 @@
 
 
 from OpenGL.GL import *
-from OpenGL.GLUT import *
 from OpenGL.GLU import *
 from OpenGL.GL.shaders import *
 import sys
 
 import synexens as s
-from mt import np, geo3d
+from mt import np, geo3d, glfw, pd
 
-global COORDS, COLORS, CAMERA_POSE, MPOSE, VERTEX_VBO, COLOR_VBO, MB, MX, MY, INVALID, SPEED, device
+
+class ShipSpeed:
+    """Speed parameters for the camera ship.
+
+    Parameters
+    ----------
+    move : float
+        speed to move along the z-axis of the camera ship. Range: [-10, +10] mm/s. Step: 0.01 mm/s
+    roll : float
+        speed to rotate about the z-axis of the camera ship. Range: [-0.05, +0.05] rad/s. Step: 0.01 mm/s.
+    pitch : float
+        speed to rotate about the y-axis of the camera ship. Range: [-0.05, +0.05] rad/s. Step: 0.01 mm/s.
+    yaw : float
+        speed to rotate about the x-axis of the camera ship. Range: [-0.05, +0.05] rad/s. Step: 0.01 mm/s.
+
+    """
+
+    def __init__(self, move: float, roll: float, pitch: float, yaw: float):
+        self.move = move
+        self.roll = roll
+        self.pitch = pitch
+        self.yaw = yaw
+
+
+ship_speed = ShipSpeed(0, 0, 0, 0)
+global COORDS, COLORS, VERTEX_VBO, COLOR_VBO, CAMERA_POSE, LAST_TS, device, window
 
 
 def update_point_cloud():
-    global COORDS, COLORS, INVALID, VERTEX_VBO, COLOR_VBO, device
+    global COORDS, COLORS, VERTEX_VBO, COLOR_VBO, device
 
     frame = device.get_last_frame_data()
     if frame is None:
-        print("no frame found")
         return
 
     depth_image = frame[s.SYFRAMETYPE_DEPTH]
@@ -66,13 +89,12 @@ def update_point_cloud():
         color_arr = infra_image.reshape((n_points, 1)).astype(np.float32) / 2048.0
         color_arr = np.repeat(color_arr, 3, axis=1)
 
-    print(f"indices: {len(indices)}")
-    print(f"point: min {point_arr.min(axis=0)} max {point_arr.max(axis=0)}")
-    print(f"color: min {color_arr.min(axis=0)} max {color_arr.max(axis=0)}")
+    # print(f"indices: {len(indices)}")
+    # print(f"point: min {point_arr.min(axis=0)} max {point_arr.max(axis=0)}")
+    # print(f"color: min {color_arr.min(axis=0)} max {color_arr.max(axis=0)}")
 
     COORDS = point_arr[indices]
     COLORS = color_arr[indices]
-    INVALID = True
 
     # copy the data to the buffer
     glBindBuffer(GL_ARRAY_BUFFER, VERTEX_VBO)
@@ -81,23 +103,27 @@ def update_point_cloud():
     glBufferData(GL_ARRAY_BUFFER, COLORS, GL_STATIC_DRAW)
     glBindBuffer(GL_ARRAY_BUFFER, 0)
 
-    print(f"frame found {COORDS.shape} {COLORS.shape} {COORDS.dtype} {COLORS.dtype}")
+    # print(f"frame found {COORDS.shape} {COLORS.shape} {COORDS.dtype} {COLORS.dtype}")
 
 
-def display_gpu(*args):
-    glutTimerFunc(50, display_gpu, 0)
-    update_point_cloud()
+def display_gpu():
+    global CAMERA_POSE, LAST_TS, ship_speed, VERTEX_VBO, COLOR_VBO, COORDS
 
-    global CAMERA_POSE, MPOSE, VERTEX_VBO, COLOR_VBO, COORDS, INVALID
+    # measure time
+    ts = pd.Timestamp.utcnow()
+    sec = (ts - LAST_TS).total_seconds()
+    LAST_TS = ts
 
-    if not INVALID:
-        return
+    CAMERA_POSE = geo3d.rot3d_z(ship_speed.roll * sec) * CAMERA_POSE
+    CAMERA_POSE = geo3d.rot3d_x(ship_speed.pitch * sec) * CAMERA_POSE
+    CAMERA_POSE = geo3d.rot3d_y(ship_speed.yaw * sec) * CAMERA_POSE
+    CAMERA_POSE = geo3d.Aff3d(offset=(0, 0, ship_speed.move * sec)) * CAMERA_POSE
 
     glGetError()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
 
     # Performing translation and rotation
-    glLoadMatrixf((MPOSE * CAMERA_POSE).matrix.T)
+    glLoadMatrixf(CAMERA_POSE.matrix.T)
 
     glBindBuffer(GL_ARRAY_BUFFER, VERTEX_VBO)
     glVertexPointer(3, GL_FLOAT, 0, None)
@@ -113,13 +139,10 @@ def display_gpu(*args):
     glDisableClientState(GL_VERTEX_ARRAY)
     glDisableClientState(GL_COLOR_ARRAY)
     glFlush()
-    glutSwapBuffers()
-
-    INVALID = False
 
 
 def generate_cube_vertices_gpu(point_vals):
-    global CAMERA_POSE, MPOSE, MB, COORDS, COLORS, INVALID, SPEED
+    global CAMERA_POSE, LAST_TS, COORDS, COLORS
     X, Y, Z = 0.0, 0.0, 0.0
     coords_arr = []
     colors_arr = []
@@ -154,160 +177,188 @@ def generate_cube_vertices_gpu(point_vals):
     Z /= len(COORDS)
     Z -= 50.0
     CAMERA_POSE = geo3d.Aff3d(offset=(X, Y, Z))
-    MB = None
-    MPOSE = geo3d.Aff3d()
-    SPEED = 1
-    INVALID = True
+    LAST_TS = pd.Timestamp.utcnow()
 
 
-def onKeyDown(*args):
-    global CAMERA_POSE, INVALID
+def on_key(window, key: int, scancode: int, action: int, mods: int):
+    # print(f"on_key: key {key} scancode {scancode} action {action} mods {mods}")
 
-    # Retrieving key events and storing translation/rotation values
-    key = args[0].decode("utf-8")
-    if key == "q":
-        glutLeaveMainLoop()
+    if key == glfw.KEY_ESCAPE:
+        glfw.set_window_should_close(window, glfw.TRUE)
         return
 
-    if key == "w":
-        pose = geo3d.Aff3d(offset=(0, -0.1, 0))
-    elif key == "s":
-        pose = geo3d.Aff3d(offset=(0, 0.1, 0))
-    elif key == "a":
-        pose = geo3d.Aff3d(offset=(0.1, 0, 0))
-    elif key == "d":
-        pose = geo3d.Aff3d(offset=(-0.1, 0, 0))
-    elif key == "z":
-        pose = geo3d.Aff3d(offset=(0, 0, -0.1))
-    elif key == "x":
-        pose = geo3d.Aff3d(offset=(0, 0, +0.1))
-    elif key == "i":
-        pose = geo3d.rot3d_z(-0.01)
-    elif key == "k":
-        pose = geo3d.rot3d_z(+0.01)
-    elif key == "j":
-        pose = geo3d.rot3d_y(+0.01)
-    elif key == "l":
-        pose = geo3d.rot3d_y(-0.01)
-    elif key == "n":
-        pose = geo3d.rot3d_z(+0.01)
-    elif key == "m":
-        pose = geo3d.rot3d_z(-0.01)
+    if action == glfw.RELEASE:
+        if key in (glfw.KEY_E, glfw.KEY_Q):
+            ship_speed.roll = 0
+        elif key in (glfw.KEY_S, glfw.KEY_W):
+            ship_speed.pitch = 0
+        elif key in (glfw.KEY_A, glfw.KEY_D):
+            ship_speed.yaw = 0
     else:
-        pose = None
-
-    if pose:
-        CAMERA_POSE = pose * CAMERA_POSE
-        INVALID = True
-
-
-def onMouseButton(button: int, state: int, x: int, y: int):
-    global MB, MX, MY, CAMERA_POSE, MPOSE, INVALID, SPEED
-
-    # print(f"{button} {state} {x} {y}")
-
-    if state == GLUT_DOWN:
-        MX = x
-        MY = y
-        MB = button
-        INVALID = True
-    elif state == GLUT_UP:
-        MPOSE = geo3d.Aff3d()
-        if MB == GLUT_LEFT_BUTTON:
-            pose = geo3d.Aff3d(
-                offset=((x - MX) * 0.05 * SPEED, (y - MY) * -0.05 * SPEED, 0)
-            )
-            CAMERA_POSE = pose * CAMERA_POSE
-            INVALID = True
-        elif MB == GLUT_MIDDLE_BUTTON:
-            pose = geo3d.Aff3d(
-                offset=((x - MX) * 0.05 * SPEED, 0, (y - MY) * -0.05 * SPEED)
-            )
-            CAMERA_POSE = pose * CAMERA_POSE
-            INVALID = True
-        elif MB == GLUT_RIGHT_BUTTON:
-            rotX = geo3d.rot3d_y((x - MX) * -0.002)
-            rotY = geo3d.rot3d_x((y - MY) * -0.002)
-            CAMERA_POSE = rotY * rotX * CAMERA_POSE
-            INVALID = True
-        elif MB == 3:  # wheel scrolling up
-            SPEED *= 2
-            if SPEED > 10:
-                SPEED = 10
-            print(f"Speed: {SPEED}")
-        elif MB == 4:  # wheel scrolling down
-            SPEED /= 2
-            if SPEED < 0.1:
-                SPEED = 0.1
-            print(f"Speed: {SPEED}")
+        if key == glfw.KEY_Z:
+            ship_speed.move = max(ship_speed.move - 0.01, -10.0)
+        elif key == glfw.KEY_C:
+            ship_speed.move = min(ship_speed.move + 0.01, 10.0)
+        elif key == glfw.KEY_W:
+            ship_speed.pitch = min(ship_speed.pitch + 0.04, 0.50)
+        elif key == glfw.KEY_S:
+            ship_speed.pitch = max(ship_speed.pitch - 0.04, -0.50)
+        elif key == glfw.KEY_D:
+            ship_speed.yaw = min(ship_speed.yaw + 0.04, 0.50)
+        elif key == glfw.KEY_A:
+            ship_speed.yaw = max(ship_speed.yaw - 0.04, -0.50)
+        elif key == glfw.KEY_Q:
+            ship_speed.roll = max(ship_speed.roll - 0.04, -1.0)
+        elif key == glfw.KEY_E:
+            ship_speed.roll = min(ship_speed.roll + 0.04, 1.0)
+        elif key == glfw.KEY_X:
+            ship_speed.move = 0
 
 
-def onMouseDrag(x: int, y: int):
-    global MPOSE, MB, INVALID, SPEED
+def on_mouse_button(window, button: int, action: int, mod: int):
+    print(f"on_mouse_button: button {button} action {action} mod {mod}")
 
-    # print(f"{x} {y}")
+    # global MB, MX, MY, CAMERA_POSE, MPOSE, INVALID, SPEED
 
-    if MB == GLUT_LEFT_BUTTON:
-        MPOSE = geo3d.Aff3d(
-            offset=((x - MX) * 0.05 * SPEED, (y - MY) * -0.05 * SPEED, 0)
-        )
-        INVALID = True
-    elif MB == GLUT_MIDDLE_BUTTON:
-        MPOSE = geo3d.Aff3d(
-            offset=((x - MX) * 0.05 * SPEED, 0, (y - MY) * -0.05 * SPEED)
-        )
-        INVALID = True
-    elif MB == GLUT_RIGHT_BUTTON:
-        rotX = geo3d.rot3d_y((x - MX) * -0.002)
-        rotY = geo3d.rot3d_x((y - MY) * -0.002)
-        MPOSE = rotY * rotX
-        INVALID = True
+    # # print(f"{button} {state} {x} {y}")
+
+    # if state == GLUT_DOWN:
+    #     MX = x
+    #     MY = y
+    #     MB = button
+    #     INVALID = True
+    # elif state == GLUT_UP:
+    #     MPOSE = geo3d.Aff3d()
+    #     if MB == GLUT_LEFT_BUTTON:
+    #         pose = geo3d.Aff3d(
+    #             offset=((x - MX) * 0.05 * SPEED, (y - MY) * -0.05 * SPEED, 0)
+    #         )
+    #         CAMERA_POSE = pose * CAMERA_POSE
+    #         INVALID = True
+    #     elif MB == GLUT_MIDDLE_BUTTON:
+    #         pose = geo3d.Aff3d(
+    #             offset=((x - MX) * 0.05 * SPEED, 0, (y - MY) * -0.05 * SPEED)
+    #         )
+    #         CAMERA_POSE = pose * CAMERA_POSE
+    #         INVALID = True
+    #     elif MB == GLUT_RIGHT_BUTTON:
+    #         rotX = geo3d.rot3d_y((x - MX) * -0.002)
+    #         rotY = geo3d.rot3d_x((y - MY) * -0.002)
+    #         CAMERA_POSE = rotY * rotX * CAMERA_POSE
+    #         INVALID = True
+    #     elif MB == 3:  # wheel scrolling up
+    #         SPEED *= 2
+    #         if SPEED > 10:
+    #             SPEED = 10
+    #         print(f"Speed: {SPEED}")
+    #     elif MB == 4:  # wheel scrolling down
+    #         SPEED /= 2
+    #         if SPEED < 0.1:
+    #             SPEED = 0.1
+    #         print(f"Speed: {SPEED}")
+
+
+def on_mouse_move(window, xpos: float, ypos: float):
+    print(f"on_mouse_move: xpos {xpos} ypos {ypos}")
+
+    # global MPOSE, MB, INVALID, SPEED
+
+    # # print(f"{x} {y}")
+
+    # if MB == GLUT_LEFT_BUTTON:
+    #     MPOSE = geo3d.Aff3d(
+    #         offset=((x - MX) * 0.05 * SPEED, (y - MY) * -0.05 * SPEED, 0)
+    #     )
+    #     INVALID = True
+    # elif MB == GLUT_MIDDLE_BUTTON:
+    #     MPOSE = geo3d.Aff3d(
+    #         offset=((x - MX) * 0.05 * SPEED, 0, (y - MY) * -0.05 * SPEED)
+    #     )
+    #     INVALID = True
+    # elif MB == GLUT_RIGHT_BUTTON:
+    #     rotX = geo3d.rot3d_y((x - MX) * -0.002)
+    #     rotY = geo3d.rot3d_x((y - MY) * -0.002)
+    #     MPOSE = rotY * rotX
+    #     INVALID = True
+
+
+def on_scroll(window, xoffset: float, yoffset: float):
+    print(f"on_scroll: xoffset {xoffset} yoffset {yoffset}")
+
+    # global MPOSE, MB, INVALID, SPEED
+
+    # # print(f"{x} {y}")
+
+    # if MB == GLUT_LEFT_BUTTON:
+    #     MPOSE = geo3d.Aff3d(
+    #         offset=((x - MX) * 0.05 * SPEED, (y - MY) * -0.05 * SPEED, 0)
+    #     )
+    #     INVALID = True
+    # elif MB == GLUT_MIDDLE_BUTTON:
+    #     MPOSE = geo3d.Aff3d(
+    #         offset=((x - MX) * 0.05 * SPEED, 0, (y - MY) * -0.05 * SPEED)
+    #     )
+    #     INVALID = True
+    # elif MB == GLUT_RIGHT_BUTTON:
+    #     rotX = geo3d.rot3d_y((x - MX) * -0.002)
+    #     rotY = geo3d.rot3d_x((y - MY) * -0.002)
+    #     MPOSE = rotY * rotX
+    #     INVALID = True
 
 
 def main():
-    global COORDS, COLORS, VERTEX_VBO, COLOR_VBO, device
+    global COORDS, COLORS, VERTEX_VBO, COLOR_VBO, device, window
 
-    device = s.Device()
-    device.open()
-    print(device.info)
-    device.resolution = s.SYRESOLUTION_640_480
-    device.stream_on(s.SYSTREAMTYPE_DEPTHIR)
+    with s.Device() as the_device:
+        device = the_device
+        print(device.info)
+        device.resolution = s.SYRESOLUTION_640_480
+        device.stream_on(s.SYSTREAMTYPE_DEPTHIR)
 
-    file = sys.argv[1]
+        file = sys.argv[1]
 
-    # IO Skipping header row in csv
-    point_vals = np.loadtxt(file, delimiter=",", skiprows=1)
-    # OpenGL Boilerplate setup
-    glutInit(sys.argv)
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH)
-    glutInitWindowSize(1200, 800)
-    glutInitWindowPosition(100, 100)
-    window = glutCreateWindow("Point Cloud Viewer")
-    # Assign mode specific display function
-    generate_cube_vertices_gpu(point_vals)
-    glutDisplayFunc(display_gpu)
-    glutKeyboardFunc(onKeyDown)
-    glutMouseFunc(onMouseButton)
-    glutMotionFunc(onMouseDrag)
-    glClearColor(0.0, 0.0, 0.0, 0.0)
-    glClearDepth(1.0)
-    glDepthFunc(GL_LESS)
-    glEnable(GL_DEPTH_TEST)
-    glShadeModel(GL_SMOOTH)
-    glMatrixMode(GL_PROJECTION)
-    glLoadIdentity()
-    gluPerspective(70.0, 640.0 / 360.0, 0.1, 100.0)
-    glMatrixMode(GL_MODELVIEW)
-    # Setup buffers for parallelization
-    VERTEX_VBO, COLOR_VBO = glGenBuffers(2)
-    glBindBuffer(GL_ARRAY_BUFFER, VERTEX_VBO)
-    glBufferData(GL_ARRAY_BUFFER, COORDS, GL_STATIC_DRAW)
-    glBindBuffer(GL_ARRAY_BUFFER, COLOR_VBO)
-    glBufferData(GL_ARRAY_BUFFER, COLORS, GL_STATIC_DRAW)
-    glBindBuffer(GL_ARRAY_BUFFER, 0)
-    # Render Loop
-    glutMainLoop()
-    device.close()
+        # IO Skipping header row in csv
+        point_vals = np.loadtxt(file, delimiter=",", skiprows=1)
+
+        # OpenGL Boilerplate setup
+        with glfw.scoped_create_window(
+            1200, 800, "Synexens Viewer", None, None
+        ) as the_window:
+            window = the_window
+
+            glfw.set_window_pos(window, 100, 100)
+            glfw.make_context_current(window)
+
+            # Assign mode specific display function
+            generate_cube_vertices_gpu(point_vals)
+            glfw.set_key_callback(window, on_key)
+            glfw.set_cursor_pos_callback(window, on_mouse_move)
+            glfw.set_mouse_button_callback(window, on_mouse_button)
+            glfw.set_scroll_callback(window, on_scroll)
+            glClearColor(0.0, 0.0, 0.0, 0.0)
+            glClearDepth(1.0)
+            glDepthFunc(GL_LESS)
+            glEnable(GL_DEPTH_TEST)
+            glShadeModel(GL_SMOOTH)
+            glMatrixMode(GL_PROJECTION)
+            glLoadIdentity()
+            gluPerspective(70.0, 640.0 / 360.0, 0.1, 100.0)
+            glMatrixMode(GL_MODELVIEW)
+            # Setup buffers for parallelization
+            VERTEX_VBO, COLOR_VBO = glGenBuffers(2)
+            glBindBuffer(GL_ARRAY_BUFFER, VERTEX_VBO)
+            glBufferData(GL_ARRAY_BUFFER, COORDS, GL_STATIC_DRAW)
+            glBindBuffer(GL_ARRAY_BUFFER, COLOR_VBO)
+            glBufferData(GL_ARRAY_BUFFER, COLORS, GL_STATIC_DRAW)
+            glBindBuffer(GL_ARRAY_BUFFER, 0)
+
+            # Render Loop
+            while not glfw.window_should_close(window):
+                update_point_cloud()
+                display_gpu()
+
+                glfw.swap_buffers(window)
+                glfw.poll_events()
 
 
 if __name__ == "__main__":
