@@ -15,7 +15,7 @@ class ShipSpeed:
     Parameters
     ----------
     move : float
-        speed to move along the z-axis of the camera ship. Range: [-10, +10] mm/s. Step: 0.01 mm/s
+        speed to move along the z-axis of the camera ship. Range: [-1, +1] m/s. Step: 1cm/s
     roll : float
         speed to rotate about the z-axis of the camera ship. Range: [-0.05, +0.05] rad/s. Step: 0.01 mm/s.
     pitch : float
@@ -56,7 +56,7 @@ def update_point_cloud():
     infra_image = frame[s.SYFRAMETYPE_IR]  # range from 0 to 2047
     # infra_image = (infra_image // 8).astype(np.uint8)
 
-    point_arr = point_image.reshape((n_points, 3)) / 50.0
+    point_arr = point_image.reshape((n_points, 3)) / 1000.0
     invalid_arr = (depth_arr < 100) | (depth_arr > 5000) | (point_arr[:, 2] < 1e-4)
 
     indices = []
@@ -81,11 +81,13 @@ def update_point_cloud():
 
         indices.append((i, i + 1, i + w + 1, i + w))
 
-    if False:
+    if True:
         color_image = device.get_depth_color(depth_image)
-        color_arr = color_image.reshape((n_points, 3)) / 10.0
+        color_arr = color_image.reshape((n_points, 3)).astype(np.float32) / 256.0
+        infra_arr = infra_image.reshape((n_points,)).astype(np.float32) / 1024.0
+        color_arr = (infra_arr[:, np.newaxis] + color_arr * 0.3) / 1.3
     else:
-        color_arr = infra_image.reshape((n_points, 1)).astype(np.float32) / 2048.0
+        color_arr = infra_image.reshape((n_points, 1)).astype(np.float32) / 1024.0
         color_arr = np.repeat(color_arr, 3, axis=1)
 
     # print(f"indices: {len(indices)}")
@@ -174,7 +176,7 @@ def generate_cube_vertices_gpu(point_vals):
     X /= len(COORDS)
     Y /= len(COORDS)
     Z /= len(COORDS)
-    Z -= 50.0
+    Z -= 3.0
     CAMERA_POSE = geo3d.Aff3d(offset=(X, Y, Z))
     LAST_TS = pd.Timestamp.utcnow()
 
@@ -195,9 +197,9 @@ def on_key(window, key: int, scancode: int, action: int, mods: int):
             ship_speed.yaw = 0
     else:
         if key == glfw.KEY_Z:
-            ship_speed.move = max(ship_speed.move - 0.01, -10.0)
+            ship_speed.move = max(ship_speed.move - 0.01, -1.0)
         elif key == glfw.KEY_C:
-            ship_speed.move = min(ship_speed.move + 0.01, 10.0)
+            ship_speed.move = min(ship_speed.move + 0.01, 1.0)
         elif key == glfw.KEY_W:
             ship_speed.pitch = min(ship_speed.pitch + 0.04, 0.50)
         elif key == glfw.KEY_S:
@@ -260,7 +262,7 @@ def main():
             glShadeModel(GL_SMOOTH)
             glMatrixMode(GL_PROJECTION)
             glLoadIdentity()
-            gluPerspective(70.0, 640.0 / 360.0, 0.1, 100.0)
+            gluPerspective(70.0, 1200 / 800, 0.01, 10.0)
             glMatrixMode(GL_MODELVIEW)
             # Setup buffers for parallelization
             VERTEX_VBO, COLOR_VBO = glGenBuffers(2)
