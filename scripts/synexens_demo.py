@@ -4,7 +4,6 @@
 from OpenGL.GL import *
 from OpenGL.GLU import *
 from OpenGL.GL.shaders import *
-import sys
 
 import synexens as s
 from mt import np, geo3d, glfw, pd
@@ -218,92 +217,13 @@ def on_key(window, key: int, scancode: int, action: int, mods: int):
 def on_mouse_button(window, button: int, action: int, mod: int):
     print(f"on_mouse_button: button {button} action {action} mod {mod}")
 
-    # global MB, MX, MY, CAMERA_POSE, MPOSE, INVALID, SPEED
-
-    # # print(f"{button} {state} {x} {y}")
-
-    # if state == GLUT_DOWN:
-    #     MX = x
-    #     MY = y
-    #     MB = button
-    #     INVALID = True
-    # elif state == GLUT_UP:
-    #     MPOSE = geo3d.Aff3d()
-    #     if MB == GLUT_LEFT_BUTTON:
-    #         pose = geo3d.Aff3d(
-    #             offset=((x - MX) * 0.05 * SPEED, (y - MY) * -0.05 * SPEED, 0)
-    #         )
-    #         CAMERA_POSE = pose * CAMERA_POSE
-    #         INVALID = True
-    #     elif MB == GLUT_MIDDLE_BUTTON:
-    #         pose = geo3d.Aff3d(
-    #             offset=((x - MX) * 0.05 * SPEED, 0, (y - MY) * -0.05 * SPEED)
-    #         )
-    #         CAMERA_POSE = pose * CAMERA_POSE
-    #         INVALID = True
-    #     elif MB == GLUT_RIGHT_BUTTON:
-    #         rotX = geo3d.rot3d_y((x - MX) * -0.002)
-    #         rotY = geo3d.rot3d_x((y - MY) * -0.002)
-    #         CAMERA_POSE = rotY * rotX * CAMERA_POSE
-    #         INVALID = True
-    #     elif MB == 3:  # wheel scrolling up
-    #         SPEED *= 2
-    #         if SPEED > 10:
-    #             SPEED = 10
-    #         print(f"Speed: {SPEED}")
-    #     elif MB == 4:  # wheel scrolling down
-    #         SPEED /= 2
-    #         if SPEED < 0.1:
-    #             SPEED = 0.1
-    #         print(f"Speed: {SPEED}")
-
 
 def on_mouse_move(window, xpos: float, ypos: float):
     print(f"on_mouse_move: xpos {xpos} ypos {ypos}")
 
-    # global MPOSE, MB, INVALID, SPEED
-
-    # # print(f"{x} {y}")
-
-    # if MB == GLUT_LEFT_BUTTON:
-    #     MPOSE = geo3d.Aff3d(
-    #         offset=((x - MX) * 0.05 * SPEED, (y - MY) * -0.05 * SPEED, 0)
-    #     )
-    #     INVALID = True
-    # elif MB == GLUT_MIDDLE_BUTTON:
-    #     MPOSE = geo3d.Aff3d(
-    #         offset=((x - MX) * 0.05 * SPEED, 0, (y - MY) * -0.05 * SPEED)
-    #     )
-    #     INVALID = True
-    # elif MB == GLUT_RIGHT_BUTTON:
-    #     rotX = geo3d.rot3d_y((x - MX) * -0.002)
-    #     rotY = geo3d.rot3d_x((y - MY) * -0.002)
-    #     MPOSE = rotY * rotX
-    #     INVALID = True
-
 
 def on_scroll(window, xoffset: float, yoffset: float):
     print(f"on_scroll: xoffset {xoffset} yoffset {yoffset}")
-
-    # global MPOSE, MB, INVALID, SPEED
-
-    # # print(f"{x} {y}")
-
-    # if MB == GLUT_LEFT_BUTTON:
-    #     MPOSE = geo3d.Aff3d(
-    #         offset=((x - MX) * 0.05 * SPEED, (y - MY) * -0.05 * SPEED, 0)
-    #     )
-    #     INVALID = True
-    # elif MB == GLUT_MIDDLE_BUTTON:
-    #     MPOSE = geo3d.Aff3d(
-    #         offset=((x - MX) * 0.05 * SPEED, 0, (y - MY) * -0.05 * SPEED)
-    #     )
-    #     INVALID = True
-    # elif MB == GLUT_RIGHT_BUTTON:
-    #     rotX = geo3d.rot3d_y((x - MX) * -0.002)
-    #     rotY = geo3d.rot3d_x((y - MY) * -0.002)
-    #     MPOSE = rotY * rotX
-    #     INVALID = True
 
 
 def main():
@@ -315,10 +235,8 @@ def main():
         device.resolution = s.SYRESOLUTION_640_480
         device.stream_on(s.SYSTREAMTYPE_DEPTHIR)
 
-        file = sys.argv[1]
-
         # IO Skipping header row in csv
-        point_vals = np.loadtxt(file, delimiter=",", skiprows=1)
+        point_vals = np.loadtxt("generated_points_100.txt", delimiter=",", skiprows=1)
 
         # OpenGL Boilerplate setup
         with glfw.scoped_create_window(
