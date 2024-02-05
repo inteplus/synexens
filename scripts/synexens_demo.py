@@ -1,12 +1,9 @@
 #!/usr/bin/python3
 
-
-from OpenGL.GL import *
-from OpenGL.GLU import *
-from OpenGL.GL.shaders import *
+import glm
 
 import synexens as s
-from mt import np, geo3d, glfw, pd
+from mt import np, geo3d, gl, glfw, pd, ctx
 
 
 class ShipSpeed:
@@ -33,152 +30,61 @@ class ShipSpeed:
 
 
 ship_speed = ShipSpeed(0, 0, 0, 0)
-global COORDS, COLORS, VERTEX_VBO, COLOR_VBO, CAMERA_POSE, LAST_TS, device, window
+height = 480
+width = 640
 
 
-def update_point_cloud():
-    global COORDS, COLORS, VERTEX_VBO, COLOR_VBO, device
+class Camera:
+    def __init__(self, pose, last_ts):
+        self.pose = pose
+        self.last_ts = last_ts
 
+
+camera = Camera(geo3d.Aff3d(offset=(0, 0, -3.0)), pd.Timestamp.utcnow())
+
+
+def initial_point_cloud():
+    posits = np.random.rand(height * width, 3).astype(np.float32)
+    colors = np.random.randint(256, size=height * width * 3, dtype=np.uint8).reshape(
+        height * width, 3
+    )
+    return posits, colors
+
+
+def framebuffer_size(window, width: int, height: int):
+    gl.glViewport(0, 0, width, height)
+
+
+def update_point_cloud(device):
     frame = device.get_last_frame_data()
     if frame is None:
         return
 
-    depth_image = frame[s.SYFRAMETYPE_DEPTH]
-    point_image = device.get_depth_point_cloud(depth_image, True)
+    depth_image = frame[s.SYFRAMETYPE_DEPTH]  # range from 0 to 7000
+    point_image = device.get_depth_point_cloud(
+        depth_image, True
+    )  # range from -1 to 8, in metres
     # depth_image = (depth_image // 32).astype(np.uint8)
 
-    h, w = depth_image.shape[:2]
-    n_points = h * w
+    posits = (
+        point_image.reshape(height * width, 3).astype(np.float32) / 10000
+    )  # to have range [0,1]
 
-    depth_arr = depth_image.reshape((n_points,))  # range from 0 to 7000
+    # depth_arr = depth_image.reshape((n_points,))  # range from 0 to 7000
     # print(f"depth: min {depth_arr.min(axis=0)} max {depth_arr.max(axis=0)}")
 
     infra_image = frame[s.SYFRAMETYPE_IR]  # range from 0 to 2047
     # infra_image = (infra_image // 8).astype(np.uint8)
 
-    point_arr = point_image.reshape((n_points, 3)) / 1000.0
-    invalid_arr = (depth_arr < 100) | (depth_arr > 5000) | (point_arr[:, 2] < 1e-4)
+    color_image = device.get_depth_color(depth_image)  # range from 0 to 255
+    # now mix up with infra to get range [0,1]
+    colors = (
+        (infra_image.astype(np.float32) / 2048)
+        + (color_image.astype(np.float32) / 256) * 0.3
+    ) / 1.3
+    colors = (colors * 256.0).astype(np.uint8).reshape(height * width, 3)
 
-    indices = []
-    for i in range(n_points - w - 1):
-        if i % w == w - 1:
-            continue
-        if (
-            invalid_arr[i]
-            or invalid_arr[i + 1]
-            or invalid_arr[i + w]
-            or invalid_arr[i + w + 1]
-        ):
-            continue
-        max_depth = max(
-            depth_arr[i], depth_arr[i + 1], depth_arr[i + w], depth_arr[i + w + 1]
-        )
-        min_depth = min(
-            depth_arr[i], depth_arr[i + 1], depth_arr[i + w], depth_arr[i + w + 1]
-        )
-        if max_depth > min_depth + 20:
-            continue
-
-        indices.append((i, i + 1, i + w + 1, i + w))
-
-    if True:
-        color_image = device.get_depth_color(depth_image)
-        color_arr = color_image.reshape((n_points, 3)).astype(np.float32) / 256.0
-        infra_arr = infra_image.reshape((n_points,)).astype(np.float32) / 1024.0
-        color_arr = (infra_arr[:, np.newaxis] + color_arr * 0.3) / 1.3
-    else:
-        color_arr = infra_image.reshape((n_points, 1)).astype(np.float32) / 1024.0
-        color_arr = np.repeat(color_arr, 3, axis=1)
-
-    # print(f"indices: {len(indices)}")
-    # print(f"point: min {point_arr.min(axis=0)} max {point_arr.max(axis=0)}")
-    # print(f"color: min {color_arr.min(axis=0)} max {color_arr.max(axis=0)}")
-
-    COORDS = point_arr[indices]
-    COLORS = color_arr[indices]
-
-    # copy the data to the buffer
-    glBindBuffer(GL_ARRAY_BUFFER, VERTEX_VBO)
-    glBufferData(GL_ARRAY_BUFFER, COORDS, GL_STATIC_DRAW)
-    glBindBuffer(GL_ARRAY_BUFFER, COLOR_VBO)
-    glBufferData(GL_ARRAY_BUFFER, COLORS, GL_STATIC_DRAW)
-    glBindBuffer(GL_ARRAY_BUFFER, 0)
-
-    # print(f"frame found {COORDS.shape} {COLORS.shape} {COORDS.dtype} {COLORS.dtype}")
-
-
-def display_gpu():
-    global CAMERA_POSE, LAST_TS, ship_speed, VERTEX_VBO, COLOR_VBO, COORDS
-
-    # measure time
-    ts = pd.Timestamp.utcnow()
-    sec = (ts - LAST_TS).total_seconds()
-    LAST_TS = ts
-
-    CAMERA_POSE = geo3d.rot3d_z(ship_speed.roll * sec) * CAMERA_POSE
-    CAMERA_POSE = geo3d.rot3d_x(ship_speed.pitch * sec) * CAMERA_POSE
-    CAMERA_POSE = geo3d.rot3d_y(ship_speed.yaw * sec) * CAMERA_POSE
-    CAMERA_POSE = geo3d.Aff3d(offset=(0, 0, ship_speed.move * sec)) * CAMERA_POSE
-
-    glGetError()
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
-
-    # Performing translation and rotation
-    glLoadMatrixf(CAMERA_POSE.matrix.T)
-
-    glBindBuffer(GL_ARRAY_BUFFER, VERTEX_VBO)
-    glVertexPointer(3, GL_FLOAT, 0, None)
-    glEnableClientState(GL_VERTEX_ARRAY)
-    glBindBuffer(GL_ARRAY_BUFFER, COLOR_VBO)
-    glColorPointer(3, GL_FLOAT, 0, None)
-    glEnableClientState(GL_COLOR_ARRAY)
-    glBindBuffer(GL_ARRAY_BUFFER, 0)
-
-    # Define buffer size as
-    # no. of vertices * no. of faces * no. of cubes
-    glDrawArrays(GL_QUADS, 0, 4 * 6 * len(COORDS))
-    glDisableClientState(GL_VERTEX_ARRAY)
-    glDisableClientState(GL_COLOR_ARRAY)
-    glFlush()
-
-
-def generate_cube_vertices_gpu(point_vals):
-    global CAMERA_POSE, LAST_TS, COORDS, COLORS
-    X, Y, Z = 0.0, 0.0, 0.0
-    coords_arr = []
-    colors_arr = []
-    # Add 8 vertices in cube, colors for each vertex
-    for x, y, z, r, g, b in point_vals:
-        X += x
-        Y += y
-        Z += z
-        vertex_1 = [x, y, z]
-        vertex_2 = [x + 0.25, y, z]
-        vertex_3 = [x + 0.25, y + 0.25, z]
-        vertex_4 = [x, y + 0.25, z]
-        vertex_5 = [x, y, z + 0.25]
-        vertex_6 = [x + 0.25, y, z + 0.25]
-        vertex_7 = [x + 0.25, y + 0.25, z + 0.25]
-        vertex_8 = [x, y + 0.25, z + 0.25]
-
-        coords_arr.extend([vertex_1, vertex_2, vertex_3, vertex_4])
-        coords_arr.extend([vertex_5, vertex_6, vertex_7, vertex_8])
-        coords_arr.extend([vertex_1, vertex_4, vertex_8, vertex_5])
-        coords_arr.extend([vertex_1, vertex_3, vertex_7, vertex_6])
-        coords_arr.extend([vertex_1, vertex_2, vertex_6, vertex_5])
-        coords_arr.extend([vertex_4, vertex_3, vertex_7, vertex_8])
-        for x in range(24):
-            colors_arr.append([r, g, b])
-    COORDS = np.array(coords_arr, dtype=np.float32)
-    COLORS = np.array(colors_arr, dtype=np.float32)
-
-    # Calculate centroid for all vertices across cubes in each axis
-    X /= len(COORDS)
-    Y /= len(COORDS)
-    Z /= len(COORDS)
-    Z -= 3.0
-    CAMERA_POSE = geo3d.Aff3d(offset=(X, Y, Z))
-    LAST_TS = pd.Timestamp.utcnow()
+    return posits, colors
 
 
 def on_key(window, key: int, scancode: int, action: int, mods: int):
@@ -228,57 +134,302 @@ def on_scroll(window, xoffset: float, yoffset: float):
     print(f"on_scroll: xoffset {xoffset} yoffset {yoffset}")
 
 
+def load_shaders_old():
+    shader_srcs = {
+        gl.GL_VERTEX_SHADER: """
+#version 330
+
+layout(location = 0) in vec4 imgcoord;
+
+uniform ivec2 imgres;
+uniform sampler2D position; // point cloud (in 10m per unit)
+uniform sampler2D color;  // color in RGB ([0,1] each)
+uniform mat4 view;
+uniform mat4 projection;
+
+void main()
+{
+gl_Position = vec4(imgcoord.xy, 0, 1);
+}
+        """,
+        gl.GL_GEOMETRY_SHADER: """
+#version 330
+
+layout (points) in;
+layout (triangle_strip, max_vertices = 4) out;
+
+uniform ivec2 imgres;
+uniform sampler2D position; // point cloud (in 10m per unit)
+uniform sampler2D color;  // color in RGB ([0,1] each)
+uniform mat4 view;
+uniform mat4 projection;
+
+out vec3 v_color;
+
+void main()
+{
+    ivec2 tl = ivec2(gl_in[0].gl_Position.xy * vec2(imgres));
+    if(tl.x < 0 || tl.x+1 >= imgres.x || tl.y < 0 || tl.y+1 >= imgres.y)
+        return;
+
+    gl_Position = projection * view * vec4(tl.x, tl.y, 0.0, 1.0);
+    v_color = texelFetch(color, tl, 0).xyz;
+    EmitVertex();
+
+    gl_Position = projection * view * vec4(tl.x+1, tl.y, 0.0, 1.0);
+    v_color = texelFetch(color, ivec2(tl.x+1, tl.y), 0).xyz;
+    EmitVertex();
+
+    gl_Position = projection * view * vec4(tl.x, tl.y+1, 0.0, 1.0);
+    v_color = texelFetch(color, ivec2(tl.x, tl.y+1), 0).xyz;
+    EmitVertex();
+
+    gl_Position = projection * view * vec4(tl.x+1, tl.y+1, 0.0, 1.0);
+    v_color = texelFetch(color, ivec2(tl.x+1, tl.y+1), 0).xyz;
+    EmitVertex();
+
+    EndPrimitive();
+}
+        """,
+        gl.GL_FRAGMENT_SHADER: """
+#version 330
+
+in vec3 v_color;
+layout(location = 0) out vec4 color;
+
+void main()
+{
+    color = vec4(v_color, 1.0);
+}
+        """,
+    }
+
+    compiled_shaders = [gl.compileShader(v, k) for k, v in shader_srcs.items()]
+    return gl.compileProgram(*compiled_shaders)
+
+
+def load_shaders():
+    shader_srcs = {
+        gl.GL_VERTEX_SHADER: """
+#version 330
+
+layout(location = 0) in vec4 imgcoord;
+
+uniform ivec2 imgres;
+uniform sampler2D position; // point cloud (in 10m per unit)
+uniform sampler2D color;  // color in RGB ([0,1] each)
+uniform mat4 view;
+uniform mat4 projection;
+
+void main()
+{
+gl_Position = vec4(imgcoord.xy, 0, 1);
+}
+        """,
+        gl.GL_GEOMETRY_SHADER: """
+#version 330
+
+layout (points) in;
+layout (triangle_strip, max_vertices = 4) out;
+
+uniform ivec2 imgres;
+uniform sampler2D position; // point cloud (in 10m per unit)
+uniform sampler2D color;  // color in RGB ([0,1] each)
+uniform mat4 view;
+uniform mat4 projection;
+
+out vec3 v_color;
+
+void main()
+{
+    ivec2 tl = ivec2(round(gl_in[0].gl_Position.xy * vec2(imgres)));
+    if(tl.x < 0 || tl.x+1 >= imgres.x || tl.y < 0 || tl.y+1 >= imgres.y)
+        return;
+
+    ivec2 tr = ivec2(tl.x+1, tl.y);
+    ivec2 bl = ivec2(tl.x, tl.y+1);
+    ivec2 br = ivec2(tr.x, tr.y+1);
+    vec3 p_tl = texelFetch(position, tl, 0).xyz * 10;  // 1m per unit now
+    vec3 p_tr = texelFetch(position, tr, 0).xyz * 10;
+    vec3 p_bl = texelFetch(position, bl, 0).xyz * 10;
+    vec3 p_br = texelFetch(position, br, 0).xyz * 10;
+    vec3 p_max = max(max(p_tl, p_tr), max(p_bl, p_br));
+    vec3 p_min = min(min(p_tl, p_tr), min(p_bl, p_br));
+    vec3 d_max = p_max - p_min;
+    float v_max = max(max(d_max.x, d_max.y), d_max.z);
+    if(v_max > 0.05f) // larger than 5cm
+        return;
+
+    gl_Position = projection * view * vec4(p_tl, 1.0);
+    v_color = texelFetch(color, tl, 0).xyz;
+    EmitVertex();
+
+    gl_Position = projection * view * vec4(p_tr, 1.0);
+    v_color = texelFetch(color, tr, 0).xyz;
+    EmitVertex();
+
+    gl_Position = projection * view * vec4(p_bl, 1.0);
+    v_color = texelFetch(color, bl, 0).xyz;
+    EmitVertex();
+
+    gl_Position = projection * view * vec4(p_br, 1.0);
+    v_color = texelFetch(color, br, 0).xyz;
+    EmitVertex();
+
+    EndPrimitive();
+}
+        """,
+        gl.GL_FRAGMENT_SHADER: """
+#version 330
+
+in vec3 v_color;
+layout(location = 0) out vec4 color;
+
+void main()
+{
+    color = vec4(v_color, 1.0);
+}
+        """,
+    }
+
+    compiled_shaders = [gl.compileShader(v, k) for k, v in shader_srcs.items()]
+    return gl.compileProgram(*compiled_shaders)
+
+
+@ctx.contextmanager
+def create_textures():
+    posit_tex, color_tex = gl.glGenTextures(2)
+
+    try:
+        yield posit_tex, color_tex
+    finally:
+        gl.glDeleteTextures(2, [posit_tex, color_tex])
+
+
+def update_textures(posits, colors, posit_tex, color_tex):
+    # posit_tex
+    gl.glActiveTexture(gl.GL_TEXTURE0)
+    gl.glBindTexture(gl.GL_TEXTURE_2D, posit_tex)
+    gl.glTexImage2D(
+        gl.GL_TEXTURE_2D,
+        0,
+        gl.GL_RGB32F,
+        width,
+        height,
+        0,
+        gl.GL_RGB,
+        gl.GL_FLOAT,
+        glm.array.as_reference(posits).ptr,
+    )
+    gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_MIN_FILTER, gl.GL_NEAREST)
+    gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_MAG_FILTER, gl.GL_NEAREST)
+    gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_WRAP_S, gl.GL_REPEAT)
+    gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_WRAP_T, gl.GL_REPEAT)
+
+    # color_tex
+    gl.glActiveTexture(gl.GL_TEXTURE0 + 1)
+    gl.glBindTexture(gl.GL_TEXTURE_2D, color_tex)
+    gl.glTexImage2D(
+        gl.GL_TEXTURE_2D,
+        0,
+        gl.GL_RGB8,
+        width,
+        height,
+        0,
+        gl.GL_RGB,
+        gl.GL_UNSIGNED_BYTE,
+        glm.array.as_reference(colors).ptr,
+    )
+    gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_MIN_FILTER, gl.GL_NEAREST)
+    gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_MAG_FILTER, gl.GL_NEAREST)
+    gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_WRAP_S, gl.GL_REPEAT)
+    gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_WRAP_T, gl.GL_REPEAT)
+
+    # gl.glBindTexture(gl.GL_TEXTURE_2D, 0)
+
+
 def main():
-    global COORDS, COLORS, VERTEX_VBO, COLOR_VBO, device, window
+    # OpenGL Boilerplate setup
+    glfw.window_hint(glfw.CONTEXT_VERSION_MAJOR, 3)
+    glfw.window_hint(glfw.CONTEXT_VERSION_MINOR, 3)
+    # glfw.window_hint(glfw.OPENGL_FORWARD_COMPAT, True)
+    glfw.window_hint(glfw.OPENGL_PROFILE, glfw.OPENGL_CORE_PROFILE)
+    with glfw.scoped_create_window(1200, 800, "Synexens Viewer", None, None) as window:
+        glfw.set_window_pos(window, 100, 100)
+        glfw.make_context_current(window)
 
-    with s.Device() as the_device:
-        device = the_device
-        print(device.info)
-        device.resolution = s.SYRESOLUTION_640_480
-        device.stream_on(s.SYSTREAMTYPE_DEPTHIR)
+        # Assign mode specific display function
+        glfw.set_key_callback(window, on_key)
+        glfw.set_cursor_pos_callback(window, on_mouse_move)
+        glfw.set_mouse_button_callback(window, on_mouse_button)
+        glfw.set_scroll_callback(window, on_scroll)
+        glfw.set_framebuffer_size_callback(window, framebuffer_size)
 
-        # IO Skipping header row in csv
-        point_vals = np.loadtxt("generated_points_100.txt", delimiter=",", skiprows=1)
+        gl.glDepthFunc(gl.GL_LESS)
+        gl.glEnable(gl.GL_DEPTH_TEST)
 
-        # OpenGL Boilerplate setup
-        with glfw.scoped_create_window(
-            1200, 800, "Synexens Viewer", None, None
-        ) as the_window:
-            window = the_window
+        program = load_shaders()
 
-            glfw.set_window_pos(window, 100, 100)
-            glfw.make_context_current(window)
+        vao = gl.VAO()
+        vbo = gl.VBO()
+        with vao:
+            vertices = np.empty((height, width, 2), dtype=np.float32)
+            vertices[:, :, 0] = np.arange(width)[np.newaxis, :] / width
+            vertices[:, :, 1] = np.arange(height)[:, np.newaxis] / height
+            vertices = vertices.reshape((width * height, 2))
+            vertices = glm.array(vertices)
+            vbo.set_data(0, vertices, gl.GL_STATIC_DRAW)
 
-            # Assign mode specific display function
-            generate_cube_vertices_gpu(point_vals)
-            glfw.set_key_callback(window, on_key)
-            glfw.set_cursor_pos_callback(window, on_mouse_move)
-            glfw.set_mouse_button_callback(window, on_mouse_button)
-            glfw.set_scroll_callback(window, on_scroll)
-            glClearColor(0.0, 0.0, 0.0, 0.0)
-            glClearDepth(1.0)
-            glDepthFunc(GL_LESS)
-            glEnable(GL_DEPTH_TEST)
-            glShadeModel(GL_SMOOTH)
-            glMatrixMode(GL_PROJECTION)
-            glLoadIdentity()
-            gluPerspective(70.0, 1200 / 800, 0.01, 10.0)
-            glMatrixMode(GL_MODELVIEW)
-            # Setup buffers for parallelization
-            VERTEX_VBO, COLOR_VBO = glGenBuffers(2)
-            glBindBuffer(GL_ARRAY_BUFFER, VERTEX_VBO)
-            glBufferData(GL_ARRAY_BUFFER, COORDS, GL_STATIC_DRAW)
-            glBindBuffer(GL_ARRAY_BUFFER, COLOR_VBO)
-            glBufferData(GL_ARRAY_BUFFER, COLORS, GL_STATIC_DRAW)
-            glBindBuffer(GL_ARRAY_BUFFER, 0)
+        with create_textures() as texes:
+            posit_tex, color_tex = texes
+            posits, colors = initial_point_cloud()
+            update_textures(posits, colors, posit_tex, color_tex)
 
-            # Render Loop
-            while not glfw.window_should_close(window):
-                update_point_cloud()
-                display_gpu()
+            with program:
+                program.set_uniform("imgres", glm.ivec2(640, 480))
+                projection = glm.perspective(
+                    glm.radians(50), width / height, 0.1, 100.0
+                )
+                program.set_uniform("projection", projection)
 
-                glfw.swap_buffers(window)
-                glfw.poll_events()
+                with s.Device() as device:
+                    print(device.info)
+                    device.resolution = s.SYRESOLUTION_640_480
+                    device.stream_on(s.SYSTREAMTYPE_DEPTHIR)
+
+                    # Render Loop
+                    while not glfw.window_should_close(window):
+                        ret = update_point_cloud(device)
+                        if ret:
+                            posits, colors = ret
+                            update_textures(posits, colors, posit_tex, color_tex)
+
+                        # measure time
+                        ts = pd.Timestamp.utcnow()
+                        sec = (ts - camera.last_ts).total_seconds()
+                        camera.last_ts = ts
+
+                        camera.pose = geo3d.rot3d_z(ship_speed.roll * sec) * camera.pose
+                        camera.pose = (
+                            geo3d.rot3d_x(ship_speed.pitch * sec) * camera.pose
+                        )
+                        camera.pose = geo3d.rot3d_y(ship_speed.yaw * sec) * camera.pose
+                        camera.pose = (
+                            geo3d.Aff3d(offset=(0, 0, ship_speed.move * sec))
+                            * camera.pose
+                        )
+
+                        gl.glClearColor(0.2, 0.3, 0.3, 1.0)
+                        gl.glClear(gl.GL_COLOR_BUFFER_BIT | gl.GL_DEPTH_BUFFER_BIT)
+
+                        program.set_uniform_texture_unit("position", 0)
+                        program.set_uniform_texture_unit("color", 1)
+                        program.set_uniform("view", camera.pose.affine)
+                        with vao:
+                            gl.glDrawArrays(gl.GL_POINTS, 0, width * height)
+
+                        glfw.swap_buffers(window)
+                        glfw.poll_events()
 
 
 if __name__ == "__main__":
