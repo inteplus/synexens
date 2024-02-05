@@ -123,15 +123,18 @@ def on_key(window, key: int, scancode: int, action: int, mods: int):
 
 
 def on_mouse_button(window, button: int, action: int, mod: int):
-    print(f"on_mouse_button: button {button} action {action} mod {mod}")
+    # print(f"on_mouse_button: button {button} action {action} mod {mod}")
+    pass
 
 
 def on_mouse_move(window, xpos: float, ypos: float):
-    print(f"on_mouse_move: xpos {xpos} ypos {ypos}")
+    # print(f"on_mouse_move: xpos {xpos} ypos {ypos}")
+    pass
 
 
 def on_scroll(window, xoffset: float, yoffset: float):
-    print(f"on_scroll: xoffset {xoffset} yoffset {yoffset}")
+    # print(f"on_scroll: xoffset {xoffset} yoffset {yoffset}")
+    pass
 
 
 def load_shaders_old():
@@ -349,53 +352,55 @@ def update_textures(posits, colors, posit_tex, color_tex):
 
 
 def main():
-    # OpenGL Boilerplate setup
-    glfw.window_hint(glfw.CONTEXT_VERSION_MAJOR, 3)
-    glfw.window_hint(glfw.CONTEXT_VERSION_MINOR, 3)
-    # glfw.window_hint(glfw.OPENGL_FORWARD_COMPAT, True)
-    glfw.window_hint(glfw.OPENGL_PROFILE, glfw.OPENGL_CORE_PROFILE)
-    with glfw.scoped_create_window(1200, 800, "Synexens Viewer", None, None) as window:
-        glfw.set_window_pos(window, 100, 100)
-        glfw.make_context_current(window)
+    with s.Device() as device:
+        print(device.info)
+        device.resolution = s.SYRESOLUTION_640_480
+        device.stream_on(s.SYSTREAMTYPE_DEPTHIR)
 
-        # Assign mode specific display function
-        glfw.set_key_callback(window, on_key)
-        glfw.set_cursor_pos_callback(window, on_mouse_move)
-        glfw.set_mouse_button_callback(window, on_mouse_button)
-        glfw.set_scroll_callback(window, on_scroll)
-        glfw.set_framebuffer_size_callback(window, framebuffer_size)
+        # OpenGL Boilerplate setup
+        glfw.window_hint(glfw.CONTEXT_VERSION_MAJOR, 3)
+        glfw.window_hint(glfw.CONTEXT_VERSION_MINOR, 3)
+        # glfw.window_hint(glfw.OPENGL_FORWARD_COMPAT, True)
+        glfw.window_hint(glfw.OPENGL_PROFILE, glfw.OPENGL_CORE_PROFILE)
+        with glfw.scoped_create_window(
+            1200, 800, "Synexens Viewer", None, None
+        ) as window:
+            glfw.set_window_pos(window, 100, 100)
+            glfw.make_context_current(window)
 
-        gl.glDepthFunc(gl.GL_LESS)
-        gl.glEnable(gl.GL_DEPTH_TEST)
+            # Assign mode specific display function
+            glfw.set_key_callback(window, on_key)
+            glfw.set_cursor_pos_callback(window, on_mouse_move)
+            glfw.set_mouse_button_callback(window, on_mouse_button)
+            glfw.set_scroll_callback(window, on_scroll)
+            glfw.set_framebuffer_size_callback(window, framebuffer_size)
 
-        program = load_shaders()
+            gl.glDepthFunc(gl.GL_LESS)
+            gl.glEnable(gl.GL_DEPTH_TEST)
 
-        vao = gl.VAO()
-        vbo = gl.VBO()
-        with vao:
-            vertices = np.empty((height, width, 2), dtype=np.float32)
-            vertices[:, :, 0] = np.arange(width)[np.newaxis, :] / width
-            vertices[:, :, 1] = np.arange(height)[:, np.newaxis] / height
-            vertices = vertices.reshape((width * height, 2))
-            vertices = glm.array(vertices)
-            vbo.set_data(0, vertices, gl.GL_STATIC_DRAW)
+            program = load_shaders()
 
-        with create_textures() as texes:
-            posit_tex, color_tex = texes
-            posits, colors = initial_point_cloud()
-            update_textures(posits, colors, posit_tex, color_tex)
+            vao = gl.VAO()
+            vbo = gl.VBO()
+            with vao:
+                vertices = np.empty((height, width, 2), dtype=np.float32)
+                vertices[:, :, 0] = np.arange(width)[np.newaxis, :] / width
+                vertices[:, :, 1] = np.arange(height)[:, np.newaxis] / height
+                vertices = vertices.reshape((width * height, 2))
+                vertices = glm.array(vertices)
+                vbo.set_data(0, vertices, gl.GL_STATIC_DRAW)
 
-            with program:
-                program.set_uniform("imgres", glm.ivec2(640, 480))
-                projection = glm.perspective(
-                    glm.radians(50), width / height, 0.1, 100.0
-                )
-                program.set_uniform("projection", projection)
+            with create_textures() as texes:
+                posit_tex, color_tex = texes
+                posits, colors = initial_point_cloud()
+                update_textures(posits, colors, posit_tex, color_tex)
 
-                with s.Device() as device:
-                    print(device.info)
-                    device.resolution = s.SYRESOLUTION_640_480
-                    device.stream_on(s.SYSTREAMTYPE_DEPTHIR)
+                with program:
+                    program.set_uniform("imgres", glm.ivec2(640, 480))
+                    projection = glm.perspective(
+                        glm.radians(50), width / height, 0.1, 100.0
+                    )
+                    program.set_uniform("projection", projection)
 
                     # Render Loop
                     while not glfw.window_should_close(window):
