@@ -52,6 +52,7 @@ setup(
     package_data={"": ["*.so*"]},
     install_requires=[
         "mtbase",  # for numpy access
+        "mtopengl":  # for rendering dynamic depth images live
         "cython",  # for wrapping purposes
         "v4l2py",  # for the interface
     ],
