@@ -9,7 +9,6 @@ from mt import path, shutil
 
 
 VERSION_FILE = os.path.join(os.path.dirname(__file__), "VERSION.txt")
-version_from_file = open(VERSION_FILE).read()
 
 if platform.machine() == "x86_64":
     plat = "amd64"
